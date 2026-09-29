@@ -8,3 +8,10 @@ snapshots/
 .env.*
 !.env.example
 npm-debug.log*
+
+# CCM / AVC / Voho content: lives in the private repo yar-malik/yarmalik-product-content, cloned into
+# product-content/. The skills are symlinked in by scripts/content/link-product-skills.sh.
+product-content/
+.claude/skills/ccm-content
+.claude/skills/avc-content
+.claude/skills/voho-content
