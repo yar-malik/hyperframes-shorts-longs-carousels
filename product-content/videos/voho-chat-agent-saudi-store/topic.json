@@ -1,0 +1,407 @@
+{
+ "n": null,
+ "slug": "chat-agent-saudi-store",
+ "title": "A website chat agent for a Saudi online store, in Saudi Arabic",
+ "industry": "Retail",
+ "template": "Website chat",
+ "scenario": "A shopper on an Arabic store website asks the chat agent about a product, delivery to Jeddah and an order; it answers in Saudi Arabic and looks the order up with a function.",
+ "agent": {
+  "name": "Al Waha Electronics Website Chat",
+  "greeting": "حيّاك الله في متجر الواحة! أنا ليلى، كيف أقدر أساعدك؟",
+  "instructions": "أنتِ \"ليلى\"، مساعدة المحادثة في موقع متجر الواحة للإلكترونيات، متجر أونلاين في الرياض يوصّل لكل مدن المملكة.\n\nمهمتك:\n- تردين على الزوار في الشات بلهجة سعودية ودودة، وبجملة أو جملتين قصيرة فقط في كل رد.\n- تجاوبين عن المنتجات والأسعار من القائمة تحت، وتقترحين المنتج المناسب.\n- إذا سأل العميل عن طلبه، اطلبي رقم الطلب واستخدمي track_order، وقولي حالته وموعد وصوله بالضبط مثل ما يرجع.\n\nالمنتجات:\n- سماعات لاسلكية: 349 ريال، عزل ضوضاء وبطارية 30 ساعة.\n- ساعة ذكية: 799 ريال، مقاومة للماء وتتبع النوم.\n- شاحن سريع: 89 ريال، 65 واط ومنفذين.\n- جراب جوال: 59 ريال، مضاد للصدمات.\n\nالتوصيل والدفع:\n- الرياض: التوصيل بكرة. باقي المدن مثل جدة والدمام: من يومين إلى أربعة أيام.\n- التوصيل مجاني للطلبات فوق 200 ريال، وتحتها 25 ريال.\n- الدفع بمدى أو أبل باي أو عند الاستلام.\n- الاسترجاع خلال 7 أيام إذا المنتج بحالته وكرتونه.\n\nقواعد:\n- لا تطلبين أبداً رقم البطاقة أو رمز التحقق أو كلمة المرور.\n- لا تخترعين حالة طلب أو موعد؛ هذي تجي من track_order بس.\n- الاسترجاع والتعويض يقررها فريق خدمة العملاء، لا توعدين بشيء."
+ },
+ "functions": {
+  "url": "https://yarmalik.com/api/shop/actions",
+  "actions": [
+   {
+    "name": "track_order",
+    "description": "Use when the customer gives an order number. Returns the item, its status and when it arrives.",
+    "parameters": {
+     "order_number": "The order number the customer typed, digits only"
+    }
+   }
+  ]
+ },
+ "caller": {
+  "voice": "omar",
+  "lines": []
+ },
+ "scene": {
+  "view": "city",
+  "icons": [
+   "cart",
+   "box",
+   "card"
+  ],
+  "cardIcon": "cart",
+  "cardCol": 2,
+  "cardHour": 5,
+  "deskCrew": [
+   "Lulu",
+   "Zaid",
+   "Mona",
+   "Hum"
+  ],
+  "floorCrew": [
+   "Bader",
+   "Lulu",
+   "Zaid",
+   "Mona",
+   "Hum",
+   "Nora",
+   "Saad",
+   "Reem"
+  ]
+ },
+ "subtitles": [],
+ "tutorial": {
+  "chat": {
+   "site": "https://yarmalik.com/shop",
+   "origin": "https://yarmalik.com",
+   "title": "متجر الواحة",
+   "messages": [
+    "السلام عليكم، عندكم سماعات لاسلكية؟ وكم سعرها؟",
+    "توصلون جدة؟ وكم ياخذ التوصيل؟",
+    "طيب طلبي رقم 4533 وين وصل؟"
+   ]
+  },
+  "noBed": true,
+  "endcard": "Every visitor answered, in Saudi Arabic",
+  "parts": [
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 2.0,
+    "out": 10.6
+   },
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 19.5,
+    "out": 62.6
+   },
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 66.2,
+    "out": 85.9
+   },
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 93.6,
+    "out": 101.3
+   },
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 105.0,
+    "out": 132.3
+   },
+   {
+    "type": "card",
+    "len": 3.4,
+    "kicker": "Step 13",
+    "title": "Try it on the store",
+    "cam": "cam2"
+   },
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 145.0,
+    "out": 153.2
+   },
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 164.8,
+    "out": 181.2,
+    "keepCam": true
+   },
+   {
+    "type": "still",
+    "take": "a",
+    "at": 181.0,
+    "len": 3.8
+   },
+   {
+    "type": "rec",
+    "take": "a",
+    "in": 188.2,
+    "out": 197.8
+   }
+  ],
+  "steps": [
+   [
+    "a",
+    "t01",
+    "Create an account"
+   ],
+   [
+    "a",
+    "t02",
+    "The dashboard"
+   ],
+   [
+    "a",
+    "t03",
+    "Create an agent"
+   ],
+   [
+    "a",
+    "t04",
+    "Name and language"
+   ],
+   [
+    "a",
+    "t05",
+    "Model and voice"
+   ],
+   [
+    "a",
+    "t06",
+    "Instructions and rules"
+   ],
+   [
+    "a",
+    "t08",
+    "Welcome message, then save"
+   ],
+   [
+    "a",
+    "t09",
+    "Functions: track_order"
+   ],
+   [
+    "a",
+    "t17",
+    "The fields it fills",
+    "docs_open"
+   ],
+   [
+    "a",
+    "t24",
+    "A public link"
+   ],
+   [
+    "a",
+    "t25",
+    "On a website"
+   ],
+   [
+    "a",
+    "t26",
+    "Copy the snippet"
+   ],
+   [
+    "a",
+    "t27",
+    "The store",
+    "site"
+   ],
+   [
+    "a",
+    "t28",
+    "Ask about a product",
+    "chat_1_typed"
+   ],
+   [
+    "a",
+    "t29",
+    "Ask about delivery",
+    "chat_2_focus"
+   ],
+   [
+    "a",
+    "t30",
+    "Ask where an order is"
+   ],
+   [
+    "a",
+    "t31",
+    "Conversations",
+    "conversations"
+   ]
+  ],
+  "focus": [
+   [
+    "a",
+    "name_focus",
+    [
+     520,
+     150,
+     1.45
+    ],
+    0.6
+   ],
+   [
+    "a",
+    "end_t04",
+    null,
+    0.5
+   ],
+   [
+    "a",
+    "instructions_focus",
+    [
+     470,
+     430,
+     1.35
+    ],
+    0.6
+   ],
+   [
+    "a",
+    "end_t06",
+    null,
+    0.5
+   ],
+   [
+    "a",
+    "greeting_focus",
+    [
+     470,
+     680,
+     1.4
+    ],
+    0.6
+   ],
+   [
+    "a",
+    "save",
+    null,
+    0.5
+   ],
+   [
+    "a",
+    "fn_url",
+    [
+     1300,
+     420,
+     1.6
+    ],
+    0.7
+   ],
+   [
+    "a",
+    "functions_saved",
+    null,
+    0.5
+   ],
+   [
+    "a",
+    "docs_open",
+    [
+     1440,
+     420,
+     1.35
+    ],
+    0.8
+   ],
+   [
+    "a",
+    "public_demo",
+    [
+     1250,
+     460,
+     1.5
+    ],
+    0.7
+   ],
+   [
+    "a",
+    "embed",
+    [
+     1290,
+     560,
+     1.4
+    ],
+    0.7
+   ],
+   [
+    "a",
+    "copy_snippet",
+    [
+     1290,
+     440,
+     1.7
+    ],
+    0.6
+   ],
+   [
+    "a",
+    "widget_open",
+    [
+     200,
+     860,
+     2.0
+    ],
+    0.8
+   ]
+  ],
+  "labels": {
+   "agent": "Layla · website chat",
+   "caller": "Customer"
+  },
+  "callAfter": null,
+  "captions": [
+   {
+    "take": "a",
+    "mark": "widget_greeted",
+    "len": 3.4,
+    "who": "agent",
+    "side": true,
+    "text": "Welcome to Al Waha store! I'm Layla, how can I help?"
+   },
+   {
+    "take": "a",
+    "mark": "chat_1_typed",
+    "len": 3.6,
+    "who": "caller",
+    "side": true,
+    "text": "Hi, do you have wireless headphones? How much are they?"
+   },
+   {
+    "take": "a",
+    "mark": "chat_1_reply",
+    "len": 4.4,
+    "who": "agent",
+    "side": true,
+    "text": "Yes, we have wireless headphones. They're 349 riyals."
+   },
+   {
+    "take": "a",
+    "mark": "chat_2_typed",
+    "len": 3.2,
+    "who": "caller",
+    "side": true,
+    "text": "Do you deliver to Jeddah? How long does delivery take?"
+   },
+   {
+    "take": "a",
+    "mark": "chat_2_reply",
+    "len": 3.4,
+    "who": "agent",
+    "side": true,
+    "text": "Yes, we deliver to Jeddah, and it takes two to four days."
+   },
+   {
+    "take": "a",
+    "mark": "chat_3_typed",
+    "len": 3.9,
+    "who": "caller",
+    "side": true,
+    "text": "OK, where's my order, number 4533?"
+   },
+   {
+    "take": "a",
+    "mark": "chat_3_reply",
+    "len": 5.6,
+    "who": "agent",
+    "side": true,
+    "text": "Hello! Your order 4533, a fast charger, is in our Riyadh warehouse. It ships tomorrow morning and reaches you in Jeddah within two days."
+   }
+  ]
+ },
+ "publish": {}
+}

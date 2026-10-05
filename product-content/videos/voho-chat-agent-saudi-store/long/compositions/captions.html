@@ -1,0 +1,111 @@
+<!doctype html>
+<html><head><meta charset="UTF-8" /></head><body><template>
+  <style>
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Regular.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Medium.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-SemiBold.woff2") format("woff2"); font-weight: 600; }
+  #root { position: absolute; inset: 0; overflow: hidden; font-family: "Geist", ui-sans-serif, system-ui, sans-serif; }
+  .step, .sub, .lyric { position: absolute; left: 0; right: 0; bottom: 56px; display: flex; justify-content: center; }
+  .step .inner { display: inline-flex; align-items: center; gap: 16px; padding: 14px 28px 14px 14px; border-radius: 999px; background: rgba(43,34,51,0.9); color: #FFF5E2; font-size: 32px; font-weight: 500; box-shadow: 0 10px 30px rgba(43,34,51,0.25); }
+  .step b { display: inline-flex; min-width: 46px; height: 46px; padding: 0 10px; border-radius: 23px; align-items: center; justify-content: center; background: #2EC27E; color: #05231a; font-weight: 600; font-size: 25px; }
+  .sub .inner { display: inline-block; max-width: 1280px; padding: 16px 30px; border-radius: 18px; background: rgba(43,34,51,0.9); color: #FFF5E2; font-size: 33px; line-height: 1.3; text-align: center; box-shadow: 0 10px 30px rgba(43,34,51,0.25); }
+  .sub em { display: block; font-style: normal; font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; color: #C6BCAB; margin-bottom: 4px; }
+  .sub.agent em { color: #57D79B; }
+  .sub.side { left: auto; right: 70px; bottom: 330px; justify-content: flex-end; }
+  .sub.side .inner { max-width: 760px; text-align: left; }
+  .lyric .inner { display: inline-block; max-width: 1320px; padding: 16px 34px; border-radius: 20px; background: rgba(43,34,51,0.86); color: #FFF5E2; font-size: 40px; line-height: 1.28; font-weight: 500; text-align: center; box-shadow: 0 10px 30px rgba(43,34,51,0.25); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div class="clip step" id="step-1" data-start="11.18" data-duration="7.41" data-track-index="0"><span class="inner"><b>1</b><span>Create an account</span></span></div>
+    <div class="clip step" id="step-2" data-start="19.47" data-duration="5.9" data-track-index="1"><span class="inner"><b>2</b><span>The dashboard</span></span></div>
+    <div class="clip step" id="step-3" data-start="25.62" data-duration="6.78" data-track-index="0"><span class="inner"><b>3</b><span>Create an agent</span></span></div>
+    <div class="clip step" id="step-4" data-start="32.65" data-duration="7.38" data-track-index="1"><span class="inner"><b>4</b><span>Name and language</span></span></div>
+    <div class="clip step" id="step-5" data-start="40.28" data-duration="6.79" data-track-index="0"><span class="inner"><b>5</b><span>Model and voice</span></span></div>
+    <div class="clip step" id="step-6" data-start="47.32" data-duration="14.37" data-track-index="1"><span class="inner"><b>6</b><span>Instructions and rules</span></span></div>
+    <div class="clip step" id="step-7" data-start="62.24" data-duration="6.22" data-track-index="0"><span class="inner"><b>7</b><span>Welcome message, then save</span></span></div>
+    <div class="clip step" id="step-8" data-start="68.71" data-duration="11" data-track-index="1"><span class="inner"><b>8</b><span>Functions: track_order</span></span></div>
+    <div class="clip step" id="step-9" data-start="81.9" data-duration="3.09" data-track-index="0"><span class="inner"><b>9</b><span>The fields it fills</span></span></div>
+    <div class="clip step" id="step-10" data-start="89.48" data-duration="7.15" data-track-index="1"><span class="inner"><b>10</b><span>A public link</span></span></div>
+    <div class="clip step" id="step-11" data-start="96.88" data-duration="11.61" data-track-index="0"><span class="inner"><b>11</b><span>On a website</span></span></div>
+    <div class="clip step" id="step-12" data-start="108.74" data-duration="7.65" data-track-index="1"><span class="inner"><b>12</b><span>Copy the snippet</span></span></div>
+    <div class="clip step" id="step-13" data-start="120.2" data-duration="2.07" data-track-index="0"><span class="inner"><b>13</b><span>The store</span></span></div>
+    <div class="clip step" id="step-14" data-start="125.91" data-duration="2.08" data-track-index="1"><span class="inner"><b>14</b><span>Ask about a product</span></span></div>
+    <div class="clip step" id="step-15" data-start="131.05" data-duration="5.98" data-track-index="0"><span class="inner"><b>15</b><span>Ask about delivery</span></span></div>
+    <div class="clip step" id="step-16" data-start="137.28" data-duration="7.11" data-track-index="1"><span class="inner"><b>16</b><span>Ask where an order is</span></span></div>
+    <div class="clip step" id="step-17" data-start="148.7" data-duration="9.09" data-track-index="0"><span class="inner"><b>17</b><span>Conversations</span></span></div>
+    <div class="clip sub agent side" id="sub-0" data-start="122.48" data-duration="3.4" data-track-index="2"><span class="inner"><em>Layla · website chat</em>Welcome to Al Waha store! I'm Layla, how can I help?</span></div>
+    <div class="clip sub caller side" id="sub-1" data-start="125.91" data-duration="3.6" data-track-index="3"><span class="inner"><em>Customer</em>Hi, do you have wireless headphones? How much are they?</span></div>
+    <div class="clip sub agent side" id="sub-2" data-start="129.09" data-duration="4.4" data-track-index="4"><span class="inner"><em>Layla · website chat</em>Yes, we have wireless headphones. They're 349 riyals.</span></div>
+    <div class="clip sub caller side" id="sub-3" data-start="132.72" data-duration="3.2" data-track-index="2"><span class="inner"><em>Customer</em>Do you deliver to Jeddah? How long does delivery take?</span></div>
+    <div class="clip sub agent side" id="sub-4" data-start="136.04" data-duration="3.4" data-track-index="3"><span class="inner"><em>Layla · website chat</em>Yes, we deliver to Jeddah, and it takes two to four days.</span></div>
+    <div class="clip sub caller side" id="sub-5" data-start="139.51" data-duration="3.9" data-track-index="4"><span class="inner"><em>Customer</em>OK, where's my order, number 4533?</span></div>
+    <div class="clip sub agent side" id="sub-6" data-start="143.49" data-duration="5.6" data-track-index="2"><span class="inner"><em>Layla · website chat</em>Hello! Your order 4533, a fast charger, is in our Riyadh warehouse. It ships tomorrow morning and reaches you in Jeddah within two days.</span></div>
+    <div class="clip lyric" id="vo-cam1" data-start="0.35" data-duration="3.52" data-track-index="5"><span class="inner"><span class="w" id="vo-cam1-w0">Today,</span> <span class="w" id="vo-cam1-w1">I'll</span> <span class="w" id="vo-cam1-w2">show</span> <span class="w" id="vo-cam1-w3">you</span> <span class="w" id="vo-cam1-w4">how</span> <span class="w" id="vo-cam1-w5">to</span> <span class="w" id="vo-cam1-w6">build</span> <span class="w" id="vo-cam1-w7">an</span> <span class="w" id="vo-cam1-w8">AI</span> <span class="w" id="vo-cam1-w9">chat</span> <span class="w" id="vo-cam1-w10">agent.</span></span></div>
+    <div class="clip lyric" id="vo-p2" data-start="3.77" data-duration="4.86" data-track-index="6"><span class="inner"><span class="w" id="vo-p2-w0">Because</span> <span class="w" id="vo-p2-w1">Saudi</span> <span class="w" id="vo-p2-w2">shoppers</span> <span class="w" id="vo-p2-w3">message</span> <span class="w" id="vo-p2-w4">at</span> <span class="w" id="vo-p2-w5">night</span> <span class="w" id="vo-p2-w6">and</span> <span class="w" id="vo-p2-w7">nobody's</span> <span class="w" id="vo-p2-w8">there</span> <span class="w" id="vo-p2-w9">to</span> <span class="w" id="vo-p2-w10">answer.</span></span></div>
+    <div class="clip lyric" id="vo-cam2" data-start="116.8" data-duration="2.12" data-track-index="5"><span class="inner"><span class="w" id="vo-cam2-w0">Now</span> <span class="w" id="vo-cam2-w1">let's</span> <span class="w" id="vo-cam2-w2">try</span> <span class="w" id="vo-cam2-w3">it</span> <span class="w" id="vo-cam2-w4">on</span> <span class="w" id="vo-cam2-w5">the</span> <span class="w" id="vo-cam2-w6">store.</span></span></div>
+    <div class="clip lyric" id="vo-cam4" data-start="159" data-duration="3.38" data-track-index="6"><span class="inner"><span class="w" id="vo-cam4-w0">Build</span> <span class="w" id="vo-cam4-w1">yours</span> <span class="w" id="vo-cam4-w2">at</span> <span class="w" id="vo-cam4-w3">app.voho.ai</span></span></div>
+  </div>
+  <script>(() => { const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#step-1 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 11.18);
+    tl.fromTo("#step-2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 19.47);
+    tl.fromTo("#step-3 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 25.62);
+    tl.fromTo("#step-4 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 32.65);
+    tl.fromTo("#step-5 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 40.28);
+    tl.fromTo("#step-6 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 47.32);
+    tl.fromTo("#step-7 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 62.24);
+    tl.fromTo("#step-8 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 68.71);
+    tl.fromTo("#step-9 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 81.9);
+    tl.fromTo("#step-10 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 89.48);
+    tl.fromTo("#step-11 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 96.88);
+    tl.fromTo("#step-12 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 108.74);
+    tl.fromTo("#step-13 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 120.2);
+    tl.fromTo("#step-14 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 125.91);
+    tl.fromTo("#step-15 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 131.05);
+    tl.fromTo("#step-16 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 137.28);
+    tl.fromTo("#step-17 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 148.7);
+    tl.fromTo("#sub-0 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 122.48);
+    tl.fromTo("#sub-1 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 125.91);
+    tl.fromTo("#sub-2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 129.09);
+    tl.fromTo("#sub-3 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 132.72);
+    tl.fromTo("#sub-4 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 136.04);
+    tl.fromTo("#sub-5 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 139.51);
+    tl.fromTo("#sub-6 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 143.49);
+    tl.fromTo("#vo-cam1 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 0.35);
+    tl.fromTo("#vo-p2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 3.77);
+    tl.fromTo("#vo-cam2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 116.8);
+    tl.fromTo("#vo-cam4 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 159);
+    tl.to("#vo-cam1-w0", { color: "#8FF0BE", duration: 0.08 }, 0.54);
+    tl.to("#vo-cam1-w1", { color: "#8FF0BE", duration: 0.08 }, 0.81);
+    tl.to("#vo-cam1-w2", { color: "#8FF0BE", duration: 0.08 }, 1.02);
+    tl.to("#vo-cam1-w3", { color: "#8FF0BE", duration: 0.08 }, 1.21);
+    tl.to("#vo-cam1-w4", { color: "#8FF0BE", duration: 0.08 }, 1.36);
+    tl.to("#vo-cam1-w5", { color: "#8FF0BE", duration: 0.08 }, 1.51);
+    tl.to("#vo-cam1-w6", { color: "#8FF0BE", duration: 0.08 }, 1.61);
+    tl.to("#vo-cam1-w7", { color: "#8FF0BE", duration: 0.08 }, 1.91);
+    tl.to("#vo-cam1-w8", { color: "#8FF0BE", duration: 0.08 }, 2.15);
+    tl.to("#vo-cam1-w9", { color: "#8FF0BE", duration: 0.08 }, 2.39);
+    tl.to("#vo-cam1-w10", { color: "#8FF0BE", duration: 0.08 }, 2.88);
+    tl.to("#vo-p2-w0", { color: "#8FF0BE", duration: 0.08 }, 3.93);
+    tl.to("#vo-p2-w1", { color: "#8FF0BE", duration: 0.08 }, 4.33);
+    tl.to("#vo-p2-w2", { color: "#8FF0BE", duration: 0.08 }, 4.65);
+    tl.to("#vo-p2-w3", { color: "#8FF0BE", duration: 0.08 }, 5.17);
+    tl.to("#vo-p2-w4", { color: "#8FF0BE", duration: 0.08 }, 5.63);
+    tl.to("#vo-p2-w5", { color: "#8FF0BE", duration: 0.08 }, 5.76);
+    tl.to("#vo-p2-w6", { color: "#8FF0BE", duration: 0.08 }, 6.14);
+    tl.to("#vo-p2-w7", { color: "#8FF0BE", duration: 0.08 }, 6.33);
+    tl.to("#vo-p2-w8", { color: "#8FF0BE", duration: 0.08 }, 6.83);
+    tl.to("#vo-p2-w9", { color: "#8FF0BE", duration: 0.08 }, 7.17);
+    tl.to("#vo-p2-w10", { color: "#8FF0BE", duration: 0.08 }, 7.37);
+    tl.to("#vo-cam2-w0", { color: "#8FF0BE", duration: 0.08 }, 116.98);
+    tl.to("#vo-cam2-w1", { color: "#8FF0BE", duration: 0.08 }, 117.11);
+    tl.to("#vo-cam2-w2", { color: "#8FF0BE", duration: 0.08 }, 117.46);
+    tl.to("#vo-cam2-w3", { color: "#8FF0BE", duration: 0.08 }, 117.67);
+    tl.to("#vo-cam2-w4", { color: "#8FF0BE", duration: 0.08 }, 117.81);
+    tl.to("#vo-cam2-w5", { color: "#8FF0BE", duration: 0.08 }, 117.95);
+    tl.to("#vo-cam2-w6", { color: "#8FF0BE", duration: 0.08 }, 118.16);
+    tl.to("#vo-cam4-w0", { color: "#8FF0BE", duration: 0.08 }, 159.14);
+    tl.to("#vo-cam4-w1", { color: "#8FF0BE", duration: 0.08 }, 159.63);
+    tl.to("#vo-cam4-w2", { color: "#8FF0BE", duration: 0.08 }, 160.16);
+    tl.to("#vo-cam4-w3", { color: "#8FF0BE", duration: 0.08 }, 160.37);
+    window.__timelines["captions"] = tl; tl.seek(0); })();</script>
+</template></body></html>

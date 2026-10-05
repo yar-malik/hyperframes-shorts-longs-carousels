@@ -1,0 +1,86 @@
+[
+ {
+  "id": "cam1",
+  "text": "Today I'll show you how to build an AI chat agent."
+ },
+ {
+  "id": "p2",
+  "text": "Because Saudi shoppers message at night, and nobody's there to answer."
+ },
+ {
+  "id": "t01",
+  "text": "Go to app dot voho dot A I and create an account. All you need is an email and a password."
+ },
+ {
+  "id": "t02",
+  "text": "This is the dashboard, and this is where your first agent starts."
+ },
+ {
+  "id": "t03",
+  "text": "Click create an agent, and start from scratch so you can see every setting."
+ },
+ {
+  "id": "t04",
+  "text": "Name it, and pick Arabic, Saudi Arabia, so it writes the way your customers do."
+ },
+ {
+  "id": "t05",
+  "text": "Here you pick the model. The voice only matters if you turn calls on too."
+ },
+ {
+  "id": "t06",
+  "text": "Now the instructions. I gave it the products and prices, delivery times by city, how people can pay, and the returns policy. And two rules: never ask for a card number, and never make up an order status."
+ },
+ {
+  "id": "t08",
+  "text": "Then the welcome message, the first thing a visitor sees. And save."
+ },
+ {
+  "id": "t09",
+  "text": "Now a function, so it can actually look things up. I pasted the store's link and added track order, which finds an order by its number."
+ },
+ {
+  "id": "t17",
+  "text": "Each function has fields the agent fills in, like the order number. You set those through the API, and the docs show you how."
+ },
+ {
+  "id": "t24",
+  "text": "Next, give the agent a public link. That's what the website widget runs on."
+ },
+ {
+  "id": "t25",
+  "text": "Then open On a website. Give it the name visitors see, add your site's address, and switch on chat. Only the sites on this list can use it."
+ },
+ {
+  "id": "t26",
+  "text": "And here's your snippet. Copy it, and paste it into your site before the closing body tag."
+ },
+ {
+  "id": "t27",
+  "text": "This is the store, with the widget in the corner. Open it, and the agent greets you."
+ },
+ {
+  "id": "t28",
+  "text": "First question, in Saudi Arabic: do you have wireless headphones, and how much are they?"
+ },
+ {
+  "id": "t29",
+  "text": "Then delivery: do you deliver to Jeddah, and how long does it take?"
+ },
+ {
+  "id": "t30",
+  "text": "And where's my order? That one's a function call to the store's own system."
+ },
+ {
+  "id": "t31",
+  "text": "And every chat lands in Conversations. This one's marked as a website chat, and it cost four cents."
+ },
+ {
+  "id": "cam2",
+  "text": "Now let's try it on the store."
+ },
+ {
+  "id": "cam4",
+  "text": "Build yours at app dot voho dot A I."
+ }
+]

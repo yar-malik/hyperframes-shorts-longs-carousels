@@ -1,0 +1,370 @@
+{
+  "email": "chat.agent.saudi.sto.demo+mupbdm2i@vohoai.com",
+  "password": "",
+  "base": "https://app.voho.ai",
+  "t0": 1790845845840,
+  "marks": [
+    {
+      "name": "step_t01",
+      "t": 2.876
+    },
+    {
+      "name": "toggle_signup",
+      "t": 3.633
+    },
+    {
+      "name": "email_focus",
+      "t": 5.116
+    },
+    {
+      "name": "create_account",
+      "t": 9.949
+    },
+    {
+      "name": "skip_onboarding",
+      "t": 20.015
+    },
+    {
+      "name": "end_t01",
+      "t": 20.067
+    },
+    {
+      "name": "step_t02",
+      "t": 20.067
+    },
+    {
+      "name": "end_t02",
+      "t": 26.216
+    },
+    {
+      "name": "step_t03",
+      "t": 26.216
+    },
+    {
+      "name": "create_agent",
+      "t": 26.952
+    },
+    {
+      "name": "start_from_scratch",
+      "t": 29.118
+    },
+    {
+      "name": "studio_loaded",
+      "t": 30.846
+    },
+    {
+      "name": "end_t03",
+      "t": 33.245
+    },
+    {
+      "name": "step_t04",
+      "t": 33.246
+    },
+    {
+      "name": "name_focus",
+      "t": 33.968
+    },
+    {
+      "name": "language_pick",
+      "t": 37.255
+    },
+    {
+      "name": "end_t04",
+      "t": 40.881
+    },
+    {
+      "name": "step_t05",
+      "t": 40.881
+    },
+    {
+      "name": "end_t05",
+      "t": 47.923
+    },
+    {
+      "name": "step_t06",
+      "t": 47.923
+    },
+    {
+      "name": "instructions_focus",
+      "t": 48.651
+    },
+    {
+      "name": "instructions_done",
+      "t": 60.321
+    },
+    {
+      "name": "end_t06",
+      "t": 64.24
+    },
+    {
+      "name": "step_t07",
+      "t": 64.24
+    },
+    {
+      "name": "end_t07",
+      "t": 66.44
+    },
+    {
+      "name": "step_t08",
+      "t": 66.44
+    },
+    {
+      "name": "greeting_focus",
+      "t": 67.168
+    },
+    {
+      "name": "greeting_done",
+      "t": 69.106
+    },
+    {
+      "name": "save",
+      "t": 70.335
+    },
+    {
+      "name": "saved",
+      "t": 71.138
+    },
+    {
+      "name": "end_t08",
+      "t": 72.913
+    },
+    {
+      "name": "step_t09",
+      "t": 72.914
+    },
+    {
+      "name": "functions",
+      "t": 73.65
+    },
+    {
+      "name": "fn_url",
+      "t": 75.3
+    },
+    {
+      "name": "add_function",
+      "t": 77.267
+    },
+    {
+      "name": "functions_done",
+      "t": 81.338
+    },
+    {
+      "name": "save_functions",
+      "t": 82.466
+    },
+    {
+      "name": "functions_saved",
+      "t": 83.775
+    },
+    {
+      "name": "end_t09",
+      "t": 84.169
+    },
+    {
+      "name": "params_set",
+      "t": 85.721,
+      "agentId": "c2068798-09ee-4d6e-986b-67f1294477f8"
+    },
+    {
+      "name": "step_t17",
+      "t": 85.721
+    },
+    {
+      "name": "docs_open",
+      "t": 93.803
+    },
+    {
+      "name": "end_t17",
+      "t": 97.138
+    },
+    {
+      "name": "studio_back",
+      "t": 105.081
+    },
+    {
+      "name": "step_t24",
+      "t": 105.082
+    },
+    {
+      "name": "public_demo",
+      "t": 105.825
+    },
+    {
+      "name": "share_click",
+      "t": 107.775
+    },
+    {
+      "name": "slug",
+      "t": 108.584,
+      "slug": "al-waha-electronics-website-chat-c20687"
+    },
+    {
+      "name": "end_t24",
+      "t": 112.484
+    },
+    {
+      "name": "step_t25",
+      "t": 112.484
+    },
+    {
+      "name": "embed",
+      "t": 113.209
+    },
+    {
+      "name": "embed_title",
+      "t": 114.957
+    },
+    {
+      "name": "origin_focus",
+      "t": 116.991
+    },
+    {
+      "name": "origin_add",
+      "t": 118.614
+    },
+    {
+      "name": "channel_voice",
+      "t": 121.325
+    },
+    {
+      "name": "embed_set",
+      "t": 121.948
+    },
+    {
+      "name": "end_t25",
+      "t": 124.345
+    },
+    {
+      "name": "step_t26",
+      "t": 124.345
+    },
+    {
+      "name": "copy_snippet",
+      "t": 127.024
+    },
+    {
+      "name": "end_t26",
+      "t": 132.304
+    },
+    {
+      "name": "step_t27",
+      "t": 132.304
+    },
+    {
+      "name": "site",
+      "t": 145.098
+    },
+    {
+      "name": "widget_open",
+      "t": 147.352
+    },
+    {
+      "name": "widget_greeted",
+      "t": 147.383
+    },
+    {
+      "name": "end_t27",
+      "t": 147.423
+    },
+    {
+      "name": "step_t28",
+      "t": 147.423
+    },
+    {
+      "name": "chat_1_focus",
+      "t": 148.169
+    },
+    {
+      "name": "chat_1_typed",
+      "t": 150.808
+    },
+    {
+      "name": "chat_1_send",
+      "t": 151.552
+    },
+    {
+      "name": "chat_1_reply",
+      "t": 165.591,
+      "text": "وعليكم السلام، أيوه عندنا سماعات لاسلكية. سعرها 349 ريال."
+    },
+    {
+      "name": "end_t28",
+      "t": 166.829
+    },
+    {
+      "name": "step_t29",
+      "t": 166.83
+    },
+    {
+      "name": "chat_2_focus",
+      "t": 167.551
+    },
+    {
+      "name": "chat_2_typed",
+      "t": 169.221
+    },
+    {
+      "name": "chat_2_send",
+      "t": 169.968
+    },
+    {
+      "name": "chat_2_reply",
+      "t": 172.539,
+      "text": "إي نوصل جدة، والتوصيل ياخذ من يومين لأربعة أيام."
+    },
+    {
+      "name": "end_t29",
+      "t": 173.777
+    },
+    {
+      "name": "step_t30",
+      "t": 173.777
+    },
+    {
+      "name": "chat_3_focus",
+      "t": 174.501
+    },
+    {
+      "name": "chat_3_typed",
+      "t": 176.006
+    },
+    {
+      "name": "chat_3_send",
+      "t": 176.75
+    },
+    {
+      "name": "chat_3_reply",
+      "t": 179.99,
+      "text": "أهلاً بك، طلبك رقم 4533 لشاحن سريع حالياً في المستودع بالرياض.\nيطلع بكرة الصبح، ويوصلك جدة خلال يومين بإذن الله."
+    },
+    {
+      "name": "end_t30",
+      "t": 181.229
+    },
+    {
+      "name": "step_t31",
+      "t": 181.229
+    },
+    {
+      "name": "conversations",
+      "t": 188.398
+    },
+    {
+      "name": "end_t31",
+      "t": 222.493
+    },
+    {
+      "name": "chat_done",
+      "t": 222.494,
+      "replies": [
+        "وعليكم السلام، أيوه عندنا سماعات لاسلكية. سعرها 349 ريال.",
+        "إي نوصل جدة، والتوصيل ياخذ من يومين لأربعة أيام.",
+        "أهلاً بك، طلبك رقم 4533 لشاحن سريع حالياً في المستودع بالرياض.\nيطلع بكرة الصبح، ويوصلك جدة خلال يومين بإذن الله."
+      ]
+    },
+    {
+      "name": "done",
+      "t": 223.995
+    }
+  ]
+}

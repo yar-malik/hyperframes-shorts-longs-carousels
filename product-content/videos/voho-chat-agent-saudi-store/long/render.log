@@ -1,0 +1,717 @@
+
+◆  Rendering long → /Users/yar/IdeaProjects/yarmalik.com/videos/voho-chat-agent-saudi-store/long/renders/long.mp4
+   30fps · standard · auto workers (14 cores detected)
+   GPU: browser GPU (auto-detect)
+
+[?25l│
+◇  Browser: cache
+[?25h
+  Lint: 0 error(s), 5 warning(s) — run with --lint-verbose for full output.
+  Continuing render despite lint issues. Use --strict to block errors.
+
+  Parallel drawElement capture stays off for this install (a previous render had to fall back). Re-enable with HF_DE_PARALLEL_ROUTER=true.
+[INFO] [Render] Pipeline started {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","platform":"darwin","arch":"arm64","nodeVersion":"v22.22.3","fps":{"num":30,"den":1},"format":"mp4","quality":"standard","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"pipeline","status":"checkpoint","elapsedMs":2,"message":"started","format":"mp4","quality":"standard","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"compile","status":"start","elapsedMs":3,"needsAlpha":false}
+  █░░░░░░░░░░░░░░░░░░░░░░░░  5%  Compiling composition
+[INFO] [Compiler] Inlined CDN script: https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js
+[INFO] [Compiler] Embedded local font file: assets/fonts/Geist-Regular.woff2 (44 KB → data URI)
+[INFO] [Compiler] Embedded local font file: assets/fonts/Geist-Medium.woff2 (45 KB → data URI)
+[INFO] [Compiler] Embedded local font file: assets/fonts/Geist-SemiBold.woff2 (45 KB → data URI)
+[INFO] Compiled composition metadata {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","entryFile":"index.html","staticDuration":171,"width":1920,"height":1080,"videoCount":13,"audioCount":371,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"compile","status":"end","elapsedMs":1468,"durationMs":1465,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"compile","status":"checkpoint","elapsedMs":1469,"message":"composition metadata resolved","width":1920,"height":1080,"videoCount":13,"audioCount":371,"imageCount":1,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"af869addc712fafe"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"browser_probe","status":"start","elapsedMs":1469,"forceScreenshot":false,"stagePhase":"calibrating"}
+[WARN] [Compiler] WARNING: Video "shot-s0" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "shot-s1" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "shot-s2" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "shot-s3" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "shot-s4" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "shot-s5" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "shot-s6" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "shot-s8" has sparse keyframes (max interval: 8.33s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/take-a.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "paint-a" has sparse keyframes (max interval: 4s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/painted.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[WARN] [Compiler] WARNING: Video "paint-c" has sparse keyframes (max interval: 4s). This causes seek failures and frame freezing. Re-encode with: ffmpeg -i "assets/painted.mp4" -c:v libx264 -r 30 -g 30 -keyint_min 30 -movflags +faststart -c:a copy output.mp4
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"browser_probe","status":"end","elapsedMs":2013,"durationMs":544,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"browser_probe","status":"checkpoint","elapsedMs":2014,"message":"duration resolved","durationSeconds":171,"totalFrames":5130,"compositionHash":"af869addc712fafe","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"video_extract","status":"start","elapsedMs":2014,"videoCount":13}
+[INFO] Probing video color spaces... {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","videoCount":13}
+  ██░░░░░░░░░░░░░░░░░░░░░░░  10%  Extracting video frames
+[INFO] Extracting frames from video 1/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 2/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 3/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 4/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 5/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 6/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 7/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 8/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 9/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 10/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 11/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 12/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] Extracting frames from video 13/13 {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","sourceType":"local"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"video_extract","status":"end","elapsedMs":5167,"durationMs":3153,"videoCount":13}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"video_extract","status":"checkpoint","elapsedMs":5171,"message":"frames resolved","videoCount":13,"extractedVideoCount":13,"totalFramesExtracted":5209,"maxFramesPerVideo":1293,"avgFramesPerExtractedVideo":401,"vfrPreflightCount":0,"vfrPreflightMs":0,"cacheHits":8,"cacheMisses":5,"transientRetries":0,"minVideoFrameCoverageRatio":1,"authoredTimedClipCount":417}
+[INFO] [Render] No HDR sources detected — rendering SDR {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"hdr_detection","status":"checkpoint","elapsedMs":5171,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"audio_process","status":"start","elapsedMs":5171,"audioCount":371}
+  █████░░░░░░░░░░░░░░░░░░░░  20%  Processing audio tracks
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"audio_process","status":"checkpoint","elapsedMs":35173,"message":"stage still running","audioCount":371,"heartbeatIndex":1,"stageElapsedMs":30001}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"audio_process","status":"end","elapsedMs":42344,"durationMs":37172,"audioCount":371}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"file_server","status":"start","elapsedMs":42344,"reused":false}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"file_server","status":"end","elapsedMs":42347,"durationMs":3}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Checking browser GPU
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (Apple)" renderer="ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)")
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"capture_calibration","status":"checkpoint","elapsedMs":42669,"message":"skipped","requestedWorkers":"auto","totalFrames":5130,"htmlInCanvasDetected":false,"lowMemoryMode":false,"deInversionEligible":true,"deParallelRouterEligible":false}
+[WARN] [Render] 5 capture workers may exceed this process's V8 heap (limit 4144MB supports ~4). If the render dies with "JavaScript heap out of memory", raise the heap (NODE_OPTIONS=--max-old-space-size=8192) or pass --workers 4. {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","heapLimitMb":4144,"heapBasedWorkers":4}
+[INFO] [Render] Fast capture: single-worker drawElement streaming preferred over 5-worker screenshot capture (5130 frames >= 900; verified path, measured faster at every worker count). Set HF_DE_SINGLE_MIN_FRAMES=0 or --workers N to override. {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"worker_resolution","status":"checkpoint","elapsedMs":42670,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":171,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"capture_strategy","status":"checkpoint","elapsedMs":42670,"message":"resolved","workerCount":1,"forceScreenshot":false,"captureBeyondViewport":true,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"capture_streaming","status":"start","elapsedMs":42670,"stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":5130,"framesCompleted":0,"captureMode":"drawelement","captureOperation":"drawElement"}
+[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, screenshot, gl=--use-gl=angle --use-angle=metal, headlessShell=true, platform=darwin)
+[initSession:screenshot] page.goto start (0ms)
+[HyperFrames] render runtime fps [object Object]
+[initSession:screenshot] page.goto complete (382ms)
+[initSession:screenshot] GSAP proxy flush complete (470ms)
+[initSession:screenshot] pollHfReady complete (484ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (641ms)
+[initSession:screenshot] applyVideoMetadataHints complete (654ms)
+[initSession:screenshot] media + fonts + tailwind ready (660ms)
+[initSession:screenshot] captureBeyondViewport downgraded: page content fits the capture viewport (662ms)
+[initSession:screenshot] timeline at-risk predictor: 0/5130 frames (0%) (725ms)
+[initSession:screenshot] static-frame dedup: disabled (before-capture hook / video injection active) (727ms)
+[initSession:screenshot] drawElement self-verify armed: 4 ground-truth frame(s) @ [1283, 2565, 3848, 4880] of 5130 (1282ms)
+[initSession:drawelement] drawElement canvas injected (1293ms)
+[initSession:drawelement] screenshot fallback: 1570 clip-boundary frame(s) (1299ms)
+[initSession:drawelement] drawElement worker encode initialized (1301ms)
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 1/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 7/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 12/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 17/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 22/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 27/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 32/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 37/5130
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 42/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 47/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 52/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 57/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 63/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 68/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 73/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 78/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 84/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 89/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 94/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 99/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 104/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 109/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 115/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 120/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 125/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 130/5130
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 135/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 141/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 146/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 151/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 156/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 162/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 168/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 173/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 178/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 183/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 188/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 193/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 198/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 203/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 209/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 215/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 221/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 226/5130
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 232/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 239/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 245/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 251/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 256/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 262/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 268/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 275/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 281/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 287/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 295/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 301/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 307/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 314/5130
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 322/5130
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":323,"bytes":69953,"floor":74135}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":323,"bytes":69953}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":324,"bytes":61342,"floor":74000}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":324,"bytes":61342}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":325,"bytes":56238,"floor":73981}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":325,"bytes":56238}
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 326/5130
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":326,"bytes":44880,"floor":73978}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":326,"bytes":44880}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":327,"bytes":35191,"floor":73929}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":327,"bytes":35191}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":328,"bytes":35167,"floor":73881}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":328,"bytes":35167}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":329,"bytes":35172,"floor":73881}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":329,"bytes":35172}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":330,"bytes":35173,"floor":73881}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":330,"bytes":35173}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 335/5130
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":336,"bytes":43113,"floor":73258}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":336,"bytes":43113}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":337,"bytes":45631,"floor":60361}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":337,"bytes":45631}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":338,"bytes":47317,"floor":60294}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":338,"bytes":47317}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":339,"bytes":47808,"floor":59824}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":339,"bytes":47808}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":340,"bytes":47791,"floor":59670}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":340,"bytes":47791}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":341,"bytes":47818,"floor":59663}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":341,"bytes":47818}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 342/5130
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":342,"bytes":47632,"floor":59454}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":342,"bytes":47632}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":343,"bytes":47405,"floor":59028}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":343,"bytes":47405}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":344,"bytes":47485,"floor":57791}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":344,"bytes":47485}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":345,"bytes":47516,"floor":54171}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":345,"bytes":47516}
+[WARN] [Render] drawElement blank-frame suspect; re-capturing {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":346,"bytes":47500,"floor":48930}
+[INFO] [Render] drawElement small frame is deterministic; accepted {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":346,"bytes":47500}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 351/5130
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 366/5130
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 381/5130
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 396/5130
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 411/5130
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 426/5130
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 441/5130
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 456/5130
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 471/5130
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 487/5130
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 502/5130
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 517/5130
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 532/5130
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 547/5130
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 562/5130
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 577/5130
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 592/5130
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 604/5130
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 619/5130
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 633/5130
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 648/5130
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 664/5130
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 680/5130
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 691/5130
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 705/5130
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 720/5130
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 735/5130
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 750/5130
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 764/5130
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 779/5130
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 791/5130
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 802/5130
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 812/5130
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 824/5130
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 837/5130
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 849/5130
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 862/5130
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 874/5130
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 888/5130
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 902/5130
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 916/5130
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 930/5130
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 944/5130
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 956/5130
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 970/5130
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 984/5130
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 997/5130
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 1011/5130
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"capture_streaming","status":"checkpoint","elapsedMs":72671,"message":"stage still running","stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":5130,"framesCompleted":1021,"captureMode":"drawelement","captureOperation":"drawElement","heartbeatIndex":1,"stageElapsedMs":30001}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 1024/5130
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 1038/5130
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 1050/5130
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 1064/5130
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 1078/5130
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 1092/5130
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 1105/5130
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 1119/5130
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 1133/5130
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 1145/5130
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 1160/5130
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 1175/5130
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 1190/5130
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 1206/5130
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 1220/5130
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 1234/5130
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 1248/5130
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 1259/5130
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 1273/5130
+[INFO] [Render] drawElement self-verify passed {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":1283,"psnrDb":"inf"}
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 1285/5130
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 1299/5130
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 1312/5130
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 1324/5130
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 1335/5130
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 1349/5130
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 1361/5130
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 1374/5130
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 1388/5130
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 1402/5130
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 1416/5130
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 1429/5130
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 1438/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1451/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1464/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1476/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1487/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1499/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1512/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1524/5130
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 1537/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1548/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1560/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1572/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1585/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1594/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1606/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1615/5130
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 1629/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1643/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1655/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1665/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1677/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1690/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1702/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1711/5130
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 1723/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1732/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1740/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1749/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1760/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1769/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1779/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1790/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1798/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1808/5130
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 1817/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1825/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1836/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1845/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1854/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1861/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1870/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1878/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1886/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1894/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1902/5130
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 1911/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1919/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1927/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1935/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1943/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1951/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1959/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1967/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1975/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1984/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 1993/5130
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 2001/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2009/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2019/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2028/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2037/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2045/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2056/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2066/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2075/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2083/5130
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 2092/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2100/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2108/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2116/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2124/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2132/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2140/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2148/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2156/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2164/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2172/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2180/5130
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 2188/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2196/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2204/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2212/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2220/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2228/5130
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"capture_streaming","status":"checkpoint","elapsedMs":102672,"message":"stage still running","stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":5130,"framesCompleted":2235,"captureMode":"drawelement","captureOperation":"drawElement","heartbeatIndex":2,"stageElapsedMs":60002}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2236/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2244/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2252/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2260/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2268/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2276/5130
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 2284/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2292/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2300/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2304/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2312/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2319/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2327/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2335/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2343/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2351/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2359/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2367/5130
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 2375/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2383/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2391/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2397/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2405/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2413/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2421/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2429/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2437/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2445/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2453/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2461/5130
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 2469/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2476/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2483/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2491/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2499/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2507/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2515/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2523/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2531/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2539/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2545/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2552/5130
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 2559/5130
+[INFO] [Render] drawElement self-verify passed {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":2565,"psnrDb":74.3}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2566/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2574/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2582/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2590/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2598/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2607/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2615/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2624/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2634/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2641/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2649/5130
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 2658/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2664/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2673/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2681/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2688/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2696/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2704/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2712/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2720/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2727/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2735/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2743/5130
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 2751/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2759/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2767/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2775/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2783/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2790/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2796/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2804/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2812/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2820/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2828/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2836/5130
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 2841/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2849/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2857/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2866/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2873/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2879/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2887/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2895/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2903/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2909/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2917/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2925/5130
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 2933/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2941/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2949/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2957/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2965/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2973/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2981/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2989/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 2997/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 3005/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 3013/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 3021/5130
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 3029/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3037/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3045/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3053/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3061/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3069/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3077/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3085/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3092/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3100/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3107/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3115/5130
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 3123/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3131/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3139/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3147/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3154/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3161/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3169/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3177/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3185/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3193/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3201/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3209/5130
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 3217/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3225/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3233/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3241/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3249/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3257/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3265/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3273/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3281/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3289/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3297/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3305/5130
+  ███████████████░░░░░░░░░░  60%  Streaming frame 3311/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3319/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3327/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3335/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3343/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3351/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3359/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3367/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3375/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3383/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3391/5130
+  ███████████████░░░░░░░░░░  61%  Streaming frame 3399/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3407/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3415/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3422/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3430/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3438/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3446/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3454/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3462/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3470/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3479/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3487/5130
+  ███████████████░░░░░░░░░░  62%  Streaming frame 3495/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3507/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3515/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3523/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3531/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3539/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3543/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3551/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3559/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3570/5130
+  ███████████████░░░░░░░░░░  63%  Streaming frame 3585/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3600/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3609/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3618/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3628/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3639/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3650/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3662/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3672/5130
+  ████████████████░░░░░░░░░  64%  Streaming frame 3682/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3692/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3702/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3712/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3721/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3731/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3741/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3753/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3765/5130
+  ████████████████░░░░░░░░░  65%  Streaming frame 3777/5130
+  ████████████████░░░░░░░░░  66%  Streaming frame 3785/5130
+  ████████████████░░░░░░░░░  66%  Streaming frame 3794/5130
+  ████████████████░░░░░░░░░  66%  Streaming frame 3804/5130
+  ████████████████░░░░░░░░░  66%  Streaming frame 3815/5130
+  ████████████████░░░░░░░░░  66%  Streaming frame 3827/5130
+  ████████████████░░░░░░░░░  66%  Streaming frame 3839/5130
+[INFO] [Render] drawElement self-verify passed {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":3848,"psnrDb":"inf"}
+  ████████████████░░░░░░░░░  66%  Streaming frame 3849/5130
+  ████████████████░░░░░░░░░  66%  Streaming frame 3862/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3874/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3887/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3900/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3912/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3923/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3934/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3946/5130
+  ████████████████░░░░░░░░░  67%  Streaming frame 3959/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 3970/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 3983/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 3994/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 4005/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 4016/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 4027/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 4039/5130
+  █████████████████░░░░░░░░  68%  Streaming frame 4050/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4062/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4074/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4086/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4096/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4104/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4117/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4129/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4138/5130
+  █████████████████░░░░░░░░  69%  Streaming frame 4147/5130
+  █████████████████░░░░░░░░  70%  Streaming frame 4160/5130
+  █████████████████░░░░░░░░  70%  Streaming frame 4173/5130
+  █████████████████░░░░░░░░  70%  Streaming frame 4185/5130
+  █████████████████░░░░░░░░  70%  Streaming frame 4195/5130
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"capture_streaming","status":"checkpoint","elapsedMs":162674,"message":"stage still running","stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":5130,"framesCompleted":4203,"captureMode":"drawelement","captureOperation":"drawElement","heartbeatIndex":3,"stageElapsedMs":120004}
+  █████████████████░░░░░░░░  70%  Streaming frame 4207/5130
+  █████████████████░░░░░░░░  70%  Streaming frame 4218/5130
+  █████████████████░░░░░░░░  70%  Streaming frame 4229/5130
+  █████████████████░░░░░░░░  70%  Streaming frame 4242/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4253/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4264/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4274/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4287/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4295/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4303/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4311/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4319/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4327/5130
+  █████████████████░░░░░░░░  71%  Streaming frame 4335/5130
+  ██████████████████░░░░░░░  72%  Streaming frame 4348/5130
+  ██████████████████░░░░░░░  72%  Streaming frame 4363/5130
+  ██████████████████░░░░░░░  72%  Streaming frame 4378/5130
+  ██████████████████░░░░░░░  72%  Streaming frame 4393/5130
+  ██████████████████░░░░░░░  72%  Streaming frame 4408/5130
+  ██████████████████░░░░░░░  72%  Streaming frame 4423/5130
+  ██████████████████░░░░░░░  73%  Streaming frame 4438/5130
+  ██████████████████░░░░░░░  73%  Streaming frame 4453/5130
+  ██████████████████░░░░░░░  73%  Streaming frame 4464/5130
+  ██████████████████░░░░░░░  73%  Streaming frame 4478/5130
+  ██████████████████░░░░░░░  73%  Streaming frame 4492/5130
+  ██████████████████░░░░░░░  73%  Streaming frame 4505/5130
+  ██████████████████░░░░░░░  73%  Streaming frame 4519/5130
+  ██████████████████░░░░░░░  74%  Streaming frame 4533/5130
+  ██████████████████░░░░░░░  74%  Streaming frame 4548/5130
+  ██████████████████░░░░░░░  74%  Streaming frame 4563/5130
+  ██████████████████░░░░░░░  74%  Streaming frame 4579/5130
+  ██████████████████░░░░░░░  74%  Streaming frame 4593/5130
+  ██████████████████░░░░░░░  74%  Streaming frame 4608/5130
+  ██████████████████░░░░░░░  75%  Streaming frame 4623/5130
+  ██████████████████░░░░░░░  75%  Streaming frame 4638/5130
+  ██████████████████░░░░░░░  75%  Streaming frame 4651/5130
+  ██████████████████░░░░░░░  75%  Streaming frame 4664/5130
+  ██████████████████░░░░░░░  75%  Streaming frame 4677/5130
+  ██████████████████░░░░░░░  75%  Streaming frame 4691/5130
+  ██████████████████░░░░░░░  75%  Streaming frame 4704/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4719/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4726/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4732/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4737/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4742/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4746/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4752/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4758/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4764/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4769/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4774/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4779/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4784/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4789/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4794/5130
+  ███████████████████░░░░░░  76%  Streaming frame 4800/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4805/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4810/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4815/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4819/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4823/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4828/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4833/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4838/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4841/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4846/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4851/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4853/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4858/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4864/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4869/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4874/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4880/5130
+[INFO] [Render] drawElement self-verify passed {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","frame":4880,"psnrDb":54.9}
+  ███████████████████░░░░░░  77%  Streaming frame 4884/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4890/5130
+  ███████████████████░░░░░░  77%  Streaming frame 4895/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4901/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4906/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4911/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4916/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4921/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4927/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4933/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4935/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4940/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4945/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4950/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4956/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4961/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4966/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4971/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4976/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4981/5130
+  ███████████████████░░░░░░  78%  Streaming frame 4986/5130
+  ███████████████████░░░░░░  79%  Streaming frame 4991/5130
+  ███████████████████░░░░░░  79%  Streaming frame 4996/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5002/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5007/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5012/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5018/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5023/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5028/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5033/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5038/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5043/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5048/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5054/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5059/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5064/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5069/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5074/5130
+  ███████████████████░░░░░░  79%  Streaming frame 5079/5130
+  ████████████████████░░░░░  80%  Streaming frame 5084/5130
+  ████████████████████░░░░░  80%  Streaming frame 5090/5130
+  ████████████████████░░░░░  80%  Streaming frame 5095/5130
+  ████████████████████░░░░░  80%  Streaming frame 5100/5130
+  ████████████████████░░░░░  80%  Streaming frame 5106/5130
+  ████████████████████░░░░░  80%  Streaming frame 5111/5130
+  ████████████████████░░░░░  80%  Streaming frame 5116/5130
+  ████████████████████░░░░░  80%  Streaming frame 5122/5130
+  ████████████████████░░░░░  80%  Streaming frame 5127/5130
+  ████████████████████░░░░░  80%  Streaming frame 5130/5130
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"capture_streaming","status":"end","elapsedMs":195713,"durationMs":153043,"stagePhase":"capturing","workerCount":1,"forceScreenshot":false,"totalFrames":5130,"framesCompleted":5130,"captureMode":"drawelement","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"assemble","status":"start","elapsedMs":195714,"stagePhase":"capturing","hasAudio":true,"workerCount":1,"forceScreenshot":false,"totalFrames":5130,"framesCompleted":5130,"captureMode":"drawelement","captureOperation":"encode"}
+  ██████████████████████░░░  90%  Assembling final video
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"assemble","status":"end","elapsedMs":198469,"durationMs":2755,"stagePhase":"capturing","hasAudio":true,"workerCount":1,"forceScreenshot":false,"totalFrames":5130,"framesCompleted":5130,"captureMode":"drawelement","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"0be45e63-8568-4e65-a68a-6a043fed2b64","phase":"pipeline","status":"checkpoint","elapsedMs":198547,"message":"artifact validated","totalElapsedMs":198521}
+  █████████████████████████  100%  Render complete
+
+◇  /Users/yar/IdeaProjects/yarmalik.com/videos/voho-chat-agent-saudi-store/long/renders/long.mp4
+   98.7 MB · 2m 51.0s video · rendered in 3m 18.6s
+   drawelement capture · hardware gpu · compile 2.0s · extract 3.2s · audio 37.2s · probe 0.5s · setup 0.3s · capture 2m 33.0s · encode (during capture) 2m 33.0s · assemble 2.8s

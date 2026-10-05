@@ -1,0 +1,22 @@
+== attempt 1 15:51:54
+Error: upload → 499 Client Closed Request
+    at post (file:///Users/yar/IdeaProjects/yarmalik.com/scripts/content/socialit.mjs:78:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///Users/yar/IdeaProjects/yarmalik.com/scripts/content/socialit.mjs:149:3
+
+Node.js v22.22.3
+== attempt 2 15:57:54
+Error: upload → 429 {"statusCode":429,"error":"Too Many Requests","message":"Rate limit exceeded, retry in 3 minutes"}
+    at post (file:///Users/yar/IdeaProjects/yarmalik.com/scripts/content/socialit.mjs:78:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///Users/yar/IdeaProjects/yarmalik.com/scripts/content/socialit.mjs:149:3
+
+Node.js v22.22.3
+== attempt 3 16:02:55
+Error: upload → 504 Gateway Timeout
+    at post (file:///Users/yar/IdeaProjects/yarmalik.com/scripts/content/socialit.mjs:78:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///Users/yar/IdeaProjects/yarmalik.com/scripts/content/socialit.mjs:149:3
+
+Node.js v22.22.3
+== attempt 4 16:08:56

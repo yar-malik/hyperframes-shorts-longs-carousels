@@ -1,0 +1,20 @@
+Only if Yar wants to remake this thumbnail by hand in the ChatGPT app (never the API).
+
+Upload these, in this order:
+  1. content/references/thumbnails/youtube-its-free-claude.png
+  2. content/references/thumbnails/youtube-claude-beginner-to-pro.png
+  3. content/avatar/yar-point-cutout.png
+  4. videos/voho-chat-agent-saudi-store/thumb-object.png
+  5. videos/voho-chat-agent-saudi-store/thumb-youtube.png
+
+Then paste this:
+
+Make a 1280×720 YouTube thumbnail in exactly the style of the first two images (my own thumbnails). Use the man in
+the third image: keep his face exactly as it is in that photo, only the pose, crop and lighting around him may change.
+He's on the right, surprised, pointing at the fourth image, which glows on the left with a white edge and a strong
+blue glow, tilted a few degrees. Put "Arabic" in heavy white letters with "Chat" in a glowing blue box. A small white stamp on the object says "REAL CHAT".
+At the bottom left, an blue pill says "SAUDI STORE · AI CHAT". Background: a deep blue glow.
+Nothing else on it: no extra text, no logos I didn't give you. The fifth image is a rough layout to follow.
+
+Check the face looks exactly like him before using it. If it drifts, ask again or use the draft.
+Save it as videos/voho-chat-agent-saudi-store/thumb-youtube-final.png and set it in YouTube Studio.

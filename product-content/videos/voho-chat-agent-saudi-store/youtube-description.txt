@@ -1,0 +1,10 @@
+I build an AI chat agent on Voho for a Saudi online store, set it to Saudi Arabic, and put it on the store's website with one script tag.
+
+On the live site, a shopper asks in Saudi Arabic about wireless headphones, delivery to Jeddah, and where order 4533 is. The agent answers the price (349 riyals) and the delivery time from its instructions, and looks the order up with a function call to the store's own system.
+
+Covered: creating the agent, the Arabic instructions and rules, a track_order function, the public link, the website widget settings (the name visitors see, which sites may use it, chat only), the snippet, and where every chat ends up in Conversations.
+
+Everything is real: the Voho console, the widget and the chat. The store is a demo I built for this video; its products and prices are invented.
+
+Try it: https://app.voho.ai
+Functions and their fields: https://docs.voho.ai/actions
