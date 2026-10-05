@@ -1,0 +1,565 @@
+{
+  "email": "voho.tutorial.build..demo+muil9xdz@vohoai.com",
+  "password": "",
+  "base": "https://app.voho.ai",
+  "t0": 1790439206809,
+  "marks": [
+    {
+      "name": "step_t01",
+      "t": 2.287
+    },
+    {
+      "name": "toggle_signup",
+      "t": 3.038
+    },
+    {
+      "name": "email_focus",
+      "t": 4.521
+    },
+    {
+      "name": "create_account",
+      "t": 9.138
+    },
+    {
+      "name": "skip_onboarding",
+      "t": 18.337
+    },
+    {
+      "name": "end_t01",
+      "t": 18.43
+    },
+    {
+      "name": "step_t02",
+      "t": 18.43
+    },
+    {
+      "name": "end_t02",
+      "t": 26.853
+    },
+    {
+      "name": "step_t03",
+      "t": 26.853
+    },
+    {
+      "name": "create_agent",
+      "t": 27.586
+    },
+    {
+      "name": "start_from_scratch",
+      "t": 29.754
+    },
+    {
+      "name": "studio_loaded",
+      "t": 31.117
+    },
+    {
+      "name": "end_t03",
+      "t": 33.883
+    },
+    {
+      "name": "step_t04",
+      "t": 33.883
+    },
+    {
+      "name": "name_focus",
+      "t": 34.603
+    },
+    {
+      "name": "language_pick",
+      "t": 37.307
+    },
+    {
+      "name": "end_t04",
+      "t": 45.186
+    },
+    {
+      "name": "step_t05",
+      "t": 45.186
+    },
+    {
+      "name": "end_t05",
+      "t": 52.866
+    },
+    {
+      "name": "step_t06",
+      "t": 52.866
+    },
+    {
+      "name": "instructions_focus",
+      "t": 53.603
+    },
+    {
+      "name": "instructions_done",
+      "t": 60.133
+    },
+    {
+      "name": "end_t06",
+      "t": 68.765
+    },
+    {
+      "name": "step_t07",
+      "t": 68.765
+    },
+    {
+      "name": "end_t07",
+      "t": 76.724
+    },
+    {
+      "name": "step_t08",
+      "t": 76.724
+    },
+    {
+      "name": "greeting_focus",
+      "t": 77.452
+    },
+    {
+      "name": "greeting_done",
+      "t": 79.912
+    },
+    {
+      "name": "save",
+      "t": 81.15
+    },
+    {
+      "name": "saved",
+      "t": 81.963
+    },
+    {
+      "name": "end_t08",
+      "t": 85.426
+    },
+    {
+      "name": "caller_lines_ready",
+      "t": 91.005
+    },
+    {
+      "name": "call_start",
+      "t": 92.652
+    },
+    {
+      "name": "call_live",
+      "t": 94.421
+    },
+    {
+      "name": "agent_greeted",
+      "t": 101.24,
+      "transcript": [
+        {
+          "who": "Layla",
+          "text": "اهلا وسهلا في عياده الروضه لطب الاسنان معك ليلى كيف اقدر اساعدك؟"
+        }
+      ]
+    },
+    {
+      "name": "caller_1_start",
+      "t": 101.24,
+      "text": "السلام عليكم، أبغى موعد تنظيف أسنان."
+    },
+    {
+      "name": "caller_1_end",
+      "t": 104.108,
+      "dur": 2.856
+    },
+    {
+      "name": "agent_reply_1",
+      "t": 110.519,
+      "transcript": [
+        {
+          "who": "Layla",
+          "text": "اهلا وسهلا في عياده الروضه لطب الاسنان معك ليلى كيف اقدر اساعدك؟"
+        },
+        {
+          "who": "You",
+          "text": "السلام عليكم ابغى موعد تنظيف اسنان."
+        },
+        {
+          "who": "Layla",
+          "text": "وعليكم السلام حياك الله اي يوم يناسبك للموعد؟"
+        }
+      ]
+    },
+    {
+      "name": "caller_2_start",
+      "t": 111.019,
+      "text": "يوم الثلاثاء الجاي بعد العصر إذا ممكن."
+    },
+    {
+      "name": "caller_2_end",
+      "t": 113.836,
+      "dur": 2.808
+    },
+    {
+      "name": "agent_reply_2",
+      "t": 120.262,
+      "transcript": [
+        {
+          "who": "Layla",
+          "text": "اهلا وسهلا في عياده الروضه لطب الاسنان معك ليلى كيف اقدر اساعدك؟"
+        },
+        {
+          "who": "You",
+          "text": "السلام عليكم ابغى موعد تنظيف اسنان."
+        },
+        {
+          "who": "Layla",
+          "text": "وعليكم السلام حياك الله اي يوم يناسبك للموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "يوم الثلاثاء الجاي بعد العصر إذا ممكن."
+        },
+        {
+          "who": "Layla",
+          "text": "الثلاثاء الجاي بيكون متاح الساعة 5 العصر يناسبك؟"
+        }
+      ]
+    },
+    {
+      "name": "caller_3_start",
+      "t": 120.764,
+      "text": "تمام، الساعة خمس مناسبة لي."
+    },
+    {
+      "name": "caller_3_end",
+      "t": 123.815,
+      "dur": 3.048
+    },
+    {
+      "name": "agent_reply_3",
+      "t": 130.246,
+      "transcript": [
+        {
+          "who": "Layla",
+          "text": "اهلا وسهلا في عياده الروضه لطب الاسنان معك ليلى كيف اقدر اساعدك؟"
+        },
+        {
+          "who": "You",
+          "text": "السلام عليكم ابغى موعد تنظيف اسنان."
+        },
+        {
+          "who": "Layla",
+          "text": "وعليكم السلام حياك الله اي يوم يناسبك للموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "يوم الثلاثاء الجاي بعد العصر إذا ممكن."
+        },
+        {
+          "who": "Layla",
+          "text": "الثلاثاء الجاي بيكون متاح الساعة 5 العصر يناسبك؟"
+        },
+        {
+          "who": "You",
+          "text": "تمام الساعه 5 مناسبه لي"
+        },
+        {
+          "who": "Layla",
+          "text": "تمام ممكن تزوديني بالاسم ورقم الجوال لاكد لك الموعد؟"
+        }
+      ]
+    },
+    {
+      "name": "caller_4_start",
+      "t": 130.748,
+      "text": "اسمي خالد العتيبي، وجوالي صفر خمسة خمسة، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة."
+    },
+    {
+      "name": "caller_4_end",
+      "t": 137.932,
+      "dur": 7.176
+    },
+    {
+      "name": "agent_reply_4",
+      "t": 146.642,
+      "transcript": [
+        {
+          "who": "Layla",
+          "text": "اهلا وسهلا في عياده الروضه لطب الاسنان معك ليلى كيف اقدر اساعدك؟"
+        },
+        {
+          "who": "You",
+          "text": "السلام عليكم ابغى موعد تنظيف اسنان."
+        },
+        {
+          "who": "Layla",
+          "text": "وعليكم السلام حياك الله اي يوم يناسبك للموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "يوم الثلاثاء الجاي بعد العصر إذا ممكن."
+        },
+        {
+          "who": "Layla",
+          "text": "الثلاثاء الجاي بيكون متاح الساعة 5 العصر يناسبك؟"
+        },
+        {
+          "who": "You",
+          "text": "تمام الساعه 5 مناسبه لي"
+        },
+        {
+          "who": "Layla",
+          "text": "تمام ممكن تزوديني بالاسم ورقم الجوال لاكد لك الموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "اسمي خالد العتيبي وجوالي 0551234567"
+        },
+        {
+          "who": "Layla",
+          "text": "تم تأكيد موعدك يا خالد يوم الثلاثاء الساعة 5:00 العصر لتنظيف الاسنان. نشوفك على خير."
+        }
+      ]
+    },
+    {
+      "name": "caller_5_start",
+      "t": 147.144,
+      "text": "مشكورة، مع السلامة."
+    },
+    {
+      "name": "caller_5_end",
+      "t": 149.48,
+      "dur": 2.328
+    },
+    {
+      "name": "agent_reply_5",
+      "t": 154.903,
+      "transcript": [
+        {
+          "who": "Layla",
+          "text": "اهلا وسهلا في عياده الروضه لطب الاسنان معك ليلى كيف اقدر اساعدك؟"
+        },
+        {
+          "who": "You",
+          "text": "السلام عليكم ابغى موعد تنظيف اسنان."
+        },
+        {
+          "who": "Layla",
+          "text": "وعليكم السلام حياك الله اي يوم يناسبك للموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "يوم الثلاثاء الجاي بعد العصر إذا ممكن."
+        },
+        {
+          "who": "Layla",
+          "text": "الثلاثاء الجاي بيكون متاح الساعة 5 العصر يناسبك؟"
+        },
+        {
+          "who": "You",
+          "text": "تمام الساعه 5 مناسبه لي"
+        },
+        {
+          "who": "Layla",
+          "text": "تمام ممكن تزوديني بالاسم ورقم الجوال لاكد لك الموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "اسمي خالد العتيبي وجوالي 0551234567"
+        },
+        {
+          "who": "Layla",
+          "text": "تم تأكيد موعدك يا خالد يوم الثلاثاء الساعة 5:00 العصر لتنظيف الاسنان. نشوفك على خير."
+        },
+        {
+          "who": "You",
+          "text": "مشكوره مع السلامه"
+        },
+        {
+          "who": "Layla",
+          "text": "تمام"
+        },
+        {
+          "who": "You",
+          "text": "طيب"
+        },
+        {
+          "who": "Layla",
+          "text": "مع السلامة"
+        }
+      ]
+    },
+    {
+      "name": "call_end",
+      "t": 156.934
+    },
+    {
+      "name": "call_done",
+      "t": 159.463,
+      "transcript": [
+        {
+          "who": "Layla",
+          "text": "اهلا وسهلا في عياده الروضه لطب الاسنان معك ليلى كيف اقدر اساعدك؟"
+        },
+        {
+          "who": "You",
+          "text": "السلام عليكم ابغى موعد تنظيف اسنان."
+        },
+        {
+          "who": "Layla",
+          "text": "وعليكم السلام حياك الله اي يوم يناسبك للموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "يوم الثلاثاء الجاي بعد العصر إذا ممكن."
+        },
+        {
+          "who": "Layla",
+          "text": "الثلاثاء الجاي بيكون متاح الساعة 5 العصر يناسبك؟"
+        },
+        {
+          "who": "You",
+          "text": "تمام الساعه 5 مناسبه لي"
+        },
+        {
+          "who": "Layla",
+          "text": "تمام ممكن تزوديني بالاسم ورقم الجوال لاكد لك الموعد؟"
+        },
+        {
+          "who": "You",
+          "text": "اسمي خالد العتيبي وجوالي 0551234567"
+        },
+        {
+          "who": "Layla",
+          "text": "تم تأكيد موعدك يا خالد يوم الثلاثاء الساعة 5:00 العصر لتنظيف الاسنان. نشوفك على خير."
+        },
+        {
+          "who": "You",
+          "text": "مشكوره مع السلامه"
+        },
+        {
+          "who": "Layla",
+          "text": "تمام"
+        },
+        {
+          "who": "You",
+          "text": "طيب"
+        },
+        {
+          "who": "Layla",
+          "text": "مع السلامة"
+        }
+      ]
+    },
+    {
+      "name": "step_t10",
+      "t": 159.463
+    },
+    {
+      "name": "functions",
+      "t": 160.201
+    },
+    {
+      "name": "end_t10",
+      "t": 168.537
+    },
+    {
+      "name": "step_t11",
+      "t": 168.537
+    },
+    {
+      "name": "knowledge",
+      "t": 169.266
+    },
+    {
+      "name": "end_t11",
+      "t": 176.869
+    },
+    {
+      "name": "step_t15",
+      "t": 176.869
+    },
+    {
+      "name": "test_chat",
+      "t": 177.598
+    },
+    {
+      "name": "chat_sent",
+      "t": 180.169
+    },
+    {
+      "name": "end_t15",
+      "t": 186.201
+    },
+    {
+      "name": "step_t16",
+      "t": 186.201
+    },
+    {
+      "name": "public_demo",
+      "t": 186.933
+    },
+    {
+      "name": "share_click",
+      "t": 189.182
+    },
+    {
+      "name": "skip_t16",
+      "t": 219.186,
+      "message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: /Share with a/ })\n    - locator resolved to <button disabled class=\"btn flex h-9 items-center gap-2 px-4 text-[13.5px]\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is not enabled\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "name": "end_t16",
+      "t": 219.251
+    },
+    {
+      "name": "step_t12",
+      "t": 219.251
+    },
+    {
+      "name": "embed",
+      "t": 219.983
+    },
+    {
+      "name": "end_t12",
+      "t": 226.932
+    },
+    {
+      "name": "step_t13",
+      "t": 226.932
+    },
+    {
+      "name": "phone_numbers",
+      "t": 227.663
+    },
+    {
+      "name": "skip_t13",
+      "t": 262.783,
+      "message": "locator.scrollIntoViewIfNeeded: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByText('From SIP Trunk').first()\n"
+    },
+    {
+      "name": "end_t13",
+      "t": 262.844
+    },
+    {
+      "name": "step_t14",
+      "t": 262.844
+    },
+    {
+      "name": "dashboard",
+      "t": 263.579
+    },
+    {
+      "name": "skip_t14",
+      "t": 293.582,
+      "message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('aside, nav').getByRole('link', { name: 'Dashboard', exact: true }).first()\n    - locator resolved to <a href=\"/dashboard\" class=\"group flex items-center rounded-lg py-2 text-[14px] transition-colors gap-3 px-3 text-dim hover:bg-raised hover:text-ink\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"fixed inset-0 z-10\"></div> from <div class=\"flex-1 overflow-x-hidden\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"fixed inset-0 z-10\"></div> from <div class=\"flex-1 overflow-x-hidden\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div class=\"fixed inset-0 z-10\"></div> from <div class=\"flex-1 overflow-x-hidden\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "name": "end_t14",
+      "t": 293.614
+    },
+    {
+      "name": "done",
+      "t": 295.116
+    },
+    {
+      "name": "audio_speaker-0",
+      "t": 94.901,
+      "file": "speaker-0.webm"
+    },
+    {
+      "name": "audio_caller-1",
+      "t": 101.251,
+      "file": "caller-1.webm"
+    }
+  ]
+}

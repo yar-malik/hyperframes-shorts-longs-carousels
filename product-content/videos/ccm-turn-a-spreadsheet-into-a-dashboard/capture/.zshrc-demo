@@ -1,0 +1,2 @@
+PROMPT='%F{202}~/jobs-app%f %F{240}❯%f '
+unsetopt PROMPT_SP

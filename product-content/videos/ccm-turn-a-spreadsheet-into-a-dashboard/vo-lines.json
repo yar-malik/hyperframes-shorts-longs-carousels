@@ -1,0 +1,26 @@
+[
+ {
+  "id": "v1",
+  "text": "Today I'll show you how to turn a messy spreadsheet into a dashboard."
+ },
+ {
+  "id": "v2",
+  "text": "It's all in one messy sheet, and nobody knows who owes what."
+ },
+ {
+  "id": "v3",
+  "text": "Open Claude Code in the folder with your spreadsheet."
+ },
+ {
+  "id": "v4",
+  "text": "Then describe the dashboard in plain English: money by month, who owes you, and your busiest people."
+ },
+ {
+  "id": "v5",
+  "text": "Now run it."
+ },
+ {
+  "id": "v6",
+  "text": "In under four minutes, it cleaned two hundred and fourteen jobs and found two thousand nine hundred and fifty five pounds still owed. The prompt is in the community."
+ }
+]

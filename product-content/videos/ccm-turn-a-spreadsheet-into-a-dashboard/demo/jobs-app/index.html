@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleaning Jobs 2026</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --ring: rgba(11,11,11,0.10);
+  --hover: rgba(11,11,11,0.04);
+  --paid: #2a78d6;
+  --unpaid: #eb6834;
+  --part: #1baf7a;
+  --critical: #d03b3b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --ring: rgba(255,255,255,0.10);
+    --hover: rgba(255,255,255,0.05);
+    --paid: #3987e5;
+    --unpaid: #d95926;
+    --part: #199e70;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --ring: rgba(255,255,255,0.10);
+  --hover: rgba(255,255,255,0.05);
+  --paid: #3987e5;
+  --unpaid: #d95926;
+  --part: #199e70;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 1120px; margin: 0 auto; padding: 28px 16px 48px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 20px; }
+h1 { font-size: 24px; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: 16px; margin: 0 0 2px; }
+.sub { color: var(--ink-2); font-size: 13px; margin: 0; }
+.muted { color: var(--muted); }
+button {
+  font: inherit; font-size: 13px; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--ring); border-radius: 8px;
+  padding: 6px 12px; cursor: pointer;
+}
+button:hover { background: var(--hover); }
+
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 18px; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px; }
+.kpi .label { color: var(--ink-2); font-size: 13px; }
+.kpi .value { font-size: 28px; font-weight: 600; margin: 2px 0; letter-spacing: -0.01em; }
+.kpi .note { color: var(--muted); font-size: 12px; }
+.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: 0; }
+
+.row2 { display: grid; grid-template-columns: 1.15fr 1fr; gap: 12px; margin-top: 12px; }
+.card-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 8px 12px; margin-bottom: 14px; }
+
+/* legend */
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; color: var(--ink-2); }
+
+/* month chart */
+.mchart { position: relative; padding-left: 52px; }
+.mchart .grid { position: absolute; left: 52px; right: 0; top: 0; height: 240px; pointer-events: none; }
+.mchart .gl { position: absolute; left: 0; right: 0; border-top: 1px solid var(--grid); }
+.mchart .gl.base { border-top-color: var(--axis); }
+.mchart .gl span { position: absolute; right: calc(100% + 8px); top: -8px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mchart .cols { position: relative; display: flex; gap: 4px; }
+.mchart .col { flex: 1; display: flex; flex-direction: column; align-items: center; cursor: default; border-radius: 6px; }
+.mchart .col:hover { background: var(--hover); }
+.mchart .area { height: 240px; width: 100%; display: flex; align-items: flex-end; justify-content: center; }
+.mchart .stack { width: 62%; max-width: 44px; display: flex; flex-direction: column-reverse; gap: 2px; border-radius: 4px 4px 0 0; overflow: hidden; }
+.mchart .seg { width: 100%; min-height: 0; }
+.mchart .xlab { font-size: 12px; color: var(--ink-2); padding: 6px 0 2px; }
+.mchart .xval { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; padding-bottom: 4px; }
+
+/* owed list */
+.owed details { border-top: 1px solid var(--grid); }
+.owed details:first-of-type { border-top: 0; }
+.owed summary {
+  list-style: none; cursor: pointer; display: grid;
+  grid-template-columns: 1fr auto; gap: 2px 12px; padding: 10px 4px; border-radius: 6px;
+}
+.owed summary::-webkit-details-marker { display: none; }
+.owed summary:hover { background: var(--hover); }
+.owed .who { font-weight: 600; }
+.owed .who::before { content: "▸"; display: inline-block; width: 14px; color: var(--muted); transition: transform .15s; }
+.owed details[open] .who::before { transform: rotate(90deg); }
+.owed .amt { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.owed .meta { grid-column: 1 / -1; padding-left: 14px; font-size: 12px; color: var(--ink-2); }
+.owed .amt .partamt { display: block; font-weight: 400; font-size: 12px; color: var(--ink-2); }
+.chip { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--ring); color: var(--ink-2); margin-left: 6px; white-space: nowrap; }
+.chip.warn { border-color: var(--critical); color: var(--critical); }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-top: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--ink-2); font-weight: 500; border-top: 0; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.owed table { margin: 0 0 10px 14px; width: calc(100% - 14px); }
+.status { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.status i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+
+/* cleaners */
+.seg-ctl { display: inline-flex; border: 1px solid var(--ring); border-radius: 8px; overflow: hidden; }
+.seg-ctl button { border: 0; border-radius: 0; padding: 5px 10px; }
+.seg-ctl button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.crow { display: grid; grid-template-columns: 72px 1fr; align-items: center; gap: 10px; padding: 7px 4px; border-radius: 6px; }
+.crow:hover { background: var(--hover); }
+.crow .name { font-weight: 600; font-size: 14px; }
+.crow .track { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.crow .bar { height: 18px; background: var(--paid); border-radius: 0 4px 4px 0; min-width: 2px; }
+.crow .val { font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.crow .val small { color: var(--muted); }
+
+.lower { margin-top: 12px; display: grid; gap: 12px; }
+.lower details > summary { cursor: pointer; font-weight: 600; }
+.notes ul { margin: 10px 0 0; padding-left: 20px; }
+.notes li { margin: 4px 0; color: var(--ink-2); }
+.notes li b { color: var(--ink); font-weight: 600; }
+.scroll { overflow-x: auto; margin-top: 10px; }
+
+#tip {
+  position: fixed; z-index: 10; pointer-events: none; display: none;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--ring);
+  box-shadow: 0 6px 20px rgba(0,0,0,.14); border-radius: 8px; padding: 8px 10px; font-size: 12px; min-width: 170px;
+}
+#tip .t { font-weight: 600; margin-bottom: 4px; }
+#tip .r { display: flex; justify-content: space-between; gap: 14px; font-variant-numeric: tabular-nums; }
+#tip .r span:first-child { color: var(--ink-2); }
+#tip .tot { border-top: 1px solid var(--grid); margin-top: 4px; padding-top: 4px; }
+
+@media (max-width: 860px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .row2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .kpi .value { font-size: 22px; }
+  .mchart { padding-left: 40px; }
+  .mchart .grid { left: 40px; }
+  .mchart .xval { display: none; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Cleaning jobs 2026</h1>
+      <p class="sub" id="range"></p>
+    </div>
+    <button id="dl" type="button">Download cleaned CSV</button>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <h2>Money in by month</h2>
+        <p class="sub">What each month's jobs were worth, split by whether they've been paid. Grouped by job date; the log doesn't record when payments came in.</p>
+      </div>
+      <div class="legend">
+        <span><i class="swatch" style="background:var(--paid)"></i>Paid</span>
+        <span><i class="swatch" style="background:var(--unpaid)"></i>Unpaid</span>
+        <span><i class="swatch" style="background:var(--part)"></i>Part-paid (full price shown)</span>
+      </div>
+    </div>
+    <div class="mchart" id="mchart"></div>
+    <details style="margin-top:10px">
+      <summary class="sub" style="cursor:pointer">Show as table</summary>
+      <div class="scroll"><table id="mtable"></table></div>
+    </details>
+  </section>
+
+  <div class="row2">
+    <section class="card owed">
+      <div class="card-head">
+        <div>
+          <h2>Who still owes you</h2>
+          <p class="sub">Unpaid jobs by client, largest first. Click a client to see their jobs.</p>
+        </div>
+      </div>
+      <div id="owed"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div>
+          <h2>Busiest cleaners</h2>
+          <p class="sub" id="csub"></p>
+        </div>
+        <div class="seg-ctl" role="group" aria-label="Measure">
+          <button type="button" data-m="hours" aria-pressed="true">Hours</button>
+          <button type="button" data-m="jobs" aria-pressed="false">Jobs</button>
+          <button type="button" data-m="billed" aria-pressed="false">Billed</button>
+        </div>
+      </div>
+      <div id="cleaners"></div>
+    </section>
+  </div>
+
+  <div class="lower">
+    <section class="card notes">
+      <h2>What was cleaned up</h2>
+      <ul id="notes"></ul>
+    </section>
+    <section class="card">
+      <details>
+        <summary>All jobs, cleaned (<span id="jobcount"></span>)</summary>
+        <div class="scroll"><table id="alljobs"></table></div>
+      </details>
+    </section>
+  </div>
+</main>
+<div id="tip"></div>
+
+<!-- The original job log, exactly as exported. To update the dashboard, paste a new export between these tags. -->
+<script type="text/plain" id="raw">
+Date,Client,Job,Cleaner,Hours,Price,Paid?,Notes
+26 Jan 26,The Mills,Deep clean,Tomasz,3,157,Y,
+2 Jul 26,Café Verde,Office clean,Priya,3.5,143,Y,
+10/08/2026,Northside Gym,Regular clean,Grace,4.5,70,NO,chased twice
+26/02/2026,Flat 4B Rosewood,Regular clean,Grace,2,73.00,Y,
+7 Jun 26,Sunny Days Nursery,Oven clean,Tomasz,4.5,64,Y,
+11/03/2026,Ridgeway Vets,Office clean,Tomasz,4.5,171.00,yes,"key under mat, ring first"
+17 May 26,The Patel family,Regular clean,Amina,1,92,Y,"key under mat, ring first"
+21/03/2026,Dr Lindqvist,End of tenancy,Amina,6,343,yes,"key under mat, ring first"
+1 Sep 26,Oakwood Lettings,Oven clean,Luis,5.5,£59,yes,chased twice
+4 Jan 26,Oakwood Lettings,Oven clean,Grace,2,58,part,
+12 Aug 26,Greenleaf Dental,Deep clean,Tomasz,6,172,NO,
+2026-06-25,Bloom Florist,Oven clean,Amina,4,59,Y,
+2026-06-15,The Patel family,Office clean,Luis,3.5,£135,Y,
+24 Jul 26,Harper & Co,Oven clean,Amina,1.5,73,part,
+01/01/2026,Bloom Florist,Office clean,Luis,5.5,176,yes,
+2026-04-02,Greenleaf Dental,Deep clean,Amina,2,£205,Y,
+14/06/2026,The Patel family,Oven clean,Priya,5,£57,yes,
+24 Apr 26,Mr & Mrs Doyle,Oven clean,Luis,5,71,yes,
+28 Aug 26,Ridgeway Vets,End of tenancy,Luis,2.5,318,no,
+3 Aug 26,Bloom Florist,Oven clean,Tomasz,2,71,Y,
+26 Mar 26,Harper & Co,Oven clean,Luis,6.5,62.00,yes,
+27/02/2026,Northside Gym,Office clean,Luis,6,122,yes,
+22/06/2026,The Patel family,Office clean,Luis,4,161,yes,
+26/03/2026,The Mills,Regular clean,Grace,6,84.00,Y,
+2026-07-26,The Patel family,Oven clean,Priya,6,59.00,Y,"key under mat, ring first"
+06/03/2026,Harper & Co,Regular clean,Amina,4.5,76,yes,"key under mat, ring first"
+21/08/2026,Greenleaf Dental,End of tenancy,Amina,5,344,Y,
+16/04/2026,The Patel family,Deep clean,Luis,1.5,£180,part,
+2026-01-24,Mr & Mrs Doyle,Oven clean,Grace,1.5,56.00,Y,
+2026-07-22,Sunny Days Nursery,Deep clean,Grace,6,£209,yes,
+22/08/2026,The Mills,Oven clean,Grace,5,£69,Y,
+07/01/2026,Kestrel Accountants,Regular clean,Grace,3,61,Y,
+15/07/2026,Kestrel Accountants,Deep clean,Priya,4.5,£180,Y,
+17/06/2026,Flat 4B Rosewood,Office clean,Tomasz,3.5,150,yes,
+02/02/2026,Northside Gym,End of tenancy,Amina,2.5,305.00,yes,
+2026-02-18,Café Verde,End of tenancy,Grace,6.5,£350,Y,
+2 Sep 26,Sunny Days Nursery,Regular clean,Grace,6.5,71,yes,
+21 Jan 26,Kestrel Accountants,End of tenancy,Tomasz,4,334,part,
+2026-04-01,Bloom Florist,Oven clean,Grace,1,68,Y,
+2026-08-24,Mr & Mrs Doyle,Regular clean,Grace,4.5,£71,no,
+26 Jun 26,The Mills,Oven clean,Amina,2,64.00,yes,chased twice
+08/02/2026,Oakwood Lettings,Regular clean,Priya,1.5,£87,Y,
+28/01/2026,Mr & Mrs Doyle,End of tenancy,Luis,1.5,293.00,Y,"key under mat, ring first"
+22/04/2026,Greenleaf Dental,Office clean,Tomasz,5.5,154,Y,
+2026-05-28,Mrs Okafor,End of tenancy,Grace,4.5,326,yes,
+23/05/2026,Café Verde,End of tenancy,Luis,6,£285,yes,chased twice
+24/07/2026,Harper & Co,Deep clean,Grace,1.5,£194,part,"key under mat, ring first"
+19 Apr 26,Bloom Florist,Deep clean,Grace,3,£160,Y,
+24 Aug 26,Café Verde,End of tenancy,Amina,3.5,303,Y,
+21/07/2026,Harper & Co,Office clean,Priya,5,153.00,Y,
+2026-08-26,Northside Gym,Oven clean,Tomasz,1.5,£56,yes,
+23/04/2026,Bloom Florist,Oven clean,Amina,2,£56,Y,"key under mat, ring first"
+28/02/2026,Flat 4B Rosewood,Oven clean,Amina,1.5,£66,Y,
+19/06/2026,Harper & Co,Regular clean,Tomasz,1.5,93,Y,
+06/03/2026,Sunny Days Nursery,Regular clean,Luis,6,65,yes,
+11/02/2026,Kestrel Accountants,End of tenancy,Amina,3,293,Y,
+2026-06-21,Flat 4B Rosewood,Oven clean,Amina,3.5,63.00,yes,
+03/05/2026,Café Verde,Regular clean,Tomasz,3.5,87,Y,
+2026-01-03,Café Verde,Regular clean,Priya,6,£80,part,
+18/05/2026,Flat 4B Rosewood,Regular clean,Priya,1.5,73,Y,
+28/07/2026,The Mills,Deep clean,Amina,6,141,part,
+10/04/2026,Harper & Co,Deep clean,Priya,2,£191,Y,
+2026-01-26,Harper & Co,Office clean,Tomasz,4,128,yes,
+17 Feb 26,Café Verde,Deep clean,Luis,4,£172,yes,chased twice
+18/01/2026,Mrs Okafor,Oven clean,Priya,6,58,Y,"key under mat, ring first"
+2026-02-15,Café Verde,End of tenancy,Priya,5.5,349,yes,
+22 Jul 26,Greenleaf Dental,Office clean,Priya,2.5,146,yes,
+20 Aug 26,The Patel family,Office clean,Grace,6,117.00,NO,"key under mat, ring first"
+2026-06-01,The Patel family,End of tenancy,Priya,3,£285,Y,
+02/03/2026,Sunny Days Nursery,Oven clean,Amina,4.5,63,Y,
+10/05/2026,Sunny Days Nursery,Office clean,Priya,2,144,Y,
+20 Sep 26,Northside Gym,Office clean,Grace,3.5,167,NO,
+02/06/2026,Flat 4B Rosewood,End of tenancy,Amina,6,272,Y,chased twice
+27/05/2026,Ridgeway Vets,Oven clean,Grace,3.5,72,Y,
+15/03/2026,Dr Lindqvist,Office clean,Tomasz,2.5,170,Y,
+10/05/2026,Kestrel Accountants,Deep clean,Grace,5,£204,yes,
+2026-03-04,Bloom Florist,End of tenancy,Grace,1.5,320,yes,
+13/09/2026,Bloom Florist,Office clean,Luis,2,145,Y,
+8 Feb 26,Oakwood Lettings,Oven clean,Luis,3,£67,yes,
+28 Jun 26,Oakwood Lettings,Regular clean,Amina,4.5,89,yes,
+20 Sep 26,Mrs Okafor,Oven clean,Grace,4.5,59,NO,"key under mat, ring first"
+25/02/2026,Kestrel Accountants,End of tenancy,Grace,5.5,279,yes,
+13 Sep 26,The Patel family,End of tenancy,Grace,4,£371,NO,
+25 Jan 26,Sunny Days Nursery,Deep clean,Tomasz,3,£204,Y,
+08/05/2026,The Mills,Office clean,Amina,2.5,154,Y,
+2026-04-20,Harper & Co,Oven clean,Tomasz,3.5,£55,part,
+20 May 26,Oakwood Lettings,Deep clean,Priya,6.5,140.00,Y,chased twice
+17 May 26,Kestrel Accountants,Deep clean,Priya,1,156,yes,
+2026-06-21,The Mills,Regular clean,Amina,6.5,72.00,yes,
+14/03/2026,Ridgeway Vets,Deep clean,Priya,1,£204,yes,
+18 Jun 26,Bloom Florist,Office clean,Tomasz,5,116.00,Y,
+25/08/2026,Ridgeway Vets,Oven clean,Priya,6,£61,no,"key under mat, ring first"
+19/03/2026,Bloom Florist,End of tenancy,Grace,4.5,357,Y,
+07/09/2026,Greenleaf Dental,Regular clean,Priya,3.5,62.00,Y,
+7 Jan 26,Mrs Okafor,Deep clean,Amina,1,£171,yes,
+05/06/2026,Sunny Days Nursery,Office clean,Amina,2.5,140,yes,
+11/02/2026,Northside Gym,Oven clean,Tomasz,2,£59,Y,
+23/06/2026,Ridgeway Vets,Office clean,Priya,6,112,yes,
+2026-07-18,Northside Gym,Oven clean,Amina,5.5,64,yes,chased twice
+25 May 26,The Patel family,Deep clean,Luis,3.5,£154,yes,
+10/03/2026,Harper & Co,End of tenancy,Priya,5.5,357.00,part,
+2026-07-13,Sunny Days Nursery,Regular clean,Priya,6.5,91,yes,chased twice
+20/09/2026,The Patel family,Oven clean,Priya,3.5,61,Y,
+07/05/2026,Bloom Florist,Office clean,Priya,5,£129,Y,"key under mat, ring first"
+10/04/2026,Greenleaf Dental,Oven clean,Tomasz,6,62,Y,
+12/04/2026,Mr & Mrs Doyle,Oven clean,Priya,3.5,62,Y,
+28 Jul 26,Mr & Mrs Doyle,Deep clean,Luis,4.5,170,yes,
+05/06/2026,Northside Gym,Deep clean,Amina,6,194,Y,
+2026-09-14,The Mills,Office clean,Tomasz,6.5,169,NO,
+3 Jun 26,Café Verde,Deep clean,Grace,6.5,176,Y,
+28 Jan 26,The Mills,Office clean,Tomasz,6,£125,Y,
+2026-07-15,The Patel family,Deep clean,Grace,1,£192,Y,
+04/08/2026,Mr & Mrs Doyle,Regular clean,Priya,1,90,yes,
+8 Jul 26,Café Verde,End of tenancy,Amina,3,350,yes,chased twice
+28 Sep 26,Bloom Florist,Oven clean,Priya,5.5,57.00,NO,
+24/02/2026,Bloom Florist,Oven clean,Amina,6.5,57,Y,
+03/05/2026,Northside Gym,End of tenancy,Amina,3,336,yes,"key under mat, ring first"
+2026-07-22,Flat 4B Rosewood,End of tenancy,Priya,5,£357,Y,
+04/01/2026,Ridgeway Vets,Deep clean,Luis,5.5,£163,yes,
+25/06/2026,Harper & Co,Oven clean,Amina,1.5,65,yes,
+13/04/2026,The Mills,Deep clean,Luis,5.5,200,yes,
+24/01/2026,The Mills,Office clean,Priya,3.5,138,yes,
+15 Aug 26,Mr & Mrs Doyle,Oven clean,Luis,5.5,£66,NO,
+19 Jun 26,Dr Lindqvist,Regular clean,Priya,5,£71,Y,
+12/07/2026,The Patel family,Office clean,Priya,1.5,164,Y,"key under mat, ring first"
+26/07/2026,Oakwood Lettings,Regular clean,Priya,1,61,yes,
+24/02/2026,Greenleaf Dental,End of tenancy,Tomasz,4.5,279,yes,"key under mat, ring first"
+10 Aug 26,Mrs Okafor,End of tenancy,Priya,5,373,yes,chased twice
+02/05/2026,Flat 4B Rosewood,Regular clean,Tomasz,2,84,Y,
+17 Apr 26,Café Verde,Oven clean,Luis,3.5,£65,yes,
+19 Aug 26,Bloom Florist,Oven clean,Priya,3.5,£68,part,
+05/02/2026,The Mills,Regular clean,Priya,3.5,86.00,part,
+14/01/2026,Bloom Florist,Regular clean,Priya,3,77,part,
+2026-02-14,The Patel family,Office clean,Amina,1.5,135,Y,
+3 Jan 26,Mrs Okafor,Office clean,Tomasz,5.5,147.00,part,
+03/01/2026,Greenleaf Dental,Office clean,Priya,2,139,yes,
+2026-02-22,Harper & Co,Office clean,Grace,5,124,Y,"key under mat, ring first"
+13/06/2026,Oakwood Lettings,Regular clean,Priya,1.5,89,Y,
+17/08/2026,Mrs Okafor,Oven clean,Priya,6,67,Y,
+2026-04-17,Greenleaf Dental,Deep clean,Grace,5,152,yes,
+26 Apr 26,Dr Lindqvist,Oven clean,Amina,4.5,64.00,Y,
+24/02/2026,Greenleaf Dental,Deep clean,Amina,5,£156,part,
+2026-03-06,Greenleaf Dental,Regular clean,Luis,5,86.00,yes,
+2026-06-13,Mrs Okafor,Oven clean,Amina,2,58,part,"key under mat, ring first"
+2026-05-09,Kestrel Accountants,Deep clean,Luis,4,193,yes,
+2026-04-15,Kestrel Accountants,Regular clean,Luis,1.5,80.00,Y,
+03/04/2026,Northside Gym,Regular clean,Grace,2.5,72,Y,
+28 Sep 26,Bloom Florist,End of tenancy,Amina,1.5,294.00,NO,
+07/03/2026,The Patel family,Office clean,Luis,3,149.00,Y,"key under mat, ring first"
+1 Apr 26,Flat 4B Rosewood,Office clean,Priya,2.5,128,yes,
+01/05/2026,Ridgeway Vets,Office clean,Tomasz,4,£117,Y,
+26 Jul 26,The Mills,Deep clean,Amina,5,£161,yes,
+07/04/2026,Mr & Mrs Doyle,Office clean,Luis,5,£153,Y,
+21/09/2026,Café Verde,End of tenancy,Priya,4.5,327,Y,
+04/05/2026,Café Verde,Regular clean,Priya,6.5,94,Y,
+02/05/2026,Sunny Days Nursery,End of tenancy,Luis,2,350,yes,
+24 Jan 26,Mr & Mrs Doyle,Office clean,Amina,3.5,176,Y,
+20/04/2026,Mr & Mrs Doyle,Deep clean,Priya,1.5,172,Y,
+22 Jul 26,Café Verde,Office clean,Tomasz,6.5,163,yes,chased twice
+20/08/2026,Café Verde,Deep clean,Grace,6.5,209,NO,
+22 Sep 26,Greenleaf Dental,End of tenancy,Tomasz,6,£263,NO,
+8 Jun 26,Bloom Florist,Oven clean,Luis,5.5,£61,part,
+2026-04-17,Ridgeway Vets,Regular clean,Grace,4.5,£66,yes,
+2026-05-08,Kestrel Accountants,Office clean,Grace,3.5,126.00,part,
+14/01/2026,Harper & Co,Oven clean,Amina,4,65.00,Y,
+2026-07-17,Mr & Mrs Doyle,Office clean,Priya,3.5,136,yes,
+28/04/2026,Ridgeway Vets,Deep clean,Tomasz,1.5,143,yes,
+2026-02-05,Sunny Days Nursery,Deep clean,Tomasz,2.5,199.00,Y,chased twice
+02/07/2026,Café Verde,Deep clean,Grace,2.5,146.00,Y,
+27/01/2026,Greenleaf Dental,Oven clean,Amina,4,62.00,yes,
+04/07/2026,Ridgeway Vets,Office clean,Tomasz,4,119,Y,
+2 Jul 26,Kestrel Accountants,Office clean,Luis,5.5,144.00,yes,
+15/02/2026,Northside Gym,End of tenancy,Priya,3.5,£311,Y,
+26/09/2026,Oakwood Lettings,Oven clean,Priya,6.5,69,no,"key under mat, ring first"
+06/04/2026,Dr Lindqvist,Deep clean,Priya,1,190,Y,
+2026-01-24,Ridgeway Vets,End of tenancy,Priya,5.5,367,yes,
+2026-01-14,Ridgeway Vets,Oven clean,Tomasz,1.5,£71,Y,
+15 Jul 26,Mrs Okafor,End of tenancy,Amina,4.5,£263,part,
+19 Aug 26,Oakwood Lettings,Office clean,Grace,4.5,£132,Y,
+12 Jul 26,Harper & Co,Office clean,Priya,2.5,179,yes,"key under mat, ring first"
+20 Jul 26,Greenleaf Dental,End of tenancy,Tomasz,2.5,£324,part,"key under mat, ring first"
+24/09/2026,The Patel family,Deep clean,Grace,1,155,NO,
+15 Jan 26,Mr & Mrs Doyle,Deep clean,Luis,3.5,174,yes,
+2026-05-15,Dr Lindqvist,Oven clean,Amina,4,65,yes,
+08/02/2026,Bloom Florist,Oven clean,Luis,2,£74,yes,
+26 Feb 26,Flat 4B Rosewood,Oven clean,Amina,1.5,55,part,
+2026-08-19,Oakwood Lettings,Regular clean,Tomasz,6.5,£66,NO,
+14/09/2026,Dr Lindqvist,Deep clean,Amina,3,157,yes,
+13/08/2026,Kestrel Accountants,Oven clean,Amina,4.5,£69,NO,
+07/06/2026,Mr & Mrs Doyle,Office clean,Luis,5,151,yes,
+2026-09-12,Dr Lindqvist,Office clean,Grace,1.5,132.00,NO,
+19/06/2026,The Mills,Office clean,Amina,1,112,yes,"key under mat, ring first"
+24/08/2026,Mr & Mrs Doyle,End of tenancy,Priya,6.5,£360,Y,
+11/07/2026,Dr Lindqvist,Regular clean,Priya,3.5,87,yes,
+7 Mar 26,Ridgeway Vets,Deep clean,Luis,5,166.00,part,
+04/04/2026,Northside Gym,End of tenancy,Grace,6.5,£328,yes,"key under mat, ring first"
+06/02/2026,Sunny Days Nursery,Office clean,Amina,4.5,152,Y,"key under mat, ring first"
+2026-01-24,Oakwood Lettings,Deep clean,Tomasz,4.5,157,yes,
+2026-04-14,The Patel family,Office clean,Amina,4,174.00,Y,
+3 Apr 26,Oakwood Lettings,End of tenancy,Grace,2,£309,Y,
+08/04/2026,Kestrel Accountants,End of tenancy,Priya,2,346,yes,
+13/03/2026,Mrs Okafor,End of tenancy,Tomasz,3,365,Y,
+21/07/2026,Sunny Days Nursery,Regular clean,Grace,1.5,£77,Y,"key under mat, ring first"
+2026-05-02,Mrs Okafor,Deep clean,Grace,5.5,£162,yes,
+06/08/2026,Harper & Co,Oven clean,Amina,6,65.00,part,
+03/09/2026,The Patel family,Regular clean,Priya,4.5,63,yes,
+18/04/2026,Bloom Florist,Oven clean,Luis,4.5,72,Y,
+18/03/2026,Greenleaf Dental,Office clean,Grace,5.5,164.00,Y,
+15/09/2026,Ridgeway Vets,Oven clean,Amina,2,60,part,"key under mat, ring first"
+13/05/2026,Kestrel Accountants,Regular clean,Priya,4,76,yes,chased twice
+21/06/2026,Flat 4B Rosewood,Office clean,Tomasz,6.5,116,Y,
+06/01/2026,Kestrel Accountants,Regular clean,Grace,2.5,80,yes,
+2026-07-27,Mr & Mrs Doyle,Office clean,Tomasz,5.5,£115,Y,
+24 Mar 26,Mrs Okafor,End of tenancy,Amina,6.5,£317,Y,"key under mat, ring first"
+</script>
+
+<script>
+(function () {
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const gbp = n => '£' + Math.round(n).toLocaleString('en-GB');
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const fmtDate = d => d.getDate() + ' ' + MON[d.getMonth()];
+  const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const DAY = 86400000;
+
+  // ---------- CSV ----------
+  function parseCSV(text) {
+    const rows = []; let row = [], field = '', q = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else q = false; }
+        else field += c;
+      } else if (c === '"') q = true;
+      else if (c === ',') { row.push(field); field = ''; }
+      else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+      else if (c !== '\r') field += c;
+    }
+    if (field !== '' || row.length) { row.push(field); rows.push(row); }
+    return rows.filter(r => r.join('').trim() !== '');
+  }
+
+  // ---------- cleaning ----------
+  function makeDate(y, m, d, fmt) {
+    const dt = new Date(y, m - 1, d);
+    if (dt.getFullYear() !== y || dt.getMonth() !== m - 1 || dt.getDate() !== d) return null;
+    return { date: dt, fmt };
+  }
+  function parseDate(s) {
+    s = s.trim(); let m;
+    if ((m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/))) return makeDate(+m[1], +m[2], +m[3], '2026-06-25');
+    // Slashed dates are day-first (UK): the log has 26/02/2026 etc., so month-first is impossible.
+    if ((m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/))) return makeDate(+m[3], +m[2], +m[1], '25/06/2026');
+    if ((m = s.match(/^(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{2}|\d{4})$/))) {
+      const mo = MON.findIndex(x => x.toLowerCase() === m[2].toLowerCase()) + 1;
+      if (!mo) return null;
+      let y = +m[3]; if (y < 100) y += 2000;
+      return makeDate(y, mo, +m[1], '25 Jun 26');
+    }
+    return null;
+  }
+  function parsePrice(s) {
+    const t = s.replace(/[£,\s]/g, '');
+    return /^\d+(\.\d+)?$/.test(t) ? Number(t) : NaN;
+  }
+  function parsePaid(s) {
+    const t = s.trim().toLowerCase();
+    if (t === 'y' || t === 'yes' || t === 'paid') return 'paid';
+    if (t === 'n' || t === 'no' || t === 'unpaid') return 'unpaid';
+    if (t === 'part' || t === 'partial' || t === 'part paid') return 'part';
+    return 'unknown';
+  }
+
+  const rows = parseCSV(document.getElementById('raw').textContent.trim());
+  const body = rows.slice(1);
+  const stats = { fmts: {}, poundSign: 0, trailingZeros: 0, paidRaw: {}, badDate: [], badPrice: [], badPaid: [] };
+  const jobs = [];
+  body.forEach((r, i) => {
+    const [dRaw = '', client = '', job = '', cleaner = '', hRaw = '', pRaw = '', paidRaw = '', notes = ''] = r;
+    const line = i + 2;
+    const d = parseDate(dRaw);
+    const price = parsePrice(pRaw);
+    const paid = parsePaid(paidRaw);
+    if (d) stats.fmts[d.fmt] = (stats.fmts[d.fmt] || 0) + 1; else stats.badDate.push({ line, v: dRaw });
+    if (pRaw.includes('£')) stats.poundSign++;
+    if (/\.00$/.test(pRaw.trim())) stats.trailingZeros++;
+    if (isNaN(price)) stats.badPrice.push({ line, v: pRaw });
+    stats.paidRaw[paidRaw.trim()] = (stats.paidRaw[paidRaw.trim()] || 0) + 1;
+    if (paid === 'unknown') stats.badPaid.push({ line, v: paidRaw });
+    if (!d || isNaN(price)) return; // can't place it on the dashboard
+    jobs.push({
+      line, date: d.date, client: client.trim(), job: job.trim(), cleaner: cleaner.trim(),
+      hours: parseFloat(hRaw) || 0, price, paid, notes: notes.trim(),
+      future: d.date > today
+    });
+  });
+  jobs.sort((a, b) => a.date - b.date);
+
+  const sum = (arr, f) => arr.reduce((t, x) => t + f(x), 0);
+  const byStatus = s => jobs.filter(j => j.paid === s);
+  const paidJobs = byStatus('paid'), unpaidJobs = byStatus('unpaid'), partJobs = byStatus('part');
+  const future = jobs.filter(j => j.future);
+
+  // ---------- header + KPIs ----------
+  const first = jobs[0].date, last = jobs[jobs.length - 1].date;
+  document.getElementById('range').textContent =
+    `${jobs.length} jobs, ${fmtDate(first)} – ${fmtDate(last)} ${last.getFullYear()} · ${new Set(jobs.map(j => j.client)).size} clients · ${new Set(jobs.map(j => j.cleaner)).size} cleaners`;
+
+  const kpis = [
+    { label: 'Collected', color: 'var(--paid)', value: gbp(sum(paidJobs, j => j.price)), note: `${paidJobs.length} jobs paid in full` },
+    { label: 'Still owed', color: 'var(--unpaid)', value: gbp(sum(unpaidJobs, j => j.price)), note: `${unpaidJobs.length} unpaid jobs, ${new Set(unpaidJobs.map(j => j.client)).size} clients` },
+    { label: 'Part-paid', color: 'var(--part)', value: gbp(sum(partJobs, j => j.price)), note: `${partJobs.length} jobs, full price. The log doesn't say how much was paid` },
+    { label: 'Total billed', color: null, value: gbp(sum(jobs, j => j.price)), note: `${sum(jobs, j => j.hours).toLocaleString('en-GB')} cleaning hours` }
+  ];
+  document.getElementById('kpis').innerHTML = kpis.map(k => `
+    <div class="card kpi">
+      <div class="label">${k.color ? `<i class="swatch" style="background:${k.color}"></i>` : ''}${k.label}</div>
+      <div class="value">${k.value}</div>
+      <div class="note">${k.note}</div>
+    </div>`).join('');
+
+  // ---------- tooltip ----------
+  const tip = document.getElementById('tip');
+  function showTip(html, e) {
+    tip.innerHTML = html; tip.style.display = 'block';
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = e.clientX + 14, y = e.clientY + 14;
+    if (x + w > window.innerWidth - 8) x = e.clientX - w - 14;
+    if (y + h > window.innerHeight - 8) y = e.clientY - h - 14;
+    tip.style.left = Math.max(8, x) + 'px'; tip.style.top = Math.max(8, y) + 'px';
+  }
+  const hideTip = () => { tip.style.display = 'none'; };
+  const tr = (k, v, sw) => `<div class="r"><span>${sw ? `<i class="swatch" style="background:${sw}"></i>` : ''}${k}</span><span>${v}</span></div>`;
+
+  // ---------- money by month ----------
+  const months = [];
+  for (let y = first.getFullYear(), m = first.getMonth(); y < last.getFullYear() || (y === last.getFullYear() && m <= last.getMonth()); m++) {
+    if (m > 11) { m = 0; y++; }
+    months.push({ y, m, paid: 0, unpaid: 0, part: 0, n: 0 });
+  }
+  jobs.forEach(j => {
+    const mo = months.find(x => x.y === j.date.getFullYear() && x.m === j.date.getMonth());
+    if (!mo) return;
+    if (j.paid === 'paid' || j.paid === 'unpaid' || j.paid === 'part') mo[j.paid] += j.price;
+    mo.n++;
+  });
+  months.forEach(mo => { mo.total = mo.paid + mo.unpaid + mo.part; });
+
+  const maxTotal = Math.max(...months.map(m => m.total), 1);
+  const raw = maxTotal / 4, mag = Math.pow(10, Math.floor(Math.log10(raw))), nrm = raw / mag;
+  const step = (nrm <= 1 ? 1 : nrm <= 2 ? 2 : nrm <= 2.5 ? 2.5 : nrm <= 5 ? 5 : 10) * mag;
+  const yMax = Math.ceil(maxTotal / step) * step;
+  const H = 240;
+
+  let grid = '';
+  for (let v = 0; v <= yMax + 0.001; v += step) {
+    const top = H - (v / yMax) * H;
+    grid += `<div class="gl${v === 0 ? ' base' : ''}" style="top:${top}px"><span>${v >= 1000 ? '£' + (v / 1000).toLocaleString('en-GB') + 'k' : '£' + v}</span></div>`;
+  }
+  const segOrder = [['paid', 'var(--paid)'], ['unpaid', 'var(--unpaid)'], ['part', 'var(--part)']];
+  const mc = document.getElementById('mchart');
+  mc.innerHTML = `<div class="grid">${grid}</div><div class="cols">${months.map((mo, i) => `
+    <div class="col" data-i="${i}">
+      <div class="area">
+        <div class="stack" style="height:${(mo.total / yMax) * 100}%">
+          ${segOrder.filter(([k]) => mo[k] > 0).map(([k, c]) => `<div class="seg" style="flex:${mo[k]} 1 0;background:${c}"></div>`).join('')}
+        </div>
+      </div>
+      <div class="xlab">${MON[mo.m]}</div>
+      <div class="xval">${mo.paid ? gbp(mo.paid) : '–'}</div>
+    </div>`).join('')}</div>`;
+  mc.querySelectorAll('.col').forEach(el => {
+    const mo = months[+el.dataset.i];
+    const html = `<div class="t">${MON[mo.m]} ${mo.y} · ${mo.n} jobs</div>` +
+      tr('Paid', gbp(mo.paid), 'var(--paid)') + tr('Unpaid', gbp(mo.unpaid), 'var(--unpaid)') +
+      tr('Part-paid', gbp(mo.part), 'var(--part)') + `<div class="tot">${tr('Billed', gbp(mo.total))}</div>`;
+    el.addEventListener('mousemove', e => showTip(html, e));
+    el.addEventListener('mouseleave', hideTip);
+  });
+  document.getElementById('mtable').innerHTML =
+    `<tr><th>Month</th><th class="num">Jobs</th><th class="num">Paid</th><th class="num">Unpaid</th><th class="num">Part-paid</th><th class="num">Billed</th></tr>` +
+    months.map(mo => `<tr><td>${MON[mo.m]} ${mo.y}</td><td class="num">${mo.n}</td><td class="num">${gbp(mo.paid)}</td><td class="num">${gbp(mo.unpaid)}</td><td class="num">${gbp(mo.part)}</td><td class="num">${gbp(mo.total)}</td></tr>`).join('');
+
+  // ---------- who owes ----------
+  const STATUS = {
+    paid: ['Paid', 'var(--paid)'], unpaid: ['Unpaid', 'var(--unpaid)'],
+    part: ['Part-paid', 'var(--part)'], unknown: ['Unclear', 'var(--muted)']
+  };
+  const statusCell = s => `<span class="status"><i style="background:${STATUS[s][1]}"></i>${STATUS[s][0]}</span>`;
+  const clients = {};
+  jobs.filter(j => j.paid === 'unpaid' || j.paid === 'part').forEach(j => {
+    const c = clients[j.client] || (clients[j.client] = { name: j.client, unpaid: 0, part: 0, jobs: [] });
+    c[j.paid] += j.price; c.jobs.push(j);
+  });
+  const owed = Object.values(clients).sort((a, b) => b.unpaid - a.unpaid || b.part - a.part);
+  document.getElementById('owed').innerHTML = owed.map(c => {
+    const unpaid = c.jobs.filter(j => j.paid === 'unpaid');
+    const oldest = unpaid[0];
+    const chased = c.jobs.some(j => /chase/i.test(j.notes));
+    const fut = c.jobs.some(j => j.future);
+    const days = oldest ? Math.max(0, Math.round((today - oldest.date) / DAY)) : 0;
+    const meta = [];
+    if (unpaid.length) meta.push(`${unpaid.length} unpaid job${unpaid.length > 1 ? 's' : ''} · oldest ${fmtDate(oldest.date)} (${days} day${days === 1 ? '' : 's'})`);
+    const parts = c.jobs.length - unpaid.length;
+    if (parts) meta.push(`${parts} part-paid`);
+    return `<details>
+      <summary>
+        <span class="who">${esc(c.name)}${chased ? '<span class="chip">chased</span>' : ''}${fut ? '<span class="chip warn">future date</span>' : ''}</span>
+        <span class="amt">${c.unpaid ? gbp(c.unpaid) : '<span class="muted">£0</span>'}${c.part ? `<span class="partamt">+ ${gbp(c.part)} part-paid</span>` : ''}</span>
+        <span class="meta">${meta.join(' · ')}</span>
+      </summary>
+      <table>
+        <tr><th>Date</th><th>Job</th><th>Cleaner</th><th class="num">Price</th><th>Status</th></tr>
+        ${c.jobs.map(j => `<tr><td>${fmtDate(j.date)}${j.future ? ' <span class="chip warn">after today</span>' : ''}</td><td>${esc(j.job)}${j.notes ? `<br><span class="muted">${esc(j.notes)}</span>` : ''}</td><td>${esc(j.cleaner)}</td><td class="num">${gbp(j.price)}</td><td>${statusCell(j.paid)}</td></tr>`).join('')}
+      </table>
+    </details>`;
+  }).join('') || '<p class="sub">Nobody owes you anything.</p>';
+
+  // ---------- cleaners ----------
+  const cl = {};
+  jobs.forEach(j => {
+    const c = cl[j.cleaner] || (cl[j.cleaner] = { name: j.cleaner, jobs: 0, hours: 0, billed: 0 });
+    c.jobs++; c.hours += j.hours; c.billed += j.price;
+  });
+  const cleaners = Object.values(cl);
+  const fmtM = { hours: v => v.toLocaleString('en-GB') + ' h', jobs: v => v + ' jobs', billed: gbp };
+  const subM = {
+    hours: 'Total hours on the job this year.',
+    jobs: 'Number of jobs done this year.',
+    billed: 'Value of the jobs they did (paid or not).'
+  };
+  function renderCleaners(metric) {
+    const list = cleaners.slice().sort((a, b) => b[metric] - a[metric]);
+    const max = Math.max(...list.map(c => c[metric]), 1);
+    document.getElementById('csub').textContent = subM[metric];
+    const box = document.getElementById('cleaners');
+    box.innerHTML = list.map((c, i) => `
+      <div class="crow" data-i="${cleaners.indexOf(c)}">
+        <div class="name">${esc(c.name)}</div>
+        <div class="track"><div class="bar" style="width:calc((100% - 90px) * ${c[metric] / max})"></div><span class="val">${fmtM[metric](c[metric])}</span></div>
+      </div>`).join('');
+    box.querySelectorAll('.crow').forEach(el => {
+      const c = cleaners[+el.dataset.i];
+      const html = `<div class="t">${esc(c.name)}</div>` + tr('Jobs', c.jobs) + tr('Hours', c.hours.toLocaleString('en-GB')) +
+        tr('Billed', gbp(c.billed)) + tr('Avg job', gbp(c.billed / c.jobs)) + tr('Avg hours/job', (c.hours / c.jobs).toFixed(1));
+      el.addEventListener('mousemove', e => showTip(html, e));
+      el.addEventListener('mouseleave', hideTip);
+    });
+  }
+  document.querySelectorAll('.seg-ctl button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.seg-ctl button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    renderCleaners(b.dataset.m);
+  }));
+  renderCleaners('hours');
+
+  // ---------- data notes ----------
+  const notes = [];
+  const fmtList = Object.entries(stats.fmts).map(([f, n]) => `${n} like <b>${f}</b>`).join(', ');
+  notes.push(`<b>Dates</b> came in ${Object.keys(stats.fmts).length} formats (${fmtList}). All converted to one date. Slashed dates are read as day/month (UK), since entries like 26/02/2026 only make sense that way.`);
+  notes.push(`<b>Prices</b>: removed the £ sign from ${stats.poundSign} entries and trailing “.00” from ${stats.trailingZeros}. All are now plain pound amounts.`);
+  notes.push(`<b>Paid column</b> had ${Object.keys(stats.paidRaw).length} spellings (${Object.entries(stats.paidRaw).map(([k, n]) => `“${esc(k)}” ×${n}`).join(', ')}). These now read as <b>Paid</b> (Y / yes), <b>Unpaid</b> (NO / no) or <b>Part-paid</b> (part).`);
+  notes.push(`<b>Part-paid</b> jobs (${partJobs.length}, worth ${gbp(sum(partJobs, j => j.price))} at full price) don't say how much was actually paid, so they aren't counted in “Collected” and they're shown separately from what's owed. Add an “Amount paid” column to the log to make this exact.`);
+  if (future.length) notes.push(`<b>${future.length} job${future.length > 1 ? 's are' : ' is'} dated after today</b>: ${future.map(j => `${esc(j.client)}, ${esc(j.job)}, ${fmtDate(j.date)} (line ${j.line})`).join('; ')}. Possibly bookings or typos. They're included, and marked in the owed list.`);
+  if (stats.badDate.length) notes.push(`<b>Couldn't read the date</b> on ${stats.badDate.map(b => `line ${b.line} (“${esc(b.v)}”)`).join(', ')}. These rows are left out.`);
+  if (stats.badPrice.length) notes.push(`<b>Couldn't read the price</b> on ${stats.badPrice.map(b => `line ${b.line} (“${esc(b.v)}”)`).join(', ')}. These rows are left out.`);
+  if (stats.badPaid.length) notes.push(`<b>Unclear paid status</b> on ${stats.badPaid.map(b => `line ${b.line} (“${esc(b.v)}”)`).join(', ')}.`);
+  notes.push(`“Money in by month” goes by <b>job date</b>, not payment date, because the log doesn't record when payments came in.`);
+  document.getElementById('notes').innerHTML = notes.map(n => `<li>${n}</li>`).join('');
+
+  // ---------- all jobs ----------
+  document.getElementById('jobcount').textContent = jobs.length;
+  document.getElementById('alljobs').innerHTML =
+    `<tr><th>Date</th><th>Client</th><th>Job</th><th>Cleaner</th><th class="num">Hours</th><th class="num">Price</th><th>Status</th><th>Notes</th></tr>` +
+    jobs.slice().reverse().map(j => `<tr><td style="white-space:nowrap">${fmtDate(j.date)}</td><td>${esc(j.client)}</td><td>${esc(j.job)}</td><td>${esc(j.cleaner)}</td><td class="num">${j.hours}</td><td class="num">${gbp(j.price)}</td><td>${statusCell(j.paid)}</td><td class="muted">${esc(j.notes)}</td></tr>`).join('');
+
+  // ---------- cleaned CSV download ----------
+  document.getElementById('dl').addEventListener('click', () => {
+    const q = v => /[",\n]/.test(v) ? `"${String(v).replace(/"/g, '""')}"` : v;
+    const label = { paid: 'Paid', unpaid: 'Unpaid', part: 'Part-paid', unknown: 'Unclear' };
+    const out = ['Date,Client,Job,Cleaner,Hours,Price,Paid,Notes']
+      .concat(jobs.map(j => [iso(j.date), j.client, j.job, j.cleaner, j.hours, j.price, label[j.paid], j.notes].map(q).join(',')))
+      .join('\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob(['﻿' + out], { type: 'text/csv;charset=utf-8' }));
+    a.download = 'jobs-2026-cleaned.csv';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+})();
+</script>
+</body>
+</html>

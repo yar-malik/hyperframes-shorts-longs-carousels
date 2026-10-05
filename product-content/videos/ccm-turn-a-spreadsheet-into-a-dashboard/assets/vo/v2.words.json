@@ -1,0 +1,175 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,060"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 60
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,060",
+				"to": "00:00:00,280"
+			},
+			"offsets": {
+				"from": 60,
+				"to": 280
+			},
+			"text": " It's"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,280",
+				"to": "00:00:00,490"
+			},
+			"offsets": {
+				"from": 280,
+				"to": 490
+			},
+			"text": " all"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,490",
+				"to": "00:00:00,630"
+			},
+			"offsets": {
+				"from": 490,
+				"to": 630
+			},
+			"text": " in"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,630",
+				"to": "00:00:00,840"
+			},
+			"offsets": {
+				"from": 630,
+				"to": 840
+			},
+			"text": " one"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,840",
+				"to": "00:00:01,190"
+			},
+			"offsets": {
+				"from": 840,
+				"to": 1190
+			},
+			"text": " messy"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,190",
+				"to": "00:00:01,560"
+			},
+			"offsets": {
+				"from": 1190,
+				"to": 1560
+			},
+			"text": " sheet"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,560",
+				"to": "00:00:01,750"
+			},
+			"offsets": {
+				"from": 1560,
+				"to": 1750
+			},
+			"text": " and"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,750",
+				"to": "00:00:02,140"
+			},
+			"offsets": {
+				"from": 1750,
+				"to": 2140
+			},
+			"text": " nobody"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,140",
+				"to": "00:00:02,460"
+			},
+			"offsets": {
+				"from": 2140,
+				"to": 2460
+			},
+			"text": " knows"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,460",
+				"to": "00:00:02,650"
+			},
+			"offsets": {
+				"from": 2460,
+				"to": 2650
+			},
+			"text": " who"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,650",
+				"to": "00:00:02,910"
+			},
+			"offsets": {
+				"from": 2650,
+				"to": 2910
+			},
+			"text": " owes"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,910",
+				"to": "00:00:03,320"
+			},
+			"offsets": {
+				"from": 2910,
+				"to": 3320
+			},
+			"text": " what."
+		}
+	]
+}

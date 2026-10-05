@@ -1,0 +1,241 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,050"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 50
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,050",
+				"to": "00:00:00,070"
+			},
+			"offsets": {
+				"from": 50,
+				"to": 70
+			},
+			"text": " I"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,070",
+				"to": "00:00:00,430"
+			},
+			"offsets": {
+				"from": 70,
+				"to": 430
+			},
+			"text": " built"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,430",
+				"to": "00:00:00,570"
+			},
+			"offsets": {
+				"from": 430,
+				"to": 570
+			},
+			"text": " an"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,570",
+				"to": "00:00:00,710"
+			},
+			"offsets": {
+				"from": 570,
+				"to": 710
+			},
+			"text": " AI"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,710",
+				"to": "00:00:01,590"
+			},
+			"offsets": {
+				"from": 710,
+				"to": 1590
+			},
+			"text": " receptionist"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,590",
+				"to": "00:00:01,800"
+			},
+			"offsets": {
+				"from": 1590,
+				"to": 1800
+			},
+			"text": " for"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,800",
+				"to": "00:00:01,860"
+			},
+			"offsets": {
+				"from": 1800,
+				"to": 1860
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,860",
+				"to": "00:00:02,280"
+			},
+			"offsets": {
+				"from": 1860,
+				"to": 2280
+			},
+			"text": " dental"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,280",
+				"to": "00:00:03,020"
+			},
+			"offsets": {
+				"from": 2280,
+				"to": 3020
+			},
+			"text": " clinic"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,020",
+				"to": "00:00:03,150"
+			},
+			"offsets": {
+				"from": 3020,
+				"to": 3150
+			},
+			"text": " and"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,150",
+				"to": "00:00:03,450"
+			},
+			"offsets": {
+				"from": 3150,
+				"to": 3450
+			},
+			"text": " this"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,450",
+				"to": "00:00:03,600"
+			},
+			"offsets": {
+				"from": 3450,
+				"to": 3600
+			},
+			"text": " is"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,600",
+				"to": "00:00:03,670"
+			},
+			"offsets": {
+				"from": 3600,
+				"to": 3670
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,670",
+				"to": "00:00:04,000"
+			},
+			"offsets": {
+				"from": 3670,
+				"to": 4000
+			},
+			"text": " real"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,000",
+				"to": "00:00:04,440"
+			},
+			"offsets": {
+				"from": 4000,
+				"to": 4440
+			},
+			"text": " call"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,440",
+				"to": "00:00:04,600"
+			},
+			"offsets": {
+				"from": 4440,
+				"to": 4600
+			},
+			"text": " in"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,600",
+				"to": "00:00:05,010"
+			},
+			"offsets": {
+				"from": 4600,
+				"to": 5010
+			},
+			"text": " Saudi"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,010",
+				"to": "00:00:05,600"
+			},
+			"offsets": {
+				"from": 5010,
+				"to": 5600
+			},
+			"text": " Arabic."
+		}
+	]
+}

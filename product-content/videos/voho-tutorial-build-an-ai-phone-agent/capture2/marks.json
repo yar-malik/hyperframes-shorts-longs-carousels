@@ -1,0 +1,24 @@
+{
+ "marks": [
+  {
+   "name": "signed_in",
+   "t": 8.613
+  },
+  {
+   "name": "step_t14",
+   "t": 9.816
+  },
+  {
+   "name": "conversations",
+   "t": 10.584
+  },
+  {
+   "name": "open_conversation",
+   "t": 12.933
+  },
+  {
+   "name": "end_t14",
+   "t": 20.653
+  }
+ ]
+}

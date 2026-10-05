@@ -1,0 +1,142 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,050"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 50
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,050",
+				"to": "00:00:00,280"
+			},
+			"offsets": {
+				"from": 50,
+				"to": 280
+			},
+			"text": " Open"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,280",
+				"to": "00:00:00,620"
+			},
+			"offsets": {
+				"from": 280,
+				"to": 620
+			},
+			"text": " Cloud"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,620",
+				"to": "00:00:00,900"
+			},
+			"offsets": {
+				"from": 620,
+				"to": 900
+			},
+			"text": " Code"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,900",
+				"to": "00:00:01,040"
+			},
+			"offsets": {
+				"from": 900,
+				"to": 1040
+			},
+			"text": " in"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,040",
+				"to": "00:00:01,260"
+			},
+			"offsets": {
+				"from": 1040,
+				"to": 1260
+			},
+			"text": " the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,260",
+				"to": "00:00:01,690"
+			},
+			"offsets": {
+				"from": 1260,
+				"to": 1690
+			},
+			"text": " folder"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,690",
+				"to": "00:00:01,940"
+			},
+			"offsets": {
+				"from": 1690,
+				"to": 1940
+			},
+			"text": " with"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,940",
+				"to": "00:00:02,200"
+			},
+			"offsets": {
+				"from": 1940,
+				"to": 2200
+			},
+			"text": " your"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,200",
+				"to": "00:00:02,960"
+			},
+			"offsets": {
+				"from": 2200,
+				"to": 2960
+			},
+			"text": " spreadsheet."
+		}
+	]
+}

@@ -1,0 +1,192 @@
+{
+ "product": "ccm",
+ "slug": "turn-a-spreadsheet-into-a-dashboard",
+ "title": "Turn a spreadsheet into a dashboard",
+ "vo": {
+  "v1": "Today I'll show you how to turn a messy spreadsheet into a dashboard.",
+  "v2": "It's all in one messy sheet, and nobody knows who owes what.",
+  "v3": "Open Claude Code in the folder with your spreadsheet.",
+  "v4": "Then describe the dashboard in plain English: money by month, who owes you, and your busiest people.",
+  "v5": "Now run it.",
+  "v6": "In under four minutes, it cleaned two hundred and fourteen jobs and found two thousand nine hundred and fifty five pounds still owed. The prompt is in the community."
+ },
+ "recording": {
+  "setup": {
+   "in": 1,
+   "out": 24.2,
+   "rate": 1.6
+  },
+  "steps": [
+   {
+    "text": "The messy spreadsheet",
+    "at": 1.5
+   },
+   {
+    "text": "Open Claude Code",
+    "at": 5.59
+   },
+   {
+    "text": "Describe it in plain English",
+    "at": 12.3
+   }
+  ],
+  "clicks": [
+   2.38,
+   5.9,
+   23.94
+  ],
+  "typing": [
+   [
+    1.4,
+    2.3
+   ],
+   [
+    5.6,
+    7.6
+   ],
+   [
+    12.25,
+    23.4
+   ]
+  ],
+  "done": null,
+  "focus": [
+   {
+    "at": 13,
+    "x": 700,
+    "y": 560,
+    "scale": 1.3
+   }
+  ],
+  "v4At": null,
+  "resultStep": "Send it",
+  "cuts": [
+   {
+    "in": 24,
+    "out": 31,
+    "focus": [
+     700,
+     560,
+     1.3
+    ]
+   },
+   {
+    "in": 92,
+    "out": 98,
+    "label": "Claude Code",
+    "sub": "I can't run anything, so I'll put the raw log inside the page and clean it with JavaScript.",
+    "focus": [
+     700,
+     760,
+     1.35
+    ]
+   },
+   {
+    "in": 233.5,
+    "out": 239.5,
+    "label": "Claude Code",
+    "sub": "Wrote 737 lines to index.html",
+    "focus": [
+     700,
+     560,
+     1.3
+    ]
+   },
+   {
+    "in": 244,
+    "out": 252,
+    "label": "What it cleaned up",
+    "sub": "Three date formats, £ signs, and Y, yes, NO and part in the paid column: all cleaned up.",
+    "focus": [
+     790,
+     600,
+     1.2
+    ]
+   },
+   {
+    "in": 252.2,
+    "out": 255.5,
+    "focus": [
+     590,
+     900,
+     1.35
+    ],
+    "label": "Claude Code",
+    "sub": "Cogitated for 3m 45s"
+   },
+   {
+    "in": 259.3,
+    "out": 265,
+    "label": "The dashboard",
+    "sub": "£26,188 collected · £2,955 still owed",
+    "focus": [
+     620,
+     300,
+     1.45
+    ]
+   },
+   {
+    "in": 265.2,
+    "out": 270,
+    "label": "The dashboard",
+    "sub": "The Patel family owes the most: £643",
+    "focus": [
+     1280,
+     420,
+     1.4
+    ]
+   },
+   {
+    "in": 270.2,
+    "out": 273.3,
+    "label": "The dashboard",
+    "sub": "Every fix it made is listed, with a button to download the clean CSV"
+   }
+  ],
+  "audio": false
+ },
+ "scene": {},
+ "endcard": "A messy spreadsheet, a dashboard in under 4 minutes",
+ "thumbnail": {
+  "headline": [
+   "TURN A",
+   "MESSY SHEET|INTO A DASHBOARD",
+   "IN 4 MINUTES"
+  ],
+  "tag": "Real Claude Code session",
+  "thumb": {
+   "mood": "excited"
+  }
+ },
+ "publish": {
+  "youtubeTitle": "I gave Claude Code a messy spreadsheet. 4 minutes later, a dashboard.",
+  "youtubeDescription": "A real Claude Code session, start to finish. A cleaning company's 2026 job log (a sample: 214 jobs, three date formats, £ signs, Y/yes/NO/part in the paid column) goes in, and one prompt in plain English asks for a dashboard: money in by month, who still owes what, and the busiest cleaners.\n\nClaude Code worked for 3 minutes 45 seconds, wrote 737 lines to one index.html, and the dashboard opens with a double-click. It found £2,955 still owed across 20 unpaid jobs, with the Patel family owing the most (£643).\n\nThe prompt and the setup are in Claude Codex Mastery: https://www.skool.com/yar-ai-automation-school-9911/about",
+  "linkedin": "A cleaning company's job log became a live dashboard in 3 minutes 45 seconds.\n\nThe sheet was the usual mess: 214 jobs, dates in three formats, prices with and without £ signs, and a paid column that said Y, yes, NO or part.\n\nI gave Claude Code one prompt in plain English:\n→ money in by month\n→ who still owes me, and how much\n→ which cleaners are busiest\n→ clean up the dates, prices and paid column as you go\n\nIt wrote 737 lines to a single index.html that opens with a double-click. £2,955 still owed across 20 unpaid jobs. The Patel family owes the most, £643.\n\nThe honest part: some jobs were only marked \"part\" paid, and the log never says how much. Claude didn't guess. It kept them out of the totals and told me to add an \"amount paid\" column.\n\nThat's the job worth selling. Not another AI app, one spreadsheet an owner hates.\n\nLink is in the comments 👇",
+  "linkedinComment": "The prompt and setup are in Claude Codex Mastery: https://www.skool.com/yar-ai-automation-school-9911/about"
+ },
+ "demo": {
+  "dir": "demo/jobs-app",
+  "show": [
+   "head -8 jobs-2026.csv"
+  ],
+  "prompt": "This is my cleaning company's job log for 2026. Turn it into a one-page dashboard in index.html that I can open by double-clicking: money in by month, who still owes me and how much, and which cleaners are busiest. Clean up the messy dates, prices and the paid column as you go. Don't run any commands.",
+  "result": "index.html",
+  "tour": [
+   {
+    "mark": "result_top",
+    "scroll": 0,
+    "hold": 3500
+   },
+   {
+    "mark": "result_mid",
+    "scroll": 750,
+    "hold": 3500
+   },
+   {
+    "mark": "result_low",
+    "scroll": 1500,
+    "hold": 3500
+   }
+  ]
+ }
+}

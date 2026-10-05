@@ -1,0 +1,263 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,060"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 60
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,060",
+				"to": "00:00:00,160"
+			},
+			"offsets": {
+				"from": 60,
+				"to": 160
+			},
+			"text": " In"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,160",
+				"to": "00:00:00,570"
+			},
+			"offsets": {
+				"from": 160,
+				"to": 570
+			},
+			"text": " under"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,570",
+				"to": "00:00:00,810"
+			},
+			"offsets": {
+				"from": 570,
+				"to": 810
+			},
+			"text": " 4"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,810",
+				"to": "00:00:01,500"
+			},
+			"offsets": {
+				"from": 810,
+				"to": 1500
+			},
+			"text": " minutes,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,500",
+				"to": "00:00:01,650"
+			},
+			"offsets": {
+				"from": 1500,
+				"to": 1650
+			},
+			"text": " it"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,650",
+				"to": "00:00:02,390"
+			},
+			"offsets": {
+				"from": 1650,
+				"to": 2390
+			},
+			"text": " cleaned"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,390",
+				"to": "00:00:03,360"
+			},
+			"offsets": {
+				"from": 2390,
+				"to": 3360
+			},
+			"text": " 214"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,360",
+				"to": "00:00:04,070"
+			},
+			"offsets": {
+				"from": 3360,
+				"to": 4070
+			},
+			"text": " jobs"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,070",
+				"to": "00:00:04,210"
+			},
+			"offsets": {
+				"from": 4070,
+				"to": 4210
+			},
+			"text": " and"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,210",
+				"to": "00:00:04,610"
+			},
+			"offsets": {
+				"from": 4210,
+				"to": 4610
+			},
+			"text": " found"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,610",
+				"to": "00:00:06,630"
+			},
+			"offsets": {
+				"from": 4610,
+				"to": 6630
+			},
+			"text": " 2,955"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:06,630",
+				"to": "00:00:07,740"
+			},
+			"offsets": {
+				"from": 6630,
+				"to": 7740
+			},
+			"text": " pounds,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:07,740",
+				"to": "00:00:08,160"
+			},
+			"offsets": {
+				"from": 7740,
+				"to": 8160
+			},
+			"text": " still"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:08,160",
+				"to": "00:00:08,960"
+			},
+			"offsets": {
+				"from": 8160,
+				"to": 8960
+			},
+			"text": " owed."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:08,960",
+				"to": "00:00:09,190"
+			},
+			"offsets": {
+				"from": 8960,
+				"to": 9190
+			},
+			"text": " The"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,190",
+				"to": "00:00:09,650"
+			},
+			"offsets": {
+				"from": 9190,
+				"to": 9650
+			},
+			"text": " prompt"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,650",
+				"to": "00:00:09,800"
+			},
+			"offsets": {
+				"from": 9650,
+				"to": 9800
+			},
+			"text": " is"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,800",
+				"to": "00:00:09,950"
+			},
+			"offsets": {
+				"from": 9800,
+				"to": 9950
+			},
+			"text": " in"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,950",
+				"to": "00:00:10,180"
+			},
+			"offsets": {
+				"from": 9950,
+				"to": 10180
+			},
+			"text": " the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,180",
+				"to": "00:00:10,880"
+			},
+			"offsets": {
+				"from": 10180,
+				"to": 10880
+			},
+			"text": " community."
+		}
+	]
+}

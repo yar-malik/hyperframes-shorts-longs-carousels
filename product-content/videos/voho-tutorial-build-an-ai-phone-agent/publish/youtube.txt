@@ -1,0 +1,22 @@
+The whole Voho console, one step at a time, at a pace you can follow along. I build an AI receptionist for a dental clinic in Riyadh, set it to Saudi Arabic, and then call it. Everything on screen is the real app at app.voho.ai, and the call is real: the caller asks for a teeth cleaning, and the agent books him in for Tuesday at 5 pm.
+
+What's in it:
+1. Create your account
+2. The console
+3. Create an agent
+4. Name it, set the language (Arabic, Saudi Arabia)
+5. Model and voice
+6. Write the instructions (my favourite rule: answer in one short sentence)
+7. Or write it with AI
+8. Welcome message, then Save
+9. Call your agent, a live call in Saudi Arabic
+10. Functions
+11. Knowledge base
+12. Test chat
+13. Public demo
+14. On your website
+15. Phone numbers (Twilio or your own SIP trunk)
+16. Webhook, outbound calls, Generate Speech and billing
+17. Conversations: every call with its transcript and summary
+
+Build yours: https://app.voho.ai

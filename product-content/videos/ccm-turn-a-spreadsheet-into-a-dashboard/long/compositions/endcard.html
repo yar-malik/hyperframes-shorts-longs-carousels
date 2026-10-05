@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Regular.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Medium.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-SemiBold.woff2") format("woff2"); font-weight: 600; }
+      #root { position: absolute; inset: 0; overflow: hidden; font-family: "Geist", ui-sans-serif, system-ui, sans-serif; }
+      #end-card { position: absolute; left: 1060px; top: 70px; width: 720px; padding: 30px 40px 34px;
+        border-radius: 28px; background: #FFF9EE; border: 3px solid #2B2233; box-shadow: 0 16px 0 rgba(43,34,51,0.9);
+        display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+      .brand { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 36px; letter-spacing: -0.03em; color: #09090b; }
+      #end-card h1 { font-weight: 600; font-size: 50px; line-height: 1.05; letter-spacing: -0.03em; color: #2B2233; }
+      .url { display: inline-block; padding: 14px 30px; border-radius: 999px; background: #243158; color: #FFF5E2; font-weight: 500; font-size: 28px; }
+      </style>
+      <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+        <div id="end-card">
+          <div class="brand"><svg viewBox="0 0 64 64" width="52" height="52" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#3A4C80"/><rect x="9" y="12" width="46" height="34" rx="6" fill="#FFF5E2"/><path d="M17 23 l7 6 -7 6" stroke="#FE5D08" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="28" y="33" width="14" height="4" rx="2" fill="#3A4C80"/><rect x="18" y="50" width="10" height="5" rx="2.5" fill="#FE5D08"/><rect x="36" y="50" width="10" height="5" rx="2.5" fill="#FE5D08"/></svg><span>Claude Codex Mastery</span></div>
+          <h1>A messy spreadsheet, a dashboard in under 4 minutes</h1>
+          <span class="url">skool.com/yar-ai-automation-school-9911</span>
+        </div>
+      </div>
+      <script>
+        (() => {
+          const tl = gsap.timeline({ paused: true });
+          tl.fromTo("#end-card", { y: -260, rotation: -3 }, { y: 0, rotation: 0, duration: 0.7, ease: "back.out(1.6)" }, 0);
+          tl.fromTo("#end-card > *", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "power3.out" }, 0.35);
+          tl.to("#end-card", { rotation: 1, duration: 8.7, ease: "sine.inOut" }, 0.8);
+          window.__timelines["endcard"] = tl;
+          tl.seek(0);
+        })();
+      </script>
+    </template>
+  </body>
+</html>

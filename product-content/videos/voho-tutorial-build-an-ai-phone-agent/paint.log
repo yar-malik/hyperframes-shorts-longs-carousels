@@ -1,0 +1,74 @@
+frame 1/696  281 ms/frame
+frame 25/696  236 ms/frame
+frame 49/696  233 ms/frame
+frame 73/696  227 ms/frame
+frame 97/696  249 ms/frame
+frame 121/696  279 ms/frame
+frame 145/696  299 ms/frame
+frame 169/696  310 ms/frame
+frame 193/696  319 ms/frame
+frame 217/696  322 ms/frame
+frame 241/696  319 ms/frame
+frame 265/696  315 ms/frame
+frame 289/696  307 ms/frame
+frame 313/696  300 ms/frame
+frame 337/696  293 ms/frame
+frame 361/696  288 ms/frame
+frame 385/696  287 ms/frame
+frame 409/696  289 ms/frame
+frame 433/696  293 ms/frame
+frame 457/696  318 ms/frame
+frame 481/696  342 ms/frame
+frame 505/696  360 ms/frame
+frame 529/696  371 ms/frame
+frame 553/696  375 ms/frame
+frame 577/696  389 ms/frame
+frame 601/696  403 ms/frame
+frame 625/696  416 ms/frame
+frame 649/696  428 ms/frame
+frame 673/696  440 ms/frame
+frame 696/696  450 ms/frame
+wrote /Users/yar/IdeaProjects/yarmalik.com/videos/voho-tutorial-build-an-ai-phone-agent/assets/painted.mp4
+frame 1/186  100 ms/frame
+frame 25/186  85 ms/frame
+frame 49/186  85 ms/frame
+frame 73/186  86 ms/frame
+frame 97/186  86 ms/frame
+frame 121/186  87 ms/frame
+frame 145/186  87 ms/frame
+frame 169/186  87 ms/frame
+frame 186/186  87 ms/frame
+wrote /Users/yar/IdeaProjects/yarmalik.com/videos/voho-tutorial-build-an-ai-phone-agent/assets/pip-talk.mp4
+frame 1/186  87 ms/frame
+frame 25/186  86 ms/frame
+frame 49/186  87 ms/frame
+frame 73/186  87 ms/frame
+file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88
+            this._reject(callback, new TargetCloseError('Target closed'));
+                                   ^
+
+TargetCloseError: Protocol error (Runtime.callFunctionOn): Target closed
+    at CallbackRegistry.clear (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88:36)
+    at CdpCDPSession.onClosed (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:121:25)
+    at #onClose (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:217:21)
+    at WebSocket.<anonymous> (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/node/NodeWebSocketTransport.js:54:30)
+    at callListener (/Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/ws/lib/event-target.js:290:14)
+    at WebSocket.onClose (/Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/ws/lib/event-target.js:220:9)
+    at WebSocket.emit (node:events:519:28)
+    at WebSocket.emitClose (/Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/ws/lib/websocket.js:279:10)
+    at Socket.socketOnClose (/Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/ws/lib/websocket.js:1360:15)
+    at Socket.emit (node:events:519:28) {
+  cause: ProtocolError
+      at <instance_members_initializer> (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:108:14)
+      at new Callback (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:112:16)
+      at CallbackRegistry.create (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:27:26)
+      at Connection._rawSend (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:125:26)
+      at CdpCDPSession.send (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:72:14)
+      at #evaluate (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:374:50)
+      at ExecutionContext.evaluate (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/cdp/ExecutionContext.js:288:36)
+      at IsolatedWorld.evaluate (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/cdp/IsolatedWorld.js:104:30)
+      at CdpFrame.evaluate (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:364:43)
+      at CdpFrame.<anonymous> (file:///Users/yar/IdeaProjects/yarmalik.com/open-source/animation-base/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)
+}
+
+Node.js v22.22.3

@@ -1,0 +1,20 @@
+Make the final thumbnail in the ChatGPT app (by hand, not the API).
+
+Upload these, in this order:
+  1. content/references/thumbnails/youtube-its-free-claude.png
+  2. content/references/thumbnails/youtube-claude-beginner-to-pro.png
+  3. content/avatar/yar-point-cutout.png
+  4. videos/ccm-spreadsheet-dashboard-reel/public/broll/dashboard.png
+  5. videos/ccm-turn-a-spreadsheet-into-a-dashboard/thumb-youtube-v2.png
+
+Then paste this:
+
+Make a 1280×720 YouTube thumbnail in exactly the style of the first two images (my own thumbnails). Use the man in
+the third image: keep his face exactly as it is in that photo, only the pose, crop and lighting around him may change.
+He's on the right, surprised, pointing at the fourth image, which glows on the left with a white edge and a strong
+orange glow, tilted a few degrees. Put the word "Claude" huge in an elegant serif behind him. A small white stamp on the object says "4 MIN".
+At the bottom left, an orange pill says "MESSY SHEET → DASHBOARD". Background: a warm glow from dark on the left to orange on the right.
+Nothing else on it: no extra text, no logos I didn't give you. The fifth image is a rough layout to follow.
+
+Check the face looks exactly like him before using it. If it drifts, ask again or use the draft.
+Save it as videos/ccm-turn-a-spreadsheet-into-a-dashboard/thumb-youtube-final.png and set it in YouTube Studio.

@@ -1,0 +1,61 @@
+{
+ "pass": true,
+ "at": "2026-09-26T12:10:26.290Z",
+ "checks": [
+  {
+   "name": "long: length 81.6s",
+   "ok": true,
+   "detail": "expected 80-130s"
+  },
+  {
+   "name": "long: under 60 MB",
+   "ok": true,
+   "detail": "18.2 MB"
+  },
+  {
+   "name": "long: never quiet (every second above -34 dB)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "v1 opens on the promise (\"Today I'll show you how…\")",
+   "ok": true,
+   "detail": "Today I'll show you how to turn a messy spreadsheet into a dashboard."
+  },
+  {
+   "name": "the setup has its step pills",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "the result has at least 3 cuts",
+   "ok": true,
+   "detail": "8 cut(s)"
+  },
+  {
+   "name": "publish.youtubeTitle written",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "publish.youtubeDescription written",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "publish.linkedin written",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "YouTube title ≤100 characters",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "YouTube thumbnail made (1280×720, under 2 MB)",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

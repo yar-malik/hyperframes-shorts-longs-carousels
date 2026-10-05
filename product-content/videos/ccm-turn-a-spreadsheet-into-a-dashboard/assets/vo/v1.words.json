@@ -1,0 +1,186 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,090"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 90
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,090",
+				"to": "00:00:00,370"
+			},
+			"offsets": {
+				"from": 90,
+				"to": 370
+			},
+			"text": " Today,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,370",
+				"to": "00:00:00,580"
+			},
+			"offsets": {
+				"from": 370,
+				"to": 580
+			},
+			"text": " I'll"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,580",
+				"to": "00:00:00,790"
+			},
+			"offsets": {
+				"from": 580,
+				"to": 790
+			},
+			"text": " show"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,790",
+				"to": "00:00:00,950"
+			},
+			"offsets": {
+				"from": 790,
+				"to": 950
+			},
+			"text": " you"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,950",
+				"to": "00:00:01,110"
+			},
+			"offsets": {
+				"from": 950,
+				"to": 1110
+			},
+			"text": " how"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,110",
+				"to": "00:00:01,210"
+			},
+			"offsets": {
+				"from": 1110,
+				"to": 1210
+			},
+			"text": " to"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,210",
+				"to": "00:00:01,460"
+			},
+			"offsets": {
+				"from": 1210,
+				"to": 1460
+			},
+			"text": " turn"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,460",
+				"to": "00:00:01,520"
+			},
+			"offsets": {
+				"from": 1460,
+				"to": 1520
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,520",
+				"to": "00:00:01,820"
+			},
+			"offsets": {
+				"from": 1520,
+				"to": 1820
+			},
+			"text": " messy"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,820",
+				"to": "00:00:02,520"
+			},
+			"offsets": {
+				"from": 1820,
+				"to": 2520
+			},
+			"text": " spreadsheet"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,520",
+				"to": "00:00:02,770"
+			},
+			"offsets": {
+				"from": 2520,
+				"to": 2770
+			},
+			"text": " into"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,770",
+				"to": "00:00:02,830"
+			},
+			"offsets": {
+				"from": 2770,
+				"to": 2830
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,830",
+				"to": "00:00:03,600"
+			},
+			"offsets": {
+				"from": 2830,
+				"to": 3600
+			},
+			"text": " dashboard."
+		}
+	]
+}

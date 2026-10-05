@@ -1,0 +1,142 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,060"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 60
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,060",
+				"to": "00:00:00,240"
+			},
+			"offsets": {
+				"from": 60,
+				"to": 240
+			},
+			"text": " Let's"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,240",
+				"to": "00:00:00,490"
+			},
+			"offsets": {
+				"from": 240,
+				"to": 490
+			},
+			"text": " build"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,490",
+				"to": "00:00:00,590"
+			},
+			"offsets": {
+				"from": 490,
+				"to": 590
+			},
+			"text": " an"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,590",
+				"to": "00:00:01,000"
+			},
+			"offsets": {
+				"from": 590,
+				"to": 1000
+			},
+			"text": " A.I."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,000",
+				"to": "00:00:01,320"
+			},
+			"offsets": {
+				"from": 1000,
+				"to": 1320
+			},
+			"text": " phone"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,320",
+				"to": "00:00:01,640"
+			},
+			"offsets": {
+				"from": 1320,
+				"to": 1640
+			},
+			"text": " agent"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,640",
+				"to": "00:00:02,040"
+			},
+			"offsets": {
+				"from": 1640,
+				"to": 2040
+			},
+			"text": " step"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,040",
+				"to": "00:00:02,180"
+			},
+			"offsets": {
+				"from": 2040,
+				"to": 2180
+			},
+			"text": " by"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,180",
+				"to": "00:00:02,580"
+			},
+			"offsets": {
+				"from": 2180,
+				"to": 2580
+			},
+			"text": " step."
+		}
+	]
+}

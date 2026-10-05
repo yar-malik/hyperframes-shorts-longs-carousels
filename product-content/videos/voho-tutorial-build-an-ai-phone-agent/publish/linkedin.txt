@@ -1,0 +1,7 @@
+A dental clinic in Riyadh closes at 9. The phone doesn't stop ringing at 9.
+
+So we built them a receptionist that does answer, in Saudi Arabic, and recorded the whole thing in the real Voho console. Account, agent, language, voice, instructions, welcome message, save. Then a live call: the caller wants a teeth cleaning, and the agent books him in for Tuesday at 5 pm and takes his name and number.
+
+After the call we go through the rest: functions that check your calendar, a knowledge base for prices and FAQs, a website widget, your own phone number over Twilio or SIP, and Conversations, where every call lands with its transcript and summary.
+
+It's about four minutes, one step at a time. The link's in the comments.

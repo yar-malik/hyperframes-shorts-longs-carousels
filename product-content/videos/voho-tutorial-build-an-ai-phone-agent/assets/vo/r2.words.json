@@ -1,0 +1,197 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,060"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 60
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,060",
+				"to": "00:00:00,250"
+			},
+			"offsets": {
+				"from": 60,
+				"to": 250
+			},
+			"text": " The"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,250",
+				"to": "00:00:00,490"
+			},
+			"offsets": {
+				"from": 250,
+				"to": 490
+			},
+			"text": " full"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,490",
+				"to": "00:00:01,060"
+			},
+			"offsets": {
+				"from": 490,
+				"to": 1060
+			},
+			"text": " tutorial"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,060",
+				"to": "00:00:01,200"
+			},
+			"offsets": {
+				"from": 1060,
+				"to": 1200
+			},
+			"text": " is"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,200",
+				"to": "00:00:01,340"
+			},
+			"offsets": {
+				"from": 1200,
+				"to": 1340
+			},
+			"text": " on"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,340",
+				"to": "00:00:01,480"
+			},
+			"offsets": {
+				"from": 1340,
+				"to": 1480
+			},
+			"text": " my"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,480",
+				"to": "00:00:02,230"
+			},
+			"offsets": {
+				"from": 1480,
+				"to": 2230
+			},
+			"text": " YouTube"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,230",
+				"to": "00:00:02,340"
+			},
+			"offsets": {
+				"from": 2230,
+				"to": 2340
+			},
+			"text": " and"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,340",
+				"to": "00:00:02,440"
+			},
+			"offsets": {
+				"from": 2340,
+				"to": 2440
+			},
+			"text": " you"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,440",
+				"to": "00:00:02,640"
+			},
+			"offsets": {
+				"from": 2440,
+				"to": 2640
+			},
+			"text": " can"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,640",
+				"to": "00:00:02,840"
+			},
+			"offsets": {
+				"from": 2640,
+				"to": 2840
+			},
+			"text": " build"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,840",
+				"to": "00:00:03,200"
+			},
+			"offsets": {
+				"from": 2840,
+				"to": 3200
+			},
+			"text": " yours"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,200",
+				"to": "00:00:03,360"
+			},
+			"offsets": {
+				"from": 3200,
+				"to": 3360
+			},
+			"text": " at"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,360",
+				"to": "00:00:05,320"
+			},
+			"offsets": {
+				"from": 3360,
+				"to": 5320
+			},
+			"text": " app.voho.ai"
+		}
+	]
+}

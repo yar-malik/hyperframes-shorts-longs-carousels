@@ -1,0 +1,60 @@
+{
+ "marks": [
+  {
+   "name": "start",
+   "t": 1.34
+  },
+  {
+   "name": "shown",
+   "t": 2.4
+  },
+  {
+   "name": "claude_launch",
+   "t": 5.6
+  },
+  {
+   "name": "claude_ready",
+   "t": 18.53
+  },
+  {
+   "name": "typing_start",
+   "t": 18.53
+  },
+  {
+   "name": "typing_end",
+   "t": 31.46
+  },
+  {
+   "name": "sent",
+   "t": 31.96
+  },
+  {
+   "name": "working",
+   "t": 32.97
+  },
+  {
+   "name": "done",
+   "t": 261.51
+  },
+  {
+   "name": "result_open",
+   "t": 265.15
+  },
+  {
+   "name": "result_top",
+   "t": 266.06
+  },
+  {
+   "name": "result_mid",
+   "t": 270.86
+  },
+  {
+   "name": "result_low",
+   "t": 275.26
+  },
+  {
+   "name": "end",
+   "t": 278.76
+  }
+ ]
+}

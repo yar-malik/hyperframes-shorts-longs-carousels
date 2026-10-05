@@ -1,0 +1,4 @@
+I built an AI receptionist for a dental clinic, set it to Saudi Arabic, and called it. It booked the appointment.
+
+The whole build, step by step in the real Voho console, plus the live call:
+https://www.youtube.com/watch?v=NNtL7QAAlEo

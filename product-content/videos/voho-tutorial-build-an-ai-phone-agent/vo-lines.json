@@ -1,0 +1,82 @@
+[
+ {
+  "id": "cam1",
+  "text": "Let's build an AI phone agent, step by step."
+ },
+ {
+  "id": "p2",
+  "text": "Because when the phone rings after hours, nobody is there to answer it."
+ },
+ {
+  "id": "t01",
+  "text": "Go to app dot voho dot A I and create an account. All you need is an email and a password."
+ },
+ {
+  "id": "t02",
+  "text": "This is the console. Everything is in the menu on the left, and your agents live right here."
+ },
+ {
+  "id": "t03",
+  "text": "Click Create an agent, and start from scratch, so you can see every setting."
+ },
+ {
+  "id": "t04",
+  "text": "Give it a name your callers will recognise, then pick the language. I'm choosing Arabic, Saudi Arabia, because this agent answers a dental clinic in Riyadh."
+ },
+ {
+  "id": "t05",
+  "text": "Up here you choose the model and the voice, so it sounds like a local, not like a translation."
+ },
+ {
+  "id": "t06",
+  "text": "Now the most important part, the instructions. Tell it who it is, what it does, the facts it can use, and the rules. My favourite rule is to answer in one short sentence, so the call keeps moving."
+ },
+ {
+  "id": "t07",
+  "text": "If you'd rather not write all that yourself, Write it with AI will draft it for you."
+ },
+ {
+  "id": "t08",
+  "text": "Then the welcome message, the first thing every caller hears. Hit save, and your agent is ready."
+ },
+ {
+  "id": "cam2",
+  "text": "Now the fun part. Let's call it."
+ },
+ {
+  "id": "cam3",
+  "text": "That was a real call, in Saudi Arabic."
+ },
+ {
+  "id": "t10",
+  "text": "To connect it to your own systems, add a function. This one checks for a free slot in your calendar."
+ },
+ {
+  "id": "t11",
+  "text": "The knowledge base holds your documents, like price lists and FAQs, so it answers from your own information."
+ },
+ {
+  "id": "t15",
+  "text": "You can also test it by chat, without picking up a phone."
+ },
+ {
+  "id": "t16",
+  "text": "And a public demo gives you a link, so your team or a client can try it before it goes live."
+ },
+ {
+  "id": "t12",
+  "text": "Want it on your website too? This gives you a chat and voice widget you can drop onto any page."
+ },
+ {
+  "id": "t13",
+  "text": "To take real phone calls, import your number from Twilio, or connect your own SIP trunk."
+ },
+ {
+  "id": "t14",
+  "text": "And every call lands in Conversations, with the full transcript and a summary, so you always know what your agent said."
+ },
+ {
+  "id": "cam4",
+  "text": "Build yours on Voho tonight."
+ }
+]

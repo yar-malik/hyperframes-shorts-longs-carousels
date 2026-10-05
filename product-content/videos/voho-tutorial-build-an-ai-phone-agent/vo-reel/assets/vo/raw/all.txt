@@ -1,0 +1,2 @@
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-tutorial-build-an-ai-phone-agent/vo-reel/assets/vo/raw/r1.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-tutorial-build-an-ai-phone-agent/vo-reel/assets/vo/raw/r2.wav'

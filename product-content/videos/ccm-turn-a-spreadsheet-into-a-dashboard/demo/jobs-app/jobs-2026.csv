@@ -1,0 +1,215 @@
+Date,Client,Job,Cleaner,Hours,Price,Paid?,Notes
+26 Jan 26,The Mills,Deep clean,Tomasz,3,157,Y,
+2 Jul 26,Café Verde,Office clean,Priya,3.5,143,Y,
+10/08/2026,Northside Gym,Regular clean,Grace,4.5,70,NO,chased twice
+26/02/2026,Flat 4B Rosewood,Regular clean,Grace,2,73.00,Y,
+7 Jun 26,Sunny Days Nursery,Oven clean,Tomasz,4.5,64,Y,
+11/03/2026,Ridgeway Vets,Office clean,Tomasz,4.5,171.00,yes,"key under mat, ring first"
+17 May 26,The Patel family,Regular clean,Amina,1,92,Y,"key under mat, ring first"
+21/03/2026,Dr Lindqvist,End of tenancy,Amina,6,343,yes,"key under mat, ring first"
+1 Sep 26,Oakwood Lettings,Oven clean,Luis,5.5,£59,yes,chased twice
+4 Jan 26,Oakwood Lettings,Oven clean,Grace,2,58,part,
+12 Aug 26,Greenleaf Dental,Deep clean,Tomasz,6,172,NO,
+2026-06-25,Bloom Florist,Oven clean,Amina,4,59,Y,
+2026-06-15,The Patel family,Office clean,Luis,3.5,£135,Y,
+24 Jul 26,Harper & Co,Oven clean,Amina,1.5,73,part,
+01/01/2026,Bloom Florist,Office clean,Luis,5.5,176,yes,
+2026-04-02,Greenleaf Dental,Deep clean,Amina,2,£205,Y,
+14/06/2026,The Patel family,Oven clean,Priya,5,£57,yes,
+24 Apr 26,Mr & Mrs Doyle,Oven clean,Luis,5,71,yes,
+28 Aug 26,Ridgeway Vets,End of tenancy,Luis,2.5,318,no,
+3 Aug 26,Bloom Florist,Oven clean,Tomasz,2,71,Y,
+26 Mar 26,Harper & Co,Oven clean,Luis,6.5,62.00,yes,
+27/02/2026,Northside Gym,Office clean,Luis,6,122,yes,
+22/06/2026,The Patel family,Office clean,Luis,4,161,yes,
+26/03/2026,The Mills,Regular clean,Grace,6,84.00,Y,
+2026-07-26,The Patel family,Oven clean,Priya,6,59.00,Y,"key under mat, ring first"
+06/03/2026,Harper & Co,Regular clean,Amina,4.5,76,yes,"key under mat, ring first"
+21/08/2026,Greenleaf Dental,End of tenancy,Amina,5,344,Y,
+16/04/2026,The Patel family,Deep clean,Luis,1.5,£180,part,
+2026-01-24,Mr & Mrs Doyle,Oven clean,Grace,1.5,56.00,Y,
+2026-07-22,Sunny Days Nursery,Deep clean,Grace,6,£209,yes,
+22/08/2026,The Mills,Oven clean,Grace,5,£69,Y,
+07/01/2026,Kestrel Accountants,Regular clean,Grace,3,61,Y,
+15/07/2026,Kestrel Accountants,Deep clean,Priya,4.5,£180,Y,
+17/06/2026,Flat 4B Rosewood,Office clean,Tomasz,3.5,150,yes,
+02/02/2026,Northside Gym,End of tenancy,Amina,2.5,305.00,yes,
+2026-02-18,Café Verde,End of tenancy,Grace,6.5,£350,Y,
+2 Sep 26,Sunny Days Nursery,Regular clean,Grace,6.5,71,yes,
+21 Jan 26,Kestrel Accountants,End of tenancy,Tomasz,4,334,part,
+2026-04-01,Bloom Florist,Oven clean,Grace,1,68,Y,
+2026-08-24,Mr & Mrs Doyle,Regular clean,Grace,4.5,£71,no,
+26 Jun 26,The Mills,Oven clean,Amina,2,64.00,yes,chased twice
+08/02/2026,Oakwood Lettings,Regular clean,Priya,1.5,£87,Y,
+28/01/2026,Mr & Mrs Doyle,End of tenancy,Luis,1.5,293.00,Y,"key under mat, ring first"
+22/04/2026,Greenleaf Dental,Office clean,Tomasz,5.5,154,Y,
+2026-05-28,Mrs Okafor,End of tenancy,Grace,4.5,326,yes,
+23/05/2026,Café Verde,End of tenancy,Luis,6,£285,yes,chased twice
+24/07/2026,Harper & Co,Deep clean,Grace,1.5,£194,part,"key under mat, ring first"
+19 Apr 26,Bloom Florist,Deep clean,Grace,3,£160,Y,
+24 Aug 26,Café Verde,End of tenancy,Amina,3.5,303,Y,
+21/07/2026,Harper & Co,Office clean,Priya,5,153.00,Y,
+2026-08-26,Northside Gym,Oven clean,Tomasz,1.5,£56,yes,
+23/04/2026,Bloom Florist,Oven clean,Amina,2,£56,Y,"key under mat, ring first"
+28/02/2026,Flat 4B Rosewood,Oven clean,Amina,1.5,£66,Y,
+19/06/2026,Harper & Co,Regular clean,Tomasz,1.5,93,Y,
+06/03/2026,Sunny Days Nursery,Regular clean,Luis,6,65,yes,
+11/02/2026,Kestrel Accountants,End of tenancy,Amina,3,293,Y,
+2026-06-21,Flat 4B Rosewood,Oven clean,Amina,3.5,63.00,yes,
+03/05/2026,Café Verde,Regular clean,Tomasz,3.5,87,Y,
+2026-01-03,Café Verde,Regular clean,Priya,6,£80,part,
+18/05/2026,Flat 4B Rosewood,Regular clean,Priya,1.5,73,Y,
+28/07/2026,The Mills,Deep clean,Amina,6,141,part,
+10/04/2026,Harper & Co,Deep clean,Priya,2,£191,Y,
+2026-01-26,Harper & Co,Office clean,Tomasz,4,128,yes,
+17 Feb 26,Café Verde,Deep clean,Luis,4,£172,yes,chased twice
+18/01/2026,Mrs Okafor,Oven clean,Priya,6,58,Y,"key under mat, ring first"
+2026-02-15,Café Verde,End of tenancy,Priya,5.5,349,yes,
+22 Jul 26,Greenleaf Dental,Office clean,Priya,2.5,146,yes,
+20 Aug 26,The Patel family,Office clean,Grace,6,117.00,NO,"key under mat, ring first"
+2026-06-01,The Patel family,End of tenancy,Priya,3,£285,Y,
+02/03/2026,Sunny Days Nursery,Oven clean,Amina,4.5,63,Y,
+10/05/2026,Sunny Days Nursery,Office clean,Priya,2,144,Y,
+20 Sep 26,Northside Gym,Office clean,Grace,3.5,167,NO,
+02/06/2026,Flat 4B Rosewood,End of tenancy,Amina,6,272,Y,chased twice
+27/05/2026,Ridgeway Vets,Oven clean,Grace,3.5,72,Y,
+15/03/2026,Dr Lindqvist,Office clean,Tomasz,2.5,170,Y,
+10/05/2026,Kestrel Accountants,Deep clean,Grace,5,£204,yes,
+2026-03-04,Bloom Florist,End of tenancy,Grace,1.5,320,yes,
+13/09/2026,Bloom Florist,Office clean,Luis,2,145,Y,
+8 Feb 26,Oakwood Lettings,Oven clean,Luis,3,£67,yes,
+28 Jun 26,Oakwood Lettings,Regular clean,Amina,4.5,89,yes,
+20 Sep 26,Mrs Okafor,Oven clean,Grace,4.5,59,NO,"key under mat, ring first"
+25/02/2026,Kestrel Accountants,End of tenancy,Grace,5.5,279,yes,
+13 Sep 26,The Patel family,End of tenancy,Grace,4,£371,NO,
+25 Jan 26,Sunny Days Nursery,Deep clean,Tomasz,3,£204,Y,
+08/05/2026,The Mills,Office clean,Amina,2.5,154,Y,
+2026-04-20,Harper & Co,Oven clean,Tomasz,3.5,£55,part,
+20 May 26,Oakwood Lettings,Deep clean,Priya,6.5,140.00,Y,chased twice
+17 May 26,Kestrel Accountants,Deep clean,Priya,1,156,yes,
+2026-06-21,The Mills,Regular clean,Amina,6.5,72.00,yes,
+14/03/2026,Ridgeway Vets,Deep clean,Priya,1,£204,yes,
+18 Jun 26,Bloom Florist,Office clean,Tomasz,5,116.00,Y,
+25/08/2026,Ridgeway Vets,Oven clean,Priya,6,£61,no,"key under mat, ring first"
+19/03/2026,Bloom Florist,End of tenancy,Grace,4.5,357,Y,
+07/09/2026,Greenleaf Dental,Regular clean,Priya,3.5,62.00,Y,
+7 Jan 26,Mrs Okafor,Deep clean,Amina,1,£171,yes,
+05/06/2026,Sunny Days Nursery,Office clean,Amina,2.5,140,yes,
+11/02/2026,Northside Gym,Oven clean,Tomasz,2,£59,Y,
+23/06/2026,Ridgeway Vets,Office clean,Priya,6,112,yes,
+2026-07-18,Northside Gym,Oven clean,Amina,5.5,64,yes,chased twice
+25 May 26,The Patel family,Deep clean,Luis,3.5,£154,yes,
+10/03/2026,Harper & Co,End of tenancy,Priya,5.5,357.00,part,
+2026-07-13,Sunny Days Nursery,Regular clean,Priya,6.5,91,yes,chased twice
+20/09/2026,The Patel family,Oven clean,Priya,3.5,61,Y,
+07/05/2026,Bloom Florist,Office clean,Priya,5,£129,Y,"key under mat, ring first"
+10/04/2026,Greenleaf Dental,Oven clean,Tomasz,6,62,Y,
+12/04/2026,Mr & Mrs Doyle,Oven clean,Priya,3.5,62,Y,
+28 Jul 26,Mr & Mrs Doyle,Deep clean,Luis,4.5,170,yes,
+05/06/2026,Northside Gym,Deep clean,Amina,6,194,Y,
+2026-09-14,The Mills,Office clean,Tomasz,6.5,169,NO,
+3 Jun 26,Café Verde,Deep clean,Grace,6.5,176,Y,
+28 Jan 26,The Mills,Office clean,Tomasz,6,£125,Y,
+2026-07-15,The Patel family,Deep clean,Grace,1,£192,Y,
+04/08/2026,Mr & Mrs Doyle,Regular clean,Priya,1,90,yes,
+8 Jul 26,Café Verde,End of tenancy,Amina,3,350,yes,chased twice
+28 Sep 26,Bloom Florist,Oven clean,Priya,5.5,57.00,NO,
+24/02/2026,Bloom Florist,Oven clean,Amina,6.5,57,Y,
+03/05/2026,Northside Gym,End of tenancy,Amina,3,336,yes,"key under mat, ring first"
+2026-07-22,Flat 4B Rosewood,End of tenancy,Priya,5,£357,Y,
+04/01/2026,Ridgeway Vets,Deep clean,Luis,5.5,£163,yes,
+25/06/2026,Harper & Co,Oven clean,Amina,1.5,65,yes,
+13/04/2026,The Mills,Deep clean,Luis,5.5,200,yes,
+24/01/2026,The Mills,Office clean,Priya,3.5,138,yes,
+15 Aug 26,Mr & Mrs Doyle,Oven clean,Luis,5.5,£66,NO,
+19 Jun 26,Dr Lindqvist,Regular clean,Priya,5,£71,Y,
+12/07/2026,The Patel family,Office clean,Priya,1.5,164,Y,"key under mat, ring first"
+26/07/2026,Oakwood Lettings,Regular clean,Priya,1,61,yes,
+24/02/2026,Greenleaf Dental,End of tenancy,Tomasz,4.5,279,yes,"key under mat, ring first"
+10 Aug 26,Mrs Okafor,End of tenancy,Priya,5,373,yes,chased twice
+02/05/2026,Flat 4B Rosewood,Regular clean,Tomasz,2,84,Y,
+17 Apr 26,Café Verde,Oven clean,Luis,3.5,£65,yes,
+19 Aug 26,Bloom Florist,Oven clean,Priya,3.5,£68,part,
+05/02/2026,The Mills,Regular clean,Priya,3.5,86.00,part,
+14/01/2026,Bloom Florist,Regular clean,Priya,3,77,part,
+2026-02-14,The Patel family,Office clean,Amina,1.5,135,Y,
+3 Jan 26,Mrs Okafor,Office clean,Tomasz,5.5,147.00,part,
+03/01/2026,Greenleaf Dental,Office clean,Priya,2,139,yes,
+2026-02-22,Harper & Co,Office clean,Grace,5,124,Y,"key under mat, ring first"
+13/06/2026,Oakwood Lettings,Regular clean,Priya,1.5,89,Y,
+17/08/2026,Mrs Okafor,Oven clean,Priya,6,67,Y,
+2026-04-17,Greenleaf Dental,Deep clean,Grace,5,152,yes,
+26 Apr 26,Dr Lindqvist,Oven clean,Amina,4.5,64.00,Y,
+24/02/2026,Greenleaf Dental,Deep clean,Amina,5,£156,part,
+2026-03-06,Greenleaf Dental,Regular clean,Luis,5,86.00,yes,
+2026-06-13,Mrs Okafor,Oven clean,Amina,2,58,part,"key under mat, ring first"
+2026-05-09,Kestrel Accountants,Deep clean,Luis,4,193,yes,
+2026-04-15,Kestrel Accountants,Regular clean,Luis,1.5,80.00,Y,
+03/04/2026,Northside Gym,Regular clean,Grace,2.5,72,Y,
+28 Sep 26,Bloom Florist,End of tenancy,Amina,1.5,294.00,NO,
+07/03/2026,The Patel family,Office clean,Luis,3,149.00,Y,"key under mat, ring first"
+1 Apr 26,Flat 4B Rosewood,Office clean,Priya,2.5,128,yes,
+01/05/2026,Ridgeway Vets,Office clean,Tomasz,4,£117,Y,
+26 Jul 26,The Mills,Deep clean,Amina,5,£161,yes,
+07/04/2026,Mr & Mrs Doyle,Office clean,Luis,5,£153,Y,
+21/09/2026,Café Verde,End of tenancy,Priya,4.5,327,Y,
+04/05/2026,Café Verde,Regular clean,Priya,6.5,94,Y,
+02/05/2026,Sunny Days Nursery,End of tenancy,Luis,2,350,yes,
+24 Jan 26,Mr & Mrs Doyle,Office clean,Amina,3.5,176,Y,
+20/04/2026,Mr & Mrs Doyle,Deep clean,Priya,1.5,172,Y,
+22 Jul 26,Café Verde,Office clean,Tomasz,6.5,163,yes,chased twice
+20/08/2026,Café Verde,Deep clean,Grace,6.5,209,NO,
+22 Sep 26,Greenleaf Dental,End of tenancy,Tomasz,6,£263,NO,
+8 Jun 26,Bloom Florist,Oven clean,Luis,5.5,£61,part,
+2026-04-17,Ridgeway Vets,Regular clean,Grace,4.5,£66,yes,
+2026-05-08,Kestrel Accountants,Office clean,Grace,3.5,126.00,part,
+14/01/2026,Harper & Co,Oven clean,Amina,4,65.00,Y,
+2026-07-17,Mr & Mrs Doyle,Office clean,Priya,3.5,136,yes,
+28/04/2026,Ridgeway Vets,Deep clean,Tomasz,1.5,143,yes,
+2026-02-05,Sunny Days Nursery,Deep clean,Tomasz,2.5,199.00,Y,chased twice
+02/07/2026,Café Verde,Deep clean,Grace,2.5,146.00,Y,
+27/01/2026,Greenleaf Dental,Oven clean,Amina,4,62.00,yes,
+04/07/2026,Ridgeway Vets,Office clean,Tomasz,4,119,Y,
+2 Jul 26,Kestrel Accountants,Office clean,Luis,5.5,144.00,yes,
+15/02/2026,Northside Gym,End of tenancy,Priya,3.5,£311,Y,
+26/09/2026,Oakwood Lettings,Oven clean,Priya,6.5,69,no,"key under mat, ring first"
+06/04/2026,Dr Lindqvist,Deep clean,Priya,1,190,Y,
+2026-01-24,Ridgeway Vets,End of tenancy,Priya,5.5,367,yes,
+2026-01-14,Ridgeway Vets,Oven clean,Tomasz,1.5,£71,Y,
+15 Jul 26,Mrs Okafor,End of tenancy,Amina,4.5,£263,part,
+19 Aug 26,Oakwood Lettings,Office clean,Grace,4.5,£132,Y,
+12 Jul 26,Harper & Co,Office clean,Priya,2.5,179,yes,"key under mat, ring first"
+20 Jul 26,Greenleaf Dental,End of tenancy,Tomasz,2.5,£324,part,"key under mat, ring first"
+24/09/2026,The Patel family,Deep clean,Grace,1,155,NO,
+15 Jan 26,Mr & Mrs Doyle,Deep clean,Luis,3.5,174,yes,
+2026-05-15,Dr Lindqvist,Oven clean,Amina,4,65,yes,
+08/02/2026,Bloom Florist,Oven clean,Luis,2,£74,yes,
+26 Feb 26,Flat 4B Rosewood,Oven clean,Amina,1.5,55,part,
+2026-08-19,Oakwood Lettings,Regular clean,Tomasz,6.5,£66,NO,
+14/09/2026,Dr Lindqvist,Deep clean,Amina,3,157,yes,
+13/08/2026,Kestrel Accountants,Oven clean,Amina,4.5,£69,NO,
+07/06/2026,Mr & Mrs Doyle,Office clean,Luis,5,151,yes,
+2026-09-12,Dr Lindqvist,Office clean,Grace,1.5,132.00,NO,
+19/06/2026,The Mills,Office clean,Amina,1,112,yes,"key under mat, ring first"
+24/08/2026,Mr & Mrs Doyle,End of tenancy,Priya,6.5,£360,Y,
+11/07/2026,Dr Lindqvist,Regular clean,Priya,3.5,87,yes,
+7 Mar 26,Ridgeway Vets,Deep clean,Luis,5,166.00,part,
+04/04/2026,Northside Gym,End of tenancy,Grace,6.5,£328,yes,"key under mat, ring first"
+06/02/2026,Sunny Days Nursery,Office clean,Amina,4.5,152,Y,"key under mat, ring first"
+2026-01-24,Oakwood Lettings,Deep clean,Tomasz,4.5,157,yes,
+2026-04-14,The Patel family,Office clean,Amina,4,174.00,Y,
+3 Apr 26,Oakwood Lettings,End of tenancy,Grace,2,£309,Y,
+08/04/2026,Kestrel Accountants,End of tenancy,Priya,2,346,yes,
+13/03/2026,Mrs Okafor,End of tenancy,Tomasz,3,365,Y,
+21/07/2026,Sunny Days Nursery,Regular clean,Grace,1.5,£77,Y,"key under mat, ring first"
+2026-05-02,Mrs Okafor,Deep clean,Grace,5.5,£162,yes,
+06/08/2026,Harper & Co,Oven clean,Amina,6,65.00,part,
+03/09/2026,The Patel family,Regular clean,Priya,4.5,63,yes,
+18/04/2026,Bloom Florist,Oven clean,Luis,4.5,72,Y,
+18/03/2026,Greenleaf Dental,Office clean,Grace,5.5,164.00,Y,
+15/09/2026,Ridgeway Vets,Oven clean,Amina,2,60,part,"key under mat, ring first"
+13/05/2026,Kestrel Accountants,Regular clean,Priya,4,76,yes,chased twice
+21/06/2026,Flat 4B Rosewood,Office clean,Tomasz,6.5,116,Y,
+06/01/2026,Kestrel Accountants,Regular clean,Grace,2.5,80,yes,
+2026-07-27,Mr & Mrs Doyle,Office clean,Tomasz,5.5,£115,Y,
+24 Mar 26,Mrs Okafor,End of tenancy,Amina,6.5,£317,Y,"key under mat, ring first"
