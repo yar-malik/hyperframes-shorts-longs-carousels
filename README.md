@@ -21,24 +21,24 @@ Every reel, long video, carousel, LinkedIn post, tweet and X article for our thr
 | AI Video Club (AVC) | `avc-content` | AI video tools and workflows for the AVC channels. |
 | Voho | `voho-content` | Voho AI phone-agent demos and tutorials, one topic of the Voho plan at a time. |
 
-The skills and everything they refer to (scripts, reference video projects, the content vault, avatar and thumbnail images) are in a **private** repo, [`yar-malik/yarmalik-product-content`](https://github.com/yar-malik/yarmalik-product-content). Ask Yar for access. The finished renders are on YouTube instead, [linked below](#reference-videos).
+The three skills are in [`.claude/skills/`](.claude/skills/): [`ccm-content`](.claude/skills/ccm-content/SKILL.md), [`avc-content`](.claude/skills/avc-content/SKILL.md) and [`voho-content`](.claude/skills/voho-content/SKILL.md). Everything they refer to (scripts, reference video projects, avatar and thumbnail images) is in [`product-content/`](product-content/). The finished renders are on YouTube, [linked below](#reference-videos).
 
 ### Setup (once)
 
 ```bash
 # from the root of this repo
-git clone git@github.com:yar-malik/yarmalik-product-content.git product-content
-scripts/content/link-product-skills.sh      # makes the three skills visible to Claude Code
 cd product-content && npm install           # dependencies for the production scripts
 ```
 
-`product-content/` is ignored by this repo, so nothing private ever gets committed here. To get Yar's latest changes later, run `git pull` inside `product-content/`.
+### What isn't here
+
+This repo is public, so a few things stay on Yar's machine: `.env` files and API keys, the content vault and downloaded reference videos (other creators' work), the avatar training footage, and the demo-account passwords in `marks.json` (the emails are kept, the passwords are blank). Ask Yar if a step needs one of them.
 
 ### How to use them
 
 1. Open this repo in Claude Code. The three skills load automatically from `.claude/skills/`.
 2. Ask for what you need in plain words, naming the product, for example *"make a CCM reel about Claude Code hooks"*, *"next Voho topic"* or *"AVC carousel from this script"*. Claude picks the matching skill and follows it end to end.
-3. Read the skill yourself before your first piece (`product-content/.claude/skills/<product>-content/SKILL.md`). It's long, but it's the single source of truth: if anything else disagrees with it, **the skill wins**.
+3. Read the skill yourself before your first piece (`.claude/skills/<product>-content/SKILL.md`). It's long, but it's the single source of truth: if anything else disagrees with it, **the skill wins**.
 
 ### Where the referenced files live
 
@@ -48,8 +48,7 @@ cd product-content && npm install           # dependencies for the production sc
 | --- | --- |
 | `scripts/content`, `scripts/long`, `scripts/voho`, `scripts/avatar`, `scripts/board`, `scripts/thumbnail` | The production pipeline: TTS, long-video builder, reel builder, thumbnails, posting. |
 | `videos/` | Past projects the skills use as reference builds (sources, recordings, b-roll), plus shared Voho music in `_voho-shared/bgm/`. Their finished renders are on YouTube, below. |
-| `content/vault/` | Hook, script, carousel, tweet, LinkedIn and Skool references, sorted by format. |
-| `content/references/`, `content/avatar/`, `content/skool/` | Layout reference stills and clips, thumbnail references, presenter cutouts and community covers. |
+| `content/references/`, `content/avatar/`, `content/skool/` | Layout reference stills, thumbnail references, presenter cutouts and community covers. |
 | `content/topics/` | Per-topic piece definitions (`pieces.mjs`). |
 | `open-source/animation-base/` | The animated presenter / studio scenes used in long videos. |
 | `docs/specs/`, `docs/playbook/` | Thumbnail specs and the writing checker (`node docs/playbook/check.mjs`). |
@@ -72,6 +71,8 @@ Finished renders of the past projects, unlisted on the **Team Yar Malik** YouTub
 | Voho | Saudi clinic | [YouTube](https://youtu.be/CZKaH_fJN3g) | `videos/voho-saudi-clinic/` |
 | Voho | Build an AI phone agent, long tutorial | [YouTube](https://youtu.be/tJm5CGuypoY) | `videos/voho-tutorial-build-an-ai-phone-agent/` |
 | Voho | Build an AI phone agent, reel | [YouTube](https://youtu.be/eCECf-1qbUw) | `videos/voho-tutorial-build-an-ai-phone-agent/` |
+| Voho | Claims reel (latest v4 Voho reel, no music bed) | — | `videos/voho-claims-reel/` |
+| Voho | Chat agent for a Saudi store, long | — | `videos/voho-chat-agent-saudi-store/` |
 | Animation base | Presenter cast demo | [YouTube](https://youtu.be/QGkrViwXMNI) | `open-source/animation-base/` |
 
 ### Keys you need
@@ -85,11 +86,11 @@ Put these in `product-content/.env` (it's never committed; ask Yar for values). 
 
 ### Where the originals live
 
-The master copies are in Yar's `yarmalik.com` repo. **Edit the skills there (or tell Yar), not in `product-content/`**, or the next refresh overwrites your change. Yar refreshes the private repo with:
+The master copies are in Yar's `yarmalik.com` repo. **Edit the skills there (or tell Yar), not here**, or the next refresh overwrites your change. Yar refreshes this repo with:
 
 ```bash
-scripts/content/pull-product-content.sh     # copies from ../yarmalik.com, relinks the skills
-cd product-content && git add -A && git commit -m "Refresh from yarmalik.com" && git push
+scripts/content/pull-product-content.sh     # copies the skills and references from ../yarmalik.com
+git add -A && git commit -m "Refresh product content from yarmalik.com" && git push
 ```
 
 ## DeepSeek Instagram carousel

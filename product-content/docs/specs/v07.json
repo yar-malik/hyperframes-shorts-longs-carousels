@@ -1,0 +1,43 @@
+{
+  "project": "fable5-skill-reel",
+  "board_id": "v07",
+  "message": "The $10,000 website is the model, not the skill",
+  "handle": "yarmalik",
+  "cta": "Full breakdown on the channel",
+  "yt_title": "The $10,000 website isn't the skill. It's the model.",
+  "yt_desc": "Everyone is saying a free design skill plus Claude Opus builds you a website an agency would charge $10,000 for.\n\nThat line sounds like it's about the skill. It isn't. Open one — they're just text files. A skill is a markdown file with a settings block at the top, sitting in a folder the agent reads. No code runs.\n\nThe good ones do three things: interview you before they build, route work between models, and argue with themselves before they start. All three are process, not taste. You could do them by hand. The value is that you don't have to remember to.\n\nFull breakdown on the channel.",
+  "lines": [
+    {"text": "Everyone is saying the same thing. A free design skill plus Claude builds you a website an agency would charge ten thousand for.", "sfx": ["pop"]},
+    {"text": "That line sounds like it is about the skill. It is not. It is about the model.", "sfx": ["impact-bass-1"]},
+    {"text": "Because if you actually open one of these skills, they are just text files. You can read them.", "sfx": ["key-press"]},
+    {"text": "A skill is a markdown file with a settings block at the top, sitting in a folder the agent reads. No code runs.", "sfx": ["click"]},
+    {"text": "The good ones do three things. They interview you before building, they route work between models, and they argue with themselves before they start.", "sfx": ["pop", "click"]},
+    {"text": "All three are process, not taste. You could do them by hand. The value is that you do not have to remember to.", "sfx": []}
+  ],
+  "frames": [
+    {"id": "01-claim", "kind": "stat", "brow": "the line everyone repeats",
+     "head": "A skill worth <em>$10,000</em>",
+     "stats": [{"n": "$10k", "t": "what an agency would charge for the page"}],
+     "note": "Free skill, plus Claude. That is the claim."},
+    {"id": "02-model", "kind": "list", "brow": "except",
+     "head": "It is not <em>the skill</em>",
+     "items": [{"c": "#dc551d", "t": "It is the model"}, {"c": "#0f0f0f", "t": "The skill just aims it"}],
+     "note": "Which changes what you should copy."},
+    {"id": "03-open", "kind": "cmd", "brow": "so open one",
+     "head": "They are <em>text files</em>",
+     "cmd": "$ cat <i>skills/design/SKILL.md</i>",
+     "note": "You can read the whole thing in a minute."},
+    {"id": "04-what", "kind": "list", "brow": "what is actually inside",
+     "head": "A markdown file. <em>No code</em>",
+     "items": [{"c": "#0f0f0f", "t": "A settings block at the top"}, {"c": "#0f0f0f", "t": "Instructions underneath"}],
+     "note": "Sitting in a folder the agent reads before it works."},
+    {"id": "05-three", "kind": "list", "brow": "the good ones do three things",
+     "head": "All three are <span class=\"g\">process</span>",
+     "items": [{"c": "#1f8a4c", "t": "Interviews you first"}, {"c": "#1f8a4c", "t": "Routes between models"}, {"c": "#1f8a4c", "t": "Argues before it starts"}],
+     "note": "None of it is taste."},
+    {"id": "06-payoff", "kind": "payoff", "brow": "", "head": "",
+     "l1": "You could do <em>all of it</em> by hand",
+     "l2": "The value is <span class=\"g\">not remembering to</span>",
+     "note": "That is the whole skill."}
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "short": {
+    "url": "https://youtu.be/qI3QULp5naM",
+    "id": "qI3QULp5naM"
+  },
+  "ig": {
+    "slides": [
+      "/content-automation/made/free-unlimited-claude-code/ig-01.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-02.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-03.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-04.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-05.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-06.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-07.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-08.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-09.jpg",
+      "/content-automation/made/free-unlimited-claude-code/ig-10.jpg"
+    ],
+    "caption": "Claude Code on 635 free AI models, from one key.\n\nFreeLLMAPI is open source (28.3k stars on GitHub). It runs on your machine and puts 34 free providers behind one endpoint: Groq, Gemini, OpenRouter, Mistral, Cerebras, NVIDIA and more. That's about 7.4 billion free tokens a month.\n\nWhen one model hits its limit, it moves you to the next one and leaves a short handoff note so you don't lose the thread.\n\nRead slide 9 before you switch, though. There are no frontier models in there, and the README itself says it's for experiments, not production.\n\nComment FREE and I'll send you the repo and the setup.\n\n#claudecode #ai #opensource #coding #aitools"
+  },
+  "li": {
+    "slides": [
+      "/content-automation/made/free-unlimited-claude-code/li-01.jpg",
+      "/content-automation/made/free-unlimited-claude-code/li-02.jpg",
+      "/content-automation/made/free-unlimited-claude-code/li-03.jpg",
+      "/content-automation/made/free-unlimited-claude-code/li-04.jpg",
+      "/content-automation/made/free-unlimited-claude-code/li-05.jpg",
+      "/content-automation/made/free-unlimited-claude-code/li-06.jpg",
+      "/content-automation/made/free-unlimited-claude-code/li-07.jpg",
+      "/content-automation/made/free-unlimited-claude-code/li-08.jpg"
+    ],
+    "pdf": "/content-automation/made/free-unlimited-claude-code/li.pdf",
+    "caption": "Most of what a coding agent writes in week one gets thrown away.\n\nSpikes, dead ends, three versions of the same component. Paying frontier rates for that is a choice, and so is stopping when a usage limit lands mid-task.\n\nFreeLLMAPI is an open-source router (MIT, 28.3k stars) that you run locally. It puts 34 free LLM providers and 635 endpoints behind a single /v1 endpoint, roughly 7.4B tokens a month, and Claude Code can point straight at it.\n\nIt ranks models live, fails over when one is rate-limited, keeps a conversation on one model for 30 minutes, and passes a short handoff note when it has to switch.\n\nThe catch is in its own README: no frontier models, variable latency, no SLA, and it gets weaker late in the day until the caps reset. So it doesn't replace your paid model. It replaces the part of your spend that was never worth it.\n\nFree for exploring. Paid for shipping.\n\nSetup is three commands, and they're in the deck. Comment FREE and I'll send you the link."
+  },
+  "lipost": {
+    "image": "/content-automation/made/free-unlimited-claude-code/lipost.jpg",
+    "text": "You can now run Claude Code on free models, and it's not a hack.\n\nFreeLLMAPI is an open-source router (MIT, 28.3k stars on GitHub). You run it on your own machine, add free keys from providers like Groq, Gemini, OpenRouter and Mistral, and it puts all of them behind one endpoint. That's 34 providers, 635 model endpoints and about 7.4 billion tokens a month.\n\nClaude Code points at it with one command. When a model hits its rate limit, the router moves you to the next one and passes a short handoff note so the work carries on.\n\nThe catch, from its own README: no frontier models, variable speed, and it gets weaker late in the day as the best free tiers hit their caps.\n\nSo I wouldn't swap a paid plan for it. I'd put it underneath one. Send the throwaway work, the spikes and first drafts, to free tiers, and keep the paid model for whatever ships.\n\nFree for exploring. Paid for shipping.\n\nComment FREE and I'll send you the setup."
+  },
+  "tweet": {
+    "text": "Claude Code can run on free models now.\n\nFreeLLMAPI (28k★, open source) puts 34 free providers and 635 endpoints behind one local /v1 endpoint. ~7.4B tokens a month.\n\nHit a limit and it fails over, with a handoff note so the context survives.\n\nCatch: no frontier models."
+  },
+  "article": {
+    "title": "Free Claude Code: what you actually get, and what you don't",
+    "body": "There's a clip doing the rounds that says you can run Claude Code for free with almost unlimited usage. It's mostly true. The \"mostly\" is the interesting part, so here's what's actually in the box.\n\n## What it is\n\nThe project is FreeLLMAPI (github.com/tashfeenahmed/freellmapi). It's open source under MIT and sitting at about 28,000 stars. It's a router you run on your own machine: every free tier it knows about, behind one /v1 endpoint that speaks both the OpenAI and the Anthropic formats.\n\nThe numbers on the README: 34 free providers, 635 model endpoints, 474 model families, and roughly 7.4 billion tokens a month if you connect all of them. Groq, Google's Gemini, OpenRouter, Mistral, Cerebras, NVIDIA and Cohere are all in there.\n\nBecause it speaks Anthropic's format, Claude Code doesn't know the difference. It thinks it's talking to Anthropic. It's talking to whatever free model the router picked.\n\n## Setting it up\n\nThree steps, and none of them take long.\n\n1. Install it: curl -fsSL https://freellmapi.co/install.sh | bash. That opens a dashboard on localhost:3001.\n2. Add your provider keys in the dashboard. Each provider is its own free signup, so this is the slow bit, and it's worth doing properly. The more keys you add, the more room the router has when one of them runs dry.\n3. Point Claude Code at it: npx freellmapi setup-claude --url http://localhost:3001 --api-key <your unified key>. The unified key is on the dashboard.\n\nThen run claude as normal.\n\n## The clever part\n\nStacking free tiers isn't new. What makes this one usable is how it behaves when a tier runs out, which with free tiers is constantly.\n\nIt keeps a live score for every model on speed, capability and reliability, and routes to the best one available. When a call gets rate-limited it fails over to the next, with cooldowns and key rotation so it isn't hammering a provider that just said no. A conversation stays on one model for 30 minutes, so you're not getting a different brain every turn. And when it does have to switch mid-task, it can leave a compact handoff note, so the next model picks up the thread instead of starting cold.\n\nThat last bit is what the viral clip means by \"it keeps your context.\" It's a summary, not a transplant. It's good, but it isn't magic.\n\n## What you don't get\n\nThis is the bit the clip skips, and the README is refreshingly blunt about it.\n\n- No frontier models. Nobody is giving away their best model on a free tier, so you are not getting Opus-level reasoning here.\n- No speed promises. You're as fast as whichever free provider answered.\n- It gets weaker as the day goes on. The best free models hit their daily caps and the router falls back to what's left. It resets at UTC midnight.\n- No SLA. The author says it's for personal experimentation and learning, not production.\n\nAnd one the README implies but doesn't shout: your prompts go to the upstream providers you connect. Don't point it at client code or anything private.\n\n## Where it actually fits\n\nI wouldn't replace a paid Claude plan with this. I'd put it underneath one.\n\nMost of what a coding agent writes early in a project gets thrown away: spikes, experiments, three attempts at the same component. That work doesn't need the best model in the world, and it's exactly where usage limits bite. Route that to free tiers. Keep the paid model for the final pass and for anything a customer will touch.\n\nFree for exploring, paid for shipping. That's the whole trick, and it's a good one.",
+    "cover": "/content-automation/made/free-unlimited-claude-code/article.jpg"
+  }
+}

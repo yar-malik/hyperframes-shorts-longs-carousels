@@ -1,0 +1,486 @@
+{
+  "at": "2026-09-23T12:00:45.481Z",
+  "runs": 2,
+  "criteria": [
+    "specific",
+    "curiosity",
+    "jolt",
+    "who",
+    "payoff",
+    "fresh",
+    "spoken",
+    "proof",
+    "voice",
+    "topic"
+  ],
+  "set": [
+    {
+      "verdict": "rejected",
+      "topic": "Claude's default design system",
+      "text": "Purple gradient. Rounded cards. Grey text you can't read. That's every AI site ever made, and in six minutes it's dead.",
+      "runs": [
+        {
+          "c": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "total": 10,
+          "weakest": "voice"
+        },
+        {
+          "c": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "total": 9,
+          "weakest": "voice"
+        }
+      ]
+    },
+    {
+      "verdict": "accepted",
+      "topic": "Claude's default design system",
+      "text": "Every site Claude builds comes out looking the same, with the purple gradient and the rounded cards and the grey text nobody can read, and that's because it's working from the same system every time. In this video I'll show you how to replace that system so what comes out actually looks like yours.",
+      "runs": [
+        {
+          "c": [
+            2,
+            1,
+            2,
+            2,
+            2,
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          "total": 15,
+          "weakest": "fresh"
+        },
+        {
+          "c": [
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "total": 16,
+          "weakest": "spoken"
+        }
+      ]
+    },
+    {
+      "verdict": "rejected",
+      "topic": "Claude marking its own work",
+      "text": "I made Claude mark its own homework. It failed itself twice, then fixed both. You'll have this running by the end of the video.",
+      "runs": [
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2
+          ],
+          "total": 18,
+          "weakest": "jolt"
+        },
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            2
+          ],
+          "total": 16,
+          "weakest": "proof"
+        }
+      ]
+    },
+    {
+      "verdict": "accepted",
+      "topic": "Claude marking its own work",
+      "text": "I let Claude mark its own homework, and it failed itself twice before going back and fixing both problems without me saying anything. I'm going to show you exactly how that's wired up, so you'll have the same thing running by the end of this video.",
+      "runs": [
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2
+          ],
+          "total": 18,
+          "weakest": "jolt"
+        },
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            2
+          ],
+          "total": 17,
+          "weakest": "voice"
+        }
+      ]
+    },
+    {
+      "verdict": "rejected",
+      "topic": "Token cost",
+      "text": "You're paying twenty times too much. Not twenty percent. Twenty times. My own bill's on screen and the fix takes a minute.",
+      "runs": [
+        {
+          "c": [
+            2,
+            2,
+            1,
+            0,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "total": 10,
+          "weakest": "voice"
+        },
+        {
+          "c": [
+            1,
+            2,
+            1,
+            0,
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "total": 10,
+          "weakest": "voice"
+        }
+      ]
+    },
+    {
+      "verdict": "accepted",
+      "topic": "Token cost",
+      "text": "You might be paying twenty times more for your Claude tokens than you need to and not even know it, because the thing that fixes it isn't a setting anybody tells you about. My own bill is on screen, and sorting it out takes about a minute.",
+      "runs": [
+        {
+          "c": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "total": 18,
+          "weakest": "fresh"
+        },
+        {
+          "c": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "total": 19,
+          "weakest": "fresh"
+        }
+      ]
+    },
+    {
+      "verdict": "rejected",
+      "topic": "An agent that bills you to think",
+      "text": "Your agent charges you to think. Then charges you to check its thinking. This one runs on your laptop, offline, for nothing.",
+      "runs": [
+        {
+          "c": [
+            1,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          "total": 12,
+          "weakest": "voice"
+        },
+        {
+          "c": [
+            1,
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            0,
+            0,
+            2
+          ],
+          "total": 13,
+          "weakest": "voice"
+        }
+      ]
+    },
+    {
+      "verdict": "accepted",
+      "topic": "An agent that bills you to think",
+      "text": "Your agent charges you to think and then charges you again to check its own thinking, which is why the bill never quite makes sense at the end of the month. This one runs on your laptop instead, completely offline, and it doesn't cost you anything at all.",
+      "runs": [
+        {
+          "c": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2,
+            0,
+            2,
+            2
+          ],
+          "total": 16,
+          "weakest": "proof"
+        },
+        {
+          "c": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            1,
+            2,
+            0,
+            2,
+            2
+          ],
+          "total": 14,
+          "weakest": "proof"
+        }
+      ]
+    },
+    {
+      "verdict": "rejected",
+      "topic": "An agent that recovered on its own",
+      "text": "It broke, fixed itself, and kept going. I never touched the keyboard. By the end of this you'll have the same thing running free.",
+      "runs": [
+        {
+          "c": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "total": 10,
+          "weakest": "jolt"
+        },
+        {
+          "c": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            0
+          ],
+          "total": 8,
+          "weakest": "specific"
+        }
+      ]
+    },
+    {
+      "verdict": "accepted",
+      "topic": "An agent that recovered on its own",
+      "text": "It broke about halfway through, fixed itself, and carried on without me touching the keyboard once. And in this video I'll walk you through how it's set up, so you can get the same thing running for free.",
+      "runs": [
+        {
+          "c": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2
+          ],
+          "total": 11,
+          "weakest": "jolt"
+        },
+        {
+          "c": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            0
+          ],
+          "total": 12,
+          "weakest": "topic"
+        }
+      ]
+    },
+    {
+      "verdict": "rejected",
+      "topic": "Two models in one folder",
+      "text": "Two rival AIs. One folder. No supervision. Claude on the interface, Codex on the logic, patching each other. Eight minutes to a working app.",
+      "runs": [
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          "total": 13,
+          "weakest": "voice"
+        },
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          "total": 13,
+          "weakest": "voice"
+        }
+      ]
+    },
+    {
+      "verdict": "accepted",
+      "topic": "Two models in one folder",
+      "text": "I put two rival AIs in one folder with no supervision, Claude on the interface and Codex on the logic, and let them patch each other's work while I watched. Eight minutes later there was an app that ran, and I'll show you exactly how it was wired.",
+      "runs": [
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            2
+          ],
+          "total": 17,
+          "weakest": "proof"
+        },
+        {
+          "c": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            2
+          ],
+          "total": 17,
+          "weakest": "proof"
+        }
+      ]
+    }
+  ]
+}

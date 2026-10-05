@@ -1,0 +1,24 @@
+{
+  "short": null,
+  "ig": {
+    "slides": [],
+    "caption": ""
+  },
+  "li": {
+    "slides": [],
+    "pdf": "/content-automation/made/voho-it-service-desk/li.pdf",
+    "caption": ""
+  },
+  "lipost": {
+    "image": "/content-automation/made/voho-it-service-desk/lipost.jpg",
+    "text": "One phone call. Two service desk tickets. Nobody typed anything.\n\nI built a small IT service desk for a made-up company in Riyadh and put a Voho agent on its phone line, speaking Saudi Arabic. An employee called with two problems: his laptop wouldn't connect to the VPN, and a new colleague needed access to the procurement system.\n\nIn a 75-second call, the agent:\n→ looked him up from his employee number (name, department, floor, laptop)\n→ opened #2421 for the network team, high priority, because he said he couldn't work at all\n→ opened #2422 for identity management, in the new colleague's name\n→ read both numbers back before he hung up\n\nThat's two functions on the agent, find_employee and create_ticket, pointed at one endpoint. The desk fills in the rest from its own directory.\n\nThe first test call is the part worth sharing. The endpoint hadn't saved, so the agent had nothing to call, and it read out ticket numbers it had made up. Confidently. So now a ticket number can only come from create_ticket, and the lookup's answer tells the agent to open the ticket next. On another run it logged the same request twice, so the desk catches duplicates too.\n\nIf your service desk still starts with someone retyping a phone call, that's the step to hand over first.\n\nLink to the full video (in Saudi Arabic) is in the comments 👇"
+  },
+  "tweet": {
+    "text": ""
+  },
+  "article": {
+    "title": "",
+    "body": "",
+    "cover": ""
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "project": "fable-watermark-reel",
+  "board_id": "v21",
+  "message": "Every Fable 5.1 output now carries an invisible watermark",
+  "handle": "yarmalik",
+  "cta": "Full breakdown on the channel",
+  "yt_title": "Fable 5.1 watermarks 100% of its output. Here's what that means.",
+  "yt_desc": "Anthropic rolled out a mandatory update that injects an invisible watermark into 100% of Fable 5.1's outputs — a statistical tracker permanently attached to what you generate.\n\nWhy: European regulators demanded a standardised, verifiable way to audit AI-generated content for models released after August 2nd, 2026.\n\nThe part that matters: it has zero practical effect on output quality. It won't break your code and it won't hallucinate facts — a date stays the date it was. It rides on token probability and it's invisible to the naked eye.\n\nFull breakdown on the channel.",
+  "lines": [
+    {"text": "Anthropic made a change to Fable five point one that nobody announced loudly, and it affects everything you generate with it.", "sfx": ["glitch-1"]},
+    {"text": "Every output now carries an invisible watermark. Not most of them. One hundred percent of them.", "sfx": ["impact-bass-1"]},
+    {"text": "A statistical tracker, permanently attached to your work, that you cannot see and did not opt into.", "sfx": ["error"]},
+    {"text": "Here is why. European regulators demanded a verifiable way to audit AI generated content for any model released after August the second.", "sfx": ["pop"]},
+    {"text": "But here is the part that actually matters. It has zero practical effect on the output quality.", "sfx": ["chime"]},
+    {"text": "It will not break your code and it will not hallucinate facts. A date stays the date it was.", "sfx": []}
+  ],
+  "frames": [
+    {"id": "01-change", "kind": "list", "brow": "quietly, last week",
+     "head": "A change nobody <em>announced</em>",
+     "items": [{"c": "#dc551d", "t": "Mandatory update"}, {"c": "#0f0f0f", "t": "Fable 5.1, all of it"}],
+     "note": "It affects everything you generate."},
+    {"id": "02-hundred", "kind": "stat", "brow": "how much of it",
+     "head": "Watermarked. <em>All of it</em>",
+     "stats": [{"n": "100%", "t": "of outputs carry an invisible mark"}],
+     "note": "Not most. All."},
+    {"id": "03-tracker", "kind": "list", "brow": "what it actually is",
+     "head": "A <em>statistical tracker</em>",
+     "items": [{"c": "#dc551d", "t": "Permanently attached"}, {"c": "#dc551d", "t": "Invisible to the eye"}],
+     "note": "You did not opt into it."},
+    {"id": "04-why", "kind": "stat", "brow": "and the reason",
+     "head": "Regulators <em>demanded it</em>",
+     "stats": [{"n": "AUG 2", "t": "models released after this date"}],
+     "note": "A standardised, verifiable audit trail for AI content."},
+    {"id": "05-impact", "kind": "stat", "brow": "the part that matters",
+     "head": "Effect on quality: <span class=\"g\">zero</span>",
+     "stats": [{"n": "0", "t": "measurable change to your output", "green": true}],
+     "note": "This is the bit everyone gets wrong."},
+    {"id": "06-payoff", "kind": "payoff", "brow": "", "head": "",
+     "l1": "It will not <em>break your code</em>",
+     "l2": "A date stays <span class=\"g\">the date it was</span>",
+     "note": "Marked, not degraded. Those are different things."}
+  ]
+}

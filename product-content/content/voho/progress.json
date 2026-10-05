@@ -1,0 +1,53 @@
+{
+ "1": {
+  "status": "published",
+  "at": "2026-09-27T15:40:00Z",
+  "workspace": "videos/voho-tutorial-ai-loan-leads",
+  "youtube": "https://www.youtube.com/watch?v=F8yM6oEOMT8",
+  "instagram": "https://www.instagram.com/vohoaicalling/reels/",
+  "facebook": "https://www.facebook.com/reel/1759786808645332/",
+  "linkedin": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7509999785756565504",
+  "x": "https://twitter.com/yarmalikAI/status/2104233875123937752"
+ },
+ "2": {
+  "status": "published",
+  "at": "2026-10-03T21:30:58.028Z",
+  "workspace": "videos/voho-02-a-car-accident-claim-logged-in",
+  "youtube": "https://www.youtube.com/watch?v=H_8vnfSPjPQ",
+  "youtubeThumbnail": {
+   "file": "/Users/yar/IdeaProjects/yarmalik.com/videos/voho-02-a-car-accident-claim-logged-in/thumb-youtube.jpg",
+   "status": "pending"
+  },
+  "instagram": "https://www.instagram.com/vohoaicalling/reels/",
+  "skipped": {
+   "facebook": "not asked for (2026-10-03)"
+  },
+  "linkedinPostId": "cmuswle8k03z3qy0yrom4r8bd",
+  "linkedin": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7512262901446135808"
+ },
+ "12": {
+  "status": "published",
+  "at": "2026-09-28T13:19:00Z",
+  "workspace": "videos/voho-12-where-is-my-order-answered-without",
+  "youtube": "https://www.youtube.com/watch?v=HICerx3boUM",
+  "instagram": "https://www.instagram.com/vohoaicalling/reels/",
+  "facebook": "https://www.facebook.com/reel/1408442224603134/",
+  "linkedin": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7510327135824392192",
+  "x": "https://twitter.com/yarmalikAI/status/2104559881772814743"
+ },
+ "car-rental-booking": {
+  "status": "published",
+  "at": "2026-10-04T10:18:30.050Z",
+  "workspace": "videos/voho-car-rental-booking",
+  "youtube": "https://www.youtube.com/watch?v=8skOjSwPmOM",
+  "youtubeThumbnail": {
+   "file": "/Users/yar/IdeaProjects/yarmalik.com/videos/voho-car-rental-booking/thumb-youtube.jpg",
+   "status": "pending"
+  },
+  "instagram": "https://www.instagram.com/vohoaicalling/reels/",
+  "facebook": "https://www.facebook.com/reel/2858307434553243/",
+  "linkedinPostId": "cmuto0cfr02vxp20ye9ljksgu",
+  "linkedin": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7512456036369281024",
+  "offPlan": true
+ }
+}

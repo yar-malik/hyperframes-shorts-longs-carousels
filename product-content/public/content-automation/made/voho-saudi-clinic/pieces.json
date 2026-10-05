@@ -1,0 +1,45 @@
+{
+  "short": {
+    "url": "https://youtu.be/xDwl0UnZlJY",
+    "id": "xDwl0UnZlJY"
+  },
+  "ig": {
+    "slides": [
+      "/content-automation/made/voho-saudi-clinic/ig-01.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-02.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-03.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-04.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-05.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-06.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-07.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-08.jpg",
+      "/content-automation/made/voho-saudi-clinic/ig-09.jpg"
+    ],
+    "caption": "I built an AI receptionist that speaks Saudi Arabic, and it took under two minutes.\n\nSign up on Voho, create an agent, give it Layla (a warm Najdi voice on Sada, Voho's Saudi voice model), and write the instructions in Saudi Arabic: book appointments, confirm the patient's name and mobile, never give medical advice.\n\nThen press call. It booked a dentist for tomorrow afternoon on the first try. 50 seconds, 6 cents.\n\nComment CLINIC and I'll send you the link.\n\n#ai #voiceai #saudiarabia #riyadh #clinic #automation"
+  },
+  "li": {
+    "slides": [
+      "/content-automation/made/voho-saudi-clinic/li-01.jpg",
+      "/content-automation/made/voho-saudi-clinic/li-02.jpg",
+      "/content-automation/made/voho-saudi-clinic/li-03.jpg",
+      "/content-automation/made/voho-saudi-clinic/li-04.jpg",
+      "/content-automation/made/voho-saudi-clinic/li-05.jpg",
+      "/content-automation/made/voho-saudi-clinic/li-06.jpg",
+      "/content-automation/made/voho-saudi-clinic/li-07.jpg"
+    ],
+    "pdf": "/content-automation/made/voho-saudi-clinic/li.pdf",
+    "caption": "A clinic's phone is where patients are won and lost.\n\nThe calls come at lunch, after hours and all at once, and the ones nobody answers book somewhere else. Voice AI can take those calls now, but in the Gulf it only works if it sounds like the caller rather than like a translation.\n\nSo here's a Saudi Arabic receptionist, built on Voho, from sign-up to a booked appointment in one take:\n\n1. Create an agent and give it Layla, a Najdi voice on Sada, Voho's Saudi model.\n2. Write the instructions in Saudi Arabic. Book, change and cancel across four departments, confirm the patient's name and mobile, never give medical advice, send emergencies to 997.\n3. Press call and talk to it like a patient would.\n\nIt booked the dentist. The call took 50 seconds and cost $0.06, and the console wrote up the summary and outcome on its own.\n\nThe deck has the prompt and the full call. Comment CLINIC and I'll send you the link."
+  },
+  "lipost": {
+    "image": "/content-automation/made/voho-saudi-clinic/lipost.jpg",
+    "text": "I built an AI receptionist that speaks Saudi Arabic, and it took under two minutes from sign-up.\n\nThe build is three decisions: a Najdi voice (Layla, on Sada, Voho's Saudi model), the language set to Arabic (Saudi Arabia), and instructions written in Saudi Arabic rather than translated into it. Book appointments, confirm the patient's name and mobile, never give medical advice.\n\nThen one test call. It booked a dentist for tomorrow afternoon. 50 seconds, six cents, and the console wrote the summary on its own.\n\nIn the Gulf, dialect isn't a nice-to-have. An agent that sounds translated has lost the caller by its second sentence, so the voice and the language are the product.\n\nComment CLINIC and I'll send you the link."
+  },
+  "tweet": {
+    "text": "I built an AI receptionist that speaks Saudi Arabic in under 2 minutes.\n\nNajdi voice, instructions written in Arabic, one rule: never give medical advice.\n\nFirst test call: booked a dentist for tomorrow afternoon. 50 seconds, $0.06.\n\nBuilt on Voho."
+  },
+  "article": {
+    "title": "I built a Saudi Arabic AI receptionist in two minutes. Here's the whole thing.",
+    "body": "Most AI receptionists fall apart the moment a caller in Riyadh speaks the way people in Riyadh actually speak. They answer in formal Arabic, or worse, in something that sounds translated. So I wanted to see how fast I could build one that doesn't, from a blank account to a booked appointment, and record it in one take.\n\nIt took under two minutes. Here's everything I did.\n\n## The setup\n\nI built it on Voho (app.voho.ai), which is ours. Sign up with an email and a password and you land in the console. Click Create an agent, and start from scratch.\n\nAn agent is three decisions, and they sit across the top of the screen:\n\n- The model: Sada, Voho's Saudi voice model.\n- The voice: Layla. The console describes her as \"warm Najdi delivery, the default for inbound reception and appointment setting.\"\n- The language: Arabic (Saudi Arabia).\n\n## The instructions\n\nThis is the part that decides whether it sounds local. I wrote the instructions in Saudi Arabic rather than writing them in English and hoping. There's a \"Write it in Arabic\" button that rewrites an English prompt for you, but for a demo I wanted to show it done properly.\n\nIn English, the prompt says roughly this. You are Layla, the voice receptionist at Al Noor Medical Clinics in Riyadh. Answer in a warm, polite Saudi dialect, in short clear sentences. Book, change and cancel appointments for dentistry, dermatology, paediatrics and internal medicine. Confirm the patient's name and mobile number before confirming anything. Give the opening hours and the location, and say which insurers the clinic accepts.\n\nAnd the rules. Never give a diagnosis or medication advice; if someone describes symptoms, offer them an appointment with the right doctor. If it's an emergency, tell them to call 997 now. If they ask for a person, transfer them politely. End every call by repeating the appointment back.\n\nThen a welcome message, which the agent speaks first, and Save.\n\n## The call\n\nI pressed Call and talked to it like a patient would. Translated from the transcript, it went like this:\n\n- Layla: Welcome to Al Noor Medical Clinics, this is Layla. How can I help?\n- Me: I'd like to book with the dentist, tomorrow afternoon if possible.\n- Layla: Of course. Can you give me the patient's name and mobile number?\n- Me: Mohammed Al-Otaibi, 0551234567.\n- Layla: Done, Mohammed. Tomorrow afternoon, in the dental department. See you then.\n\nThe console marked it resolved. The call took 50 seconds and cost six cents.\n\n## What happens after the call\n\nThis is the bit I like most. Every call shows up under Conversations with the transcript, a summary and an outcome, and the summary is written from what was actually said. This one read: \"The caller, Mohammed Al-Otaibi, called to book a dental appointment for tomorrow afternoon. The agent successfully booked the appointment for him in the dental department for tomorrow afternoon. The exact time of the appointment was not specified in the call.\"\n\nThat last sentence is the honest part. Layla asked what time suited him and I hung up without answering, so the summary says so. It records what happened on the call, not what the agent was meant to do.\n\n## Making it real\n\nA test call in the browser is a demo. To put it on a real line, you import a number from Twilio or point your own SIP trunk at Voho (an STC or Mobily trunk works), and route that number to the agent. The same agent can also sit on your website as a voice and chat widget, with one snippet pasted before the closing body tag.\n\nIf a clinic is losing patients to unanswered calls, this is a two-minute experiment. Comment CLINIC and I'll send you the link.",
+    "cover": "/content-automation/made/voho-saudi-clinic/article.jpg"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "project": "gpt6-astra-reel",
+  "board_id": "v27",
+  "message": "Astra wins by two points; the real story is cached input pricing",
+  "handle": "yarmalik",
+  "cta": "Full breakdown on the channel",
+  "yt_title": "GPT-6 Astra: wins by 2 points, but cached inputs change everything",
+  "yt_desc": "OpenAI launched GPT-6 Astra on September 3rd, 2026. The numbers underneath it are the real story.\n\n1.05 million token context window. 128,000 output tokens in a single generation.\n\nOn Terminal Bench 4.0 Astra scored 57.9% on complex software engineering tasks. Claude Fable 5.1 scored 55.8%. It wins — by two points.\n\nPricing: $10 per million input tokens, $50 per million output. But cache your inputs and it drops to $1 per million. That's where the economics actually change.\n\nFull breakdown on the channel.",
+  "lines": [
+    {"text": "OpenAI launched GPT six Astra on September the third, and the numbers underneath it are the actual story.", "sfx": ["pop"]},
+    {"text": "A one point zero five million token context window, and a hundred and twenty eight thousand output tokens in a single generation.", "sfx": ["impact-bass-1"]},
+    {"text": "On Terminal Bench four, Astra scored fifty seven point nine percent on complex software engineering tasks.", "sfx": ["ping"]},
+    {"text": "Claude Fable five point one scored fifty five point eight. So Astra wins, but it wins by two points.", "sfx": ["click"]},
+    {"text": "Ten dollars per million input tokens. Fifty dollars per million output. That is the sticker price.", "sfx": ["pop"]},
+    {"text": "But cache your inputs and it drops to one dollar per million. That is where the economics actually change.", "sfx": []}
+  ],
+  "frames": [
+    {"id": "01-launch", "kind": "stat", "brow": "openai, this week",
+     "head": "GPT-6 <em>Astra</em> is out",
+     "stats": [{"n": "SEP 3", "t": "the day the flagship landed"}],
+     "note": "The numbers underneath it are the story."},
+    {"id": "02-context", "kind": "stat", "brow": "what it holds",
+     "head": "Context, <em>and output</em>",
+     "stats": [{"n": "1.05M", "t": "token context window"}, {"n": "128k", "t": "output tokens in one generation"}],
+     "note": "Big enough for a whole codebase."},
+    {"id": "03-bench", "kind": "stat", "brow": "terminal bench 4.0",
+     "head": "Astra scores <em>57.9%</em>",
+     "stats": [{"n": "57.9", "t": "percent on complex engineering tasks"}],
+     "note": "New industry standard, on paper."},
+    {"id": "04-gap", "kind": "list", "brow": "against the field",
+     "head": "It wins by <em>two points</em>",
+     "items": [{"c": "#dc551d", "t": "Astra 57.9%"}, {"c": "#1f8a4c", "t": "Claude Fable 5.1 55.8%"}],
+     "note": "That is the headline nobody writes."},
+    {"id": "05-price", "kind": "stat", "brow": "the sticker price",
+     "head": "Ten in, <em>fifty out</em>",
+     "stats": [{"n": "$10", "t": "per million input tokens"}, {"n": "$50", "t": "per million output tokens"}],
+     "note": "Per million, standard developer pricing."},
+    {"id": "06-payoff", "kind": "payoff", "brow": "", "head": "",
+     "l1": "Cache the inputs",
+     "l2": "It drops to <span class=\"g\">$1 per million</span>",
+     "note": "That is where the economics actually change."}
+  ]
+}

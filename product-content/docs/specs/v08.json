@@ -1,0 +1,134 @@
+{
+  "project": "chatgpt-voice-reel",
+  "board_id": "v08",
+  "message": "The voice button did not change; the engine behind it did",
+  "handle": "yarmalik",
+  "cta": "Full breakdown on the channel",
+  "yt_title": "ChatGPT's voice button didn't change. The engine did.",
+  "yt_desc": "For months ChatGPT's voice mode talked over you. It jumped in the second you paused to think. Less a conversation, more arguing with someone who won't let you finish.\n\nThen on July 8th 2026, quietly, OpenAI replaced the entire engine underneath it. Same button, same icon, different thing answering.\n\nThree rules for using it: give it context freely, give it permission narrowly, and always keep the transcript somewhere you can see it.\n\nFull breakdown on the channel.",
+  "lines": [
+    {
+      "text": "Before you tap that voice button again, there is something you should know about what sits underneath it.",
+      "sfx": [
+        "pop"
+      ]
+    },
+    {
+      "text": "The button has not moved. The icon has not changed. But the thing answering you on the other side is not the same AI anymore.",
+      "sfx": [
+        "glitch-1"
+      ]
+    },
+    {
+      "text": "For months, voice mode talked over you. It jumped in the second you paused to think, like arguing with someone who will not let you finish.",
+      "sfx": [
+        "error"
+      ]
+    },
+    {
+      "text": "Then on July the eighth, quietly, with no fireworks at all, OpenAI replaced the entire engine underneath it.",
+      "sfx": [
+        "impact-bass-1"
+      ]
+    },
+    {
+      "text": "So there are three rules now. Give it context freely. Give it permission narrowly. Those are not the same dial.",
+      "sfx": [
+        "pop",
+        "click"
+      ]
+    },
+    {
+      "text": "And always keep the transcript somewhere you can actually see it. That is the part every demo skips.",
+      "sfx": []
+    }
+  ],
+  "frames": [
+    {
+      "id": "01-button",
+      "kind": "list",
+      "brow": "before you tap it again",
+      "head": "The button <em>did not change</em>",
+      "items": [
+        {
+          "c": "#0f0f0f",
+          "t": "Same icon"
+        },
+        {
+          "c": "#0f0f0f",
+          "t": "Same place"
+        }
+      ],
+      "note": "Something underneath it did."
+    },
+    {
+      "id": "02-swap",
+      "kind": "stat",
+      "brow": "what actually happened",
+      "head": "A different <em>thing answering</em>",
+      "stats": [
+        {
+          "n": "NEW",
+          "t": "engine, behind an unchanged button"
+        }
+      ],
+      "note": "Not an update. A replacement."
+    },
+    {
+      "id": "03-old",
+      "kind": "list",
+      "brow": "the old one",
+      "head": "It <em>talked over you</em>",
+      "items": [
+        {
+          "c": "#dc551d",
+          "t": "Jumped in when you paused"
+        },
+        {
+          "c": "#dc551d",
+          "t": "Never let you finish"
+        }
+      ],
+      "note": "Less a conversation, more an argument."
+    },
+    {
+      "id": "04-date",
+      "kind": "stat",
+      "brow": "quietly, no fireworks",
+      "head": "Swapped on <em>July 8th</em>",
+      "stats": [
+        {
+          "n": "JUL 8",
+          "t": "the day the engine was replaced"
+        }
+      ],
+      "note": "No announcement worth the name."
+    },
+    {
+      "id": "05-rules",
+      "kind": "list",
+      "brow": "how to actually use it",
+      "head": "Two rules, <span class=\"g\">opposite directions</span>",
+      "items": [
+        {
+          "c": "#1f8a4c",
+          "t": "Context: give it freely"
+        },
+        {
+          "c": "#dc551d",
+          "t": "Permission: give it narrowly"
+        }
+      ],
+      "note": "Those are not the same dial."
+    },
+    {
+      "id": "06-payoff",
+      "kind": "payoff",
+      "brow": "",
+      "head": "",
+      "l1": "Keep <em>the transcript</em> visible",
+      "l2": "That is the part <span class=\"g\">demos skip</span>",
+      "note": "Everything it heard, where you can check it."
+    }
+  ]
+}

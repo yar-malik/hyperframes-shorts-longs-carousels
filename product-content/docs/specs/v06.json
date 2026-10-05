@@ -1,0 +1,140 @@
+{
+  "project": "kimi-vs-claude-reel",
+  "board_id": "v06",
+  "message": "Default to the cheap model, keep the expensive one one line away",
+  "handle": "yarmalik",
+  "cta": "Full test on the channel",
+  "yt_title": "Claude vs Kimi K3: 3x the price, near-even benchmarks",
+  "yt_desc": "Everyone tells you Claude is better, or that Kimi is cheaper. Both are true. Neither matters until you watch them build something.\n\nClaude costs three times what Kimi costs. Not roughly — exactly. $10 against $3, $50 against $15, straight off both pricing pages.\n\nNear-even benchmark split. Claude is stronger on more of the hard tasks. Kimi publishes its weights. And Claude spent 19 days in June switched off completely.\n\nThey share the same API, so you don't have to choose the way these comparisons make it feel. Full test on the channel.",
+  "lines": [
+    {
+      "text": "Everyone tells you Claude is better than Kimi, or that Kimi is cheaper. Both are true, and neither one matters.",
+      "sfx": [
+        "pop"
+      ]
+    },
+    {
+      "text": "Claude costs three times what Kimi costs. Not roughly three times. Exactly three times.",
+      "sfx": [
+        "impact-bass-1"
+      ]
+    },
+    {
+      "text": "Ten dollars against three. Fifty against fifteen. Straight off both companies' own pricing pages.",
+      "sfx": [
+        "ping"
+      ]
+    },
+    {
+      "text": "Then the benchmarks come back near even. Claude is stronger on the genuinely hard tasks, and Kimi publishes its weights.",
+      "sfx": [
+        "pop",
+        "click"
+      ]
+    },
+    {
+      "text": "And Claude spent nineteen days in June switched off completely. The expensive one is not the reliable one.",
+      "sfx": [
+        "glitch-1"
+      ]
+    },
+    {
+      "text": "They share the same API. Default to the cheap one, and keep the expensive one just one line away.",
+      "sfx": []
+    }
+  ],
+  "frames": [
+    {
+      "id": "01-claims",
+      "kind": "list",
+      "brow": "the two things people say",
+      "head": "Both true. <em>Neither matters</em>",
+      "items": [
+        {
+          "c": "#1f8a4c",
+          "t": "\"Claude is better\""
+        },
+        {
+          "c": "#dc551d",
+          "t": "\"Kimi is cheaper\""
+        }
+      ],
+      "note": "Not until you watch them build something.",
+      "note_top": 1180
+    },
+    {
+      "id": "02-price",
+      "kind": "stat",
+      "brow": "list price",
+      "head": "Exactly <em>three times</em>",
+      "stats": [
+        {
+          "n": "3x",
+          "t": "what Claude costs against Kimi"
+        }
+      ],
+      "note": "Not roughly. Exactly.",
+      "note_top": 1120
+    },
+    {
+      "id": "03-numbers",
+      "kind": "stat",
+      "brow": "straight off both pricing pages",
+      "head": "The actual <em>numbers</em>",
+      "stats": [
+        {
+          "n": "$10 / $3",
+          "t": "Claude against Kimi"
+        },
+        {
+          "n": "$50 / $15",
+          "t": "the tier above"
+        }
+      ],
+      "note": "Same job, a third of the bill.",
+      "note_top": 1420
+    },
+    {
+      "id": "04-bench",
+      "kind": "list",
+      "brow": "then the benchmarks",
+      "head": "It comes back <span class=\"g\">near even</span>",
+      "items": [
+        {
+          "c": "#dc551d",
+          "t": "Claude wins more hard tasks"
+        },
+        {
+          "c": "#1f8a4c",
+          "t": "Kimi publishes its weights"
+        }
+      ],
+      "note": "Not the gap the price implies.",
+      "note_top": 1180
+    },
+    {
+      "id": "05-outage",
+      "kind": "stat",
+      "brow": "and one more thing",
+      "head": "Switched off for <em>19 days</em>",
+      "stats": [
+        {
+          "n": "19",
+          "t": "days Claude was down in June"
+        }
+      ],
+      "note": "The expensive one is not the reliable one.",
+      "note_top": 1120
+    },
+    {
+      "id": "06-payoff",
+      "kind": "payoff",
+      "brow": "",
+      "head": "",
+      "l1": "Default to <span class=\"g\">the cheap one</span>",
+      "l2": "Keep the other <em>one line away</em>",
+      "note": "They share the same API. You never had to choose.",
+      "note_top": 1290
+    }
+  ]
+}

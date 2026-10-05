@@ -1,0 +1,43 @@
+{
+  "project": "five-skills-reel",
+  "board_id": "v25",
+  "message": "A skill is a folder of instructions the model reads before it starts",
+  "handle": "yarmalik",
+  "cta": "All five on the channel",
+  "yt_title": "The best AI skill doesn't answer you. It asks first.",
+  "yt_desc": "The smartest AI users quietly switched to skills, and most people still haven't.\n\nA skill isn't a prompt. It's a folder of instructions the model reads before it starts working.\n\nThe best one doesn't answer you at all at first — it asks. Which market. What constraints. How many hours a week you actually have. Then it builds against your answers instead of its assumptions.\n\nAnother is Unslop, which exists for exactly one job: removing the writing that sounds like a template.\n\nAll five, free, on the channel.",
+  "lines": [
+    {"text": "The smartest AI users quietly switched to something called skills, and most people still have not.", "sfx": ["pop"]},
+    {"text": "A skill is not a prompt. It is a folder of instructions the model reads before it starts working.", "sfx": ["click"]},
+    {"text": "And the best one does not answer you at all at first. It asks you questions.", "sfx": ["impact-bass-1"]},
+    {"text": "Which market you are in. What your real constraints are. How many hours a week you actually have.", "sfx": ["pop", "click"]},
+    {"text": "Then it builds against your answers instead of against its own assumptions. That is the whole trick.", "sfx": ["chime"]},
+    {"text": "Another one is called Unslop, and it exists for exactly one job. Removing writing that sounds like a template.", "sfx": []}
+  ],
+  "frames": [
+    {"id": "01-switch", "kind": "list", "brow": "quietly, already happened",
+     "head": "They switched to <em>skills</em>",
+     "items": [{"c": "#1f8a4c", "t": "The people getting real output"}, {"c": "#dc551d", "t": "Everyone else, still prompting"}],
+     "note": "Most people have not caught up."},
+    {"id": "02-what", "kind": "list", "brow": "so what is one",
+     "head": "Not a prompt. <em>A folder</em>",
+     "items": [{"c": "#0f0f0f", "t": "Instructions on disk"}, {"c": "#0f0f0f", "t": "Read before it works"}],
+     "note": "The agent loads it first, every time."},
+    {"id": "03-asks", "kind": "stat", "brow": "the best one",
+     "head": "It <em>does not answer</em>",
+     "stats": [{"n": "ASKS", "t": "before it writes a single line"}],
+     "note": "Which is the opposite of what you expect."},
+    {"id": "04-questions", "kind": "list", "brow": "what it asks",
+     "head": "Three things, <span class=\"g\">every time</span>",
+     "items": [{"c": "#1f8a4c", "t": "Which market"}, {"c": "#1f8a4c", "t": "What constraints"}, {"c": "#1f8a4c", "t": "Hours per week"}],
+     "note": "Answers you have, and it does not."},
+    {"id": "05-trick", "kind": "stat", "brow": "and that is the trick",
+     "head": "Your answers, <span class=\"g\">not its guesses</span>",
+     "stats": [{"n": "YOURS", "t": "what it builds against", "green": true}],
+     "note": "Assumptions are where the slop comes from."},
+    {"id": "06-payoff", "kind": "payoff", "brow": "", "head": "",
+     "l1": "Another is called <em>Unslop</em>",
+     "l2": "One job: <span class=\"g\">kill the template voice</span>",
+     "note": "Small change. You feel it immediately."}
+  ]
+}

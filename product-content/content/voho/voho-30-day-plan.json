@@ -1,0 +1,902 @@
+[
+ {
+  "n": 1,
+  "day": 1,
+  "date": "2026-09-26",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Lead qualification",
+  "title": "A personal-loan enquiry at 9pm, qualified before the branch opens",
+  "scenario": "Caller asks about a personal loan; the agent asks salary band, employer type and amount, explains the documents needed from the knowledge base, and books a branch callback.",
+  "hook": "A customer wants a loan at 9pm, and the branch doesn't open till tomorrow.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 2,
+  "day": 1,
+  "date": "2026-09-26",
+  "slot": "B",
+  "industry": "Insurance",
+  "template": "First notice of claim",
+  "title": "A car accident claim, logged in Saudi Arabic in under two minutes",
+  "scenario": "Caller had a minor collision; the agent takes policy number, date, location, whether anyone is hurt and the Najm report number, then gives a claim reference.",
+  "hook": "The first call after a car accident decides whether a customer stays with you.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 3,
+  "day": 2,
+  "date": "2026-09-27",
+  "slot": "A",
+  "industry": "Oil & gas",
+  "template": "Order and delivery support",
+  "title": "Ordering 10,000 litres of diesel for a construction site by phone",
+  "scenario": "A site manager orders diesel; the agent confirms quantity, site location, delivery window and the account number, then reads the order back.",
+  "hook": "A crane is idle because the site ran out of diesel.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 4,
+  "day": 2,
+  "date": "2026-09-27",
+  "slot": "B",
+  "industry": "Banking",
+  "template": "Payment reminder",
+  "title": "A polite credit-card reminder call that never asks for a PIN",
+  "scenario": "Outbound: the agent reminds a customer of the due date and minimum payment, offers the payment channels, and never asks for card numbers, PINs or OTPs.",
+  "hook": "Collections calls are where banks lose customers, so here's one that doesn't.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 5,
+  "day": 3,
+  "date": "2026-09-28",
+  "slot": "A",
+  "industry": "Telecom",
+  "template": "Billing enquiries",
+  "title": "Why is my bill higher this month? Answered at midnight",
+  "scenario": "Caller disputes a higher bill; the agent explains roaming and add-on charges from the knowledge base and opens a review ticket if the caller still disagrees.",
+  "hook": "Nobody calls a telecom company when they're happy.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 6,
+  "day": 3,
+  "date": "2026-09-28",
+  "slot": "B",
+  "industry": "Any business",
+  "template": "After-hours answering",
+  "title": "Every business closes at 10pm. Its phone line doesn't have to",
+  "scenario": "Caller rings after hours; the agent answers questions from the knowledge base, takes a message with name and number, and promises a morning callback.",
+  "hook": "Half your calls come in when nobody's there to answer them.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 7,
+  "day": 4,
+  "date": "2026-09-29",
+  "slot": "A",
+  "industry": "Insurance",
+  "template": "Lead qualification",
+  "title": "A health-insurance quote request, qualified in Saudi Arabic",
+  "scenario": "A small-business owner wants cover for 12 staff; the agent asks headcount, ages band and current insurer, and books a consultant call.",
+  "hook": "A company with 12 staff wants health insurance tonight.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 8,
+  "day": 4,
+  "date": "2026-09-29",
+  "slot": "B",
+  "industry": "Banking",
+  "template": "Appointments and reminders",
+  "title": "Booking a branch appointment for a mortgage, by voice",
+  "scenario": "Caller wants to discuss a home loan; the agent checks which branch, offers two slots, and confirms by name and mobile.",
+  "hook": "Mortgage customers want a person, and the first thing they want is an appointment.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 9,
+  "day": 5,
+  "date": "2026-09-30",
+  "slot": "A",
+  "industry": "Oil & gas",
+  "template": "Complaints and escalation",
+  "title": "A fuel-station complaint, routed to the right regional manager",
+  "scenario": "A driver complains about a closed pump and a rude attendant; the agent logs station, time and issue, calms the caller, and escalates to the region.",
+  "hook": "One bad fuel stop is enough to lose a fleet customer.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 10,
+  "day": 5,
+  "date": "2026-09-30",
+  "slot": "B",
+  "industry": "Healthcare",
+  "template": "Appointments and reminders",
+  "title": "The appointment reminder that stops no-shows",
+  "scenario": "Outbound: the agent reminds a patient of tomorrow's appointment, confirms or reschedules, and updates the booking.",
+  "hook": "Every no-show is an empty chair you still pay for.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 11,
+  "day": 6,
+  "date": "2026-10-01",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Reception and routing",
+  "title": "A bank switchboard that routes calls in Saudi Arabic",
+  "scenario": "Caller asks for cards, loans or a branch; the agent asks one question, understands the dialect, and routes to the right team.",
+  "hook": "Press 1 for cards is where customers hang up.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 12,
+  "day": 6,
+  "date": "2026-10-01",
+  "slot": "B",
+  "industry": "Retail",
+  "template": "Order and delivery support",
+  "title": "Where is my order? answered without a human",
+  "scenario": "Caller asks about a late order; the agent looks up the order status via a function and gives the delivery date.",
+  "hook": "Where is my order is the most asked question in retail.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 13,
+  "day": 7,
+  "date": "2026-10-02",
+  "slot": "A",
+  "industry": "Insurance",
+  "template": "Payment reminder",
+  "title": "A renewal reminder call before the policy lapses",
+  "scenario": "Outbound: the agent reminds a customer their motor policy ends in 7 days and offers to book a renewal callback.",
+  "hook": "A lapsed policy is a customer you already lost.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 14,
+  "day": 7,
+  "date": "2026-10-02",
+  "slot": "B",
+  "industry": "Government",
+  "template": "Reception and routing",
+  "title": "A government service line that understands Najdi and Hijazi",
+  "scenario": "Caller asks how to renew an iqama-related document; the agent answers the steps from the knowledge base and points to the right channel.",
+  "hook": "Government hotlines are where the waiting music never ends.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 15,
+  "day": 8,
+  "date": "2026-10-03",
+  "slot": "A",
+  "industry": "Oil & gas",
+  "template": "Order and delivery support",
+  "title": "Ordering gas cylinders to your door in Saudi Arabic",
+  "scenario": "A household orders two gas cylinders; the agent confirms the district, gate, and payment on delivery, and gives an arrival window.",
+  "hook": "The gas runs out in the middle of cooking dinner.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 16,
+  "day": 8,
+  "date": "2026-10-03",
+  "slot": "B",
+  "industry": "Banking",
+  "template": "Satisfaction survey",
+  "title": "A two-question survey after every branch visit",
+  "scenario": "Outbound: the agent asks for a 1-to-5 rating and one reason, thanks the customer, and flags low scores.",
+  "hook": "Banks send surveys by SMS, and nobody answers them.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 17,
+  "day": 9,
+  "date": "2026-10-04",
+  "slot": "A",
+  "industry": "Airlines",
+  "template": "Reception and routing",
+  "title": "Rebooking a missed flight in Saudi Arabic, at 3am",
+  "scenario": "A passenger missed a connection; the agent explains rebooking options from the knowledge base and hands the case to the ops desk with the booking reference.",
+  "hook": "You missed your flight, and it's three in the morning.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 18,
+  "day": 9,
+  "date": "2026-10-04",
+  "slot": "B",
+  "industry": "Any business",
+  "template": "Recruitment screening",
+  "title": "Screening 200 job applicants by phone in one afternoon",
+  "scenario": "Outbound: the agent asks each applicant three screening questions, notes answers, and books interviews for the ones who fit.",
+  "hook": "Two hundred people applied, and you have one afternoon.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 19,
+  "day": 10,
+  "date": "2026-10-05",
+  "slot": "A",
+  "industry": "Insurance",
+  "template": "Complaints and escalation",
+  "title": "A claim complaint handled calmly, then escalated",
+  "scenario": "A customer is angry about a delayed claim; the agent acknowledges, gives the status, and escalates with a summary.",
+  "hook": "Angry claim calls are the ones your team avoids.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 20,
+  "day": 10,
+  "date": "2026-10-05",
+  "slot": "B",
+  "industry": "Oil & gas",
+  "template": "Reception and routing",
+  "title": "A supplier hotline for a refinery: invoices, gate passes, tenders",
+  "scenario": "A vendor asks about an unpaid invoice; the agent collects the invoice number and routes to accounts payable with a summary.",
+  "hook": "Refinery suppliers spend hours on hold just to ask about an invoice.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 21,
+  "day": 11,
+  "date": "2026-10-06",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Lead qualification",
+  "title": "Turning a credit-card ad into qualified leads by phone",
+  "scenario": "Outbound: the agent calls people who clicked an ad, checks eligibility questions, and books a callback with sales.",
+  "hook": "Most leads from a card ad are never called back.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 22,
+  "day": 11,
+  "date": "2026-10-06",
+  "slot": "B",
+  "industry": "Hospitality",
+  "template": "Appointments and reminders",
+  "title": "A restaurant that takes bookings while the kitchen is slammed",
+  "scenario": "Caller books a table for six on Thursday; the agent checks the time, takes the name, and confirms.",
+  "hook": "The phone rings during the dinner rush, and nobody can answer it.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 23,
+  "day": 12,
+  "date": "2026-10-07",
+  "slot": "A",
+  "industry": "Telecom",
+  "template": "Lead qualification",
+  "title": "Selling a fibre upgrade by phone without a call center",
+  "scenario": "Outbound: the agent offers a fibre upgrade to existing customers, answers speed and price questions, and books installation.",
+  "hook": "Upgrades are the cheapest sale a telecom company can make.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 24,
+  "day": 12,
+  "date": "2026-10-07",
+  "slot": "B",
+  "industry": "Insurance",
+  "template": "First notice of claim",
+  "title": "A home water-leak claim, logged at 2am",
+  "scenario": "Caller has a burst pipe; the agent logs the address, damage and photos-to-send instructions, and gives emergency contractor info from the knowledge base.",
+  "hook": "Pipes burst at night, never during office hours.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 25,
+  "day": 13,
+  "date": "2026-10-08",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Complaints and escalation",
+  "title": "A disputed card transaction, logged without asking for the PIN",
+  "scenario": "Caller doesn't recognise a charge; the agent records amount, date and merchant, never asks for PIN or OTP, and opens a dispute case.",
+  "hook": "Here's how a bank's AI should handle fraud calls, and what it must never ask.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 26,
+  "day": 13,
+  "date": "2026-10-08",
+  "slot": "B",
+  "industry": "Logistics",
+  "template": "Order and delivery support",
+  "title": "A courier that reschedules deliveries by voice",
+  "scenario": "Caller won't be home; the agent reschedules delivery to tomorrow afternoon and confirms the address.",
+  "hook": "Missed deliveries cost couriers twice.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 27,
+  "day": 14,
+  "date": "2026-10-09",
+  "slot": "A",
+  "industry": "Oil & gas",
+  "template": "Recruitment screening",
+  "title": "Screening field technicians for a rig contract",
+  "scenario": "Outbound: the agent asks certification, years on rigs and availability, and shortlists candidates.",
+  "hook": "An oil contractor needs thirty technicians by next month.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 28,
+  "day": 14,
+  "date": "2026-10-09",
+  "slot": "B",
+  "industry": "Healthcare",
+  "template": "Reception and routing",
+  "title": "A hospital switchboard that finds the right department",
+  "scenario": "Caller asks for cardiology results; the agent routes to the department and never gives medical advice.",
+  "hook": "Hospital switchboards are the busiest phone lines in the city.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 29,
+  "day": 15,
+  "date": "2026-10-10",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "After-hours answering",
+  "title": "A bank hotline that answers fee questions at midnight",
+  "scenario": "Caller asks about transfer fees and limits; the agent answers from the knowledge base and offers a callback for anything account-specific.",
+  "hook": "Customers don't have banking questions only between nine and five.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 30,
+  "day": 15,
+  "date": "2026-10-10",
+  "slot": "B",
+  "industry": "Retail",
+  "template": "Complaints and escalation",
+  "title": "A return request handled in one call",
+  "scenario": "Caller wants to return shoes; the agent explains the return policy, logs the order number, and books a pickup.",
+  "hook": "Returns are where online shops lose repeat customers.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 31,
+  "day": 16,
+  "date": "2026-10-11",
+  "slot": "A",
+  "industry": "Insurance",
+  "template": "Lead qualification",
+  "title": "Travel insurance sold on the phone before the flight",
+  "scenario": "Caller needs travel cover for a family of four; the agent asks destination and dates and books a quote callback.",
+  "hook": "The family flies on Friday and needs insurance by Thursday.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 32,
+  "day": 16,
+  "date": "2026-10-11",
+  "slot": "B",
+  "industry": "Utilities",
+  "template": "Complaints and escalation",
+  "title": "A power-outage line that tells you what's happening",
+  "scenario": "Caller reports an outage; the agent logs the district, checks known outages from the knowledge base, and gives an estimate.",
+  "hook": "When the power goes out, everyone calls at once.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 33,
+  "day": 17,
+  "date": "2026-10-12",
+  "slot": "A",
+  "industry": "Automotive",
+  "template": "Appointments and reminders",
+  "title": "Booking a car service by voice, in Saudi Arabic",
+  "scenario": "Caller needs a 20,000 km service; the agent offers two slots and confirms car model and plate.",
+  "hook": "Car owners hate calling the service center.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 34,
+  "day": 17,
+  "date": "2026-10-12",
+  "slot": "B",
+  "industry": "Banking",
+  "template": "Payment reminder",
+  "title": "A loan instalment reminder that people actually thank you for",
+  "scenario": "Outbound: the agent reminds of an instalment due in three days and offers payment channels, no personal data asked.",
+  "hook": "Nobody likes a debt reminder, unless it sounds like this.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 35,
+  "day": 18,
+  "date": "2026-10-13",
+  "slot": "A",
+  "industry": "Oil & gas",
+  "template": "Complaints and escalation",
+  "title": "An HSE incident hotline that never goes to voicemail",
+  "scenario": "A contractor reports a minor spill; the agent logs site, time, substance and injuries, and escalates immediately.",
+  "hook": "On an oil site, a safety report can't wait for Monday.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 36,
+  "day": 18,
+  "date": "2026-10-13",
+  "slot": "B",
+  "industry": "Telecom",
+  "template": "Complaints and escalation",
+  "title": "A no-internet complaint, triaged in one call",
+  "scenario": "Caller has no internet; the agent walks through a router restart from the knowledge base, then opens a technician ticket.",
+  "hook": "No internet is the call every telecom company dreads.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 37,
+  "day": 19,
+  "date": "2026-10-14",
+  "slot": "A",
+  "industry": "Insurance",
+  "template": "Satisfaction survey",
+  "title": "A claims survey that catches unhappy customers before they leave",
+  "scenario": "Outbound after a closed claim: the agent asks two questions and flags anyone scoring under 3.",
+  "hook": "The time to save a customer is right after their claim.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 38,
+  "day": 19,
+  "date": "2026-10-14",
+  "slot": "B",
+  "industry": "Government",
+  "template": "After-hours answering",
+  "title": "A municipality line that takes reports at night",
+  "scenario": "Caller reports a broken streetlight; the agent logs the location and gives a reference number.",
+  "hook": "Broken streetlights get reported at night, when they matter.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 39,
+  "day": 20,
+  "date": "2026-10-15",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Reception and routing",
+  "title": "A corporate-banking desk that screens calls for relationship managers",
+  "scenario": "A business client calls; the agent takes the company name and request and routes to the right relationship manager.",
+  "hook": "Relationship managers spend half their day on calls that aren't for them.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 40,
+  "day": 20,
+  "date": "2026-10-15",
+  "slot": "B",
+  "industry": "Real estate",
+  "template": "Real estate sales",
+  "title": "Selling off-plan apartments by phone to overseas buyers",
+  "scenario": "Caller asks about off-plan units; the agent gives payment plans from the knowledge base and books a video viewing.",
+  "hook": "An investor in London wants to buy in Riyadh.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 41,
+  "day": 21,
+  "date": "2026-10-16",
+  "slot": "A",
+  "industry": "Oil & gas",
+  "template": "Order and delivery support",
+  "title": "Lubricant distributor orders, taken by an AI desk",
+  "scenario": "A workshop orders engine oil; the agent confirms products, quantities and delivery date.",
+  "hook": "Workshops reorder oil every week, by phone.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 42,
+  "day": 21,
+  "date": "2026-10-16",
+  "slot": "B",
+  "industry": "Hospitality",
+  "template": "Reception and routing",
+  "title": "A hotel front desk that answers in Arabic and English",
+  "scenario": "A guest asks about late checkout and airport transfer; the agent answers from the knowledge base and books the transfer.",
+  "hook": "Hotel front desks answer the same ten questions all day.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 43,
+  "day": 22,
+  "date": "2026-10-17",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Lead qualification",
+  "title": "Qualifying SME finance leads for a bank",
+  "scenario": "A shop owner asks about business finance; the agent asks turnover, years trading and need, and books an advisor.",
+  "hook": "Small businesses want finance, and banks want to know who qualifies.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 44,
+  "day": 22,
+  "date": "2026-10-17",
+  "slot": "B",
+  "industry": "Insurance",
+  "template": "First notice of claim",
+  "title": "A medical claim reimbursement, started by voice",
+  "scenario": "Caller wants to claim a clinic visit; the agent explains the documents needed and logs the case.",
+  "hook": "Medical claims start with confusion about paperwork.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 45,
+  "day": 23,
+  "date": "2026-10-18",
+  "slot": "A",
+  "industry": "Logistics",
+  "template": "Lead qualification",
+  "title": "A freight company qualifying shipping leads by phone",
+  "scenario": "Caller wants to ship containers; the agent asks route, volume and timing, then books a sales call.",
+  "hook": "Freight quotes are lost when nobody answers fast.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 46,
+  "day": 23,
+  "date": "2026-10-18",
+  "slot": "B",
+  "industry": "Healthcare",
+  "template": "After-hours answering",
+  "title": "A pharmacy line that answers stock questions at night",
+  "scenario": "Caller asks whether a medicine is in stock; the agent checks the knowledge base list and never gives dosage advice.",
+  "hook": "Pharmacies get asked the same stock question all night.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 47,
+  "day": 24,
+  "date": "2026-10-19",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Satisfaction survey",
+  "title": "A call-center quality check by the AI itself",
+  "scenario": "Outbound: the agent calls customers who spoke to support today and asks whether their issue was solved.",
+  "hook": "The best quality check is asking the customer, the same day.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 48,
+  "day": 24,
+  "date": "2026-10-19",
+  "slot": "B",
+  "industry": "Oil & gas",
+  "template": "Reception and routing",
+  "title": "A fuel-card support line for fleet managers",
+  "scenario": "A fleet manager's card is blocked; the agent logs the card's last digits, never full numbers, and routes to support.",
+  "hook": "A blocked fuel card stops a whole fleet.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 49,
+  "day": 25,
+  "date": "2026-10-20",
+  "slot": "A",
+  "industry": "Retail",
+  "template": "Lead qualification",
+  "title": "A furniture store qualifying delivery-and-assembly leads",
+  "scenario": "Caller asks about a sofa and delivery; the agent answers price from the knowledge base and books assembly.",
+  "hook": "Big-ticket buyers call before they buy.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 50,
+  "day": 25,
+  "date": "2026-10-20",
+  "slot": "B",
+  "industry": "Insurance",
+  "template": "Reception and routing",
+  "title": "An insurance switchboard: claims, sales or renewals in one question",
+  "scenario": "Caller is routed after one question, in dialect.",
+  "hook": "Insurance callers don't know which department they need.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 51,
+  "day": 26,
+  "date": "2026-10-21",
+  "slot": "A",
+  "industry": "Telecom",
+  "template": "Payment reminder",
+  "title": "A prepaid top-up reminder that keeps customers connected",
+  "scenario": "Outbound: the agent reminds a customer their package ends tomorrow and explains how to renew.",
+  "hook": "Customers churn when their package quietly runs out.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 52,
+  "day": 26,
+  "date": "2026-10-21",
+  "slot": "B",
+  "industry": "Automotive",
+  "template": "Lead qualification",
+  "title": "A car dealership that follows up every test-drive lead",
+  "scenario": "Outbound: the agent calls test-drive leads, asks budget and timeline, and books a showroom visit.",
+  "hook": "Car dealers lose leads they never called back.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 53,
+  "day": 27,
+  "date": "2026-10-22",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "After-hours answering",
+  "title": "A lost-card call at 2am: blocked-card steps, and what the AI must not ask",
+  "scenario": "Caller lost a card; the agent explains how to freeze it in the app, routes to the emergency line, and never asks for card details.",
+  "hook": "Losing your card at 2am is the worst banking call there is.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 54,
+  "day": 27,
+  "date": "2026-10-22",
+  "slot": "B",
+  "industry": "Oil & gas",
+  "template": "Satisfaction survey",
+  "title": "A B2B fuel-delivery survey after every drop",
+  "scenario": "Outbound: the agent asks the site manager whether the delivery was on time and complete.",
+  "hook": "Fuel customers leave when deliveries run late, not when prices rise.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 55,
+  "day": 28,
+  "date": "2026-10-23",
+  "slot": "A",
+  "industry": "Utilities",
+  "template": "Billing enquiries",
+  "title": "A water bill question answered from the tariff table",
+  "scenario": "Caller asks why the bill doubled; the agent explains the tariff tiers from the knowledge base.",
+  "hook": "Water bills make people angry because nobody explains them.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 56,
+  "day": 28,
+  "date": "2026-10-23",
+  "slot": "B",
+  "industry": "Airlines",
+  "template": "Lead qualification",
+  "title": "A travel agency qualifying Umrah package enquiries",
+  "scenario": "Caller asks about Umrah packages; the agent asks dates and group size and books a consultant.",
+  "hook": "Umrah season means every travel agency phone rings at once.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 57,
+  "day": 29,
+  "date": "2026-10-24",
+  "slot": "A",
+  "industry": "Government",
+  "template": "Appointments and reminders",
+  "title": "A civil-affairs appointment booked by voice",
+  "scenario": "Caller books an appointment; the agent offers slots and confirms by ID-free details (name and mobile only).",
+  "hook": "Booking a government appointment shouldn't take an hour.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 58,
+  "day": 29,
+  "date": "2026-10-24",
+  "slot": "B",
+  "industry": "Insurance",
+  "template": "Payment reminder",
+  "title": "Chasing unpaid premiums without damaging the relationship",
+  "scenario": "Outbound: the agent reminds a small business of an unpaid premium and books a callback.",
+  "hook": "Premium collections are awkward, so let the AI be polite about it.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 59,
+  "day": 30,
+  "date": "2026-10-25",
+  "slot": "A",
+  "industry": "Banking",
+  "template": "Reception and routing",
+  "title": "One AI, ten bank branches: which branch is open on Saturday?",
+  "scenario": "Caller asks branch hours and location; the agent answers from the knowledge base for every branch.",
+  "hook": "The most common bank call is where and when.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ },
+ {
+  "n": 60,
+  "day": 30,
+  "date": "2026-10-25",
+  "slot": "B",
+  "industry": "Any business",
+  "template": "Lead qualification",
+  "title": "Every missed call is a missed sale: an AI that calls leads back in 60 seconds",
+  "scenario": "Outbound 'Call new leads instantly': the agent calls a web lead within a minute and qualifies them.",
+  "hook": "Leads go cold in five minutes, so this calls them back in one.",
+  "pieces": [
+   "long (16:9, YouTube + LinkedIn)",
+   "reel (9:16, Instagram + Facebook)"
+  ]
+ }
+]

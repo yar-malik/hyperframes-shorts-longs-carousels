@@ -1,0 +1,16 @@
+# What did the competitors post, and which of it should we make?
+# Installed by scripts/board/systemd/install.sh. See scan-competitors.mjs.
+[Unit]
+Description=Scan competitor YouTube channels and add worthwhile ideas to Recording Hooks
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=malikasfandyarashraf_gmail_com
+WorkingDirectory=/var/www/yarmalik.com
+ExecStart=/usr/bin/node scripts/board/scan-competitors.mjs --write
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=competitor-scan
+TimeoutStartSec=15min

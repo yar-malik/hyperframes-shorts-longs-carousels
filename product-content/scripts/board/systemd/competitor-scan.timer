@@ -1,0 +1,13 @@
+# Every six hours, on the hour, so the board has fresh ideas by the time the
+# team in Pakistan starts and again through the day.
+[Unit]
+Description=Run the competitor scan every six hours
+
+[Timer]
+OnCalendar=00/6:00
+RandomizedDelaySec=5min
+Persistent=true
+Unit=competitor-scan.service
+
+[Install]
+WantedBy=timers.target

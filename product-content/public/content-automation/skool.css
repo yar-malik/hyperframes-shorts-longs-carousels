@@ -1,0 +1,806 @@
+/* The Skool pages, scoped.
+
+   Everything here used to be served on its own URL where it could only style
+   its own page. It now renders inside the video board, and the two
+   stylesheets share forty-four class names — .s-done, .board, .stat, .search
+   and the rest. One of those collisions has already shipped a bug, where
+   skool's row colouring turned every status pill on the video board green.
+
+   So every rule is confined to #skool-root. Nothing in here can reach the
+   rest of the app, and the tokens and structural styles still come from the
+   video board's stylesheet, which is why the two look like one product. */
+
+/* The handful of rules this board needs on top of the video board's
+   stylesheet. Everything structural — the rail, the cards, the buttons, the
+   colour tokens — comes from there, so the two look like one product. */
+
+#skool-root .brandmark{
+  width:34px;height:34px;border-radius:9px;display:grid;place-items:center;flex:none;
+  background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:15px;
+}
+
+/* Moving between days is the thing done most on this board, so it sits above
+   the rows rather than behind a picker. */
+#skool-root .daynav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+#skool-root .dayin, #skool-root .personpick{
+  background:var(--surface);border:1px solid var(--line-mid);border-radius:var(--radius-md);
+  padding:7px 11px;font:inherit;font-size:13.5px;color:var(--text);outline:none;
+}
+#skool-root .dayin:focus, #skool-root .personpick:focus{border-color:var(--accent)}
+
+/* One task, one day. The status colours the left edge so a day can be read
+   down the margin without reading the words. */
+#skool-root .logrows{display:flex;flex-direction:column;gap:10px;max-width:820px}
+#skool-root .logrow{
+  border:1px solid var(--line-mid);border-left:3px solid var(--line-strong);
+  border-radius:var(--radius-md);background:var(--surface);padding:12px 14px;
+  display:flex;flex-direction:column;gap:10px;
+}
+#skool-root .logrow.s-done{border-left-color:var(--warn-dot)}
+#skool-root .logrow.s-reviewed{border-left-color:var(--ok)}
+#skool-root .logrow.s-redo{border-left-color:var(--bad)}
+#skool-root .logtop{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#skool-root .logtask{font-size:14.5px;font-weight:600;flex:1 1 220px;min-width:0}
+#skool-root textarea.logtask{
+  border:1px solid transparent;background:transparent;border-radius:var(--radius-sm);
+  padding:4px 6px;margin:-4px -6px;font:inherit;font-size:14.5px;font-weight:600;
+  line-height:1.45;outline:none;resize:vertical;color:var(--text);
+}
+#skool-root textarea.logtask:hover{border-color:var(--line-mid)}
+#skool-root textarea.logtask:focus{border-color:var(--accent);background:var(--canvas)}
+#skool-root .logmins{display:inline-flex;align-items:center;gap:5px;flex:none;font-size:13px;color:var(--text-dim)}
+#skool-root .logmins i{font-style:normal;font-size:11.5px;color:var(--text-faint)}
+#skool-root .minsin{
+  width:72px;background:var(--canvas);border:1px solid var(--line-mid);border-radius:var(--radius-sm);
+  padding:5px 8px;font:inherit;font-size:13.5px;font-variant-numeric:tabular-nums;
+  color:var(--text);outline:none;text-align:right;
+}
+#skool-root .minsin:focus{border-color:var(--accent)}
+#skool-root .status-select.st-reviewed{color:var(--ok)}
+#skool-root .status-select.st-redo{color:var(--bad)}
+
+#skool-root .loglinks{display:flex;gap:8px;flex-wrap:wrap}
+#skool-root .linkin{
+  flex:1 1 200px;min-width:0;background:var(--canvas);border:1px solid var(--line-mid);
+  border-radius:var(--radius-sm);padding:6px 10px;font:inherit;font-size:12.5px;
+  color:var(--text);outline:none;
+}
+#skool-root .linkin:focus{border-color:var(--accent);background:var(--surface)}
+/* .linkin carries `flex:1 1 200px` so it shares a row inside .loglinks. As a
+   direct child of the column-flex .stdcard that basis becomes 200px of HEIGHT,
+   which is why the note field was a tall empty box on every standard. */
+#skool-root .stdcard>.linkin{flex:none}
+#skool-root textarea.logcomment{width:100%;font-size:13px;line-height:1.6;min-height:44px}
+#skool-root p.logcomment{margin:0;font-size:13px;line-height:1.6;color:var(--text-dim);white-space:pre-wrap}
+
+#skool-root .pname-static{font-size:14.5px;font-weight:600}
+@media (max-width:700px){
+  #skool-root .logtop{gap:8px}
+  #skool-root .logtask, #skool-root textarea.logtask{flex:1 1 100%}
+}
+
+
+
+/* Statistics. The cards are the latest day; the table is every day under it. */
+#skool-root .statgroup{margin-bottom:30px}
+#skool-root .statcards{
+  display:grid;gap:10px;margin:12px 0 16px;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+}
+#skool-root .statcard{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);background:var(--surface);
+  padding:11px 13px;display:flex;flex-direction:column;gap:3px;
+}
+#skool-root .statcard .k{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#skool-root .statcard b{font-size:22px;font-weight:700;line-height:1.15;font-variant-numeric:tabular-nums}
+#skool-root .statcard .h{font-size:11.5px;color:var(--text-dim)}
+
+#skool-root .stattable{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+#skool-root .stattable th{
+  text-align:left;padding:9px 12px;font-size:10.5px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line-mid);
+  white-space:nowrap;position:sticky;top:0;background:var(--surface);
+}
+#skool-root .stattable td{padding:8px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+#skool-root .stattable tr:last-child td{border-bottom:0}
+#skool-root .stattable tbody tr:hover{background:var(--idle-wash)}
+#skool-root .stattable .trend{white-space:normal;color:var(--text-dim);font-size:12px;min-width:130px}
+
+#skool-root .g{font-size:12px;font-weight:600}
+#skool-root .g.up{color:var(--ok)}
+#skool-root .g.down{color:var(--bad)}
+#skool-root .g.flat{color:var(--muted)}
+
+/* ---------------- the log, as a table ----------------
+   The video board's .board table, .stats tiles, .chip filters and .search all
+   come from content-automation/style.css, which this page already loads. Only
+   the columns this board has and that one does not are defined here. */
+
+#skool-root .logboard td{vertical-align:middle}
+#skool-root .logboard .rownum{width:26px;padding-left:6px;padding-right:0}
+#skool-root .logboard .datecell{width:64px;white-space:nowrap}
+#skool-root .logboard .dcell{font-size:12.5px;color:var(--text-dim);font-variant-numeric:tabular-nums}
+#skool-root .logboard .minscell{width:74px;white-space:nowrap;font-variant-numeric:tabular-nums}
+#skool-root .logboard .statuscell{width:190px}
+#skool-root .logboard .workcell{width:150px;white-space:nowrap}
+#skool-root .logboard .rowtools{width:30px}
+/* Capped like the video board's. Without a max-width the task column takes
+   every spare pixel on a wide monitor and leaves a hand's width of nothing
+   between the task and its own minutes. */
+#skool-root .logboard .titlecell{min-width:260px;max-width:520px}
+#skool-root .logboard .titlerow{display:flex;align-items:center;gap:7px;min-width:0}
+#skool-root .logboard .titlerow .t{
+  font-size:13.5px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+}
+
+/* The open/close triangle. Small, quiet, and the whole reason the row is one
+   line instead of twelve. */
+#skool-root .disc{
+  border:1px solid transparent;background:none;cursor:pointer;color:var(--text-dim);
+  font-size:10px;line-height:1;width:20px;height:20px;border-radius:5px;
+  display:grid;place-items:center;
+}
+#skool-root .disc:hover{background:var(--surface);border-color:var(--line-mid);color:var(--text)}
+#skool-root .disc svg{transition:transform .12s ease}
+#skool-root .logtr.is-open .disc{background:var(--surface);border-color:var(--line-mid);color:var(--accent)}
+#skool-root .logtr.is-open .disc svg{transform:rotate(90deg)}
+/* Tiles sit in a row; a hint that wraps makes one taller than its neighbours. */
+#skool-root .stats .stat .h{min-height:0}
+
+#skool-root .logtr.is-open{background:var(--idle-wash)}
+/* Only the exceptions are tinted. 151 of 168 rows are "waiting on review" —
+   colouring the norm makes the page one green wash and hides the two rows
+   that came back, which are the ones anybody is looking for. */
+#skool-root table.board tbody tr.logs-reviewed{background:rgb(11 164 107 / .07)}
+#skool-root table.board tbody tr.logs-reviewed:hover{background:rgb(11 164 107 / .13)}
+#skool-root table.board tbody tr.logs-redo{background:var(--bad-wash)}
+#skool-root .logtr.logs-redo .dcell{color:var(--bad);font-weight:700}
+/* The task is body text, not a link. */
+#skool-root .logboard .titlecell .t, #skool-root .logboard .titlecell .tin{color:var(--text);font-weight:500}
+
+/* The log's box holds two digits; a standard's holds three (120 min). */
+#skool-root .stdcard .minsin{width:56px}
+#skool-root .minsin{
+  width:46px;border:1px solid var(--line-mid);background:var(--canvas);
+  border-radius:var(--radius-sm);padding:4px 5px;font:inherit;font-size:12.5px;
+  text-align:right;color:var(--text);outline:none;
+}
+#skool-root .minsin:focus{border-color:var(--accent);background:var(--surface)}
+#skool-root .minscell i{font-style:normal;font-size:11px;color:var(--muted);margin-left:3px}
+
+#skool-root .logboard .workcell .chip-link{
+  display:inline-grid;place-items:center;width:19px;height:19px;padding:0;
+  margin-right:3px;border-radius:5px;font-size:10.5px;font-weight:700;
+}
+#skool-root .morelinks{font-size:11px;color:var(--muted);font-weight:600}
+#skool-root .hascomment{margin-left:5px;font-size:11px;opacity:.65}
+/* A row with no link does not say what was worked on. It is the complaint
+   this board was built to answer, so it is marked, not left to be noticed. */
+#skool-root .noproof{
+  font-size:11px;font-weight:600;color:var(--bad);
+  background:var(--bad-wash);border-radius:4px;padding:2px 6px;
+}
+
+/* The detail row: only ever one open at a time. */
+#skool-root .logdetail>td{background:var(--idle-wash);padding:0 12px 12px}
+#skool-root .detailbox{display:flex;flex-direction:column;gap:11px;max-width:760px}
+#skool-root .dfield{display:flex;flex-direction:column;gap:5px}
+#skool-root .dk{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#skool-root .dv{font-size:13px;color:var(--text-dim);white-space:pre-wrap}
+#skool-root .detailbox .loglinks{display:grid;gap:6px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+#skool-root .detailbox .linkin, #skool-root .detailbox .tinput{
+  width:100%;border:1px solid var(--line-mid);background:var(--surface);
+  border-radius:var(--radius-sm);padding:6px 9px;font:inherit;font-size:12.5px;
+  color:var(--text);outline:none;
+}
+#skool-root .detailbox .linkin:focus, #skool-root .detailbox .tinput:focus{border-color:var(--accent)}
+#skool-root .detailbox textarea.tinput{resize:vertical;line-height:1.6}
+
+/* The day stepper only appears when a day or a week is being looked at. */
+#skool-root .daypick{display:inline-flex;align-items:center;gap:5px;margin-left:10px}
+#skool-root .daypick .dayin{
+  border:1px solid var(--line-mid);background:var(--surface);border-radius:var(--radius-sm);
+  padding:4px 7px;font:inherit;font-size:12.5px;color:var(--text);outline:none;
+}
+/* The filter row has to wrap: search, two buttons and the person picker do not
+   fit one line on a laptop, and the picker was sliding off the right edge. */
+#skool-root .filters .filterrow{flex-wrap:wrap}
+#skool-root .filters .search{flex:1 1 260px;min-width:200px}
+#skool-root .personpick{max-width:170px}
+
+/* The page title and its line. Neither had a rule anywhere, so both were
+   running on browser defaults — an h1 with a 21px margin above it and a
+   paragraph tight underneath. */
+#skool-root .pagehead{margin:0 0 22px}
+#skool-root .pagehead h1{
+  margin:0 0 4px;font-size:27px;font-weight:700;letter-spacing:-.025em;
+  line-height:1.15;color:var(--text);
+}
+#skool-root .pagesub{margin:0;font-size:14px;line-height:1.5;color:var(--text-dim);max-width:72ch}
+
+/* The statistics table is the one place this board draws its own table, so it
+   borrows the video board's .tablewrap rather than redefining it. */
+#skool-root .stattable{margin:0}
+
+/* ---------------- tasks ----------------
+   One tab per job. The page has to work for somebody who opens it at nine in
+   the morning and works down it, so the day, the progress and the tick marks
+   are all visible without scrolling. */
+
+#skool-root .dayhead{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  flex-wrap:wrap;margin-bottom:16px;
+}
+#skool-root .dayhead-l, #skool-root .dayhead-r{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#skool-root .dayhead-r{margin-left:auto}
+
+/* Who. Two names, so they are both on screen rather than behind a dropdown. */
+#skool-root .whopick{display:inline-flex;gap:3px;background:var(--sunken);border-radius:99px;padding:3px}
+#skool-root .whobtn{
+  display:inline-flex;align-items:center;gap:7px;cursor:pointer;border:0;background:none;
+  border-radius:99px;padding:5px 13px 5px 5px;font:inherit;font-size:13px;font-weight:600;
+  color:var(--text-dim);transition:background .12s ease,color .12s ease;
+}
+#skool-root .whobtn:hover{color:var(--text)}
+#skool-root .whobtn.on{background:var(--surface);color:var(--text);box-shadow:0 1px 2px rgb(0 0 0 / .1)}
+#skool-root .whobtn .avatar.tiny{width:22px;height:22px;font-size:9.5px}
+
+/* The day. The date is the first thing anybody looks at in the morning, so
+   it is the biggest thing in the header — the number large, the weekday spelt
+   out, and a colour that says whether you are on today without reading. */
+#skool-root .datepick{
+  display:inline-flex;align-items:stretch;gap:0;position:relative;
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);
+  background:var(--surface);overflow:hidden;
+}
+#skool-root .datepick.istoday{border-color:var(--accent-line);background:var(--accent-wash)}
+#skool-root .stepbtn{
+  width:32px;border:0;border-right:1px solid var(--line);background:none;cursor:pointer;
+  color:var(--muted);font-size:17px;line-height:1;display:grid;place-items:center;
+}
+#skool-root .datepick .stepbtn:last-child{border-right:0;border-left:1px solid var(--line)}
+#skool-root .stepbtn:hover{background:var(--idle-wash);color:var(--accent)}
+#skool-root .datebtn{
+  display:flex;align-items:center;gap:11px;cursor:pointer;border:0;background:none;
+  padding:8px 15px;font:inherit;text-align:left;
+}
+#skool-root .datebtn:hover{background:var(--idle-wash)}
+#skool-root .datepick.istoday .datebtn:hover{background:rgb(var(--ink-rgb) / .04)}
+#skool-root .dnum{
+  font-size:26px;font-weight:800;letter-spacing:-.04em;line-height:1;
+  color:var(--accent);font-variant-numeric:tabular-nums;
+}
+#skool-root .dstack{display:flex;flex-direction:column;line-height:1.2}
+#skool-root .dstack b{font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--text)}
+#skool-root .dstack small{font-size:11.5px;color:var(--text-dim)}
+#skool-root .dtag{
+  align-self:center;font-size:9.5px;font-weight:800;letter-spacing:.07em;
+  text-transform:uppercase;border-radius:99px;padding:3px 8px;margin-left:2px;
+  background:var(--idle-wash);color:var(--muted);
+}
+#skool-root .datepick.istoday .dtag{background:var(--accent);color:#fff}
+#skool-root .dayhidden{
+  position:absolute;left:50%;bottom:0;width:1px;height:1px;
+  opacity:0;pointer-events:none;border:0;padding:0;
+}
+#skool-root .backtoday{font-weight:600}
+
+/* Progress, as progress. */
+#skool-root .progress{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;color:var(--text-dim)}
+#skool-root .progress b{color:var(--text);font-size:14px}
+#skool-root .pbar{
+  width:64px;height:6px;border-radius:99px;background:var(--sunken);
+  overflow:hidden;display:block;flex:none;
+}
+#skool-root .pbar i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .2s ease}
+#skool-root .progress.all .pbar i{background:var(--ok)}
+#skool-root .progress.all b{color:var(--ok)}
+
+#skool-root .btn.undo{color:var(--text-dim)}
+#skool-root .btn.undo:hover{border-color:var(--bad);color:var(--bad)}
+#skool-root .istoday{
+  font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ok);background:var(--ok-wash);border-radius:99px;padding:3px 9px;
+}
+#skool-root .progress{font-size:12.5px;color:var(--text-dim)}
+#skool-root .progress b{color:var(--text);font-size:14px}
+
+/* The strip. Scrolls sideways rather than wrapping into a second row, so the
+   grid below never jumps as tabs are added. */
+#skool-root .tasktabs{
+  display:flex;gap:7px;overflow-x:auto;padding:0 0 12px;margin-bottom:4px;
+  border-bottom:1px solid var(--line);
+}
+#skool-root .tasktab{
+  flex:none;display:flex;align-items:center;gap:8px;cursor:pointer;
+  border:1px solid var(--line-mid);background:var(--surface);
+  border-radius:var(--radius-md);padding:9px 13px;font:inherit;font-size:13px;
+  font-weight:600;color:var(--text-dim);white-space:nowrap;
+  transition:border-color .12s ease,color .12s ease,background .12s ease;
+}
+#skool-root .tasktab:hover{border-color:var(--line-strong);color:var(--text)}
+/* The selected tab has to be the most legible thing in the strip, not the
+   least — accent-ink on accent-wash was near-invisible. */
+#skool-root .tasktab.on{border-color:var(--accent);background:var(--accent);color:#fff;box-shadow:0 1px 2px rgb(0 0 0 / .12)}
+#skool-root .tasktab.on .wk{color:#fff;border-color:rgb(255 255 255 / .45)}
+#skool-root .tasktab.on .tickbox{border-color:rgb(255 255 255 / .6)}
+#skool-root .tasktab.on.done .tickbox{background:#fff;border-color:#fff;color:var(--accent)}
+#skool-root .tasktab .tickbox{
+  width:16px;height:16px;border-radius:5px;border:1.5px solid var(--line-strong);
+  display:grid;place-items:center;font-size:10px;font-style:normal;font-weight:800;
+  color:transparent;flex:none;
+}
+#skool-root .tasktab.done .tickbox{background:var(--ok);border-color:var(--ok);color:#fff}
+#skool-root .tasktab.done .tl{text-decoration:none}
+#skool-root .tasktab .wk{
+  font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line-mid);border-radius:4px;padding:1px 4px;
+}
+
+/* Job on the left, standard on the right. */
+#skool-root .taskgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:26px;margin-top:22px;align-items:start}
+@media (max-width:1080px){#skool-root .taskgrid{grid-template-columns:minmax(0,1fr)}}
+
+#skool-root .taskhead{margin-bottom:18px}
+#skool-root .taskheadrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#skool-root .taskheadrow h2{margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+#skool-root .taskmeta{display:flex;gap:6px;flex-wrap:wrap;margin:0}
+#skool-root .tmeta{
+  font-size:11px;font-weight:600;color:var(--text-dim);
+  background:var(--idle-wash);border-radius:99px;padding:3px 9px;
+}
+#skool-root .taskheadrow .btn{margin-left:auto}
+#skool-root .tasklede{margin:8px 0 0;font-size:15px;line-height:1.55;color:var(--text-dim);max-width:56ch}
+
+/* The job, as numbers. The sentence used to have to be read twice. */
+#skool-root .targets{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:18px}
+#skool-root .target{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);background:var(--surface);
+  padding:13px 15px;display:flex;flex-direction:column;gap:1px;
+}
+#skool-root .target b{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--accent)}
+#skool-root .target span{font-size:13px;font-weight:600;color:var(--text)}
+#skool-root .target small{font-size:11.5px;line-height:1.4;color:var(--muted);margin-top:2px}
+
+#skool-root .markbar{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);
+  background:var(--surface);padding:14px 16px;margin-bottom:20px;
+}
+#skool-root .markbar.is-done{background:var(--ok-wash);border-color:rgb(11 164 107 / .35)}
+#skool-root .marktodo{font-size:14px;color:var(--text-dim)}
+#skool-root .markdone{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--text)}
+#skool-root .markdone i{
+  width:20px;height:20px;border-radius:50%;background:var(--ok);color:#fff;
+  display:grid;place-items:center;font-size:11px;font-style:normal;font-weight:800;flex:none;
+}
+#skool-root .markacts{display:flex;align-items:center;gap:7px}
+#skool-root .minsin.wide{width:60px}
+#skool-root .mu{font-style:normal;font-size:11.5px;color:var(--muted);margin-right:4px}
+
+#skool-root .proofbox{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);background:var(--surface);
+  padding:14px 16px;margin-bottom:24px;display:flex;flex-direction:column;gap:9px;
+}
+#skool-root .proofwarn{margin:0;font-size:12.5px;color:var(--bad)}
+
+#skool-root .block{margin-bottom:14px}
+#skool-root .blocknote{margin:0 0 11px;font-size:12.5px;color:var(--text-dim)}
+
+#skool-root .prompt{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);
+  background:var(--surface);margin-bottom:10px;overflow:hidden;
+}
+#skool-root .prompthead{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:9px 13px;border-bottom:1px solid var(--line);background:var(--idle-wash);
+}
+#skool-root .prompthead b{font-size:13px;font-weight:600}
+#skool-root .promptbody{
+  margin:0;padding:12px 14px;font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;line-height:1.65;color:var(--text-dim);
+  white-space:pre-wrap;word-break:break-word;max-height:260px;overflow-y:auto;
+}
+
+/* The right rail carries the words now. */
+#skool-root .taskside{display:flex;flex-direction:column;gap:12px;position:sticky;top:18px}
+@media (max-width:1080px){#skool-root .taskside{position:static}}
+#skool-root .sidecard{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);
+  background:var(--surface);padding:13px 15px;
+}
+#skool-root .sidekey{
+  display:block;font-size:10.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:8px;
+}
+#skool-root .sidelist{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:7px}
+#skool-root .sidelist li{font-size:12.5px;line-height:1.5;color:var(--text-dim)}
+#skool-root .sidelist.tight li{font-size:12px}
+#skool-root .morebtn{
+  border:0;background:none;cursor:pointer;padding:7px 0 0;font:inherit;
+  font-size:11.5px;font-weight:600;color:var(--accent);
+}
+#skool-root .sidenote{margin:0;font-size:12.5px;line-height:1.55;color:var(--text-dim)}
+#skool-root .sideempty{margin:0;font-size:12.5px;line-height:1.55;color:var(--muted)}
+
+#skool-root .exlink{
+  display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;
+  border:1px solid var(--line-mid);border-radius:var(--radius-sm);
+  padding:9px 11px;margin-bottom:7px;transition:border-color .12s ease,background .12s ease;
+}
+#skool-root .exlink:last-child{margin-bottom:0}
+#skool-root .exlink:hover{border-color:var(--accent);background:var(--accent-wash)}
+#skool-root .exn{
+  width:20px;height:20px;border-radius:5px;background:var(--accent-wash);color:var(--accent-ink);
+  display:grid;place-items:center;font-size:11px;font-weight:700;flex:none;
+}
+#skool-root .exlink .ex{display:flex;flex-direction:column;min-width:0;flex:1}
+#skool-root .exlink .ex b{font-size:12.5px;font-weight:600}
+#skool-root .exlink .ex small{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#skool-root .exgo{color:var(--muted);font-size:12px;flex:none}
+
+#skool-root .recent{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+#skool-root .recentgo{
+  width:100%;display:flex;align-items:center;gap:9px;cursor:pointer;
+  border:0;background:none;padding:5px 6px;border-radius:var(--radius-sm);
+  font:inherit;font-size:12px;color:var(--text-dim);text-align:left;
+}
+#skool-root .recentgo:hover{background:var(--idle-wash);color:var(--text)}
+#skool-root .recent .rd{width:44px;flex:none;font-variant-numeric:tabular-nums}
+#skool-root .recent .rm{width:46px;flex:none;font-variant-numeric:tabular-nums}
+#skool-root .recent .rl{font-size:11px;color:var(--ok)}
+#skool-root .recent .rl.none{color:var(--bad)}
+
+/* The submit form: minutes and proof, asked for at the tick. */
+#skool-root .subform{width:100%;display:flex;flex-direction:column;gap:14px}
+#skool-root .subrow{display:flex;gap:14px;flex-wrap:wrap}
+#skool-root .subfield{display:flex;flex-direction:column;gap:5px;flex:1;min-width:0}
+#skool-root .subm{display:flex;align-items:center;gap:7px}
+#skool-root .sublinks{display:flex;flex-direction:column;gap:7px;margin:2px 0 7px}
+#skool-root .sublinks .linkin{width:100%;flex:none}
+#skool-root .subfoot{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#skool-root .subwhy{flex:1;font-size:12.5px;color:var(--text-dim);text-align:right}
+
+/* Log: a link says where it went. */
+#skool-root .wlink{
+  display:inline-flex;align-items:center;gap:3px;text-decoration:none;
+  border:1px solid var(--line-mid);border-radius:99px;padding:2px 9px;margin-right:4px;
+  font-size:11px;font-weight:600;color:var(--text-dim);background:var(--surface);
+}
+#skool-root .wlink:hover{border-color:var(--accent);color:var(--accent)}
+#skool-root .wlink b{font-weight:700;color:var(--muted);font-size:10px}
+
+/* Screenshots as proof. Same store the video board's feedback images use. */
+#skool-root .shots{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;margin-top:4px}
+#skool-root .shot{position:relative;width:88px;height:66px;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--line-mid)}
+#skool-root .shot img{width:100%;height:100%;object-fit:cover;display:block}
+#skool-root .shot-x{
+  position:absolute;top:3px;right:3px;width:18px;height:18px;border-radius:50%;
+  border:0;cursor:pointer;background:rgb(0 0 0 / .6);color:#fff;font-size:12px;line-height:1;
+  display:grid;place-items:center;
+}
+#skool-root .shot-x:hover{background:var(--bad)}
+#skool-root .shotadd{
+  width:88px;height:66px;border:1px dashed var(--line-strong);border-radius:var(--radius-sm);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  cursor:pointer;color:var(--muted);background:var(--surface);
+}
+#skool-root .shotadd:hover{border-color:var(--accent);color:var(--accent)}
+#skool-root .shotadd input{display:none}
+#skool-root .shotadd span{font-size:11px;font-weight:600}
+#skool-root .shotadd.busy{opacity:.6;pointer-events:none}
+#skool-root .hasshot{margin-left:5px;font-size:10.5px;font-weight:600;color:var(--text-dim)}
+
+/* ---------------- the post, drawn ----------------
+   Rendered roughly as it will look where it is going, so the shape of a good
+   one is obvious before a word of guidance is read. */
+#skool-root .pv{margin:6px 0 20px}
+#skool-root .pvhead h3{
+  margin:0 0 3px;font-size:11px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--muted);
+}
+#skool-root .pvnote{margin:0 0 12px;font-size:12.5px;line-height:1.55;color:var(--text-dim);max-width:60ch}
+#skool-root .pvbody{max-width:560px}
+
+#skool-root .pvcard{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);background:var(--surface);
+  padding:15px 17px;box-shadow:0 1px 3px rgb(0 0 0 / .05);
+}
+#skool-root .pvtop{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+#skool-root .pvtop>div{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+#skool-root .pvtop b{font-size:13.5px;font-weight:600}
+#skool-root .pvtop small{font-size:11.5px;color:var(--muted)}
+#skool-root .pvav{
+  width:32px;height:32px;border-radius:50%;flex:none;color:#fff;font-style:normal;
+  font-size:11.5px;font-weight:700;display:grid;place-items:center;line-height:1;
+}
+#skool-root .pvtitle{margin:0 0 8px;font-size:16px;font-weight:700;line-height:1.35;letter-spacing:-.015em}
+#skool-root .pvtext p{margin:0 0 9px;font-size:14px;line-height:1.65;color:var(--text)}
+#skool-root .pvtext p:last-child{margin-bottom:0}
+#skool-root .pvbar{
+  display:flex;gap:16px;margin-top:13px;padding-top:11px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--muted);
+}
+#skool-root .pvcomments{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+#skool-root .pvcomment{display:flex;gap:9px;align-items:flex-start}
+#skool-root .pvcomment .pvav{width:24px;height:24px;font-size:9.5px;margin-top:1px}
+#skool-root .pvcomment>div{display:flex;flex-direction:column;gap:2px;min-width:0}
+#skool-root .pvcomment b{font-size:12.5px;font-weight:600}
+#skool-root .pvcomment span{font-size:13px;line-height:1.55;color:var(--text-dim)}
+
+#skool-root .pvig{display:flex;flex-direction:column;gap:9px}
+#skool-root .pvslide{
+  position:relative;border:1px solid var(--line-mid);border-radius:var(--radius-md);
+  background:var(--surface);padding:14px 15px 14px 40px;
+}
+#skool-root .pvslide p{margin:0;font-size:13px;line-height:1.5;color:var(--text-dim)}
+#skool-root .pvslide.first{
+  background:linear-gradient(135deg,#ffd84d,#ffb01f);border-color:#f0a800;
+  padding:26px 22px 26px 48px;
+}
+#skool-root .pvslide.first p{font-size:21px;font-weight:800;line-height:1.25;letter-spacing:-.02em;color:#1a1400}
+#skool-root .pvsn{
+  position:absolute;left:13px;top:14px;width:19px;height:19px;border-radius:5px;
+  background:var(--idle-wash);color:var(--muted);font-size:10.5px;font-weight:700;
+  display:grid;place-items:center;
+}
+#skool-root .pvslide.first .pvsn{top:26px;background:rgb(0 0 0 / .18);color:#1a1400}
+#skool-root .pvrest{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+
+#skool-root .pvtweet .pvtext p{font-size:15px}
+#skool-root .pvstats{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+#skool-root .pvstat{
+  border:1px solid var(--line-mid);border-radius:var(--radius-sm);background:var(--surface);
+  padding:10px 12px;display:flex;flex-direction:column;gap:2px;
+}
+#skool-root .pvstat span{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+#skool-root .pvstat b{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* Folds. Everything long opens on request. */
+#skool-root .fold{border-top:1px solid var(--line);padding-top:10px;margin-bottom:10px}
+#skool-root .foldbtn{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border:0;background:none;cursor:pointer;padding:5px 0;font:inherit;
+  font-size:13px;font-weight:600;color:var(--text-dim);text-align:left;
+}
+#skool-root .foldbtn:hover{color:var(--accent)}
+#skool-root .foldarrow{font-size:9px;color:var(--muted)}
+#skool-root .foldbody{padding-top:6px}
+#skool-root .foldbody p{margin:0 0 11px;font-size:14px;line-height:1.65;color:var(--text)}
+#skool-root .foldbody ul{margin:0 0 11px;padding-left:19px}
+#skool-root .foldbody li{font-size:14px;line-height:1.65;margin-bottom:5px;color:var(--text)}
+#skool-root .fold.on .foldbtn{color:var(--text)}
+
+/* Field labels and hints. Both were lost when the task layout was rebuilt,
+   which left every hint rendering at body size and the form looking shouty. */
+#skool-root .dk{
+  font-size:10.5px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);
+}
+#skool-root .fieldhint{margin:0;font-size:11.5px;line-height:1.45;color:var(--text-dim)}
+#skool-root .subform .dk{display:block;margin-bottom:2px}
+
+/* ---------------- recovered ----------------
+   These three blocks — the standard editor, Finances and Feedback —
+   were deleted by accident when the task layout's stylesheet was
+   rebuilt: the range that was replaced ran past the end of the task
+   rules and took everything appended after them. Restored from the
+   commit before that rebuild, minus the two rules the new task
+   header replaced. */
+/* ---------------- editing a task in place ----------------
+   The standard used to have a page of its own, which put the definition of a
+   job on a different screen from the job. It is edited here now, under the
+   task it describes. */
+
+#skool-root .tasktab.addtab{
+  padding:9px 14px;font-size:15px;font-weight:600;color:var(--muted);
+  border-style:dashed;
+}
+#skool-root .tasktab.addtab:hover{border-style:solid;border-color:var(--accent);color:var(--accent)}
+
+#skool-root .stdedit{
+  border:1px solid var(--accent-line);border-radius:var(--radius-md);
+  background:var(--accent-wash);padding:16px 18px;margin-bottom:22px;
+  display:flex;flex-direction:column;gap:15px;
+}
+#skool-root .stdgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+#skool-root .fieldwrap{display:flex;flex-direction:column;gap:6px}
+#skool-root .stdedit .tinput, #skool-root .stdedit .sel{
+  width:100%;border:1px solid var(--line-mid);background:var(--surface);
+  border-radius:var(--radius-sm);padding:7px 10px;font:inherit;font-size:13px;
+  color:var(--text);outline:none;
+}
+#skool-root .stdedit .tinput:focus, #skool-root .stdedit .sel:focus{border-color:var(--accent)}
+#skool-root .stdedit textarea.tinput{resize:vertical;line-height:1.6}
+#skool-root .stdedit textarea.tall{font-size:12.5px;line-height:1.65}
+
+#skool-root .pedit{
+  border:1px solid var(--line-mid);border-radius:var(--radius-sm);
+  background:var(--surface);padding:10px;display:flex;flex-direction:column;gap:8px;
+}
+#skool-root .pedithead{display:flex;align-items:center;gap:8px}
+#skool-root .pedithead .tinput{flex:1;font-weight:600}
+#skool-root .pedit textarea.tinput{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+#skool-root .stdeditfoot{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border-top:1px solid var(--accent-line);padding-top:14px;
+}
+#skool-root .btn.danger{color:var(--bad);border-color:var(--line-mid)}
+#skool-root .btn.danger:hover{border-color:var(--bad);background:var(--bad-wash)}
+
+/* ---------------- finances ---------------- */
+#skool-root .finhead{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+#skool-root .finmonths{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+#skool-root .finasof{font-size:12.5px;color:var(--text-dim)}
+#skool-root .fintiles{margin-bottom:16px}
+
+#skool-root .finblock{margin-bottom:30px}
+#skool-root .finblock h3{
+  margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--muted);
+}
+#skool-root .fintable td, #skool-root .fintable th{white-space:nowrap;font-variant-numeric:tabular-nums}
+#skool-root .fintable td:first-child, #skool-root .fintable th:first-child{white-space:normal}
+#skool-root .fintable tr.dim td{opacity:.6}
+#skool-root .fintable tr.fintotal td{border-top:1px solid var(--line-strong);background:var(--idle-wash)}
+#skool-root .finin{
+  width:76px;border:1px solid var(--line-mid);background:var(--surface);
+  border-radius:var(--radius-sm);padding:4px 7px;font:inherit;font-size:12.5px;
+  text-align:right;color:var(--text);outline:none;
+}
+#skool-root .finin:focus{border-color:var(--accent)}
+#skool-root .finlab{display:flex;flex-direction:column;gap:4px}
+#skool-root .finlab span{font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+
+/* The bottom line, read down rather than across. */
+#skool-root .pnl{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);background:var(--surface);
+  max-width:420px;overflow:hidden;margin-bottom:12px;
+}
+#skool-root .pnlrow{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:11px 15px;border-bottom:1px solid var(--line);font-size:13.5px;
+}
+#skool-root .pnlrow:last-child{border-bottom:0}
+#skool-root .pnlrow b{font-variant-numeric:tabular-nums;font-size:14px}
+#skool-root .pnlrow.ok b{color:var(--ok)}
+#skool-root .pnlrow.big{background:var(--idle-wash);padding:14px 15px}
+#skool-root .pnlrow.big b{font-size:21px;font-weight:700;letter-spacing:-.02em}
+#skool-root .pnlrow.big.ok b{color:var(--ok)}
+#skool-root .pnlrow.big.bad b{color:var(--bad)}
+/* Somebody with nothing payable is still on the page, quietly. */
+#skool-root .paygroup.idle .paygroup-head{opacity:.72}
+#skool-root .paygroup.idle .paygroup-owed{color:var(--muted);font-weight:500}
+
+/* ---------------- feedback ---------------- */
+#skool-root .fbnew{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);background:var(--surface);
+  padding:14px 16px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px;max-width:720px;
+}
+#skool-root .fbnewhead{display:flex;align-items:center;justify-content:space-between}
+#skool-root .fbnewrow{display:flex;gap:8px;flex-wrap:wrap}
+#skool-root .fbnewrow .sel{flex:1 1 180px;min-width:0}
+#skool-root .fbnew .tinput{
+  width:100%;border:1px solid var(--line-mid);background:var(--canvas);border-radius:var(--radius-sm);
+  padding:9px 11px;font:inherit;font-size:13.5px;line-height:1.6;color:var(--text);
+  outline:none;resize:vertical;
+}
+#skool-root .fbnew .tinput:focus{border-color:var(--accent);background:var(--surface)}
+#skool-root .fbnewfoot{display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+#skool-root .fblist{display:flex;flex-direction:column;gap:10px;max-width:820px;margin-bottom:30px}
+#skool-root .fbitem{
+  border:1px solid var(--line-mid);border-radius:var(--radius-md);background:var(--surface);
+  padding:12px 14px;
+}
+/* Sent back is the one that has to catch the eye — it is the only kind that
+   says something has to be done again. */
+#skool-root .fbitem.k-redo{border-left:3px solid var(--bad)}
+#skool-root .fbitem.k-written{border-left:3px solid var(--accent)}
+#skool-root .fbitem.k-said{border-left:3px solid var(--line-strong)}
+#skool-root .fbtop{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+#skool-root .fbtop b{font-size:13.5px}
+#skool-root .fbtop .avatar.tiny{width:22px;height:22px;font-size:9px}
+#skool-root .fbtag{
+  border:1px solid var(--line-mid);background:var(--idle-wash);color:var(--text-dim);
+  border-radius:99px;padding:2px 9px;font:inherit;font-size:11px;font-weight:600;cursor:pointer;
+}
+#skool-root .fbtag:hover{border-color:var(--accent);color:var(--accent)}
+#skool-root .fbkind{
+  font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);
+}
+#skool-root .fbwhen{margin-left:auto;font-size:11.5px;color:var(--muted);white-space:nowrap}
+#skool-root .fbtext{margin:0;font-size:14px;line-height:1.65;color:var(--text);white-space:pre-wrap}
+#skool-root .fbmissing{margin:0;font-size:13px;line-height:1.6;color:var(--bad)}
+#skool-root .fbwhybox{display:flex;gap:8px;align-items:flex-start;margin-top:9px}
+#skool-root .fbwhybox .tinput{
+  flex:1;border:1px solid var(--line-mid);background:var(--canvas);border-radius:var(--radius-sm);
+  padding:7px 10px;font:inherit;font-size:13px;line-height:1.6;color:var(--text);outline:none;resize:vertical;
+}
+#skool-root .fbwhybox .tinput:focus{border-color:var(--accent);background:var(--surface)}
+
+#skool-root .fbstd{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+#skool-root .fbstdbtn{
+  border:1px solid var(--line-mid);background:var(--surface);border-radius:var(--radius-sm);
+  padding:7px 12px;font:inherit;font-size:12.5px;font-weight:600;color:var(--text-dim);cursor:pointer;
+}
+#skool-root .fbstdbtn:hover{border-color:var(--accent);color:var(--accent)}
+
+
+/* A grid child will not shrink below its content without this, so one long
+   unbroken link in a prompt was able to widen the whole middle column. */
+#skool-root .taskmain{min-width:0}
+
+/* The log-it dialog. The shell comes from the video board's stylesheet; only
+   the fields inside it are this board's. */
+#skool-root .modal .subfield{display:flex;flex-direction:column;gap:5px}
+#skool-root .modal .subm{display:flex;align-items:center;gap:7px}
+#skool-root .modal .sublinks{display:flex;flex-direction:column;gap:7px;margin:4px 0 8px}
+#skool-root .modal .sublinks .linkin{width:100%;flex:none}
+#skool-root .modal-foot .subwhy{margin-right:auto;font-size:12.5px;color:var(--text-dim)}
+
+/* What each task is worth. The point of allocating time is that this table
+   exists and a month does not have to be worked out from a list of rows. */
+#skool-root .allocblock{margin-bottom:26px}
+#skool-root .alloctable td, #skool-root .alloctable th{white-space:nowrap}
+#skool-root .alloctable td:first-child, #skool-root .alloctable th:first-child{white-space:normal;min-width:140px}
+#skool-root .paywhy .actual{
+  display:block;font-style:normal;font-size:10.5px;color:var(--muted);margin-top:1px;
+}
+#skool-root .billedin{
+  display:block;font-size:10px;font-weight:600;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--muted);margin-top:1px;
+}
+/* The sent-back rows with nothing written on them, when they are asked for. */
+#skool-root .fblist.unex{margin:-8px 0 22px}
+
+/* Allocations, edited where they are read. */
+#skool-root .allocin{display:inline-flex;align-items:center;gap:5px}
+#skool-root .allocin i{font-style:normal;font-size:10.5px;color:var(--muted)}
+#skool-root .allocin .finin{width:62px}
+/* What the dialog is worth, said once instead of asked for. */
+#skool-root .subworth{
+  margin:0;padding:11px 13px;border-radius:var(--radius-sm);
+  border:1px solid var(--accent-line);background:var(--accent-wash);
+  color:var(--text);font-size:13.5px;line-height:1.5;
+}
+#skool-root .subworth b{color:var(--accent-ink);font-weight:700}
+
+/* The save button is a status now: it saves itself, and this says so. */
+#skool-root .btn-save-here.done{
+  background:var(--ok-wash);border-color:rgb(11 164 107 / .3);color:var(--ok);
+  opacity:1;
+}
+#skool-root .btn-save-here.pending{
+  background:var(--accent-wash);border-color:var(--accent-line);color:var(--accent-ink);
+}
+
+/* The statistics sheet is a section that saves on its own, and unlike the
+   others it has no heading row to hang its Save on. */
+.statsavehead{display:flex;justify-content:flex-end;margin-bottom:10px}
+.stdeditfoot .saveunit{margin-left:auto}
+.dayhead-r .saveunit,.daynav .saveunit{margin-left:12px}
+
+/* ---------- fixed price or by the hour ----------
+   A task is worth what it is worth, to whoever does it. The few that cannot
+   be priced in advance are paid by the hour instead, and they are meant to
+   look like the exception they are. */
+.paymode{
+  font-size:11.5px;font-weight:600;border-radius:999px;padding:4px 11px;white-space:nowrap;
+  border:1px solid var(--line-mid);background:var(--surface);color:var(--text-dim);
+  cursor:pointer;transition:border-color .15s ease,color .15s ease,background-color .15s ease;
+}
+.paymode:hover{border-color:var(--accent);color:var(--accent-deep)}
+.paymode.on{background:var(--warn-wash);border-color:color-mix(in srgb,var(--warn-dot) 45%,transparent);color:var(--warn)}
+.paymode.ro{cursor:default}
+.paymode.ro:hover{border-color:var(--line-mid);color:var(--text-dim)}
+.paymode.ro.on:hover{border-color:color-mix(in srgb,var(--warn-dot) 45%,transparent);color:var(--warn)}
+.payhourly{color:var(--warn);font-variant-numeric:tabular-nums}
+table.alloctable tr.hourlyrow{background:color-mix(in srgb,var(--warn-dot) 5%,transparent)}
+/* The allocation is still worth showing — it plans a day — but it no longer
+   prices one, so it sits under the name rather than in a column of its own. */
+.allocmins{display:block;margin-top:2px;font-size:11.5px;color:var(--text-faint);font-weight:400}
+.allocin{display:inline-flex;align-items:center;gap:6px}
+.pkrmark{font-size:11px;font-style:normal;color:var(--text-faint);letter-spacing:.03em}
