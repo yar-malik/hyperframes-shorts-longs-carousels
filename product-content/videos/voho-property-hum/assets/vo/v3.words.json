@@ -1,0 +1,208 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,080"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 80
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,080",
+				"to": "00:00:00,100"
+			},
+			"offsets": {
+				"from": 80,
+				"to": 100
+			},
+			"text": " It"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,100",
+				"to": "00:00:00,310"
+			},
+			"offsets": {
+				"from": 100,
+				"to": 310
+			},
+			"text": " gets"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,310",
+				"to": "00:00:00,470"
+			},
+			"offsets": {
+				"from": 310,
+				"to": 470
+			},
+			"text": " the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,470",
+				"to": "00:00:01,000"
+			},
+			"offsets": {
+				"from": 470,
+				"to": 1000
+			},
+			"text": " listings,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,000",
+				"to": "00:00:01,160"
+			},
+			"offsets": {
+				"from": 1000,
+				"to": 1160
+			},
+			"text": " the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,160",
+				"to": "00:00:01,650"
+			},
+			"offsets": {
+				"from": 1160,
+				"to": 1650
+			},
+			"text": " rents,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,650",
+				"to": "00:00:01,920"
+			},
+			"offsets": {
+				"from": 1650,
+				"to": 1920
+			},
+			"text": " and"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,920",
+				"to": "00:00:02,190"
+			},
+			"offsets": {
+				"from": 1920,
+				"to": 2190
+			},
+			"text": " one"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,190",
+				"to": "00:00:02,600"
+			},
+			"offsets": {
+				"from": 2190,
+				"to": 2600
+			},
+			"text": " rule"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,600",
+				"to": "00:00:02,620"
+			},
+			"offsets": {
+				"from": 2600,
+				"to": 2620
+			},
+			"text": " -"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,620",
+				"to": "00:00:03,100"
+			},
+			"offsets": {
+				"from": 2620,
+				"to": 3100
+			},
+			"text": " answer"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,100",
+				"to": "00:00:03,270"
+			},
+			"offsets": {
+				"from": 3100,
+				"to": 3270
+			},
+			"text": " in"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,270",
+				"to": "00:00:03,520"
+			},
+			"offsets": {
+				"from": 3270,
+				"to": 3520
+			},
+			"text": " one"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,520",
+				"to": "00:00:03,940"
+			},
+			"offsets": {
+				"from": 3520,
+				"to": 3940
+			},
+			"text": " short"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,940",
+				"to": "00:00:04,680"
+			},
+			"offsets": {
+				"from": 3940,
+				"to": 4680
+			},
+			"text": " sentence."
+		}
+	]
+}

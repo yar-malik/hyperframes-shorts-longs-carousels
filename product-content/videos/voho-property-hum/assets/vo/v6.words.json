@@ -1,0 +1,186 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,080"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 80
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,080",
+				"to": "00:00:00,380"
+			},
+			"offsets": {
+				"from": 80,
+				"to": 380
+			},
+			"text": " Every"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,380",
+				"to": "00:00:00,760"
+			},
+			"offsets": {
+				"from": 380,
+				"to": 760
+			},
+			"text": " buyer"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,760",
+				"to": "00:00:01,060"
+			},
+			"offsets": {
+				"from": 760,
+				"to": 1060
+			},
+			"text": " gets"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,060",
+				"to": "00:00:01,210"
+			},
+			"offsets": {
+				"from": 1060,
+				"to": 1210
+			},
+			"text": " an"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,210",
+				"to": "00:00:01,900"
+			},
+			"offsets": {
+				"from": 1210,
+				"to": 1900
+			},
+			"text": " answer,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,900",
+				"to": "00:00:02,140"
+			},
+			"offsets": {
+				"from": 1900,
+				"to": 2140
+			},
+			"text": " even"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,140",
+				"to": "00:00:02,440"
+			},
+			"offsets": {
+				"from": 2140,
+				"to": 2440
+			},
+			"text": " when"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,440",
+				"to": "00:00:02,800"
+			},
+			"offsets": {
+				"from": 2440,
+				"to": 2800
+			},
+			"text": " you're"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,800",
+				"to": "00:00:03,200"
+			},
+			"offsets": {
+				"from": 2800,
+				"to": 3200
+			},
+			"text": " out."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,200",
+				"to": "00:00:03,590"
+			},
+			"offsets": {
+				"from": 3200,
+				"to": 3590
+			},
+			"text": " Try"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,590",
+				"to": "00:00:03,850"
+			},
+			"offsets": {
+				"from": 3590,
+				"to": 3850
+			},
+			"text": " it"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,850",
+				"to": "00:00:04,110"
+			},
+			"offsets": {
+				"from": 3850,
+				"to": 4110
+			},
+			"text": " at"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,110",
+				"to": "00:00:06,120"
+			},
+			"offsets": {
+				"from": 4110,
+				"to": 6120
+			},
+			"text": " app.voho.ai."
+		}
+	]
+}

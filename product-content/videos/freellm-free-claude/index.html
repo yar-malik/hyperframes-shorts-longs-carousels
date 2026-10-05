@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Fraunces"; font-weight: 800; font-style: normal; src: url("public/fonts/fraunces-800.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #ECE7DE; }
+      body { font-family: "Inter", sans-serif; color: #1B1815; -webkit-font-smoothing: antialiased; }
+      #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden;
+        background: radial-gradient(120% 80% at 50% 30%, #F3EFE7 0%, #ECE7DE 60%, #E4DED2 100%); }
+      .clip { position: absolute; }
+      .ghost { position: absolute; right: -140px; bottom: 60px; width: 620px; height: 620px; opacity: .07; background: #DC5A2B;
+        -webkit-mask: url("public/logos/claude.svg") center/contain no-repeat; mask: url("public/logos/claude.svg") center/contain no-repeat; }
+      .ghost2 { position: absolute; left: -180px; top: 560px; width: 420px; height: 420px; opacity: .05; background: #1B1815;
+        -webkit-mask: url("public/logos/dollar.svg") center/contain no-repeat; mask: url("public/logos/dollar.svg") center/contain no-repeat; }
+
+      /* rail */
+      .rail { position: absolute; left: 0; top: 0; width: 1080px; height: 400px; z-index: 6; }
+      .rail-track { position: absolute; left: 80px; top: 287px; width: 920px; height: 10px; border-radius: 5px; background: #D9D2C4; }
+      .rail-fill { position: absolute; left: 80px; top: 287px; width: 920px; height: 10px; border-radius: 5px; background: #DC5A2B; transform-origin: 0 50%; }
+      .stop { position: absolute; top: 270px; width: 44px; height: 44px; border-radius: 50%; background: #F7F3EA; border: 3px solid #D9D2C4;
+        display: grid; place-items: center; font-weight: 700; font-size: 22px; color: #8A8172; }
+      .stop-num { grid-area: 1/1; }
+      .stop-check { grid-area: 1/1; width: 26px; height: 26px; opacity: 0; }
+      .marker { position: absolute; left: 70px; top: 192px; width: 80px; height: 124px; }
+      .marker .bot { left: 6px; bottom: 0; }
+      .marker-ring { position: absolute; left: 12px; bottom: 6px; width: 56px; height: 18px; border-radius: 50%; background: rgba(220, 90, 43, .28); }
+      .flag { position: absolute; left: 974px; top: 266px; width: 52px; height: 52px; border-radius: 14px; background: #F7F3EA; border: 3px solid #D9D2C4; display: grid; place-items: center; }
+      .flag svg { width: 28px; height: 28px; }
+
+      /* pill */
+      .pill-slot { left: 0; top: 330px; width: 1080px; height: 160px; display: flex; justify-content: center; align-items: flex-start; z-index: 5; }
+      .pill { display: flex; align-items: center; gap: 22px; padding: 16px 44px 16px 16px; background: #FFFDF9; border-radius: 34px;
+        box-shadow: 0 14px 34px rgba(60, 40, 20, .16), 0 2px 0 rgba(255,255,255,.8) inset; border: 2px solid #EFE8DC; }
+      .pill-logo { width: 112px; height: 112px; border-radius: 26px; background: #F5E6D6; display: grid; place-items: center; flex: none; }
+      .pill-glyph { width: 62px; height: 62px; background: #DC5A2B; -webkit-mask: url("public/logos/claude.svg") center/contain no-repeat; mask: url("public/logos/claude.svg") center/contain no-repeat; }
+      .pill-text { font-weight: 900; font-size: 46px; line-height: 1.06; text-transform: uppercase; letter-spacing: -.012em; white-space: nowrap; }
+      .pill-l1 { color: #1B1815; }
+      .pill-l2 { color: #DC5A2B; }
+
+      /* card */
+      .card { position: absolute; left: 36px; top: 380px; width: 1008px; height: 790px; border-radius: 38px; background: #F8F5EF; border: 3px solid #E4DCCE;
+        box-shadow: 0 24px 60px rgba(60, 40, 20, .14); overflow: hidden; }
+      .card-beat { left: 0; top: 0; width: 1002px; height: 784px; overflow: hidden; }
+      .beat-inner { position: absolute; inset: 0; }
+      .floor { position: absolute; left: 0; bottom: 0; width: 1002px; height: 26px; background: linear-gradient(180deg, rgba(60,40,20,.06), rgba(60,40,20,.14)); }
+      .chip { position: absolute; transform-origin: 50% 50%; padding: 14px 26px; border-radius: 999px; font-weight: 900; font-size: 30px; letter-spacing: .01em; text-transform: uppercase; white-space: nowrap;
+        box-shadow: 0 8px 20px rgba(60, 40, 20, .18); z-index: 3; }
+      .chip-orange { background: #DC5A2B; color: #fff; }
+      .chip-ink { background: #1B1815; color: #fff; }
+      .chip-green { background: #2E9E5B; color: #fff; }
+      .chip-red { background: #C63D2F; color: #fff; }
+      .chip-muted { background: #FFFDF9; color: #6E6558; border: 2px solid #E4DCCE; box-shadow: none; font-weight: 700; text-transform: none; font-size: 24px; padding: 10px 20px; }
+
+      /* bots */
+      .bot { position: absolute; bottom: 10px; width: var(--w); height: calc(var(--w) * 1.42); font-size: calc(var(--w) / 100); z-index: 2; }
+      .bot-rig { position: absolute; inset: 0; transform-origin: 50% 100%; }
+      .bot-head { position: absolute; left: 8em; top: 0; width: 84em; height: 70em; border-radius: 12em; background: var(--skin);
+        box-shadow: inset -11em 0 0 rgba(0,0,0,.14), inset 0 7em 0 rgba(255,255,255,.22); transform-origin: 50% 100%; }
+      /* Yar: the head is his own cutout, no frame, standing on the shirt */
+      .bot-head-yar { left: -8em; top: -18em; width: 116em; height: 96em; border-radius: 0; background: none; box-shadow: none; overflow: visible; transform-origin: 50% 90%; }
+      .bot-head-yar img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; display: block;
+        filter: drop-shadow(0 3em 5em rgba(60,40,20,.22)); }
+      .bot-eye { position: absolute; top: 30em; width: 10em; height: 11em; background: #1B1815; border-radius: 2em; }
+      .bot-eye.l { left: 22em; } .bot-eye.r { left: 52em; }
+      .bot-mouth { position: absolute; left: 34em; top: 50em; width: 16em; height: 5em; background: #1B1815; border-radius: 0 0 6em 6em; }
+      .bot-mouth.o { left: 37em; width: 10em; height: 9em; border-radius: 50%; }
+      .bot-glasses { position: absolute; left: 14em; top: 24em; width: 56em; height: 22em; display: flex; justify-content: space-between; }
+      .bot-glasses i { width: 24em; height: 22em; border: 3.5em solid #1B1815; border-radius: 6em; background: rgba(255,255,255,.35); }
+      .bot-shades { position: absolute; left: 16em; top: 26em; width: 52em; height: 18em; background: #1B1815; border-radius: 4em; }
+      .bot-cap { position: absolute; left: -2em; top: -10em; width: 88em; height: 20em; background: var(--shirt); border-radius: 10em 10em 3em 3em; box-shadow: inset -8em 0 0 rgba(0,0,0,.14); }
+      .bot-brim { position: absolute; left: 60em; top: 4em; width: 34em; height: 8em; background: var(--shirt); border-radius: 0 4em 4em 0; }
+      .bot-hard { position: absolute; left: -4em; top: -14em; width: 92em; height: 26em; background: #F5C542; border-radius: 40em 40em 4em 4em; box-shadow: inset -10em 0 0 rgba(0,0,0,.12); }
+      .bot-beanie { position: absolute; left: -2em; top: -12em; width: 88em; height: 22em; background: #C63D2F; border-radius: 30em 30em 4em 4em; box-shadow: inset 0 -6em 0 rgba(255,255,255,.25); }
+      .bot-phones { position: absolute; left: -8em; top: 18em; width: 100em; height: 30em; border: 6em solid #1B1815; border-bottom: none; border-radius: 40em 40em 0 0; }
+      .bot-body { position: absolute; left: 18em; top: 66em; width: 64em; height: 46em; border-radius: 8em; background: var(--shirt); box-shadow: inset -9em 0 0 rgba(0,0,0,.14); }
+      .bot-yar .bot-body { left: 14em; top: 64em; width: 72em; height: 48em; border-radius: 14em 14em 8em 8em; }
+      .bot-collar { position: absolute; left: 22em; top: 0; width: 28em; height: 10em; background: #FFFDF9; border-radius: 0 0 14em 14em; opacity: .9; }
+      .bot-tie { position: absolute; left: 27em; top: 2em; width: 10em; height: 26em; background: #C63D2F; clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%); }
+      .bot-bow { position: absolute; left: 20em; top: 4em; width: 24em; height: 10em; background: #C63D2F; clip-path: polygon(0 0, 50% 40%, 100% 0, 100% 100%, 50% 60%, 0 100%); }
+      .bot-pocket { position: absolute; left: 10em; top: 10em; width: 14em; height: 12em; background: rgba(255,255,255,.35); border-radius: 2em; }
+      .bot-badge { position: absolute; left: 40em; top: 10em; width: 12em; height: 12em; background: #F5C542; border-radius: 50%; }
+      .bot-arm { position: absolute; top: 70em; width: 13em; height: 30em; border-radius: 5em; background: var(--skin); transform-origin: 50% 10%; box-shadow: inset -4em 0 0 rgba(0,0,0,.12); }
+      .bot-arm.l { left: 4em; } .bot-arm.r { left: 83em; }
+      .bot-leg { position: absolute; top: 108em; width: 22em; height: 34em; border-radius: 4em 4em 6em 6em; background: var(--skin); transform-origin: 50% 0; box-shadow: inset 0 -9em 0 #1B1815, inset -5em 0 0 rgba(0,0,0,.12); }
+      .bot-leg.l { left: 24em; } .bot-leg.r { left: 54em; }
+      .bot-yar .bot-leg, .bot-yar .bot-arm { background: #2B4C9B; }
+      .bot-yar .bot-arm { top: 72em; }
+
+      /* caption — the serif line under the card, spoken words in orange, the rest ghosted */
+      .cap { left: 70px; top: 1235px; width: 940px; font-family: "Fraunces", "Playfair Display", serif; font-weight: 800; font-size: 62px; line-height: 1.22; }
+      .cap-ghost, .cap-live { position: absolute; left: 0; top: 0; width: 940px; text-align: center; }
+      .cap-ghost { color: #E4D3C2; }
+      .cap-live { color: #DC5A2B; }
+      .cap-live .w { opacity: 0; display: inline-block; transform-origin: 50% 80%; }
+
+      /* cta + confetti + handle */
+      .cta { left: 0; top: 1455px; width: 1080px; display: flex; justify-content: center; }
+      .cta-chip { display: inline-flex; align-items: center; gap: 18px; padding: 18px 34px; border-radius: 999px; background: #1B1815; color: #fff; font-weight: 800; font-size: 32px; box-shadow: 0 12px 30px rgba(30, 20, 10, .25); }
+      .cta-chip .tri { width: 0; height: 0; border-left: 22px solid #DC5A2B; border-top: 13px solid transparent; border-bottom: 13px solid transparent; }
+      .cta-chip em { font-style: normal; color: #E8B79E; font-weight: 700; }
+      .confetti { left: 0; top: 1200px; width: 1080px; height: 700px; pointer-events: none; }
+      .cf { position: absolute; left: 540px; top: 300px; width: 14px; height: 22px; border-radius: 3px; background: var(--c); opacity: 0; }
+      .handle { position: absolute; left: 0; top: 1790px; width: 1080px; text-align: center; font-weight: 700; font-size: 28px; letter-spacing: .04em; color: #7A7164; }
+
+
+      /* beat 1 — the bill */
+      .b1-bill { position: absolute; left: 231px; top: 96px; width: 540px; border-radius: 28px; background: #FFFDF9; border: 3px solid #E4DCCE; box-shadow: 0 14px 34px rgba(60,40,20,.12); padding: 30px 34px 34px; text-align: center; }
+      .b1-bill-top { font-weight: 800; font-size: 24px; letter-spacing: .06em; text-transform: uppercase; color: #8A8172; }
+      .b1-was { font-weight: 900; font-size: 96px; line-height: 1.1; color: #6B6257; margin-top: 10px; }
+      /* Through the old number, not above the new one. The card's own box:
+         30 padding + 29 of label + 10 margin puts $317 at 69..174, so the
+         strike sits on its middle. */
+      .b1-rule { position: absolute; left: 162px; top: 117px; width: 216px; height: 9px; border-radius: 5px; background: #C63D2F; transform-origin: 0 50%; }
+      .b1-now { font-weight: 900; font-size: 190px; line-height: 1; letter-spacing: -.05em; color: #2E9E5B; margin-top: 4px; }
+      /* In the gap between the bill and the bots. Under the card it landed in
+         the row they walk along; on the card's corner the card clipped it,
+         because the card hides its own overflow. The bill ends about 494 and
+         Yar's head starts about 571, so it goes between them. */
+      .b1-tag { left: 50%; margin-left: -170px; top: 508px; width: 340px; text-align: center; }
+
+      /* beat 2 — the counter and the models */
+      .b2-num { position: absolute; left: 0; top: 96px; width: 1002px; text-align: center; font-weight: 900; font-size: 210px; line-height: 1; letter-spacing: -.05em; color: #DC5A2B; }
+      .b2-num i { font-style: normal; font-size: 110px; }
+      .b2-cap { position: absolute; left: 0; top: 330px; width: 1002px; text-align: center; font-weight: 800; font-size: 34px; letter-spacing: .08em; text-transform: uppercase; color: #6B6257; }
+      .b2-chips { position: absolute; left: 60px; top: 410px; width: 882px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+      .modelchip { padding: 13px 24px; border-radius: 999px; background: #FFFDF9; border: 3px solid #E4DCCE; font-weight: 800; font-size: 28px; color: #1B1815; opacity: 0; }
+
+      /* beat 3 — the name and the terminal */
+      .b3-name { position: absolute; left: 0; top: 86px; width: 1002px; text-align: center; font-weight: 900; font-size: 76px; letter-spacing: -.03em; color: #1B1815; }
+      .term { position: absolute; left: 130px; top: 210px; width: 742px; border-radius: 22px; background: #FFFDF9; border: 3px solid #E4DCCE; box-shadow: 0 14px 34px rgba(60,40,20,.12); padding-bottom: 20px; font-family: ui-monospace, Menlo, monospace; }
+      .term-bar { display: flex; align-items: center; gap: 12px; padding: 14px 22px; font-family: "Inter", sans-serif; font-size: 24px; font-weight: 900; border-bottom: 2px solid #EFE8DC; margin-bottom: 14px; }
+      .term-bar i { width: 22px; height: 22px; border-radius: 6px; background: #DC5A2B; }
+      .term-line { padding: 8px 24px; font-size: 30px; color: #1B1815; white-space: nowrap; opacity: 0; }
+      .term-ok { padding: 10px 24px 0; font-size: 30px; font-weight: 700; color: #2E9E5B; opacity: 0; }
+      .b3-min { left: 50%; margin-left: -150px; bottom: 44px; width: 300px; text-align: center; }
+
+      /* beat 4 — the swap */
+      .b4-pair { position: absolute; left: 60px; top: 150px; width: 882px; display: flex; align-items: center; justify-content: space-between; }
+      .b4-model { width: 340px; height: 300px; border-radius: 26px; background: #FFFDF9; border: 3px solid #E4DCCE; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+      .b4-lab { font-weight: 900; font-size: 34px; letter-spacing: .04em; text-transform: uppercase; color: #1B1815; }
+      .b4-gauge { width: 200px; height: 30px; border-radius: 15px; background: #EFE8DC; overflow: hidden; }
+      .b4-gauge i { display: block; width: 0%; height: 100%; background: #C63D2F; }
+      .b4-state { font-weight: 800; font-size: 26px; text-transform: uppercase; letter-spacing: .08em; color: #C63D2F; opacity: 0; }
+      .b4-state.ok { color: #2E9E5B; }
+      .b4-arrow { font-weight: 900; font-size: 84px; color: #DC5A2B; opacity: 0; }
+      .b4-ctx { position: absolute; left: 180px; top: 500px; padding: 14px 30px; border-radius: 999px; background: #2E9E5B; color: #fff; font-weight: 900; font-size: 30px; text-transform: uppercase; letter-spacing: .04em; opacity: 0; }
+
+      /* beat 5 — the close */
+      .b5-line { position: absolute; left: 0; top: 180px; width: 1002px; text-align: center; display: flex; flex-direction: column; gap: 6px; }
+      .b5-a { font-weight: 900; font-size: 92px; letter-spacing: -.03em; color: #1B1815; line-height: 1.05; }
+      .b5-b { font-weight: 900; font-size: 100px; letter-spacing: -.03em; color: #DC5A2B; line-height: 1.05; }
+      .b5-tag { left: 50%; margin-left: -120px; top: 476px; width: 240px; text-align: center; font-size: 34px; }
+
+      /* card grounds per beat */
+      .b1 { background: radial-gradient(90% 70% at 50% 45%, #FBF8F2 0%, #F3EEE4 100%); }
+      .b2 { background: #F3EEE4; }
+      .b2::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(#D9D0BF 2.5px, transparent 2.5px); background-size: 44px 44px; opacity: .55; }
+      .b3 { background: #FBFAF7; }
+      .b4 { background: radial-gradient(90% 70% at 50% 45%, #FBF8F2 0%, #F3EEE4 100%); }
+      .b5 { background: #FBFAF7; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30.071" data-width="1080" data-height="1920">
+      <div class="ghost" id="ghost"></div>
+      <div class="ghost2" id="ghost2"></div>
+
+      <div class="rail">
+        <div class="rail-track"></div>
+        <div class="rail-fill" id="rail-fill"></div>
+      <div class="stop" data-layout-allow-occlusion style="left:88px">
+        <span class="stop-num">1</span>
+        <svg class="stop-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="stop" data-layout-allow-occlusion style="left:276px">
+        <span class="stop-num">2</span>
+        <svg class="stop-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="stop" data-layout-allow-occlusion style="left:463px">
+        <span class="stop-num">3</span>
+        <svg class="stop-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="stop" data-layout-allow-occlusion style="left:651px">
+        <span class="stop-num">4</span>
+        <svg class="stop-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="stop" data-layout-allow-occlusion style="left:838px">
+        <span class="stop-num">5</span>
+        <svg class="stop-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+        <div class="flag" id="flag"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" fill="#DC5A2B"/></svg></div>
+        <div class="marker" id="marker"><div class="marker-ring"></div><div class="bot bot-yar " id="marker-bot" data-side="c" style="--w:68px; --skin:#F2A33A; --shirt:#DC5A2B; left:0px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-collar"></i><i class="bot-tie"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head bot-head-yar"><img src="public/yar-head.png" alt="" /></div>
+    </div>
+  </div></div>
+      </div>
+
+      <div id="pill-1" class="clip pill-slot" data-start="0" data-duration="3.901" data-track-index="2">
+      <div class="pill" id="pill-in-1">
+        <div class="pill-logo"><div class="pill-glyph"></div></div>
+        <div class="pill-text"><div class="pill-l1">My bill: $0</div><div class="pill-l2">And it is not a trial</div></div>
+      </div></div><div id="pill-2" class="clip pill-slot" data-start="3.901" data-duration="7.848" data-track-index="2">
+      <div class="pill" id="pill-in-2">
+        <div class="pill-logo"><div class="pill-glyph"></div></div>
+        <div class="pill-text"><div class="pill-l1">7 billion tokens</div><div class="pill-l2">Every month, free</div></div>
+      </div></div><div id="pill-3" class="clip pill-slot" data-start="11.749" data-duration="5.759" data-track-index="2">
+      <div class="pill" id="pill-in-3">
+        <div class="pill-logo"><div class="pill-glyph"></div></div>
+        <div class="pill-text"><div class="pill-l1">FreeLLM API</div><div class="pill-l2">About a minute to wire in</div></div>
+      </div></div><div id="pill-4" class="clip pill-slot" data-start="17.508" data-duration="6.037" data-track-index="2">
+      <div class="pill" id="pill-in-4">
+        <div class="pill-logo"><div class="pill-glyph"></div></div>
+        <div class="pill-text"><div class="pill-l1">Hit a limit?</div><div class="pill-l2">It swaps for you</div></div>
+      </div></div><div id="pill-5" class="clip pill-slot" data-start="23.545" data-duration="6.526" data-track-index="2">
+      <div class="pill" id="pill-in-5">
+        <div class="pill-logo"><div class="pill-glyph"></div></div>
+        <div class="pill-text"><div class="pill-l1">Claude Code</div><div class="pill-l2">Stops running out</div></div>
+      </div></div>
+
+      <div class="card">
+        <div id="beat-1" class="clip card-beat b1" data-start="0" data-duration="3.901" data-track-index="1"><div class="beat-inner" id="inner-1">
+    <div class="b1-bill" id="b1bill">
+      <div class="b1-bill-top">Claude Code · this month</div>
+      <div class="b1-was" id="b1was">$317</div>
+      <div class="b1-rule" id="b1rule"></div>
+      <div class="b1-now" id="b1now">$0</div>
+    </div>
+    <div class="chip chip-green b1-tag" id="b1tag">Not a trial</div>
+    <div class="bot  " id="b1-bot0" data-side="l" style="--w:96px; --skin:#F2A33A; --shirt:#1B1815; left:40px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-tie"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div><div class="bot  " id="b1-bot1" data-side="l" style="--w:118px; --skin:#F5C542; --shirt:#2E9E5B; left:150px">
+    <div class="bot-rig">
+      <div class="bot-body"></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        <div class="bot-cap"></div><div class="bot-brim"></div>
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        <div class="bot-shades"></div>
+        
+      </div>
+    </div>
+  </div><div class="bot  " id="b1-bot2" data-side="r" style="--w:104px; --skin:#4A8FE7; --shirt:#DC5A2B; left:700px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-bow"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        <div class="bot-phones"></div>
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        <div class="bot-glasses"><i></i><i></i></div>
+        
+        <i class="bot-mouth o"></i>
+      </div>
+    </div>
+  </div><div class="bot  " id="b1-bot3" data-side="r" style="--w:122px; --skin:#F07A6A; --shirt:#C63D2F; left:830px">
+    <div class="bot-rig">
+      <div class="bot-body"></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+    <div class="bot bot-yar " id="b1-yar" data-side="c" style="--w:150px; --skin:#F2A33A; --shirt:#DC5A2B; left:426px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-collar"></i><i class="bot-tie"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head bot-head-yar"><img src="public/yar-head.png" alt="" /></div>
+    </div>
+  </div></div></div><div id="beat-2" class="clip card-beat b2" data-start="3.901" data-duration="7.848" data-track-index="1"><div class="beat-inner" id="inner-2">
+    <div class="b2-num" id="b2num"><span id="b2count">0</span><i>B</i></div>
+    <div class="b2-cap" id="b2cap">free tokens a month</div>
+    <div class="b2-chips" id="b2chips">
+      <span class="modelchip" id="b2m0">ChatGPT</span><span class="modelchip" id="b2m1">Gemini</span><span class="modelchip" id="b2m2">Kimi</span><span class="modelchip" id="b2m3">Grok</span><span class="modelchip" id="b2m4">Qwen</span><span class="modelchip" id="b2m5">Mistral</span><span class="modelchip" id="b2m6">Llama</span><span class="modelchip" id="b2m7">+600 more</span>
+    </div>
+    <div class="bot  " id="b2-bot0" data-side="l" style="--w:100px; --skin:#6CBF5A; --shirt:#FFFDF9; left:30px">
+    <div class="bot-rig">
+      <div class="bot-body"></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        <div class="bot-glasses"><i></i><i></i></div>
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div><div class="bot  " id="b2-bot1" data-side="r" style="--w:96px; --skin:#F28DB2; --shirt:#F5C542; left:880px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-tie"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        
+      </div>
+    </div>
+  </div></div></div><div id="beat-3" class="clip card-beat b3" data-start="11.749" data-duration="5.759" data-track-index="1"><div class="beat-inner" id="inner-3">
+    <div class="b3-name" id="b3name">FreeLLM API</div>
+    <div class="term" id="b3term">
+      <div class="term-bar"><i></i><b>terminal</b></div>
+      <div class="term-line" id="b3l1">$ npx freellm login</div>
+      <div class="term-line" id="b3l2">$ claude --model free/auto</div>
+      <div class="term-ok" id="b3ok">✓ 600 models connected</div>
+    </div>
+    <div class="chip chip-orange b3-min" id="b3min">About a minute</div>
+    <div class="bot  " id="b3-bot0" data-side="l" style="--w:104px; --skin:#F2A33A; --shirt:#6B4FBB; left:40px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-bow"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        <div class="bot-phones"></div>
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        <div class="bot-glasses"><i></i><i></i></div>
+        
+        
+      </div>
+    </div>
+  </div><div class="bot  " id="b3-bot1" data-side="r" style="--w:100px; --skin:#F5C542; --shirt:#DC5A2B; left:870px">
+    <div class="bot-rig">
+      <div class="bot-body"></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div></div></div><div id="beat-4" class="clip card-beat b4" data-start="17.508" data-duration="6.037" data-track-index="1"><div class="beat-inner" id="inner-4">
+    <div class="b4-pair">
+      <div class="b4-model" id="b4a"><span class="b4-lab">Model A</span>
+        <div class="b4-gauge"><i id="b4fill"></i></div>
+        <span class="b4-state" id="b4afull">limit</span></div>
+      <div class="b4-arrow" id="b4arrow">→</div>
+      <div class="b4-model" id="b4b"><span class="b4-lab">Model B</span>
+        <div class="b4-gauge"></div>
+        <span class="b4-state ok" id="b4bon">running</span></div>
+    </div>
+    <div class="b4-ctx" id="b4ctx">your context</div>
+    <div class="bot bot-yar " id="b4-yar" data-side="l" style="--w:130px; --skin:#F2A33A; --shirt:#DC5A2B; left:30px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-collar"></i><i class="bot-tie"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head bot-head-yar"><img src="public/yar-head.png" alt="" /></div>
+    </div>
+  </div>
+    <div class="bot  no-walk" id="b4-dev" data-side="r" style="--w:130px; --skin:#4A8FE7; --shirt:#DC5A2B; left:842px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-bow"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        <div class="bot-phones"></div>
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        <div class="bot-glasses"><i></i><i></i></div>
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div></div></div><div id="beat-5" class="clip card-beat b5" data-start="23.545" data-duration="6.526" data-track-index="1"><div class="beat-inner" id="inner-5">
+    <div class="b5-line" id="b5line"><span class="b5-a">It just</span><span class="b5-b">never stops</span></div>
+    <div class="chip chip-green b5-tag" id="b5tag">$0 a month</div>
+    <div class="bot  no-walk b5-crowd" id="b5-b0" data-side="l" style="--w:84px; --skin:#F07A6A; --shirt:#FFFDF9; left:150px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-tie"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div><div class="bot  no-walk b5-crowd" id="b5-b1" data-side="l" style="--w:84px; --skin:#8E6BD9; --shirt:#F5C542; left:258px">
+    <div class="bot-rig">
+      <div class="bot-body"></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        <div class="bot-cap"></div><div class="bot-brim"></div>
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        <div class="bot-shades"></div>
+        <i class="bot-mouth o"></i>
+      </div>
+    </div>
+  </div><div class="bot  no-walk b5-crowd" id="b5-b2" data-side="l" style="--w:84px; --skin:#6CBF5A; --shirt:#1B1815; left:366px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-pocket"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        <div class="bot-hard"></div>
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        
+      </div>
+    </div>
+  </div><div class="bot  no-walk b5-crowd" id="b5-b3" data-side="l" style="--w:84px; --skin:#F28DB2; --shirt:#2E9E5B; left:474px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-bow"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        <div class="bot-phones"></div>
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        <div class="bot-glasses"><i></i><i></i></div>
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div><div class="bot  no-walk b5-crowd" id="b5-b4" data-side="r" style="--w:84px; --skin:#E8734A; --shirt:#6B4FBB; left:582px">
+    <div class="bot-rig">
+      <div class="bot-body"></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div><div class="bot  no-walk b5-crowd" id="b5-b5" data-side="r" style="--w:84px; --skin:#5CC8E8; --shirt:#DC5A2B; left:690px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-badge"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        <div class="bot-beanie"></div>
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        
+        
+        
+      </div>
+    </div>
+  </div><div class="bot  no-walk b5-crowd" id="b5-b6" data-side="r" style="--w:84px; --skin:#F2A33A; --shirt:#C63D2F; left:798px">
+    <div class="bot-rig">
+      <div class="bot-body"></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head">
+        
+        
+        
+        
+        <i class="bot-eye l"></i><i class="bot-eye r"></i>
+        <div class="bot-glasses"><i></i><i></i></div>
+        
+        <i class="bot-mouth smile"></i>
+      </div>
+    </div>
+  </div>
+    <div class="bot bot-yar " id="b5-yar" data-side="c" style="--w:130px; --skin:#F2A33A; --shirt:#DC5A2B; left:10px">
+    <div class="bot-rig">
+      <div class="bot-body"><i class="bot-collar"></i><i class="bot-tie"></i></div>
+      <div class="bot-arm l"></div><div class="bot-arm r"></div>
+      <div class="bot-leg l"></div><div class="bot-leg r"></div>
+      <div class="bot-head bot-head-yar"><img src="public/yar-head.png" alt="" /></div>
+    </div>
+  </div></div></div>
+        <div class="floor"></div>
+      </div>
+
+      <div id="cap-0" class="clip cap" data-start="0" data-duration="1.324" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">My</span> <span class="w">Claude</span> <span class="w">Code</span> <span class="w">bill</span> <span class="w">went</span></div><div class="cap-live"><span class="w" id="cap-0-0">My</span> <span class="w" id="cap-0-1">Claude</span> <span class="w" id="cap-0-2">Code</span> <span class="w" id="cap-0-3">bill</span> <span class="w" id="cap-0-4">went</span></div></div><div id="cap-1" class="clip cap" data-start="1.324" data-duration="0.998" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">to</span> <span class="w">zero</span> <span class="w">this</span> <span class="w">week,</span></div><div class="cap-live"><span class="w" id="cap-1-0">to</span> <span class="w" id="cap-1-1">zero</span> <span class="w" id="cap-1-2">this</span> <span class="w" id="cap-1-3">week,</span></div></div><div id="cap-2" class="clip cap" data-start="2.322" data-duration="1.579" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">and</span> <span class="w">it</span> <span class="w">is</span> <span class="w">not</span> <span class="w">a</span> <span class="w">trial.</span></div><div class="cap-live"><span class="w" id="cap-2-0">and</span> <span class="w" id="cap-2-1">it</span> <span class="w" id="cap-2-2">is</span> <span class="w" id="cap-2-3">not</span> <span class="w" id="cap-2-4">a</span> <span class="w" id="cap-2-5">trial.</span></div></div><div id="cap-3" class="clip cap" data-start="3.901" data-duration="1.149" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">Somebody</span> <span class="w">on</span> <span class="w">GitHub</span> <span class="w">is</span></div><div class="cap-live"><span class="w" id="cap-3-0">Somebody</span> <span class="w" id="cap-3-1">on</span> <span class="w" id="cap-3-2">GitHub</span> <span class="w" id="cap-3-3">is</span></div></div><div id="cap-4" class="clip cap" data-start="5.05" data-duration="1.254" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">handing</span> <span class="w">out</span> <span class="w">seven</span> <span class="w">billion</span></div><div class="cap-live"><span class="w" id="cap-4-0">handing</span> <span class="w" id="cap-4-1">out</span> <span class="w" id="cap-4-2">seven</span> <span class="w" id="cap-4-3">billion</span></div></div><div id="cap-5" class="clip cap" data-start="6.304" data-duration="1.103" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">tokens</span> <span class="w">a</span> <span class="w">month,</span></div><div class="cap-live"><span class="w" id="cap-5-0">tokens</span> <span class="w" id="cap-5-1">a</span> <span class="w" id="cap-5-2">month,</span></div></div><div id="cap-6" class="clip cap" data-start="7.407" data-duration="1.347" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">across</span> <span class="w">ChatGPT,</span></div><div class="cap-live"><span class="w" id="cap-6-0">across</span> <span class="w" id="cap-6-1">ChatGPT,</span></div></div><div id="cap-7" class="clip cap" data-start="8.754" data-duration="0.546" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">Gemini,</span></div><div class="cap-live"><span class="w" id="cap-7-0">Gemini,</span></div></div><div id="cap-8" class="clip cap" data-start="9.3" data-duration="0.336" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">Kimi,</span></div><div class="cap-live"><span class="w" id="cap-8-0">Kimi,</span></div></div><div id="cap-9" class="clip cap" data-start="9.636" data-duration="1.115" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">Grok</span> <span class="w">and</span> <span class="w">six</span> <span class="w">hundred</span></div><div class="cap-live"><span class="w" id="cap-9-0">Grok</span> <span class="w" id="cap-9-1">and</span> <span class="w" id="cap-9-2">six</span> <span class="w" id="cap-9-3">hundred</span></div></div><div id="cap-10" class="clip cap" data-start="10.751" data-duration="0.998" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">other</span> <span class="w">models.</span></div><div class="cap-live"><span class="w" id="cap-10-0">other</span> <span class="w" id="cap-10-1">models.</span></div></div><div id="cap-11" class="clip cap" data-start="11.749" data-duration="2.322" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">It</span> <span class="w">is</span> <span class="w">called</span> <span class="w">FreeLLM</span> <span class="w">API,</span></div><div class="cap-live"><span class="w" id="cap-11-0">It</span> <span class="w" id="cap-11-1">is</span> <span class="w" id="cap-11-2">called</span> <span class="w" id="cap-11-3">FreeLLM</span> <span class="w" id="cap-11-4">API,</span></div></div><div id="cap-12" class="clip cap" data-start="14.071" data-duration="1.498" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">and</span> <span class="w">wiring</span> <span class="w">it</span> <span class="w">into</span> <span class="w">Claude</span></div><div class="cap-live"><span class="w" id="cap-12-0">and</span> <span class="w" id="cap-12-1">wiring</span> <span class="w" id="cap-12-2">it</span> <span class="w" id="cap-12-3">into</span> <span class="w" id="cap-12-4">Claude</span></div></div><div id="cap-13" class="clip cap" data-start="15.569" data-duration="1.939" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">Code</span> <span class="w">takes</span> <span class="w">about</span> <span class="w">a</span> <span class="w">minute.</span></div><div class="cap-live"><span class="w" id="cap-13-0">Code</span> <span class="w" id="cap-13-1">takes</span> <span class="w" id="cap-13-2">about</span> <span class="w" id="cap-13-3">a</span> <span class="w" id="cap-13-4">minute.</span></div></div><div id="cap-14" class="clip cap" data-start="17.508" data-duration="1.324" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">The</span> <span class="w">second</span> <span class="w">you</span> <span class="w">hit</span> <span class="w">a</span> <span class="w">limit</span></div><div class="cap-live"><span class="w" id="cap-14-0">The</span> <span class="w" id="cap-14-1">second</span> <span class="w" id="cap-14-2">you</span> <span class="w" id="cap-14-3">hit</span> <span class="w" id="cap-14-4">a</span> <span class="w" id="cap-14-5">limit</span></div></div><div id="cap-15" class="clip cap" data-start="18.832" data-duration="1.068" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">it</span> <span class="w">swaps</span> <span class="w">you</span> <span class="w">to</span> <span class="w">the</span></div><div class="cap-live"><span class="w" id="cap-15-0">it</span> <span class="w" id="cap-15-1">swaps</span> <span class="w" id="cap-15-2">you</span> <span class="w" id="cap-15-3">to</span> <span class="w" id="cap-15-4">the</span></div></div><div id="cap-16" class="clip cap" data-start="19.9" data-duration="1.683" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">next</span> <span class="w">model</span> <span class="w">on</span> <span class="w">its</span> <span class="w">own,</span></div><div class="cap-live"><span class="w" id="cap-16-0">next</span> <span class="w" id="cap-16-1">model</span> <span class="w" id="cap-16-2">on</span> <span class="w" id="cap-16-3">its</span> <span class="w" id="cap-16-4">own,</span></div></div><div id="cap-17" class="clip cap" data-start="21.583" data-duration="1.08" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">and</span> <span class="w">it</span> <span class="w">carries</span> <span class="w">your</span></div><div class="cap-live"><span class="w" id="cap-17-0">and</span> <span class="w" id="cap-17-1">it</span> <span class="w" id="cap-17-2">carries</span> <span class="w" id="cap-17-3">your</span></div></div><div id="cap-18" class="clip cap" data-start="22.663" data-duration="0.882" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">context</span> <span class="w">across.</span></div><div class="cap-live"><span class="w" id="cap-18-0">context</span> <span class="w" id="cap-18-1">across.</span></div></div><div id="cap-19" class="clip cap" data-start="23.545" data-duration="1.219" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">So</span> <span class="w">Claude</span> <span class="w">Code</span> <span class="w">just</span></div><div class="cap-live"><span class="w" id="cap-19-0">So</span> <span class="w" id="cap-19-1">Claude</span> <span class="w" id="cap-19-2">Code</span> <span class="w" id="cap-19-3">just</span></div></div><div id="cap-20" class="clip cap" data-start="24.764" data-duration="1.277" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">stops</span> <span class="w">running</span> <span class="w">out.</span></div><div class="cap-live"><span class="w" id="cap-20-0">stops</span> <span class="w" id="cap-20-1">running</span> <span class="w" id="cap-20-2">out.</span></div></div><div id="cap-21" class="clip cap" data-start="26.041" data-duration="1.742" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">Comment</span> <span class="w">FREE</span> <span class="w">and</span> <span class="w">I</span> <span class="w">will</span></div><div class="cap-live"><span class="w" id="cap-21-0">Comment</span> <span class="w" id="cap-21-1">FREE</span> <span class="w" id="cap-21-2">and</span> <span class="w" id="cap-21-3">I</span> <span class="w" id="cap-21-4">will</span></div></div><div id="cap-22" class="clip cap" data-start="27.783" data-duration="2.288" data-track-index="3"><div class="cap-ghost" data-layout-ignore><span class="w">send</span> <span class="w">you</span> <span class="w">the</span> <span class="w">setup.</span></div><div class="cap-live"><span class="w" id="cap-22-0">send</span> <span class="w" id="cap-22-1">you</span> <span class="w" id="cap-22-2">the</span> <span class="w" id="cap-22-3">setup.</span></div></div>
+
+      <div id="cta" class="clip cta" data-start="25.941" data-duration="4.13" data-track-index="2"><div class="cta-chip" id="cta-chip"><span class="tri"></span>Comment <em>FREE</em> for the setup</div></div>
+      <div id="confetti" class="clip confetti" data-start="25.941" data-duration="4.13" data-track-index="2" data-layout-ignore><span class="cf" style="--c:#DC5A2B"></span><span class="cf" style="--c:#F5C542"></span><span class="cf" style="--c:#2E9E5B"></span><span class="cf" style="--c:#4A8FE7"></span><span class="cf" style="--c:#F07A6A"></span><span class="cf" style="--c:#8E6BD9"></span><span class="cf" style="--c:#DC5A2B"></span><span class="cf" style="--c:#F5C542"></span><span class="cf" style="--c:#2E9E5B"></span><span class="cf" style="--c:#4A8FE7"></span><span class="cf" style="--c:#F07A6A"></span><span class="cf" style="--c:#8E6BD9"></span><span class="cf" style="--c:#DC5A2B"></span><span class="cf" style="--c:#F5C542"></span><span class="cf" style="--c:#2E9E5B"></span><span class="cf" style="--c:#4A8FE7"></span><span class="cf" style="--c:#F07A6A"></span><span class="cf" style="--c:#8E6BD9"></span><span class="cf" style="--c:#DC5A2B"></span><span class="cf" style="--c:#F5C542"></span><span class="cf" style="--c:#2E9E5B"></span><span class="cf" style="--c:#4A8FE7"></span><span class="cf" style="--c:#F07A6A"></span><span class="cf" style="--c:#8E6BD9"></span><span class="cf" style="--c:#DC5A2B"></span><span class="cf" style="--c:#F5C542"></span><span class="cf" style="--c:#2E9E5B"></span><span class="cf" style="--c:#4A8FE7"></span><span class="cf" style="--c:#F07A6A"></span><span class="cf" style="--c:#8E6BD9"></span><span class="cf" style="--c:#DC5A2B"></span><span class="cf" style="--c:#F5C542"></span><span class="cf" style="--c:#2E9E5B"></span><span class="cf" style="--c:#4A8FE7"></span></div>
+      <div class="handle">@yarmalikhere</div>
+      
+    <audio id="vo-1" src=".media/audio/voice/01.wav" data-start="0" data-duration="3.901" data-track-index="10" data-volume="1"></audio>
+    <audio id="vo-2" src=".media/audio/voice/02.wav" data-start="3.901" data-duration="7.848" data-track-index="10" data-volume="1"></audio>
+    <audio id="vo-3" src=".media/audio/voice/03.wav" data-start="11.749" data-duration="5.759" data-track-index="10" data-volume="1"></audio>
+    <audio id="vo-4" src=".media/audio/voice/04.wav" data-start="17.508" data-duration="6.037" data-track-index="10" data-volume="1"></audio>
+    <audio id="vo-5" src=".media/audio/voice/05.wav" data-start="23.545" data-duration="5.526" data-track-index="10" data-volume="1"></audio>
+    <audio id="sfx-1" src="public/sfx/pop.mp3" data-start="0" data-duration="0.72" data-track-index="11" data-volume="0.35"></audio>
+    <audio id="sfx-2" src="public/sfx/impact-bass-1.mp3" data-start="3.901" data-duration="2.116" data-track-index="11" data-volume="0.35"></audio>
+    <audio id="sfx-3" src="public/sfx/click.mp3" data-start="11.749" data-duration="0.366" data-track-index="11" data-volume="0.35"></audio>
+    <audio id="sfx-4" src="public/sfx/ping.mp3" data-start="17.508" data-duration="1.32" data-track-index="11" data-volume="0.35"></audio>
+    <audio id="sfx-5" src="public/sfx/pop.mp3" data-start="23.545" data-duration="0.72" data-track-index="11" data-volume="0.35"></audio>
+    <audio id="sfx-cta" src="public/sfx/whoosh-short.mp3" data-start="25.941" data-duration="0.575" data-track-index="11" data-volume="0.4"></audio>
+    <audio id="bgm" src="public/bgm.wav" data-start="0" data-duration="30.071" data-track-index="12" data-volume="0.55"></audio>
+    </div>
+
+    <script id="data" type="application/json">{"total":30.071,"beats":[{"i":1,"start":0,"dur":3.901,"end":3.901},{"i":2,"start":3.901,"dur":7.848,"end":11.749},{"i":3,"start":11.749,"dur":5.759,"end":17.508},{"i":4,"start":17.508,"dur":6.037,"end":23.545},{"i":5,"start":23.545,"dur":5.526,"end":30.071}],"stops":[110,298,485,673,860],"rail":{"y":292,"x0":80,"x1":1000},"flagX":1000,"caps":[{"id":"cap-0-0","at":0},{"id":"cap-0-1","at":0.232},{"id":"cap-0-2","at":0.592},{"id":"cap-0-3","at":0.871},{"id":"cap-0-4","at":1.103},{"id":"cap-1-0","at":1.324},{"id":"cap-1-1","at":1.44},{"id":"cap-1-2","at":1.858},{"id":"cap-1-3","at":2.067},{"id":"cap-2-0","at":2.322},{"id":"cap-2-1","at":2.485},{"id":"cap-2-2","at":2.601},{"id":"cap-2-3","at":2.786},{"id":"cap-2-4","at":3.03},{"id":"cap-2-5","at":3.111},{"id":"cap-3-0","at":3.901},{"id":"cap-3-1","at":4.354},{"id":"cap-3-2","at":4.528},{"id":"cap-3-3","at":4.923},{"id":"cap-4-0","at":5.05},{"id":"cap-4-1","at":5.387},{"id":"cap-4-2","at":5.596},{"id":"cap-4-3","at":5.956},{"id":"cap-5-0","at":6.304},{"id":"cap-5-1","at":6.734},{"id":"cap-5-2","at":6.838},{"id":"cap-6-0","at":7.407},{"id":"cap-6-1","at":7.93},{"id":"cap-7-0","at":8.754},{"id":"cap-8-0","at":9.3},{"id":"cap-9-0","at":9.636},{"id":"cap-9-1","at":9.973},{"id":"cap-9-2","at":10.136},{"id":"cap-9-3","at":10.391},{"id":"cap-10-0","at":10.751},{"id":"cap-10-1","at":11.03},{"id":"cap-11-0","at":11.749},{"id":"cap-11-1","at":11.935},{"id":"cap-11-2","at":12.039},{"id":"cap-11-3","at":12.329},{"id":"cap-11-4","at":13.258},{"id":"cap-12-0","at":14.071},{"id":"cap-12-1","at":14.315},{"id":"cap-12-2","at":14.733},{"id":"cap-12-3","at":14.872},{"id":"cap-12-4","at":15.128},{"id":"cap-13-0","at":15.569},{"id":"cap-13-1","at":15.917},{"id":"cap-13-2","at":16.242},{"id":"cap-13-3","at":16.579},{"id":"cap-13-4","at":16.765},{"id":"cap-14-0","at":17.508},{"id":"cap-14-1","at":17.717},{"id":"cap-14-2","at":18.054},{"id":"cap-14-3","at":18.193},{"id":"cap-14-4","at":18.356},{"id":"cap-14-5","at":18.448},{"id":"cap-15-0","at":18.832},{"id":"cap-15-1","at":19.087},{"id":"cap-15-2","at":19.517},{"id":"cap-15-3","at":19.656},{"id":"cap-15-4","at":19.76},{"id":"cap-16-0","at":19.9},{"id":"cap-16-1","at":20.202},{"id":"cap-16-2","at":20.596},{"id":"cap-16-3","at":20.782},{"id":"cap-16-4","at":20.979},{"id":"cap-17-0","at":21.583},{"id":"cap-17-1","at":21.78},{"id":"cap-17-2","at":21.966},{"id":"cap-17-3","at":22.442},{"id":"cap-18-0","at":22.663},{"id":"cap-18-1","at":23.162},{"id":"cap-19-0","at":23.545},{"id":"cap-19-1","at":23.8},{"id":"cap-19-2","at":24.207},{"id":"cap-19-3","at":24.52},{"id":"cap-20-0","at":24.764},{"id":"cap-20-1","at":25.182},{"id":"cap-20-2","at":25.519},{"id":"cap-21-0","at":26.041},{"id":"cap-21-1","at":26.529},{"id":"cap-21-2","at":27.109},{"id":"cap-21-3","at":27.434},{"id":"cap-21-4","at":27.574},{"id":"cap-22-0","at":27.783},{"id":"cap-22-1","at":28.026},{"id":"cap-22-2","at":28.177},{"id":"cap-22-3","at":28.317}],"cues":{"b1_zero":1.44,"b1_trial":3.111,"b2_seven":5.596,"b2_chatgpt":7.93,"b2_six":10.136,"b3_called":12.039,"b3_minute":16.765,"b4_limit":18.448,"b4_swaps":19.087,"b4_carries":21.966,"b5_stops":24.764,"cta":25.941}}</script>
+    <script>
+      const D = JSON.parse(document.getElementById("data").textContent);
+      const tl = gsap.timeline({ paused: true });
+      const C = D.cues;
+      const N = D.beats.length;
+      const reps = (span, cycle) => Math.max(0, Math.floor(span / cycle) - 1);
+      const pop = (sel, t, dur = 0.5, from = {}) =>
+        tl.fromTo(sel, { scale: 0, ...from }, { scale: 1, x: 0, duration: dur, ease: "power3.out" }, t);
+      // a chip that has landed keeps a little life: a short rock, then still
+      const wiggle = (sel, t) => tl.fromTo(sel, { rotation: -3 }, { rotation: 3, duration: 0.18, ease: "sine.inOut", yoyo: true, repeat: 3 }, t);
+      // seek-safe typewriter: the visible prefix is a function of time
+      const type = (sel, text, t, dur) => {
+        const o = { n: 0 };
+        tl.to(o, { n: text.length, duration: dur, ease: "none", onUpdate: () => { const e = document.querySelector(sel); if (e) e.textContent = text.slice(0, Math.round(o.n)); } }, t);
+      };
+
+      // ── bots ──────────────────────────────────────────────────────────────
+      // walk-in from the bot's side, legs and arms swinging, then an idle bob for
+      // the rest of the beat. Everything finite and seek-safe.
+      function walkIn(id, t, span, { from = 0.9, delay = 0 } = {}) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const side = el.dataset.side;
+        const dx = side === "l" ? -720 : side === "r" ? 720 : 0;
+        const t0 = t + delay;
+        const steps = Math.max(1, Math.round(from / 0.14) - 1);
+        if (dx) {
+          tl.fromTo(el, { x: dx }, { x: 0, duration: from, ease: "power2.out" }, t0);
+          tl.fromTo(el.querySelector(".bot-leg.l"), { rotation: -22 }, { rotation: 22, duration: 0.14, yoyo: true, repeat: steps, ease: "sine.inOut" }, t0);
+          tl.fromTo(el.querySelector(".bot-leg.r"), { rotation: 22 }, { rotation: -22, duration: 0.14, yoyo: true, repeat: steps, ease: "sine.inOut" }, t0);
+          tl.fromTo(el.querySelector(".bot-arm.l"), { rotation: 18 }, { rotation: -18, duration: 0.14, yoyo: true, repeat: steps, ease: "sine.inOut" }, t0);
+          tl.fromTo(el.querySelector(".bot-arm.r"), { rotation: -18 }, { rotation: 18, duration: 0.14, yoyo: true, repeat: steps, ease: "sine.inOut" }, t0);
+          tl.fromTo(el.querySelector(".bot-rig"), { y: 0 }, { y: -6, duration: 0.14, yoyo: true, repeat: steps, ease: "sine.inOut" }, t0);
+        } else {
+          tl.fromTo(el, { scale: 0, y: 40 }, { scale: 1, y: 0, duration: 0.5, ease: "power3.out" }, t0);
+        }
+        // idle: breathe + head tilt, offset by the bot's own x so they never sync
+        const seed = (parseFloat(el.style.left) || 0) / 1000;
+        const idleStart = t0 + from + 0.05;
+        const left = span - (idleStart - t);
+        if (left > 1.2) {
+          tl.fromTo(el.querySelector(".bot-rig"), { scaleY: 1 }, { scaleY: 1.04, duration: 0.55 + seed * 0.3, yoyo: true, repeat: reps(left, 0.55 + seed * 0.3), ease: "sine.inOut" }, idleStart);
+          tl.fromTo(el.querySelector(".bot-head"), { rotation: -3 + seed * 4 }, { rotation: 3 - seed * 4, duration: 0.9 + seed, yoyo: true, repeat: reps(left, 0.9 + seed), ease: "sine.inOut" }, idleStart);
+        }
+      }
+      function jump(id, t, h = 90) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        tl.fromTo(el.querySelector(".bot-rig"), { y: 0 }, { y: -h, duration: 0.28, ease: "power2.out", yoyo: true, repeat: 1 }, t);
+        tl.fromTo(el.querySelector(".bot-arm.l"), { rotation: 0 }, { rotation: 150, duration: 0.22, ease: "power2.out", yoyo: true, repeat: 1 }, t);
+        tl.fromTo(el.querySelector(".bot-arm.r"), { rotation: 0 }, { rotation: -150, duration: 0.22, ease: "power2.out", yoyo: true, repeat: 1 }, t);
+      }
+      function pointUp(id, t, arm = "r") {
+        const el = document.getElementById(id);
+        if (!el) return;
+        tl.to(el.querySelector(".bot-arm." + arm), { rotation: arm === "r" ? -160 : 160, duration: 0.35, ease: "back.out(1.4)" }, t);
+      }
+      function slump(id, t) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        tl.to(el.querySelector(".bot-head"), { rotation: 14, y: 6, duration: 0.4, ease: "power2.out" }, t);
+        tl.to(el.querySelector(".bot-rig"), { scaleY: 0.94, duration: 0.4, ease: "power2.out" }, t);
+      }
+      const crowd = (i) => Array.from(document.querySelectorAll("#beat-" + i + " .bot:not(.bot-yar):not(.no-walk)")).map((e) => e.id);
+      D.beats.forEach((b) => {
+        crowd(b.i).forEach((id, j) => walkIn(id, b.start, b.end - b.start, { from: 0.8 + (j % 3) * 0.18, delay: 0.05 + j * 0.09 }));
+      });
+
+      // ── ambient: ghosts turn, pill breathes, marker bobs ──
+      tl.fromTo("#ghost", { rotation: 0 }, { rotation: 90, duration: D.total, ease: "none" }, 0);
+      tl.fromTo("#ghost2", { rotation: 0 }, { rotation: -60, duration: D.total, ease: "none" }, 0);
+      tl.fromTo("#marker-bot .bot-rig", { scaleY: 1 }, { scaleY: 1.05, duration: 0.5, yoyo: true, repeat: reps(D.total, 0.5), ease: "sine.inOut" }, 0);
+      tl.fromTo("#marker-bot .bot-head", { rotation: -4 }, { rotation: 4, duration: 1.1, yoyo: true, repeat: reps(D.total, 1.1), ease: "sine.inOut" }, 0);
+
+      // ── rail: fill + marker hop at each beat, previous stop turns green ──
+      const railW = D.rail.x1 - D.rail.x0;
+      tl.set("#rail-fill", { scaleX: (D.stops[0] - D.rail.x0) / railW }, 0);
+      const hopTo = (x, t) => {
+        tl.to("#marker", { x, duration: 0.55, ease: "power2.inOut" }, t);
+        tl.to("#marker", { y: -46, duration: 0.27, ease: "power2.out", yoyo: true, repeat: 1 }, t);
+        tl.fromTo("#marker-bot .bot-leg.l", { rotation: 0 }, { rotation: -35, duration: 0.27, yoyo: true, repeat: 1, ease: "power2.out" }, t);
+        tl.fromTo("#marker-bot .bot-leg.r", { rotation: 0 }, { rotation: 35, duration: 0.27, yoyo: true, repeat: 1, ease: "power2.out" }, t);
+      };
+      const stops = document.querySelectorAll(".stop");
+      const tick = (stop, t) => {
+        tl.to(stop, { backgroundColor: "#2E9E5B", borderColor: "#2E9E5B", duration: 0.25 }, t);
+        tl.to(stop.querySelector(".stop-num"), { opacity: 0, duration: 0.15 }, t);
+        tl.to(stop.querySelector(".stop-check"), { opacity: 1, duration: 0.2 }, t + 0.1);
+        tl.fromTo(stop, { scale: 1 }, { scale: 1.3, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out" }, t);
+      };
+      D.beats.forEach((b, i) => {
+        if (i === 0) return;
+        tl.to("#rail-fill", { scaleX: (D.stops[i] - D.rail.x0) / railW, duration: 0.55, ease: "power3.inOut" }, b.start);
+        hopTo(D.stops[i] - D.stops[0], b.start);
+        tick(stops[i - 1], b.start + 0.1);
+      });
+      const last = D.beats[N - 1], lastEnd = last.start + last.dur;
+      tl.to("#rail-fill", { scaleX: 1, duration: 0.55, ease: "power3.inOut" }, lastEnd - 0.4);
+      hopTo(D.flagX - D.stops[0], lastEnd - 0.4);
+      tick(stops[N - 1], lastEnd - 0.3);
+      tl.fromTo("#flag", { scale: 1, rotation: 0 }, { scale: 1.4, rotation: 20, duration: 0.25, ease: "power2.out" }, lastEnd + 0.1);
+      tl.to("#flag", { scale: 1, rotation: 0, duration: 0.4, ease: "power3.out" }, lastEnd + 0.35);
+
+      // ── pill text swaps (spring-pop-entrance) + a breath while it holds ──
+      D.beats.forEach((b) => {
+        tl.fromTo("#pill-in-" + b.i, { scale: b.i === 1 ? 0.96 : 0.8, opacity: b.i === 1 ? 1 : 0, y: b.i === 1 ? 0 : 18, rotation: b.i === 1 ? 0 : (b.i % 2 ? -3 : 3) },
+          { scale: 1, opacity: 1, y: 0, rotation: 0, duration: 0.45, ease: "power3.out" }, b.start);
+        const hold = b.end - b.start - 0.5;
+        tl.fromTo("#pill-in-" + b.i, { y: 0 }, { y: -6, duration: 0.7, yoyo: true, repeat: reps(hold, 0.7), ease: "sine.inOut" }, b.start + 0.5);
+      });
+
+      // ── beat transitions: each card scene slides in from the right and leaves left ──
+      D.beats.forEach((b) => {
+        if (b.i > 1) tl.fromTo("#inner-" + b.i, { x: 260, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, b.start);
+        if (b.i < N) tl.to("#inner-" + b.i, { x: -200, opacity: 0, duration: 0.3, ease: "power2.in" }, b.end - 0.3);
+      });
+
+      // ── captions: each word pops on at its own time ──
+      D.caps.forEach((w) => tl.fromTo("#" + w.id, { opacity: 0, scale: 1.35, y: 6 }, { opacity: 1, scale: 1, y: 0, duration: 0.18, ease: "power3.out" }, w.at));
+
+      // each beat's start, as a number, so cues can be written relative to it
+      const [b1, b2, b3, b4, b5, b6] = D.beats.map((b) => b.start);
+      const dur = (i) => D.beats[i - 1].dur;
+
+
+      // ── beat 1: the old number gets struck through, zero lands ──
+      tl.fromTo("#b1bill", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .45, ease: "power3.out" }, b1 + .05);
+      tl.fromTo("#b1rule", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "power2.out" }, C.b1_zero - .5);
+      tl.fromTo("#b1now", { scale: .4, opacity: 0 }, { scale: 1, opacity: 1, duration: .5, ease: "back.out(2)" }, C.b1_zero - .1);
+      tl.fromTo("#b1was", { opacity: 1 }, { opacity: .45, duration: .3 }, C.b1_zero - .1);
+      pop("#b1tag", C.b1_trial - .1, .45, { rotation: -22 });
+      tl.to("#b1tag", { rotation: -6, duration: .25, ease: "power2.out" }, C.b1_trial + .35);
+      crowd(1).forEach((id, j) => jump(id, C.b1_zero + .1 + j * .07, 74));
+      walkIn("b1-yar", b1, dur(1), { from: .5, delay: .25 });
+      jump("b1-yar", C.b1_trial, 110);
+
+      // ── beat 2: seven billion counts up, then the models land ──
+      { const o = { v: 0 };
+        tl.fromTo("#b2num", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .4, ease: "back.out(1.6)" }, C.b2_seven - .3);
+        tl.to(o, { v: 7, duration: .9, ease: "power2.out",
+          onUpdate: () => { const e = document.getElementById("b2count"); if (e) e.textContent = String(Math.round(o.v)); } }, C.b2_seven - .25);
+        tl.fromTo("#b2cap", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .3 }, C.b2_seven + .5); }
+      tl.fromTo("#b2m0", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.00);
+      tl.fromTo("#b2m1", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.13);
+      tl.fromTo("#b2m2", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.26);
+      tl.fromTo("#b2m3", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.39);
+      tl.fromTo("#b2m4", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.52);
+      tl.fromTo("#b2m5", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.65);
+      tl.fromTo("#b2m6", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.78);
+      tl.fromTo("#b2m7", { y: 26, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .3, ease: "back.out(1.7)" }, C.b2_chatgpt - .1 + 0.91);
+      tl.fromTo("#b2m7", { rotation: -4 }, { rotation: 4, duration: .16, yoyo: true, repeat: 3, ease: "sine.inOut" }, C.b2_six + .2);
+      crowd(2).forEach((id, j) => jump(id, C.b2_six + .1 + j * .08, 70));
+
+      // ── beat 3: the name, then the two lines that do it ──
+      tl.fromTo("#b3name", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "power3.out" }, C.b3_called - .15);
+      tl.fromTo("#b3term", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: .45, ease: "power3.out" }, C.b3_called + .15);
+      tl.fromTo("#b3l1", { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: .28, ease: "power3.out" }, C.b3_called + .5);
+      tl.fromTo("#b3l2", { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: .28, ease: "power3.out" }, C.b3_called + .9);
+      tl.fromTo("#b3ok", { opacity: 0, scale: .9 }, { opacity: 1, scale: 1, duration: .32, ease: "back.out(1.8)" }, C.b3_minute - .2);
+      pop("#b3min", C.b3_minute, .45); wiggle("#b3min", C.b3_minute + .45);
+      crowd(3).forEach((id, j) => jump(id, C.b3_minute + .15 + j * .08, 70));
+
+      // ── beat 4: one fills up, the other takes it, the context rides over ──
+      tl.fromTo("#b4a", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: .4, ease: "power3.out" }, b4 + .05);
+      tl.fromTo("#b4b", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: .4, ease: "power3.out" }, b4 + .15);
+      tl.to("#b4fill", { width: "100%", duration: 1.1, ease: "power1.in" }, b4 + .4);
+      tl.to("#b4afull", { opacity: 1, duration: .25 }, C.b4_limit);
+      tl.fromTo("#b4a", { rotation: 0 }, { rotation: 1.5, duration: .1, yoyo: true, repeat: 3, ease: "sine.inOut" }, C.b4_limit);
+      pop("#b4arrow", C.b4_swaps - .1, .4);
+      tl.to("#b4bon", { opacity: 1, duration: .25 }, C.b4_swaps + .25);
+      tl.fromTo("#b4ctx", { opacity: 0, scale: .7 }, { opacity: 1, scale: 1, duration: .3, ease: "back.out(2)" }, C.b4_carries - .2);
+      tl.to("#b4ctx", { x: 560, duration: .8, ease: "power2.inOut" }, C.b4_carries + .1);
+      walkIn("b4-yar", b4, dur(4), { from: .5, delay: .1 });
+      walkIn("b4-dev", b4, dur(4), { from: .5, delay: .2 });
+      jump("b4-dev", C.b4_carries + .6, 90);
+
+      // ── beat 5: the line, the tag, and everybody jumps on the CTA ──
+      tl.fromTo("#b5line .b5-a", { y: -18, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "power3.out" }, b5 + .1);
+      tl.fromTo("#b5line .b5-b", { scale: .7, opacity: 0 }, { scale: 1, opacity: 1, duration: .5, ease: "back.out(1.8)" }, C.b5_stops - .15);
+      pop("#b5tag", C.b5_stops + .35, .45); wiggle("#b5tag", C.b5_stops + .8);
+      tl.fromTo("#b5-yar", { scale: 0, y: 40 }, { scale: 1, y: 0, duration: .5, ease: "power3.out" }, b5 + .1);
+      jump("b5-yar", C.cta, 100);
+      Array.from(document.querySelectorAll("#beat-5 .b5-crowd")).forEach((e, j) =>
+        walkIn(e.id, b5 + .2, dur(5) - .2, { from: .55 + (j % 3) * .1, delay: (j % 4) * .07 }));
+      Array.from(document.querySelectorAll("#beat-5 .b5-crowd")).forEach((e, j) => jump(e.id, C.cta + .15 + j * .05, 64));
+
+
+      // ── close: CTA chip + confetti ──
+      tl.fromTo("#cta-chip", { scale: 0.7, opacity: 0, y: 20 }, { scale: 1, opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, C.cta);
+      tl.fromTo("#cta-chip", { y: 0 }, { y: -6, duration: 0.5, yoyo: true, repeat: reps(D.total - C.cta - 0.5, 0.5), ease: "sine.inOut" }, C.cta + 0.5);
+      // confetti: seeded by index, gravity via a second tween
+      const cf = gsap.utils.toArray(".cf");
+      cf.forEach((p, i) => {
+        const a = (i * 0.83) % (Math.PI * 2), r = 260 + (i * 37) % 220;
+        tl.fromTo(p, { x: 0, y: 0, opacity: 0, rotation: 0, scale: 0.6 }, { x: Math.cos(a) * r, y: -Math.abs(Math.sin(a)) * r - 120, opacity: 1, rotation: 180 + i * 37, scale: 1, duration: 0.6, ease: "power2.out" }, C.cta + 0.15 + (i % 5) * 0.02);
+        tl.to(p, { y: "+=420", rotation: "+=180", duration: 1.4, ease: "power1.in" }, C.cta + 0.75 + (i % 5) * 0.02);
+        tl.to(p, { opacity: 0, duration: 0.4 }, C.cta + 1.75);
+      });
+      tl.to({}, { duration: 0.01 }, D.total - 0.01);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

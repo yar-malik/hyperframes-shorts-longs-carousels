@@ -1,0 +1,585 @@
+{
+  "tts_provider": "elevenlabs",
+  "model_id": "eleven_multilingual_v2",
+  "seed": 12345,
+  "output_format": "pcm_44100",
+  "loudness_lufs": -14.08,
+  "voice_id": "vfHjAzBDDjup1YnV36Y1",
+  "voices": [
+    {
+      "id": "01",
+      "text": "My Claude Code bill went to zero this week, and it is not a trial.",
+      "path": ".media/audio/voice/01.wav",
+      "duration_s": 3.901,
+      "words": [
+        {
+          "id": "w0",
+          "text": "My",
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "id": "w1",
+          "text": "Claude",
+          "start": 0.232,
+          "end": 0.557
+        },
+        {
+          "id": "w2",
+          "text": "Code",
+          "start": 0.592,
+          "end": 0.848
+        },
+        {
+          "id": "w3",
+          "text": "bill",
+          "start": 0.871,
+          "end": 1.033
+        },
+        {
+          "id": "w4",
+          "text": "went",
+          "start": 1.103,
+          "end": 1.3
+        },
+        {
+          "id": "w5",
+          "text": "to",
+          "start": 1.324,
+          "end": 1.382
+        },
+        {
+          "id": "w6",
+          "text": "zero",
+          "start": 1.44,
+          "end": 1.788
+        },
+        {
+          "id": "w7",
+          "text": "this",
+          "start": 1.858,
+          "end": 1.997
+        },
+        {
+          "id": "w8",
+          "text": "week,",
+          "start": 2.067,
+          "end": 2.299
+        },
+        {
+          "id": "w9",
+          "text": "and",
+          "start": 2.322,
+          "end": 2.415
+        },
+        {
+          "id": "w10",
+          "text": "it",
+          "start": 2.485,
+          "end": 2.554
+        },
+        {
+          "id": "w11",
+          "text": "is",
+          "start": 2.601,
+          "end": 2.705
+        },
+        {
+          "id": "w12",
+          "text": "not",
+          "start": 2.786,
+          "end": 2.995
+        },
+        {
+          "id": "w13",
+          "text": "a",
+          "start": 3.03,
+          "end": 3.065
+        },
+        {
+          "id": "w14",
+          "text": "trial.",
+          "start": 3.111,
+          "end": 3.901
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "text": "Somebody on GitHub is handing out seven billion tokens a month, across ChatGPT, Gemini, Kimi, Grok and six hundred other models.",
+      "path": ".media/audio/voice/02.wav",
+      "duration_s": 7.848,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Somebody",
+          "start": 0,
+          "end": 0.406
+        },
+        {
+          "id": "w1",
+          "text": "on",
+          "start": 0.453,
+          "end": 0.557
+        },
+        {
+          "id": "w2",
+          "text": "GitHub",
+          "start": 0.627,
+          "end": 0.964
+        },
+        {
+          "id": "w3",
+          "text": "is",
+          "start": 1.022,
+          "end": 1.103
+        },
+        {
+          "id": "w4",
+          "text": "handing",
+          "start": 1.149,
+          "end": 1.428
+        },
+        {
+          "id": "w5",
+          "text": "out",
+          "start": 1.486,
+          "end": 1.614
+        },
+        {
+          "id": "w6",
+          "text": "seven",
+          "start": 1.695,
+          "end": 2.009
+        },
+        {
+          "id": "w7",
+          "text": "billion",
+          "start": 2.055,
+          "end": 2.345
+        },
+        {
+          "id": "w8",
+          "text": "tokens",
+          "start": 2.403,
+          "end": 2.798
+        },
+        {
+          "id": "w9",
+          "text": "a",
+          "start": 2.833,
+          "end": 2.868
+        },
+        {
+          "id": "w10",
+          "text": "month,",
+          "start": 2.937,
+          "end": 3.297
+        },
+        {
+          "id": "w11",
+          "text": "across",
+          "start": 3.506,
+          "end": 3.959
+        },
+        {
+          "id": "w12",
+          "text": "ChatGPT,",
+          "start": 4.029,
+          "end": 4.807
+        },
+        {
+          "id": "w13",
+          "text": "Gemini,",
+          "start": 4.853,
+          "end": 5.352
+        },
+        {
+          "id": "w14",
+          "text": "Kimi,",
+          "start": 5.399,
+          "end": 5.7
+        },
+        {
+          "id": "w15",
+          "text": "Grok",
+          "start": 5.735,
+          "end": 6.002
+        },
+        {
+          "id": "w16",
+          "text": "and",
+          "start": 6.072,
+          "end": 6.165
+        },
+        {
+          "id": "w17",
+          "text": "six",
+          "start": 6.235,
+          "end": 6.432
+        },
+        {
+          "id": "w18",
+          "text": "hundred",
+          "start": 6.49,
+          "end": 6.78
+        },
+        {
+          "id": "w19",
+          "text": "other",
+          "start": 6.85,
+          "end": 7.07
+        },
+        {
+          "id": "w20",
+          "text": "models.",
+          "start": 7.129,
+          "end": 7.848
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "text": "It is called FreeLLM API, and wiring it into Claude Code takes about a minute.",
+      "path": ".media/audio/voice/03.wav",
+      "duration_s": 5.759,
+      "words": [
+        {
+          "id": "w0",
+          "text": "It",
+          "start": 0,
+          "end": 0.139
+        },
+        {
+          "id": "w1",
+          "text": "is",
+          "start": 0.186,
+          "end": 0.244
+        },
+        {
+          "id": "w2",
+          "text": "called",
+          "start": 0.29,
+          "end": 0.511
+        },
+        {
+          "id": "w3",
+          "text": "FreeLLM",
+          "start": 0.58,
+          "end": 1.393
+        },
+        {
+          "id": "w4",
+          "text": "API,",
+          "start": 1.509,
+          "end": 2.194
+        },
+        {
+          "id": "w5",
+          "text": "and",
+          "start": 2.322,
+          "end": 2.485
+        },
+        {
+          "id": "w6",
+          "text": "wiring",
+          "start": 2.566,
+          "end": 2.926
+        },
+        {
+          "id": "w7",
+          "text": "it",
+          "start": 2.984,
+          "end": 3.053
+        },
+        {
+          "id": "w8",
+          "text": "into",
+          "start": 3.123,
+          "end": 3.309
+        },
+        {
+          "id": "w9",
+          "text": "Claude",
+          "start": 3.379,
+          "end": 3.785
+        },
+        {
+          "id": "w10",
+          "text": "Code",
+          "start": 3.82,
+          "end": 4.122
+        },
+        {
+          "id": "w11",
+          "text": "takes",
+          "start": 4.168,
+          "end": 4.447
+        },
+        {
+          "id": "w12",
+          "text": "about",
+          "start": 4.493,
+          "end": 4.76
+        },
+        {
+          "id": "w13",
+          "text": "a",
+          "start": 4.83,
+          "end": 4.865
+        },
+        {
+          "id": "w14",
+          "text": "minute.",
+          "start": 5.016,
+          "end": 5.759
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "text": "The second you hit a limit it swaps you to the next model on its own, and it carries your context across.",
+      "path": ".media/audio/voice/04.wav",
+      "duration_s": 6.037,
+      "words": [
+        {
+          "id": "w0",
+          "text": "The",
+          "start": 0,
+          "end": 0.139
+        },
+        {
+          "id": "w1",
+          "text": "second",
+          "start": 0.209,
+          "end": 0.499
+        },
+        {
+          "id": "w2",
+          "text": "you",
+          "start": 0.546,
+          "end": 0.615
+        },
+        {
+          "id": "w3",
+          "text": "hit",
+          "start": 0.685,
+          "end": 0.801
+        },
+        {
+          "id": "w4",
+          "text": "a",
+          "start": 0.848,
+          "end": 0.871
+        },
+        {
+          "id": "w5",
+          "text": "limit",
+          "start": 0.94,
+          "end": 1.231
+        },
+        {
+          "id": "w6",
+          "text": "it",
+          "start": 1.324,
+          "end": 1.498
+        },
+        {
+          "id": "w7",
+          "text": "swaps",
+          "start": 1.579,
+          "end": 1.974
+        },
+        {
+          "id": "w8",
+          "text": "you",
+          "start": 2.009,
+          "end": 2.09
+        },
+        {
+          "id": "w9",
+          "text": "to",
+          "start": 2.148,
+          "end": 2.206
+        },
+        {
+          "id": "w10",
+          "text": "the",
+          "start": 2.252,
+          "end": 2.322
+        },
+        {
+          "id": "w11",
+          "text": "next",
+          "start": 2.392,
+          "end": 2.624
+        },
+        {
+          "id": "w12",
+          "text": "model",
+          "start": 2.694,
+          "end": 3.007
+        },
+        {
+          "id": "w13",
+          "text": "on",
+          "start": 3.088,
+          "end": 3.216
+        },
+        {
+          "id": "w14",
+          "text": "its",
+          "start": 3.274,
+          "end": 3.413
+        },
+        {
+          "id": "w15",
+          "text": "own,",
+          "start": 3.471,
+          "end": 3.866
+        },
+        {
+          "id": "w16",
+          "text": "and",
+          "start": 4.075,
+          "end": 4.203
+        },
+        {
+          "id": "w17",
+          "text": "it",
+          "start": 4.272,
+          "end": 4.377
+        },
+        {
+          "id": "w18",
+          "text": "carries",
+          "start": 4.458,
+          "end": 4.888
+        },
+        {
+          "id": "w19",
+          "text": "your",
+          "start": 4.934,
+          "end": 5.085
+        },
+        {
+          "id": "w20",
+          "text": "context",
+          "start": 5.155,
+          "end": 5.619
+        },
+        {
+          "id": "w21",
+          "text": "across.",
+          "start": 5.654,
+          "end": 6.037
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "text": "So Claude Code just stops running out. Comment FREE and I will send you the setup.",
+      "path": ".media/audio/voice/05.wav",
+      "duration_s": 5.526,
+      "words": [
+        {
+          "id": "w0",
+          "text": "So",
+          "start": 0,
+          "end": 0.186
+        },
+        {
+          "id": "w1",
+          "text": "Claude",
+          "start": 0.255,
+          "end": 0.627
+        },
+        {
+          "id": "w2",
+          "text": "Code",
+          "start": 0.662,
+          "end": 0.917
+        },
+        {
+          "id": "w3",
+          "text": "just",
+          "start": 0.975,
+          "end": 1.173
+        },
+        {
+          "id": "w4",
+          "text": "stops",
+          "start": 1.219,
+          "end": 1.567
+        },
+        {
+          "id": "w5",
+          "text": "running",
+          "start": 1.637,
+          "end": 1.904
+        },
+        {
+          "id": "w6",
+          "text": "out.",
+          "start": 1.974,
+          "end": 2.252
+        },
+        {
+          "id": "w7",
+          "text": "Comment",
+          "start": 2.496,
+          "end": 2.902
+        },
+        {
+          "id": "w8",
+          "text": "FREE",
+          "start": 2.984,
+          "end": 3.413
+        },
+        {
+          "id": "w9",
+          "text": "and",
+          "start": 3.564,
+          "end": 3.773
+        },
+        {
+          "id": "w10",
+          "text": "I",
+          "start": 3.889,
+          "end": 3.947
+        },
+        {
+          "id": "w11",
+          "text": "will",
+          "start": 4.029,
+          "end": 4.18
+        },
+        {
+          "id": "w12",
+          "text": "send",
+          "start": 4.238,
+          "end": 4.423
+        },
+        {
+          "id": "w13",
+          "text": "you",
+          "start": 4.481,
+          "end": 4.563
+        },
+        {
+          "id": "w14",
+          "text": "the",
+          "start": 4.632,
+          "end": 4.714
+        },
+        {
+          "id": "w15",
+          "text": "setup.",
+          "start": 4.772,
+          "end": 5.526
+        }
+      ]
+    }
+  ],
+  "total_duration_s": 29.071
+}

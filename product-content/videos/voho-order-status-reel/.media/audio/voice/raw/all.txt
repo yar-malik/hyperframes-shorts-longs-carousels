@@ -1,0 +1,5 @@
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-order-status-reel/.media/audio/voice/raw/01.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-order-status-reel/.media/audio/voice/raw/02.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-order-status-reel/.media/audio/voice/raw/03.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-order-status-reel/.media/audio/voice/raw/04.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-order-status-reel/.media/audio/voice/raw/05.wav'

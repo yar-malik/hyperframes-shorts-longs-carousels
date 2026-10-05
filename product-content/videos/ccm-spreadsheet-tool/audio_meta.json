@@ -1,0 +1,447 @@
+{
+  "tts_provider": "elevenlabs",
+  "model_id": "eleven_multilingual_v2",
+  "seed": 12345,
+  "output_format": "pcm_44100",
+  "loudness_lufs": -14.02,
+  "voice_id": "vfHjAzBDDjup1YnV36Y1",
+  "voices": [
+    {
+      "id": "01",
+      "text": "Nobody pays for another AI app, but every business owner you know will pay to never open a spreadsheet again.",
+      "path": ".media/audio/voice/01.wav",
+      "duration_s": 7.338,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Nobody",
+          "start": 0,
+          "end": 0.476
+        },
+        {
+          "id": "w1",
+          "text": "pays",
+          "start": 0.522,
+          "end": 0.731
+        },
+        {
+          "id": "w2",
+          "text": "for",
+          "start": 0.766,
+          "end": 0.871
+        },
+        {
+          "id": "w3",
+          "text": "another",
+          "start": 0.917,
+          "end": 1.254
+        },
+        {
+          "id": "w4",
+          "text": "AI",
+          "start": 1.335,
+          "end": 1.683
+        },
+        {
+          "id": "w5",
+          "text": "app,",
+          "start": 1.765,
+          "end": 2.171
+        },
+        {
+          "id": "w6",
+          "text": "but",
+          "start": 2.415,
+          "end": 2.601
+        },
+        {
+          "id": "w7",
+          "text": "every",
+          "start": 2.717,
+          "end": 3.077
+        },
+        {
+          "id": "w8",
+          "text": "business",
+          "start": 3.123,
+          "end": 3.46
+        },
+        {
+          "id": "w9",
+          "text": "owner",
+          "start": 3.506,
+          "end": 3.773
+        },
+        {
+          "id": "w10",
+          "text": "you",
+          "start": 3.843,
+          "end": 3.936
+        },
+        {
+          "id": "w11",
+          "text": "know",
+          "start": 4.005,
+          "end": 4.191
+        },
+        {
+          "id": "w12",
+          "text": "will",
+          "start": 4.249,
+          "end": 4.412
+        },
+        {
+          "id": "w13",
+          "text": "pay",
+          "start": 4.47,
+          "end": 4.667
+        },
+        {
+          "id": "w14",
+          "text": "to",
+          "start": 4.714,
+          "end": 4.783
+        },
+        {
+          "id": "w15",
+          "text": "never",
+          "start": 4.865,
+          "end": 5.097
+        },
+        {
+          "id": "w16",
+          "text": "open",
+          "start": 5.178,
+          "end": 5.445
+        },
+        {
+          "id": "w17",
+          "text": "a",
+          "start": 5.492,
+          "end": 5.515
+        },
+        {
+          "id": "w18",
+          "text": "spreadsheet",
+          "start": 5.561,
+          "end": 6.118
+        },
+        {
+          "id": "w19",
+          "text": "again.",
+          "start": 6.188,
+          "end": 7.338
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "text": "Ask one owner which spreadsheet they still fill in by hand.",
+      "path": ".media/audio/voice/02.wav",
+      "duration_s": 3.808,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Ask",
+          "start": 0,
+          "end": 0.337
+        },
+        {
+          "id": "w1",
+          "text": "one",
+          "start": 0.406,
+          "end": 0.673
+        },
+        {
+          "id": "w2",
+          "text": "owner",
+          "start": 0.731,
+          "end": 1.149
+        },
+        {
+          "id": "w3",
+          "text": "which",
+          "start": 1.265,
+          "end": 1.486
+        },
+        {
+          "id": "w4",
+          "text": "spreadsheet",
+          "start": 1.509,
+          "end": 1.997
+        },
+        {
+          "id": "w5",
+          "text": "they",
+          "start": 2.043,
+          "end": 2.159
+        },
+        {
+          "id": "w6",
+          "text": "still",
+          "start": 2.218,
+          "end": 2.438
+        },
+        {
+          "id": "w7",
+          "text": "fill",
+          "start": 2.496,
+          "end": 2.659
+        },
+        {
+          "id": "w8",
+          "text": "in",
+          "start": 2.717,
+          "end": 2.786
+        },
+        {
+          "id": "w9",
+          "text": "by",
+          "start": 2.856,
+          "end": 2.995
+        },
+        {
+          "id": "w10",
+          "text": "hand.",
+          "start": 3.077,
+          "end": 3.808
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "text": "Open Claude Code and describe it in plain English.",
+      "path": ".media/audio/voice/03.wav",
+      "duration_s": 3.251,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Open",
+          "start": 0,
+          "end": 0.372
+        },
+        {
+          "id": "w1",
+          "text": "Claude",
+          "start": 0.43,
+          "end": 0.755
+        },
+        {
+          "id": "w2",
+          "text": "Code",
+          "start": 0.778,
+          "end": 1.068
+        },
+        {
+          "id": "w3",
+          "text": "and",
+          "start": 1.115,
+          "end": 1.207
+        },
+        {
+          "id": "w4",
+          "text": "describe",
+          "start": 1.254,
+          "end": 1.683
+        },
+        {
+          "id": "w5",
+          "text": "it",
+          "start": 1.707,
+          "end": 1.788
+        },
+        {
+          "id": "w6",
+          "text": "in",
+          "start": 1.846,
+          "end": 1.927
+        },
+        {
+          "id": "w7",
+          "text": "plain",
+          "start": 2.009,
+          "end": 2.31
+        },
+        {
+          "id": "w8",
+          "text": "English.",
+          "start": 2.403,
+          "end": 3.251
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "text": "Add a login and Stripe, and you can charge for it tonight.",
+      "path": ".media/audio/voice/04.wav",
+      "duration_s": 3.762,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Add",
+          "start": 0,
+          "end": 0.302
+        },
+        {
+          "id": "w1",
+          "text": "a",
+          "start": 0.337,
+          "end": 0.36
+        },
+        {
+          "id": "w2",
+          "text": "login",
+          "start": 0.418,
+          "end": 0.848
+        },
+        {
+          "id": "w3",
+          "text": "and",
+          "start": 0.94,
+          "end": 1.149
+        },
+        {
+          "id": "w4",
+          "text": "Stripe,",
+          "start": 1.231,
+          "end": 1.741
+        },
+        {
+          "id": "w5",
+          "text": "and",
+          "start": 1.95,
+          "end": 2.078
+        },
+        {
+          "id": "w6",
+          "text": "you",
+          "start": 2.125,
+          "end": 2.206
+        },
+        {
+          "id": "w7",
+          "text": "can",
+          "start": 2.252,
+          "end": 2.357
+        },
+        {
+          "id": "w8",
+          "text": "charge",
+          "start": 2.415,
+          "end": 2.728
+        },
+        {
+          "id": "w9",
+          "text": "for",
+          "start": 2.763,
+          "end": 2.868
+        },
+        {
+          "id": "w10",
+          "text": "it",
+          "start": 2.926,
+          "end": 3.019
+        },
+        {
+          "id": "w11",
+          "text": "tonight.",
+          "start": 3.065,
+          "end": 3.762
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "text": "Sell it to that owner, then their whole industry. Comment TOOL for the prompt.",
+      "path": ".media/audio/voice/05.wav",
+      "duration_s": 4.69,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Sell",
+          "start": 0,
+          "end": 0.255
+        },
+        {
+          "id": "w1",
+          "text": "it",
+          "start": 0.302,
+          "end": 0.372
+        },
+        {
+          "id": "w2",
+          "text": "to",
+          "start": 0.395,
+          "end": 0.453
+        },
+        {
+          "id": "w3",
+          "text": "that",
+          "start": 0.499,
+          "end": 0.662
+        },
+        {
+          "id": "w4",
+          "text": "owner,",
+          "start": 0.743,
+          "end": 1.207
+        },
+        {
+          "id": "w5",
+          "text": "then",
+          "start": 1.277,
+          "end": 1.44
+        },
+        {
+          "id": "w6",
+          "text": "their",
+          "start": 1.509,
+          "end": 1.672
+        },
+        {
+          "id": "w7",
+          "text": "whole",
+          "start": 1.707,
+          "end": 1.962
+        },
+        {
+          "id": "w8",
+          "text": "industry.",
+          "start": 2.009,
+          "end": 2.635
+        },
+        {
+          "id": "w9",
+          "text": "Comment",
+          "start": 2.914,
+          "end": 3.367
+        },
+        {
+          "id": "w10",
+          "text": "TOOL",
+          "start": 3.39,
+          "end": 3.611
+        },
+        {
+          "id": "w11",
+          "text": "for",
+          "start": 3.669,
+          "end": 3.785
+        },
+        {
+          "id": "w12",
+          "text": "the",
+          "start": 3.831,
+          "end": 3.901
+        },
+        {
+          "id": "w13",
+          "text": "prompt.",
+          "start": 3.959,
+          "end": 4.69
+        }
+      ]
+    }
+  ],
+  "total_duration_s": 22.849
+}

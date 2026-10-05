@@ -1,0 +1,6 @@
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-property-hum/assets/vo/raw/v1.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-property-hum/assets/vo/raw/v2.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-property-hum/assets/vo/raw/v3.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-property-hum/assets/vo/raw/v4.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-property-hum/assets/vo/raw/v5.wav'
+file '/Users/yar/IdeaProjects/yarmalik.com/videos/voho-property-hum/assets/vo/raw/v6.wav'

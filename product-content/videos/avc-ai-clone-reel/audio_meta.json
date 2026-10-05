@@ -1,0 +1,537 @@
+{
+  "tts_provider": "elevenlabs",
+  "model_id": "eleven_multilingual_v2",
+  "seed": 12345,
+  "output_format": "pcm_44100",
+  "loudness_lufs": -14.13,
+  "voice_id": "vfHjAzBDDjup1YnV36Y1",
+  "voices": [
+    {
+      "id": "01",
+      "text": "This isn't me talking. It's my AI clone, and I made it from one minute of video.",
+      "path": ".media/audio/voice/01.wav",
+      "duration_s": 5.201,
+      "words": [
+        {
+          "id": "w0",
+          "text": "This",
+          "start": 0,
+          "end": 0.221
+        },
+        {
+          "id": "w1",
+          "text": "isn't",
+          "start": 0.267,
+          "end": 0.453
+        },
+        {
+          "id": "w2",
+          "text": "me",
+          "start": 0.499,
+          "end": 0.627
+        },
+        {
+          "id": "w3",
+          "text": "talking.",
+          "start": 0.662,
+          "end": 1.231
+        },
+        {
+          "id": "w4",
+          "text": "It's",
+          "start": 1.474,
+          "end": 1.695
+        },
+        {
+          "id": "w5",
+          "text": "my",
+          "start": 1.753,
+          "end": 1.892
+        },
+        {
+          "id": "w6",
+          "text": "AI",
+          "start": 1.985,
+          "end": 2.38
+        },
+        {
+          "id": "w7",
+          "text": "clone,",
+          "start": 2.45,
+          "end": 2.879
+        },
+        {
+          "id": "w8",
+          "text": "and",
+          "start": 3.03,
+          "end": 3.158
+        },
+        {
+          "id": "w9",
+          "text": "I",
+          "start": 3.216,
+          "end": 3.239
+        },
+        {
+          "id": "w10",
+          "text": "made",
+          "start": 3.332,
+          "end": 3.529
+        },
+        {
+          "id": "w11",
+          "text": "it",
+          "start": 3.553,
+          "end": 3.611
+        },
+        {
+          "id": "w12",
+          "text": "from",
+          "start": 3.646,
+          "end": 3.785
+        },
+        {
+          "id": "w13",
+          "text": "one",
+          "start": 3.878,
+          "end": 4.075
+        },
+        {
+          "id": "w14",
+          "text": "minute",
+          "start": 4.11,
+          "end": 4.354
+        },
+        {
+          "id": "w15",
+          "text": "of",
+          "start": 4.389,
+          "end": 4.435
+        },
+        {
+          "id": "w16",
+          "text": "video.",
+          "start": 4.47,
+          "end": 5.201
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "text": "Film yourself talking straight to the camera for one minute, in good light.",
+      "path": ".media/audio/voice/02.wav",
+      "duration_s": 4.272,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Film",
+          "start": 0,
+          "end": 0.29
+        },
+        {
+          "id": "w1",
+          "text": "yourself",
+          "start": 0.348,
+          "end": 0.743
+        },
+        {
+          "id": "w2",
+          "text": "talking",
+          "start": 0.801,
+          "end": 1.149
+        },
+        {
+          "id": "w3",
+          "text": "straight",
+          "start": 1.219,
+          "end": 1.533
+        },
+        {
+          "id": "w4",
+          "text": "to",
+          "start": 1.567,
+          "end": 1.625
+        },
+        {
+          "id": "w5",
+          "text": "the",
+          "start": 1.672,
+          "end": 1.741
+        },
+        {
+          "id": "w6",
+          "text": "camera",
+          "start": 1.788,
+          "end": 2.159
+        },
+        {
+          "id": "w7",
+          "text": "for",
+          "start": 2.206,
+          "end": 2.322
+        },
+        {
+          "id": "w8",
+          "text": "one",
+          "start": 2.403,
+          "end": 2.577
+        },
+        {
+          "id": "w9",
+          "text": "minute,",
+          "start": 2.612,
+          "end": 3.03
+        },
+        {
+          "id": "w10",
+          "text": "in",
+          "start": 3.204,
+          "end": 3.344
+        },
+        {
+          "id": "w11",
+          "text": "good",
+          "start": 3.425,
+          "end": 3.611
+        },
+        {
+          "id": "w12",
+          "text": "light.",
+          "start": 3.669,
+          "end": 4.272
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "text": "Upload it to HeyGen, and it builds an avatar that moves the way you do.",
+      "path": ".media/audio/voice/03.wav",
+      "duration_s": 4.319,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Upload",
+          "start": 0,
+          "end": 0.418
+        },
+        {
+          "id": "w1",
+          "text": "it",
+          "start": 0.464,
+          "end": 0.522
+        },
+        {
+          "id": "w2",
+          "text": "to",
+          "start": 0.557,
+          "end": 0.639
+        },
+        {
+          "id": "w3",
+          "text": "HeyGen,",
+          "start": 0.708,
+          "end": 1.219
+        },
+        {
+          "id": "w4",
+          "text": "and",
+          "start": 1.254,
+          "end": 1.382
+        },
+        {
+          "id": "w5",
+          "text": "it",
+          "start": 1.44,
+          "end": 1.521
+        },
+        {
+          "id": "w6",
+          "text": "builds",
+          "start": 1.579,
+          "end": 1.811
+        },
+        {
+          "id": "w7",
+          "text": "an",
+          "start": 1.846,
+          "end": 1.916
+        },
+        {
+          "id": "w8",
+          "text": "avatar",
+          "start": 1.985,
+          "end": 2.426
+        },
+        {
+          "id": "w9",
+          "text": "that",
+          "start": 2.473,
+          "end": 2.624
+        },
+        {
+          "id": "w10",
+          "text": "moves",
+          "start": 2.717,
+          "end": 3.042
+        },
+        {
+          "id": "w11",
+          "text": "the",
+          "start": 3.077,
+          "end": 3.146
+        },
+        {
+          "id": "w12",
+          "text": "way",
+          "start": 3.204,
+          "end": 3.367
+        },
+        {
+          "id": "w13",
+          "text": "you",
+          "start": 3.437,
+          "end": 3.576
+        },
+        {
+          "id": "w14",
+          "text": "do.",
+          "start": 3.669,
+          "end": 4.319
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "text": "Clone your voice in ElevenLabs, then type any line and your clone says it.",
+      "path": ".media/audio/voice/04.wav",
+      "duration_s": 5.108,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Clone",
+          "start": 0,
+          "end": 0.36
+        },
+        {
+          "id": "w1",
+          "text": "your",
+          "start": 0.395,
+          "end": 0.522
+        },
+        {
+          "id": "w2",
+          "text": "voice",
+          "start": 0.58,
+          "end": 0.859
+        },
+        {
+          "id": "w3",
+          "text": "in",
+          "start": 0.894,
+          "end": 0.975
+        },
+        {
+          "id": "w4",
+          "text": "ElevenLabs,",
+          "start": 1.022,
+          "end": 1.73
+        },
+        {
+          "id": "w5",
+          "text": "then",
+          "start": 1.904,
+          "end": 2.055
+        },
+        {
+          "id": "w6",
+          "text": "type",
+          "start": 2.148,
+          "end": 2.485
+        },
+        {
+          "id": "w7",
+          "text": "any",
+          "start": 2.531,
+          "end": 2.752
+        },
+        {
+          "id": "w8",
+          "text": "line",
+          "start": 2.81,
+          "end": 3.135
+        },
+        {
+          "id": "w9",
+          "text": "and",
+          "start": 3.309,
+          "end": 3.483
+        },
+        {
+          "id": "w10",
+          "text": "your",
+          "start": 3.553,
+          "end": 3.773
+        },
+        {
+          "id": "w11",
+          "text": "clone",
+          "start": 3.831,
+          "end": 4.133
+        },
+        {
+          "id": "w12",
+          "text": "says",
+          "start": 4.168,
+          "end": 4.412
+        },
+        {
+          "id": "w13",
+          "text": "it.",
+          "start": 4.481,
+          "end": 5.108
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "text": "Now I post videos without filming. If you want to learn, step by step, how to clone yourself, join my Skool community.",
+      "path": ".media/audio/voice/05.wav",
+      "duration_s": 7.245,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Now",
+          "start": 0,
+          "end": 0.163
+        },
+        {
+          "id": "w1",
+          "text": "I",
+          "start": 0.221,
+          "end": 0.255
+        },
+        {
+          "id": "w2",
+          "text": "post",
+          "start": 0.383,
+          "end": 0.662
+        },
+        {
+          "id": "w3",
+          "text": "videos",
+          "start": 0.708,
+          "end": 1.01
+        },
+        {
+          "id": "w4",
+          "text": "without",
+          "start": 1.045,
+          "end": 1.324
+        },
+        {
+          "id": "w5",
+          "text": "filming.",
+          "start": 1.393,
+          "end": 1.846
+        },
+        {
+          "id": "w6",
+          "text": "If",
+          "start": 2.055,
+          "end": 2.171
+        },
+        {
+          "id": "w7",
+          "text": "you",
+          "start": 2.229,
+          "end": 2.31
+        },
+        {
+          "id": "w8",
+          "text": "want",
+          "start": 2.38,
+          "end": 2.589
+        },
+        {
+          "id": "w9",
+          "text": "to",
+          "start": 2.624,
+          "end": 2.682
+        },
+        {
+          "id": "w10",
+          "text": "learn,",
+          "start": 2.74,
+          "end": 3.042
+        },
+        {
+          "id": "w11",
+          "text": "step",
+          "start": 3.111,
+          "end": 3.379
+        },
+        {
+          "id": "w12",
+          "text": "by",
+          "start": 3.437,
+          "end": 3.564
+        },
+        {
+          "id": "w13",
+          "text": "step,",
+          "start": 3.646,
+          "end": 4.052
+        },
+        {
+          "id": "w14",
+          "text": "how",
+          "start": 4.226,
+          "end": 4.389
+        },
+        {
+          "id": "w15",
+          "text": "to",
+          "start": 4.458,
+          "end": 4.516
+        },
+        {
+          "id": "w16",
+          "text": "clone",
+          "start": 4.574,
+          "end": 4.807
+        },
+        {
+          "id": "w17",
+          "text": "yourself,",
+          "start": 4.83,
+          "end": 5.352
+        },
+        {
+          "id": "w18",
+          "text": "join",
+          "start": 5.561,
+          "end": 5.84
+        },
+        {
+          "id": "w19",
+          "text": "my",
+          "start": 5.898,
+          "end": 6.002
+        },
+        {
+          "id": "w20",
+          "text": "Skool",
+          "start": 6.072,
+          "end": 6.327
+        },
+        {
+          "id": "w21",
+          "text": "community.",
+          "start": 6.374,
+          "end": 7.245
+        }
+      ]
+    }
+  ],
+  "total_duration_s": 26.145
+}

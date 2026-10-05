@@ -1,0 +1,29 @@
+{
+  "id": "ccm-spreadsheet-tool",
+  "community": "CCM",
+  "message": "Don't build another AI app \u2014 build the tool that replaces one spreadsheet a business owner already hates",
+  "handle": "@yarmalikhere",
+  "cta": "Comment TOOL",
+  "lines": [
+    {
+      "id": "01",
+      "text": "Nobody pays for another AI app, but every business owner you know will pay to never open a spreadsheet again."
+    },
+    {
+      "id": "02",
+      "text": "Ask one owner which spreadsheet they still fill in by hand."
+    },
+    {
+      "id": "03",
+      "text": "Open Claude Code and describe it in plain English."
+    },
+    {
+      "id": "04",
+      "text": "Add a login and Stripe, and you can charge for it tonight."
+    },
+    {
+      "id": "05",
+      "text": "Sell it to that owner, then their whole industry. Comment TOOL for the prompt."
+    }
+  ]
+}

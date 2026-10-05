@@ -1,0 +1,8 @@
+Nobody pays for another AI app.
+Every business owner you know will pay to never open a spreadsheet again.
+
+Ask an owner which sheet they fill in by hand.
+Open Claude Code. Describe it in plain English.
+Add login and Stripe.
+
+Charge for it tonight. Then sell it to their industry.

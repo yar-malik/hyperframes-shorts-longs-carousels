@@ -1,0 +1,5 @@
+One messy spreadsheet went in: 214 cleaning jobs, dates in three formats, prices with and without £ signs, and a paid column that said Y, yes, NO or part. One plain-English prompt to Claude Code, and 3 minutes 45 seconds later there was a dashboard that opens with a double-click.
+
+It found £2,955 the owner is still owed. That's a tool an owner pays for every month. Comment DASHBOARD and I'll send you the prompt.
+
+https://www.skool.com/yar-ai-automation-school-9911/about

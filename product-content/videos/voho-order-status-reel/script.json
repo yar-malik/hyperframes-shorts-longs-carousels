@@ -1,0 +1,15 @@
+{
+  "id": "voho-order-status-reel",
+  "community": "Voho",
+  "language": "ar-SA",
+  "message": "A customer calls asking where his order is; an AI agent answers in Saudi Arabic, gives the delivery time and moves the delivery, with no staff",
+  "handle": "@yarmalikhere",
+  "cta": "جربه على app.voho.ai",
+  "lines": [
+    { "id": "01", "text": "عميل اتصل يسأل وين طلبه، ووكيل ذكي جاوبه بالسعودي وغيّر موعد التوصيل، بدون أي موظف." },
+    { "id": "02", "text": "تسوي وكيل على فُوهو، تختار العربي السعودي، وتعطيه قائمة الطلبات وحالة كل طلب." },
+    { "id": "03", "text": "وتكتب له القواعد: ما يطلب رقم البطاقة أبداً، وما يوعد باسترجاع، هذا قرار الفريق." },
+    { "id": "04", "text": "اتصلت وعطيته رقم الطلب، قال لي يوصل الليلة قبل تسعة، وغيّر الموعد لبكرة العصر." },
+    { "id": "05", "text": "كل سؤال وين طلبي يتجاوب، حتى بعد الدوام. جربه على آب دوت فُوهو دوت إيه آي." }
+  ]
+}

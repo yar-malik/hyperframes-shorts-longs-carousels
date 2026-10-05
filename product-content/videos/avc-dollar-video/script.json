@@ -1,0 +1,29 @@
+{
+  "id": "avc-dollar-video",
+  "community": "AVC",
+  "message": "A ten-second AI video costs about a dollar to make and a local business pays hundreds for it \u2014 three steps to your first paying client",
+  "handle": "@yarmalikhere",
+  "cta": "Comment VIDEO",
+  "lines": [
+    {
+      "id": "01",
+      "text": "A ten second AI video costs you about a dollar, and the restaurant down your street pays three hundred for it."
+    },
+    {
+      "id": "02",
+      "text": "Screenshot their best dish from their own Instagram."
+    },
+    {
+      "id": "03",
+      "text": "Drop it into Seedance and ask for a slow push in with steam rising."
+    },
+    {
+      "id": "04",
+      "text": "Send it to the owner free and ask if they want three more."
+    },
+    {
+      "id": "05",
+      "text": "One yes pays your month. Comment VIDEO for the prompt."
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "tts_provider": "elevenlabs",
+  "model_id": "eleven_multilingual_v2",
+  "seed": 12345,
+  "output_format": "pcm_44100",
+  "loudness_lufs": -14.13,
+  "voice_id": "vfHjAzBDDjup1YnV36Y1",
+  "voices": [
+    {
+      "id": "01",
+      "text": "A ten second AI video costs you about a dollar, and the restaurant down your street pays three hundred for it.",
+      "path": ".media/audio/voice/01.wav",
+      "duration_s": 6.362,
+      "words": [
+        {
+          "id": "w0",
+          "text": "A",
+          "start": 0,
+          "end": 0.093
+        },
+        {
+          "id": "w1",
+          "text": "ten",
+          "start": 0.174,
+          "end": 0.383
+        },
+        {
+          "id": "w2",
+          "text": "second",
+          "start": 0.453,
+          "end": 0.755
+        },
+        {
+          "id": "w3",
+          "text": "AI",
+          "start": 0.824,
+          "end": 1.057
+        },
+        {
+          "id": "w4",
+          "text": "video",
+          "start": 1.138,
+          "end": 1.486
+        },
+        {
+          "id": "w5",
+          "text": "costs",
+          "start": 1.556,
+          "end": 1.892
+        },
+        {
+          "id": "w6",
+          "text": "you",
+          "start": 1.939,
+          "end": 2.032
+        },
+        {
+          "id": "w7",
+          "text": "about",
+          "start": 2.101,
+          "end": 2.392
+        },
+        {
+          "id": "w8",
+          "text": "a",
+          "start": 2.461,
+          "end": 2.508
+        },
+        {
+          "id": "w9",
+          "text": "dollar,",
+          "start": 2.577,
+          "end": 3.007
+        },
+        {
+          "id": "w10",
+          "text": "and",
+          "start": 3.181,
+          "end": 3.332
+        },
+        {
+          "id": "w11",
+          "text": "the",
+          "start": 3.367,
+          "end": 3.437
+        },
+        {
+          "id": "w12",
+          "text": "restaurant",
+          "start": 3.506,
+          "end": 3.924
+        },
+        {
+          "id": "w13",
+          "text": "down",
+          "start": 3.971,
+          "end": 4.156
+        },
+        {
+          "id": "w14",
+          "text": "your",
+          "start": 4.214,
+          "end": 4.342
+        },
+        {
+          "id": "w15",
+          "text": "street",
+          "start": 4.389,
+          "end": 4.656
+        },
+        {
+          "id": "w16",
+          "text": "pays",
+          "start": 4.714,
+          "end": 4.957
+        },
+        {
+          "id": "w17",
+          "text": "three",
+          "start": 5.016,
+          "end": 5.248
+        },
+        {
+          "id": "w18",
+          "text": "hundred",
+          "start": 5.294,
+          "end": 5.596
+        },
+        {
+          "id": "w19",
+          "text": "for",
+          "start": 5.654,
+          "end": 5.782
+        },
+        {
+          "id": "w20",
+          "text": "it.",
+          "start": 5.84,
+          "end": 6.362
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "text": "Screenshot their best dish from their own Instagram.",
+      "path": ".media/audio/voice/02.wav",
+      "duration_s": 2.926,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Screenshot",
+          "start": 0,
+          "end": 0.569
+        },
+        {
+          "id": "w1",
+          "text": "their",
+          "start": 0.615,
+          "end": 0.743
+        },
+        {
+          "id": "w2",
+          "text": "best",
+          "start": 0.789,
+          "end": 1.022
+        },
+        {
+          "id": "w3",
+          "text": "dish",
+          "start": 1.08,
+          "end": 1.254
+        },
+        {
+          "id": "w4",
+          "text": "from",
+          "start": 1.289,
+          "end": 1.416
+        },
+        {
+          "id": "w5",
+          "text": "their",
+          "start": 1.463,
+          "end": 1.614
+        },
+        {
+          "id": "w6",
+          "text": "own",
+          "start": 1.672,
+          "end": 1.869
+        },
+        {
+          "id": "w7",
+          "text": "Instagram.",
+          "start": 1.939,
+          "end": 2.926
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "text": "Drop it into Seedance and ask for a slow push in with steam rising.",
+      "path": ".media/audio/voice/03.wav",
+      "duration_s": 4.365,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Drop",
+          "start": 0,
+          "end": 0.302
+        },
+        {
+          "id": "w1",
+          "text": "it",
+          "start": 0.36,
+          "end": 0.43
+        },
+        {
+          "id": "w2",
+          "text": "into",
+          "start": 0.499,
+          "end": 0.697
+        },
+        {
+          "id": "w3",
+          "text": "Seedance",
+          "start": 0.755,
+          "end": 1.254
+        },
+        {
+          "id": "w4",
+          "text": "and",
+          "start": 1.289,
+          "end": 1.451
+        },
+        {
+          "id": "w5",
+          "text": "ask",
+          "start": 1.533,
+          "end": 1.788
+        },
+        {
+          "id": "w6",
+          "text": "for",
+          "start": 1.846,
+          "end": 1.962
+        },
+        {
+          "id": "w7",
+          "text": "a",
+          "start": 2.009,
+          "end": 2.032
+        },
+        {
+          "id": "w8",
+          "text": "slow",
+          "start": 2.09,
+          "end": 2.357
+        },
+        {
+          "id": "w9",
+          "text": "push",
+          "start": 2.426,
+          "end": 2.682
+        },
+        {
+          "id": "w10",
+          "text": "in",
+          "start": 2.74,
+          "end": 2.844
+        },
+        {
+          "id": "w11",
+          "text": "with",
+          "start": 2.902,
+          "end": 3.065
+        },
+        {
+          "id": "w12",
+          "text": "steam",
+          "start": 3.111,
+          "end": 3.39
+        },
+        {
+          "id": "w13",
+          "text": "rising.",
+          "start": 3.471,
+          "end": 4.365
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "text": "Send it to the owner free and ask if they want three more.",
+      "path": ".media/audio/voice/04.wav",
+      "duration_s": 3.297,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Send",
+          "start": 0,
+          "end": 0.221
+        },
+        {
+          "id": "w1",
+          "text": "it",
+          "start": 0.267,
+          "end": 0.337
+        },
+        {
+          "id": "w2",
+          "text": "to",
+          "start": 0.372,
+          "end": 0.418
+        },
+        {
+          "id": "w3",
+          "text": "the",
+          "start": 0.476,
+          "end": 0.557
+        },
+        {
+          "id": "w4",
+          "text": "owner",
+          "start": 0.639,
+          "end": 0.929
+        },
+        {
+          "id": "w5",
+          "text": "free",
+          "start": 1.01,
+          "end": 1.265
+        },
+        {
+          "id": "w6",
+          "text": "and",
+          "start": 1.324,
+          "end": 1.44
+        },
+        {
+          "id": "w7",
+          "text": "ask",
+          "start": 1.521,
+          "end": 1.776
+        },
+        {
+          "id": "w8",
+          "text": "if",
+          "start": 1.823,
+          "end": 1.892
+        },
+        {
+          "id": "w9",
+          "text": "they",
+          "start": 1.927,
+          "end": 2.032
+        },
+        {
+          "id": "w10",
+          "text": "want",
+          "start": 2.078,
+          "end": 2.287
+        },
+        {
+          "id": "w11",
+          "text": "three",
+          "start": 2.334,
+          "end": 2.566
+        },
+        {
+          "id": "w12",
+          "text": "more.",
+          "start": 2.612,
+          "end": 3.297
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "text": "One yes pays your month. Comment VIDEO for the prompt.",
+      "path": ".media/audio/voice/05.wav",
+      "duration_s": 3.622,
+      "words": [
+        {
+          "id": "w0",
+          "text": "One",
+          "start": 0,
+          "end": 0.279
+        },
+        {
+          "id": "w1",
+          "text": "yes",
+          "start": 0.313,
+          "end": 0.639
+        },
+        {
+          "id": "w2",
+          "text": "pays",
+          "start": 0.789,
+          "end": 1.045
+        },
+        {
+          "id": "w3",
+          "text": "your",
+          "start": 1.091,
+          "end": 1.219
+        },
+        {
+          "id": "w4",
+          "text": "month.",
+          "start": 1.277,
+          "end": 1.637
+        },
+        {
+          "id": "w5",
+          "text": "Comment",
+          "start": 1.881,
+          "end": 2.229
+        },
+        {
+          "id": "w6",
+          "text": "VIDEO",
+          "start": 2.276,
+          "end": 2.577
+        },
+        {
+          "id": "w7",
+          "text": "for",
+          "start": 2.635,
+          "end": 2.74
+        },
+        {
+          "id": "w8",
+          "text": "the",
+          "start": 2.786,
+          "end": 2.856
+        },
+        {
+          "id": "w9",
+          "text": "prompt.",
+          "start": 2.902,
+          "end": 3.622
+        }
+      ]
+    }
+  ],
+  "total_duration_s": 20.572
+}

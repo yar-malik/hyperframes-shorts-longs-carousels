@@ -1,0 +1,31 @@
+{
+  "id": "freellm-free-claude",
+  "boardVideo": 134,
+  "reference": "https://www.youtube.com/watch?v=PSNdJuaPWi8",
+  "community": "CCM",
+  "message": "One free key gives Claude Code 7 billion tokens a month across 600 models, and it swaps for you at the limit",
+  "handle": "@yarmalikhere",
+  "cta": "Comment FREE",
+  "lines": [
+    {
+      "id": "01",
+      "text": "My Claude Code bill went to zero this week, and it is not a trial."
+    },
+    {
+      "id": "02",
+      "text": "Somebody on GitHub is handing out seven billion tokens a month, across ChatGPT, Gemini, Kimi, Grok and six hundred other models."
+    },
+    {
+      "id": "03",
+      "text": "It is called FreeLLM API, and wiring it into Claude Code takes about a minute."
+    },
+    {
+      "id": "04",
+      "text": "The second you hit a limit it swaps you to the next model on its own, and it carries your context across."
+    },
+    {
+      "id": "05",
+      "text": "So Claude Code just stops running out. Comment FREE and I will send you the setup."
+    }
+  ]
+}

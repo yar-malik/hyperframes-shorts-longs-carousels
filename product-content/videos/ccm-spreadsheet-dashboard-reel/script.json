@@ -1,0 +1,29 @@
+{
+  "id": "ccm-spreadsheet-dashboard-reel",
+  "community": "CCM",
+  "message": "One messy spreadsheet and one plain-English prompt: Claude Code built the owner a dashboard and found £2,955 he's still owed",
+  "handle": "@yarmalikhere",
+  "cta": "Comment DASHBOARD",
+  "lines": [
+    {
+      "id": "01",
+      "text": "One messy spreadsheet and one prompt, and Claude Code found this owner almost three thousand pounds."
+    },
+    {
+      "id": "02",
+      "text": "Put the owner's spreadsheet in a folder, messy dates and all."
+    },
+    {
+      "id": "03",
+      "text": "Open Claude Code and ask for the dashboard in plain English."
+    },
+    {
+      "id": "04",
+      "text": "It cleans the data and writes one page that opens with a double click."
+    },
+    {
+      "id": "05",
+      "text": "That's a tool an owner pays for every month. Comment DASHBOARD for the prompt."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "voho-saudi-clinic",
+  "reference": "https://youtu.be/c4h0otTvBcU",
+  "community": "Voho",
+  "message": "An AI receptionist that answers in Saudi Arabic, built in under two minutes, booked a dentist on the first call",
+  "handle": "@yarmalikhere",
+  "cta": "Comment CLINIC",
+  "lines": [
+    { "id": "01", "text": "I built an AI receptionist that answers the phone in Saudi Arabic, and it took me less than two minutes." },
+    { "id": "02", "text": "You sign up on Voho, create an agent, and give it Layla, a warm Najdi voice that sounds like a local." },
+    { "id": "03", "text": "Then you write its instructions in Saudi Arabic: book the appointment, take the patient's name and number, and never give medical advice." },
+    { "id": "04", "text": "I pressed call and asked for a dentist tomorrow afternoon, and it booked me in. Fifty seconds, six cents." },
+    { "id": "05", "text": "That's a receptionist that picks up every call. Comment CLINIC and I will send you the link." }
+  ]
+}

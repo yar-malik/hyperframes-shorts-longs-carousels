@@ -1,0 +1,9 @@
+أكثر سؤال يوصل أي متجر: وين طلبي؟ في هذا الشرح، أبني خطوة بخطوة وكيل ذكي لخدمة العملاء على فوهو، بالعربي السعودي، وبعدين أتصل عليه. كل اللي على الشاشة هو لوحة التحكم الحقيقية على app.voho.ai، والمكالمة حقيقية: العميل سأل عن طلب رقم 4521، والوكيل قال له إنه مع المندوب ويوصل الليلة قبل الساعة 9، وبعدين غيّر موعد التوصيل لبكرة العصر. المكالمة كاملة أخذت دقيقة و12 ثانية، وكلفت 0.14 دولار.
+
+القواعد: ما يطلب أبداً رقم البطاقة أو رمز التحقق، وما يوعد باسترجاع، هذا قرار فريق خدمة العملاء.
+
+شي لازم تعرفه: في هذا العرض، الوكيل يقرأ حالة الطلب من قائمة كتبتها في التعليمات. في متجر حقيقي، تربط الدالة بنظام الطلبات عندك.
+
+The whole tutorial is in Saudi Arabic: building a customer service agent on Voho that answers "where is my order?", then a real call where it gives the order status and moves the delivery. Every screen is the real console at app.voho.ai. The store is invented for the demo.
+
+جربه: https://app.voho.ai

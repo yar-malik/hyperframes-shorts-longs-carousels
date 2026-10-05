@@ -1,0 +1,16 @@
+[11.8s] ready
+[11.8s] step_t20
+[12.5s] webhook
+[20.6s] end_t20
+[20.6s] step_t19
+[21.3s] outbound
+[31.5s] end_t19
+[31.5s] step_t18
+[32.3s] generate
+[40.3s] end_t18
+[40.3s] step_t21
+[41.0s] billing
+[43.6s] usage
+[47.8s] end_t21
+[49.0s] done
+wrote /Users/yar/IdeaProjects/yarmalik.com/videos/voho-12-where-is-my-order-answered-without/capture3

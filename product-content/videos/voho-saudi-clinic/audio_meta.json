@@ -1,0 +1,645 @@
+{
+  "tts_provider": "elevenlabs",
+  "model_id": "eleven_multilingual_v2",
+  "seed": 12345,
+  "output_format": "pcm_44100",
+  "loudness_lufs": -14.09,
+  "voice_id": "vfHjAzBDDjup1YnV36Y1",
+  "voices": [
+    {
+      "id": "01",
+      "text": "I built an AI receptionist that answers the phone in Saudi Arabic, and it took me less than two minutes.",
+      "path": ".media/audio/voice/01.wav",
+      "duration_s": 6.316,
+      "words": [
+        {
+          "id": "w0",
+          "text": "I",
+          "start": 0,
+          "end": 0.104
+        },
+        {
+          "id": "w1",
+          "text": "built",
+          "start": 0.197,
+          "end": 0.406
+        },
+        {
+          "id": "w2",
+          "text": "an",
+          "start": 0.453,
+          "end": 0.511
+        },
+        {
+          "id": "w3",
+          "text": "AI",
+          "start": 0.592,
+          "end": 0.906
+        },
+        {
+          "id": "w4",
+          "text": "receptionist",
+          "start": 0.964,
+          "end": 1.579
+        },
+        {
+          "id": "w5",
+          "text": "that",
+          "start": 1.614,
+          "end": 1.753
+        },
+        {
+          "id": "w6",
+          "text": "answers",
+          "start": 1.823,
+          "end": 2.241
+        },
+        {
+          "id": "w7",
+          "text": "the",
+          "start": 2.276,
+          "end": 2.345
+        },
+        {
+          "id": "w8",
+          "text": "phone",
+          "start": 2.392,
+          "end": 2.659
+        },
+        {
+          "id": "w9",
+          "text": "in",
+          "start": 2.728,
+          "end": 2.844
+        },
+        {
+          "id": "w10",
+          "text": "Saudi",
+          "start": 2.926,
+          "end": 3.286
+        },
+        {
+          "id": "w11",
+          "text": "Arabic,",
+          "start": 3.367,
+          "end": 3.924
+        },
+        {
+          "id": "w12",
+          "text": "and",
+          "start": 4.075,
+          "end": 4.226
+        },
+        {
+          "id": "w13",
+          "text": "it",
+          "start": 4.296,
+          "end": 4.389
+        },
+        {
+          "id": "w14",
+          "text": "took",
+          "start": 4.423,
+          "end": 4.609
+        },
+        {
+          "id": "w15",
+          "text": "me",
+          "start": 4.656,
+          "end": 4.783
+        },
+        {
+          "id": "w16",
+          "text": "less",
+          "start": 4.899,
+          "end": 5.155
+        },
+        {
+          "id": "w17",
+          "text": "than",
+          "start": 5.178,
+          "end": 5.317
+        },
+        {
+          "id": "w18",
+          "text": "two",
+          "start": 5.375,
+          "end": 5.55
+        },
+        {
+          "id": "w19",
+          "text": "minutes.",
+          "start": 5.631,
+          "end": 6.316
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "text": "You sign up on Voho, create an agent, and give it Layla, a warm Najdi voice that sounds like a local.",
+      "path": ".media/audio/voice/02.wav",
+      "duration_s": 6.641,
+      "words": [
+        {
+          "id": "w0",
+          "text": "You",
+          "start": 0,
+          "end": 0.174
+        },
+        {
+          "id": "w1",
+          "text": "sign",
+          "start": 0.221,
+          "end": 0.453
+        },
+        {
+          "id": "w2",
+          "text": "up",
+          "start": 0.488,
+          "end": 0.569
+        },
+        {
+          "id": "w3",
+          "text": "on",
+          "start": 0.627,
+          "end": 0.697
+        },
+        {
+          "id": "w4",
+          "text": "Voho,",
+          "start": 0.766,
+          "end": 1.242
+        },
+        {
+          "id": "w5",
+          "text": "create",
+          "start": 1.289,
+          "end": 1.707
+        },
+        {
+          "id": "w6",
+          "text": "an",
+          "start": 1.73,
+          "end": 1.788
+        },
+        {
+          "id": "w7",
+          "text": "agent,",
+          "start": 1.834,
+          "end": 2.159
+        },
+        {
+          "id": "w8",
+          "text": "and",
+          "start": 2.183,
+          "end": 2.276
+        },
+        {
+          "id": "w9",
+          "text": "give",
+          "start": 2.345,
+          "end": 2.519
+        },
+        {
+          "id": "w10",
+          "text": "it",
+          "start": 2.554,
+          "end": 2.624
+        },
+        {
+          "id": "w11",
+          "text": "Layla,",
+          "start": 2.705,
+          "end": 3.262
+        },
+        {
+          "id": "w12",
+          "text": "a",
+          "start": 3.506,
+          "end": 3.599
+        },
+        {
+          "id": "w13",
+          "text": "warm",
+          "start": 3.75,
+          "end": 4.18
+        },
+        {
+          "id": "w14",
+          "text": "Najdi",
+          "start": 4.296,
+          "end": 4.737
+        },
+        {
+          "id": "w15",
+          "text": "voice",
+          "start": 4.818,
+          "end": 5.097
+        },
+        {
+          "id": "w16",
+          "text": "that",
+          "start": 5.12,
+          "end": 5.248
+        },
+        {
+          "id": "w17",
+          "text": "sounds",
+          "start": 5.294,
+          "end": 5.538
+        },
+        {
+          "id": "w18",
+          "text": "like",
+          "start": 5.573,
+          "end": 5.712
+        },
+        {
+          "id": "w19",
+          "text": "a",
+          "start": 5.747,
+          "end": 5.77
+        },
+        {
+          "id": "w20",
+          "text": "local.",
+          "start": 5.84,
+          "end": 6.641
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "text": "Then you write its instructions in Saudi Arabic: book the appointment, take the patient's name and number, and never give medical advice.",
+      "path": ".media/audio/voice/03.wav",
+      "duration_s": 8.081,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Then",
+          "start": 0,
+          "end": 0.244
+        },
+        {
+          "id": "w1",
+          "text": "you",
+          "start": 0.302,
+          "end": 0.406
+        },
+        {
+          "id": "w2",
+          "text": "write",
+          "start": 0.476,
+          "end": 0.766
+        },
+        {
+          "id": "w3",
+          "text": "its",
+          "start": 0.801,
+          "end": 0.906
+        },
+        {
+          "id": "w4",
+          "text": "instructions",
+          "start": 0.94,
+          "end": 1.474
+        },
+        {
+          "id": "w5",
+          "text": "in",
+          "start": 1.521,
+          "end": 1.591
+        },
+        {
+          "id": "w6",
+          "text": "Saudi",
+          "start": 1.649,
+          "end": 1.997
+        },
+        {
+          "id": "w7",
+          "text": "Arabic:",
+          "start": 2.078,
+          "end": 2.635
+        },
+        {
+          "id": "w8",
+          "text": "book",
+          "start": 2.961,
+          "end": 3.216
+        },
+        {
+          "id": "w9",
+          "text": "the",
+          "start": 3.274,
+          "end": 3.355
+        },
+        {
+          "id": "w10",
+          "text": "appointment,",
+          "start": 3.413,
+          "end": 4.11
+        },
+        {
+          "id": "w11",
+          "text": "take",
+          "start": 4.261,
+          "end": 4.551
+        },
+        {
+          "id": "w12",
+          "text": "the",
+          "start": 4.586,
+          "end": 4.656
+        },
+        {
+          "id": "w13",
+          "text": "patient's",
+          "start": 4.702,
+          "end": 5.097
+        },
+        {
+          "id": "w14",
+          "text": "name",
+          "start": 5.143,
+          "end": 5.352
+        },
+        {
+          "id": "w15",
+          "text": "and",
+          "start": 5.375,
+          "end": 5.445
+        },
+        {
+          "id": "w16",
+          "text": "number,",
+          "start": 5.492,
+          "end": 5.909
+        },
+        {
+          "id": "w17",
+          "text": "and",
+          "start": 5.968,
+          "end": 6.142
+        },
+        {
+          "id": "w18",
+          "text": "never",
+          "start": 6.258,
+          "end": 6.502
+        },
+        {
+          "id": "w19",
+          "text": "give",
+          "start": 6.56,
+          "end": 6.757
+        },
+        {
+          "id": "w20",
+          "text": "medical",
+          "start": 6.803,
+          "end": 7.105
+        },
+        {
+          "id": "w21",
+          "text": "advice.",
+          "start": 7.152,
+          "end": 8.081
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "text": "I pressed call and asked for a dentist tomorrow afternoon, and it booked me in. Fifty seconds, six cents.",
+      "path": ".media/audio/voice/04.wav",
+      "duration_s": 6.827,
+      "words": [
+        {
+          "id": "w0",
+          "text": "I",
+          "start": 0,
+          "end": 0.093
+        },
+        {
+          "id": "w1",
+          "text": "pressed",
+          "start": 0.209,
+          "end": 0.488
+        },
+        {
+          "id": "w2",
+          "text": "call",
+          "start": 0.511,
+          "end": 0.72
+        },
+        {
+          "id": "w3",
+          "text": "and",
+          "start": 0.766,
+          "end": 0.836
+        },
+        {
+          "id": "w4",
+          "text": "asked",
+          "start": 0.906,
+          "end": 1.126
+        },
+        {
+          "id": "w5",
+          "text": "for",
+          "start": 1.149,
+          "end": 1.254
+        },
+        {
+          "id": "w6",
+          "text": "a",
+          "start": 1.3,
+          "end": 1.324
+        },
+        {
+          "id": "w7",
+          "text": "dentist",
+          "start": 1.382,
+          "end": 1.753
+        },
+        {
+          "id": "w8",
+          "text": "tomorrow",
+          "start": 1.776,
+          "end": 2.136
+        },
+        {
+          "id": "w9",
+          "text": "afternoon,",
+          "start": 2.206,
+          "end": 2.833
+        },
+        {
+          "id": "w10",
+          "text": "and",
+          "start": 3.007,
+          "end": 3.146
+        },
+        {
+          "id": "w11",
+          "text": "it",
+          "start": 3.216,
+          "end": 3.309
+        },
+        {
+          "id": "w12",
+          "text": "booked",
+          "start": 3.402,
+          "end": 3.657
+        },
+        {
+          "id": "w13",
+          "text": "me",
+          "start": 3.692,
+          "end": 3.855
+        },
+        {
+          "id": "w14",
+          "text": "in.",
+          "start": 3.936,
+          "end": 4.354
+        },
+        {
+          "id": "w15",
+          "text": "Fifty",
+          "start": 4.598,
+          "end": 4.946
+        },
+        {
+          "id": "w16",
+          "text": "seconds,",
+          "start": 5.004,
+          "end": 5.561
+        },
+        {
+          "id": "w17",
+          "text": "six",
+          "start": 5.735,
+          "end": 6.026
+        },
+        {
+          "id": "w18",
+          "text": "cents.",
+          "start": 6.072,
+          "end": 6.827
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "text": "That's a receptionist that picks up every call. Comment CLINIC and I will send you the link.",
+      "path": ".media/audio/voice/05.wav",
+      "duration_s": 5.48,
+      "words": [
+        {
+          "id": "w0",
+          "text": "That's",
+          "start": 0,
+          "end": 0.279
+        },
+        {
+          "id": "w1",
+          "text": "a",
+          "start": 0.313,
+          "end": 0.337
+        },
+        {
+          "id": "w2",
+          "text": "receptionist",
+          "start": 0.383,
+          "end": 0.894
+        },
+        {
+          "id": "w3",
+          "text": "that",
+          "start": 0.917,
+          "end": 1.022
+        },
+        {
+          "id": "w4",
+          "text": "picks",
+          "start": 1.068,
+          "end": 1.277
+        },
+        {
+          "id": "w5",
+          "text": "up",
+          "start": 1.312,
+          "end": 1.416
+        },
+        {
+          "id": "w6",
+          "text": "every",
+          "start": 1.533,
+          "end": 1.834
+        },
+        {
+          "id": "w7",
+          "text": "call.",
+          "start": 1.904,
+          "end": 2.322
+        },
+        {
+          "id": "w8",
+          "text": "Comment",
+          "start": 2.601,
+          "end": 3.042
+        },
+        {
+          "id": "w9",
+          "text": "CLINIC",
+          "start": 3.111,
+          "end": 3.564
+        },
+        {
+          "id": "w10",
+          "text": "and",
+          "start": 3.68,
+          "end": 3.878
+        },
+        {
+          "id": "w11",
+          "text": "I",
+          "start": 3.994,
+          "end": 4.052
+        },
+        {
+          "id": "w12",
+          "text": "will",
+          "start": 4.145,
+          "end": 4.307
+        },
+        {
+          "id": "w13",
+          "text": "send",
+          "start": 4.365,
+          "end": 4.551
+        },
+        {
+          "id": "w14",
+          "text": "you",
+          "start": 4.609,
+          "end": 4.69
+        },
+        {
+          "id": "w15",
+          "text": "the",
+          "start": 4.748,
+          "end": 4.818
+        },
+        {
+          "id": "w16",
+          "text": "link.",
+          "start": 4.876,
+          "end": 5.48
+        }
+      ]
+    }
+  ],
+  "total_duration_s": 33.345
+}

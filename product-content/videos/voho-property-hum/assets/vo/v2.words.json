@@ -1,0 +1,208 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,070"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 70
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,070",
+				"to": "00:00:00,140"
+			},
+			"offsets": {
+				"from": 70,
+				"to": 140
+			},
+			"text": " So"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,140",
+				"to": "00:00:00,210"
+			},
+			"offsets": {
+				"from": 140,
+				"to": 210
+			},
+			"text": " I"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,210",
+				"to": "00:00:00,420"
+			},
+			"offsets": {
+				"from": 210,
+				"to": 420
+			},
+			"text": " set"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,420",
+				"to": "00:00:00,560"
+			},
+			"offsets": {
+				"from": 420,
+				"to": 560
+			},
+			"text": " up"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,560",
+				"to": "00:00:00,630"
+			},
+			"offsets": {
+				"from": 560,
+				"to": 630
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,630",
+				"to": "00:00:00,910"
+			},
+			"offsets": {
+				"from": 630,
+				"to": 910
+			},
+			"text": " Voho"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,910",
+				"to": "00:00:01,820"
+			},
+			"offsets": {
+				"from": 910,
+				"to": 1820
+			},
+			"text": " receptionist"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,820",
+				"to": "00:00:01,960"
+			},
+			"offsets": {
+				"from": 1820,
+				"to": 1960
+			},
+			"text": " for"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,960",
+				"to": "00:00:02,030"
+			},
+			"offsets": {
+				"from": 1960,
+				"to": 2030
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,030",
+				"to": "00:00:02,540"
+			},
+			"offsets": {
+				"from": 2030,
+				"to": 2540
+			},
+			"text": " Riyadh"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,540",
+				"to": "00:00:03,000"
+			},
+			"offsets": {
+				"from": 2540,
+				"to": 3000
+			},
+			"text": " property"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,000",
+				"to": "00:00:03,980"
+			},
+			"offsets": {
+				"from": 3000,
+				"to": 3980
+			},
+			"text": " agency"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,980",
+				"to": "00:00:04,100"
+			},
+			"offsets": {
+				"from": 3980,
+				"to": 4100
+			},
+			"text": " in"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,100",
+				"to": "00:00:04,550"
+			},
+			"offsets": {
+				"from": 4100,
+				"to": 4550
+			},
+			"text": " Saudi"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,550",
+				"to": "00:00:05,140"
+			},
+			"offsets": {
+				"from": 4550,
+				"to": 5140
+			},
+			"text": " Arabic."
+		}
+	]
+}

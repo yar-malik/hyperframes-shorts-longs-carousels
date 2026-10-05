@@ -1,0 +1,219 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/yar/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,050"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 50
+			},
+			"text": ""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,050",
+				"to": "00:00:00,140"
+			},
+			"offsets": {
+				"from": 50,
+				"to": 140
+			},
+			"text": " It"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,140",
+				"to": "00:00:00,510"
+			},
+			"offsets": {
+				"from": 140,
+				"to": 510
+			},
+			"text": " found"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,510",
+				"to": "00:00:00,580"
+			},
+			"offsets": {
+				"from": 510,
+				"to": 580
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,580",
+				"to": "00:00:00,870"
+			},
+			"offsets": {
+				"from": 580,
+				"to": 870
+			},
+			"text": " flat"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,870",
+				"to": "00:00:01,010"
+			},
+			"offsets": {
+				"from": 870,
+				"to": 1010
+			},
+			"text": " in"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,010",
+				"to": "00:00:01,140"
+			},
+			"offsets": {
+				"from": 1010,
+				"to": 1140
+			},
+			"text": " my"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,140",
+				"to": "00:00:01,650"
+			},
+			"offsets": {
+				"from": 1140,
+				"to": 1650
+			},
+			"text": " budget"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,650",
+				"to": "00:00:01,820"
+			},
+			"offsets": {
+				"from": 1650,
+				"to": 1820
+			},
+			"text": " and"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,820",
+				"to": "00:00:02,180"
+			},
+			"offsets": {
+				"from": 1820,
+				"to": 2180
+			},
+			"text": " booked"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,180",
+				"to": "00:00:02,240"
+			},
+			"offsets": {
+				"from": 2180,
+				"to": 2240
+			},
+			"text": " a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,240",
+				"to": "00:00:02,700"
+			},
+			"offsets": {
+				"from": 2240,
+				"to": 2700
+			},
+			"text": " viewing"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,700",
+				"to": "00:00:02,880"
+			},
+			"offsets": {
+				"from": 2700,
+				"to": 2880
+			},
+			"text": " with"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,880",
+				"to": "00:00:03,260"
+			},
+			"offsets": {
+				"from": 2880,
+				"to": 3260
+			},
+			"text": " nobody"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,260",
+				"to": "00:00:03,380"
+			},
+			"offsets": {
+				"from": 3260,
+				"to": 3380
+			},
+			"text": " at"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,380",
+				"to": "00:00:03,570"
+			},
+			"offsets": {
+				"from": 3380,
+				"to": 3570
+			},
+			"text": " the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,570",
+				"to": "00:00:04,040"
+			},
+			"offsets": {
+				"from": 3570,
+				"to": 4040
+			},
+			"text": " desk."
+		}
+	]
+}

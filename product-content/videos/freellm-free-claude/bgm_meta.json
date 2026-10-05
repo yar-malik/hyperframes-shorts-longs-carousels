@@ -1,0 +1,11 @@
+{
+  "bgm": {
+    "path": "public/bgm.wav",
+    "query": "upbeat pop hip-hop beat, energetic, rhythmic, no vocals",
+    "mode": "retrieve",
+    "id": "0d144462c24e4be9a044712cfe6773be",
+    "name": "Astral Generated Music: 0d144462",
+    "duration_s": 55.0
+  },
+  "bgm_provider": "heygen"
+}

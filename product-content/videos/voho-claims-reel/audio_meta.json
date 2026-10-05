@@ -1,0 +1,693 @@
+{
+  "tts_provider": "elevenlabs",
+  "model_id": "eleven_multilingual_v2",
+  "seed": 12345,
+  "output_format": "pcm_44100",
+  "loudness_lufs": -14.02,
+  "voice_id": "vfHjAzBDDjup1YnV36Y1",
+  "voices": [
+    {
+      "id": "01",
+      "text": "Unbelievable. Voho just launched an AI claims desk that logs a car accident in Saudi Arabic in sixty-nine seconds.",
+      "path": ".media/audio/voice/01.wav",
+      "duration_s": 8.081,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Unbelievable.",
+          "start": 0,
+          "end": 0.998
+        },
+        {
+          "id": "w1",
+          "text": "Voho",
+          "start": 1.207,
+          "end": 1.602
+        },
+        {
+          "id": "w2",
+          "text": "just",
+          "start": 1.683,
+          "end": 1.927
+        },
+        {
+          "id": "w3",
+          "text": "launched",
+          "start": 1.997,
+          "end": 2.38
+        },
+        {
+          "id": "w4",
+          "text": "an",
+          "start": 2.45,
+          "end": 2.543
+        },
+        {
+          "id": "w5",
+          "text": "AI",
+          "start": 2.635,
+          "end": 2.949
+        },
+        {
+          "id": "w6",
+          "text": "claims",
+          "start": 3.019,
+          "end": 3.355
+        },
+        {
+          "id": "w7",
+          "text": "desk",
+          "start": 3.402,
+          "end": 3.704
+        },
+        {
+          "id": "w8",
+          "text": "that",
+          "start": 3.762,
+          "end": 3.924
+        },
+        {
+          "id": "w9",
+          "text": "logs",
+          "start": 3.994,
+          "end": 4.307
+        },
+        {
+          "id": "w10",
+          "text": "a",
+          "start": 4.342,
+          "end": 4.377
+        },
+        {
+          "id": "w11",
+          "text": "car",
+          "start": 4.458,
+          "end": 4.714
+        },
+        {
+          "id": "w12",
+          "text": "accident",
+          "start": 4.783,
+          "end": 5.213
+        },
+        {
+          "id": "w13",
+          "text": "in",
+          "start": 5.259,
+          "end": 5.317
+        },
+        {
+          "id": "w14",
+          "text": "Saudi",
+          "start": 5.375,
+          "end": 5.689
+        },
+        {
+          "id": "w15",
+          "text": "Arabic",
+          "start": 5.735,
+          "end": 6.177
+        },
+        {
+          "id": "w16",
+          "text": "in",
+          "start": 6.351,
+          "end": 6.525
+        },
+        {
+          "id": "w17",
+          "text": "sixty-nine",
+          "start": 6.606,
+          "end": 7.256
+        },
+        {
+          "id": "w18",
+          "text": "seconds.",
+          "start": 7.303,
+          "end": 8.081
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "text": "You create an agent on Voho, set it to Saudi Arabic, and tell it what a claim needs. It was saved in twenty-four seconds.",
+      "path": ".media/audio/voice/02.wav",
+      "duration_s": 7.059,
+      "words": [
+        {
+          "id": "w0",
+          "text": "You",
+          "start": 0,
+          "end": 0.209
+        },
+        {
+          "id": "w1",
+          "text": "create",
+          "start": 0.279,
+          "end": 0.662
+        },
+        {
+          "id": "w2",
+          "text": "an",
+          "start": 0.685,
+          "end": 0.743
+        },
+        {
+          "id": "w3",
+          "text": "agent",
+          "start": 0.801,
+          "end": 1.091
+        },
+        {
+          "id": "w4",
+          "text": "on",
+          "start": 1.161,
+          "end": 1.312
+        },
+        {
+          "id": "w5",
+          "text": "Voho,",
+          "start": 1.393,
+          "end": 1.892
+        },
+        {
+          "id": "w6",
+          "text": "set",
+          "start": 2.009,
+          "end": 2.229
+        },
+        {
+          "id": "w7",
+          "text": "it",
+          "start": 2.276,
+          "end": 2.334
+        },
+        {
+          "id": "w8",
+          "text": "to",
+          "start": 2.368,
+          "end": 2.426
+        },
+        {
+          "id": "w9",
+          "text": "Saudi",
+          "start": 2.485,
+          "end": 2.775
+        },
+        {
+          "id": "w10",
+          "text": "Arabic,",
+          "start": 2.844,
+          "end": 3.251
+        },
+        {
+          "id": "w11",
+          "text": "and",
+          "start": 3.274,
+          "end": 3.367
+        },
+        {
+          "id": "w12",
+          "text": "tell",
+          "start": 3.413,
+          "end": 3.576
+        },
+        {
+          "id": "w13",
+          "text": "it",
+          "start": 3.622,
+          "end": 3.68
+        },
+        {
+          "id": "w14",
+          "text": "what",
+          "start": 3.715,
+          "end": 3.831
+        },
+        {
+          "id": "w15",
+          "text": "a",
+          "start": 3.866,
+          "end": 3.889
+        },
+        {
+          "id": "w16",
+          "text": "claim",
+          "start": 3.936,
+          "end": 4.203
+        },
+        {
+          "id": "w17",
+          "text": "needs.",
+          "start": 4.272,
+          "end": 4.69
+        },
+        {
+          "id": "w18",
+          "text": "It",
+          "start": 4.934,
+          "end": 5.062
+        },
+        {
+          "id": "w19",
+          "text": "was",
+          "start": 5.097,
+          "end": 5.201
+        },
+        {
+          "id": "w20",
+          "text": "saved",
+          "start": 5.248,
+          "end": 5.538
+        },
+        {
+          "id": "w21",
+          "text": "in",
+          "start": 5.573,
+          "end": 5.631
+        },
+        {
+          "id": "w22",
+          "text": "twenty-four",
+          "start": 5.677,
+          "end": 6.188
+        },
+        {
+          "id": "w23",
+          "text": "seconds.",
+          "start": 6.246,
+          "end": 7.059
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "text": "Then the rules: it asks about injuries first, it never decides who is at fault, and it never invents a claim number.",
+      "path": ".media/audio/voice/03.wav",
+      "duration_s": 7.477,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Then",
+          "start": 0,
+          "end": 0.302
+        },
+        {
+          "id": "w1",
+          "text": "the",
+          "start": 0.372,
+          "end": 0.464
+        },
+        {
+          "id": "w2",
+          "text": "rules:",
+          "start": 0.546,
+          "end": 1.057
+        },
+        {
+          "id": "w3",
+          "text": "it",
+          "start": 1.265,
+          "end": 1.405
+        },
+        {
+          "id": "w4",
+          "text": "asks",
+          "start": 1.474,
+          "end": 1.788
+        },
+        {
+          "id": "w5",
+          "text": "about",
+          "start": 1.834,
+          "end": 2.09
+        },
+        {
+          "id": "w6",
+          "text": "injuries",
+          "start": 2.171,
+          "end": 2.566
+        },
+        {
+          "id": "w7",
+          "text": "first,",
+          "start": 2.624,
+          "end": 3.077
+        },
+        {
+          "id": "w8",
+          "text": "it",
+          "start": 3.251,
+          "end": 3.39
+        },
+        {
+          "id": "w9",
+          "text": "never",
+          "start": 3.471,
+          "end": 3.75
+        },
+        {
+          "id": "w10",
+          "text": "decides",
+          "start": 3.808,
+          "end": 4.203
+        },
+        {
+          "id": "w11",
+          "text": "who",
+          "start": 4.238,
+          "end": 4.354
+        },
+        {
+          "id": "w12",
+          "text": "is",
+          "start": 4.412,
+          "end": 4.493
+        },
+        {
+          "id": "w13",
+          "text": "at",
+          "start": 4.54,
+          "end": 4.598
+        },
+        {
+          "id": "w14",
+          "text": "fault,",
+          "start": 4.656,
+          "end": 5.027
+        },
+        {
+          "id": "w15",
+          "text": "and",
+          "start": 5.178,
+          "end": 5.317
+        },
+        {
+          "id": "w16",
+          "text": "it",
+          "start": 5.387,
+          "end": 5.468
+        },
+        {
+          "id": "w17",
+          "text": "never",
+          "start": 5.561,
+          "end": 5.84
+        },
+        {
+          "id": "w18",
+          "text": "invents",
+          "start": 5.909,
+          "end": 6.246
+        },
+        {
+          "id": "w19",
+          "text": "a",
+          "start": 6.293,
+          "end": 6.316
+        },
+        {
+          "id": "w20",
+          "text": "claim",
+          "start": 6.385,
+          "end": 6.641
+        },
+        {
+          "id": "w21",
+          "text": "number.",
+          "start": 6.711,
+          "end": 7.477
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "text": "I called it after a minor accident. It took my policy number, the road and the Najm report, and logged the claim for fourteen cents.",
+      "path": ".media/audio/voice/04.wav",
+      "duration_s": 7.988,
+      "words": [
+        {
+          "id": "w0",
+          "text": "I",
+          "start": 0,
+          "end": 0.093
+        },
+        {
+          "id": "w1",
+          "text": "called",
+          "start": 0.186,
+          "end": 0.441
+        },
+        {
+          "id": "w2",
+          "text": "it",
+          "start": 0.488,
+          "end": 0.557
+        },
+        {
+          "id": "w3",
+          "text": "after",
+          "start": 0.615,
+          "end": 0.917
+        },
+        {
+          "id": "w4",
+          "text": "a",
+          "start": 0.975,
+          "end": 1.01
+        },
+        {
+          "id": "w5",
+          "text": "minor",
+          "start": 1.08,
+          "end": 1.416
+        },
+        {
+          "id": "w6",
+          "text": "accident.",
+          "start": 1.486,
+          "end": 2.09
+        },
+        {
+          "id": "w7",
+          "text": "It",
+          "start": 2.264,
+          "end": 2.403
+        },
+        {
+          "id": "w8",
+          "text": "took",
+          "start": 2.438,
+          "end": 2.612
+        },
+        {
+          "id": "w9",
+          "text": "my",
+          "start": 2.67,
+          "end": 2.775
+        },
+        {
+          "id": "w10",
+          "text": "policy",
+          "start": 2.856,
+          "end": 3.286
+        },
+        {
+          "id": "w11",
+          "text": "number,",
+          "start": 3.344,
+          "end": 3.762
+        },
+        {
+          "id": "w12",
+          "text": "the",
+          "start": 3.831,
+          "end": 3.959
+        },
+        {
+          "id": "w13",
+          "text": "road",
+          "start": 4.075,
+          "end": 4.47
+        },
+        {
+          "id": "w14",
+          "text": "and",
+          "start": 4.528,
+          "end": 4.644
+        },
+        {
+          "id": "w15",
+          "text": "the",
+          "start": 4.69,
+          "end": 4.76
+        },
+        {
+          "id": "w16",
+          "text": "Najm",
+          "start": 4.818,
+          "end": 5.143
+        },
+        {
+          "id": "w17",
+          "text": "report,",
+          "start": 5.201,
+          "end": 5.631
+        },
+        {
+          "id": "w18",
+          "text": "and",
+          "start": 5.724,
+          "end": 5.898
+        },
+        {
+          "id": "w19",
+          "text": "logged",
+          "start": 5.979,
+          "end": 6.269
+        },
+        {
+          "id": "w20",
+          "text": "the",
+          "start": 6.293,
+          "end": 6.362
+        },
+        {
+          "id": "w21",
+          "text": "claim",
+          "start": 6.409,
+          "end": 6.629
+        },
+        {
+          "id": "w22",
+          "text": "for",
+          "start": 6.687,
+          "end": 6.803
+        },
+        {
+          "id": "w23",
+          "text": "fourteen",
+          "start": 6.885,
+          "end": 7.291
+        },
+        {
+          "id": "w24",
+          "text": "cents.",
+          "start": 7.349,
+          "end": 7.988
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "text": "That is every accident call answered and logged. Try it at app dot voho dot A I.",
+      "path": ".media/audio/voice/05.wav",
+      "duration_s": 6.316,
+      "words": [
+        {
+          "id": "w0",
+          "text": "That",
+          "start": 0,
+          "end": 0.244
+        },
+        {
+          "id": "w1",
+          "text": "is",
+          "start": 0.29,
+          "end": 0.372
+        },
+        {
+          "id": "w2",
+          "text": "every",
+          "start": 0.488,
+          "end": 0.801
+        },
+        {
+          "id": "w3",
+          "text": "accident",
+          "start": 0.859,
+          "end": 1.265
+        },
+        {
+          "id": "w4",
+          "text": "call",
+          "start": 1.3,
+          "end": 1.533
+        },
+        {
+          "id": "w5",
+          "text": "answered",
+          "start": 1.625,
+          "end": 2.101
+        },
+        {
+          "id": "w6",
+          "text": "and",
+          "start": 2.171,
+          "end": 2.357
+        },
+        {
+          "id": "w7",
+          "text": "logged.",
+          "start": 2.45,
+          "end": 2.879
+        },
+        {
+          "id": "w8",
+          "text": "Try",
+          "start": 3.158,
+          "end": 3.448
+        },
+        {
+          "id": "w9",
+          "text": "it",
+          "start": 3.518,
+          "end": 3.587
+        },
+        {
+          "id": "w10",
+          "text": "at",
+          "start": 3.634,
+          "end": 3.715
+        },
+        {
+          "id": "w11",
+          "text": "app",
+          "start": 3.808,
+          "end": 4.005
+        },
+        {
+          "id": "w12",
+          "text": "dot",
+          "start": 4.075,
+          "end": 4.226
+        },
+        {
+          "id": "w13",
+          "text": "voho",
+          "start": 4.342,
+          "end": 4.818
+        },
+        {
+          "id": "w14",
+          "text": "dot",
+          "start": 5.027,
+          "end": 5.213
+        },
+        {
+          "id": "w15",
+          "text": "A",
+          "start": 5.329,
+          "end": 5.503
+        },
+        {
+          "id": "w16",
+          "text": "I.",
+          "start": 5.654,
+          "end": 6.316
+        }
+      ]
+    }
+  ],
+  "total_duration_s": 36.921
+}

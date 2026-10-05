@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Regular.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Medium.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-SemiBold.woff2") format("woff2"); font-weight: 600; }
+      #root { position: absolute; inset: 0; overflow: hidden; font-family: "Geist", ui-sans-serif, system-ui, sans-serif; }
+      #end-card { position: absolute; left: 1060px; top: 70px; width: 720px; padding: 30px 40px 34px;
+        border-radius: 28px; background: #FFF9EE; border: 3px solid #2B2233; box-shadow: 0 16px 0 rgba(43,34,51,0.9);
+        display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+      .brand { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 40px; letter-spacing: -0.03em; color: #09090b; }
+      #end-card h1 { font-weight: 600; font-size: 50px; line-height: 1.05; letter-spacing: -0.03em; color: #2B2233; }
+      .url { display: inline-block; padding: 14px 34px; border-radius: 999px; background: #016838; color: #FFF5E2; font-weight: 500; font-size: 34px; }
+      </style>
+      <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+        <div id="end-card">
+          <div class="brand"><svg viewBox="0 0 64 64" width="52" height="52" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#09090b"/><g fill="#f4f4f5"><rect x="10.5" y="25" width="7" height="14" rx="3.5"/><rect x="22.5" y="16" width="7" height="32" rx="3.5"/><rect x="34.5" y="21" width="7" height="22" rx="3.5"/><rect x="46.5" y="26" width="7" height="12" rx="3.5"/></g></svg><span>voho</span></div>
+          <h1>Every buyer answered, in Saudi Arabic</h1>
+          <span class="url">app.voho.ai</span>
+        </div>
+      </div>
+      <script>
+        (() => {
+          const tl = gsap.timeline({ paused: true });
+          tl.fromTo("#end-card", { y: -260, rotation: -3 }, { y: 0, rotation: 0, duration: 0.7, ease: "back.out(1.6)" }, 0);
+          tl.fromTo("#end-card > *", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "power3.out" }, 0.35);
+          tl.to("#end-card", { rotation: 1, duration: 3.98, ease: "sine.inOut" }, 0.8);
+          window.__timelines["endcard"] = tl;
+          tl.seek(0);
+        })();
+      </script>
+    </template>
+  </body>
+</html>

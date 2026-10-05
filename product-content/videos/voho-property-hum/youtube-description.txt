@@ -1,0 +1,5 @@
+Your agent is out on a viewing, and every phone in the office is ringing. This is Voho's AI receptionist answering for a Riyadh property agency in Saudi Arabic, from building the agent to a live call that books a viewing.
+
+Everything on the screen is the real console at app.voho.ai: create an agent, set Saudi Arabic, give it the listings and the rents, and one rule, answer in one short sentence. Then the call: the caller wants a three-bedroom flat in north Riyadh for about 70,000 a year, the agent offers the Al Narjis flat, takes his name and number, and confirms a viewing for Sunday at five.
+
+Try it: https://app.voho.ai

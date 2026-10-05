@@ -1,0 +1,29 @@
+{
+  "id": "avc-ai-clone-reel",
+  "community": "AVC",
+  "message": "This isn't me talking: it's my AI clone, made from one minute of video. Here's how, and where to learn the whole setup.",
+  "handle": "@yarmalikhere",
+  "cta": "Join my Skool community",
+  "lines": [
+    {
+      "id": "01",
+      "text": "This isn't me talking. It's my AI clone, and I made it from one minute of video."
+    },
+    {
+      "id": "02",
+      "text": "Film yourself talking straight to the camera for one minute, in good light."
+    },
+    {
+      "id": "03",
+      "text": "Upload it to HeyGen, and it builds an avatar that moves the way you do."
+    },
+    {
+      "id": "04",
+      "text": "Clone your voice in ElevenLabs, then type any line and your clone says it."
+    },
+    {
+      "id": "05",
+      "text": "Now I post videos without filming. If you want to learn, step by step, how to clone yourself, join my Skool community."
+    }
+  ]
+}

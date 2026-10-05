@@ -1,0 +1,30 @@
+{
+  "id": "voho-claims-reel",
+  "community": "Voho",
+  "language": "en",
+  "message": "Voho just launched an AI claims desk in Saudi Arabic: a driver calls after a minor accident and the claim is logged in 69 seconds",
+  "handle": "@yarmalikhere",
+  "cta": "Try it at app.voho.ai",
+  "lines": [
+    {
+      "id": "01",
+      "text": "Unbelievable. Voho just launched an AI claims desk that logs a car accident in Saudi Arabic in sixty-nine seconds."
+    },
+    {
+      "id": "02",
+      "text": "You create an agent on Voho, set it to Saudi Arabic, and tell it what a claim needs. It was saved in twenty-four seconds."
+    },
+    {
+      "id": "03",
+      "text": "Then the rules: it asks about injuries first, it never decides who is at fault, and it never invents a claim number."
+    },
+    {
+      "id": "04",
+      "text": "I called it after a minor accident. It took my policy number, the road and the Najm report, and logged the claim for fourteen cents."
+    },
+    {
+      "id": "05",
+      "text": "That is every accident call answered and logged. Try it at app dot voho dot A I."
+    }
+  ]
+}

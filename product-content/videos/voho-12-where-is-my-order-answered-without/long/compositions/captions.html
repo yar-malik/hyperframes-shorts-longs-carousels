@@ -1,0 +1,128 @@
+<!doctype html>
+<html><head><meta charset="UTF-8" /></head><body><template>
+  <style>
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Regular.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-Medium.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Geist"; src: url("assets/fonts/Geist-SemiBold.woff2") format("woff2"); font-weight: 600; }
+      @font-face { font-family: "Plex Arabic"; src: url("assets/fonts/PlexArabic-500.woff2") format("woff2"); font-weight: 400 500; }
+      @font-face { font-family: "Plex Arabic"; src: url("assets/fonts/PlexArabic-700.woff2") format("woff2"); font-weight: 600 700; }
+  #root { position: absolute; inset: 0; overflow: hidden; font-family: "Plex Arabic", "Geist", ui-sans-serif, system-ui, sans-serif; }
+  .step, .sub, .lyric { position: absolute; left: 0; right: 0; bottom: 56px; display: flex; justify-content: center; }
+  .step .inner { display: inline-flex; align-items: center; gap: 16px; padding: 14px 28px 14px 14px; border-radius: 999px; background: rgba(43,34,51,0.9); color: #FFF5E2; font-size: 32px; font-weight: 500; box-shadow: 0 10px 30px rgba(43,34,51,0.25); }
+  .step b { display: inline-flex; min-width: 46px; height: 46px; padding: 0 10px; border-radius: 23px; align-items: center; justify-content: center; background: #2EC27E; color: #05231a; font-weight: 600; font-size: 25px; }
+  .sub .inner { display: inline-block; max-width: 1280px; padding: 16px 30px; border-radius: 18px; background: rgba(43,34,51,0.9); color: #FFF5E2; font-size: 33px; line-height: 1.3; text-align: center; box-shadow: 0 10px 30px rgba(43,34,51,0.25); }
+  .sub em { display: block; font-style: normal; font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; color: #C6BCAB; margin-bottom: 4px; }
+  .sub.agent em { color: #57D79B; }
+  .lyric .inner { display: inline-block; max-width: 1320px; padding: 16px 34px; border-radius: 20px; background: rgba(43,34,51,0.86); color: #FFF5E2; font-size: 40px; line-height: 1.28; font-weight: 500; text-align: center; box-shadow: 0 10px 30px rgba(43,34,51,0.25); }
+  .step .inner, .sub .inner, .lyric .inner { direction: rtl; }
+  .step .inner { padding: 14px 14px 14px 28px; }
+  .sub em { letter-spacing: 0; text-transform: none; font-size: 20px; }
+  .card-kicker, .card-title { direction: rtl; text-align: right; letter-spacing: 0; text-transform: none; }
+  #end-card h1, .card-title { letter-spacing: 0; line-height: 1.25; direction: rtl; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div class="clip step" id="step-1" data-start="10.89" data-duration="16.4" data-track-index="0"><span class="inner"><b>1</b><span>سوّ حسابك</span></span></div>
+    <div class="clip step" id="step-2" data-start="27.55" data-duration="7.57" data-track-index="1"><span class="inner"><b>2</b><span>لوحة التحكم</span></span></div>
+    <div class="clip step" id="step-3" data-start="35.37" data-duration="7.34" data-track-index="0"><span class="inner"><b>3</b><span>أنشئ وكيل</span></span></div>
+    <div class="clip step" id="step-4" data-start="42.95" data-duration="12.4" data-track-index="1"><span class="inner"><b>4</b><span>الاسم واللغة</span></span></div>
+    <div class="clip step" id="step-5" data-start="55.6" data-duration="7.62" data-track-index="0"><span class="inner"><b>5</b><span>النموذج والصوت</span></span></div>
+    <div class="clip step" id="step-6" data-start="63.47" data-duration="20.25" data-track-index="1"><span class="inner"><b>6</b><span>التعليمات والقواعد</span></span></div>
+    <div class="clip step" id="step-7" data-start="83.97" data-duration="7.99" data-track-index="0"><span class="inner"><b>7</b><span>أو اكتبها بالذكاء الاصطناعي</span></span></div>
+    <div class="clip step" id="step-8" data-start="92.2" data-duration="7.69" data-track-index="1"><span class="inner"><b>8</b><span>رسالة الترحيب، ثم احفظ</span></span></div>
+    <div class="clip step" id="step-9" data-start="103.5" data-duration="3" data-track-index="0"><span class="inner"><b>9</b><span>Call your agent</span></span></div>
+    <div class="clip step" id="step-10" data-start="157.33" data-duration="10.12" data-track-index="1"><span class="inner"><b>10</b><span>الدوال</span></span></div>
+    <div class="clip step" id="step-11" data-start="167.7" data-duration="10.45" data-track-index="0"><span class="inner"><b>11</b><span>قاعدة المعرفة</span></span></div>
+    <div class="clip step" id="step-12" data-start="178.4" data-duration="8.91" data-track-index="1"><span class="inner"><b>12</b><span>تجربة بالمحادثة</span></span></div>
+    <div class="clip step" id="step-13" data-start="187.62" data-duration="9.09" data-track-index="0"><span class="inner"><b>13</b><span>العرض العام</span></span></div>
+    <div class="clip step" id="step-14" data-start="197.02" data-duration="7.39" data-track-index="1"><span class="inner"><b>14</b><span>في موقعك</span></span></div>
+    <div class="clip step" id="step-15" data-start="204.72" data-duration="9.39" data-track-index="0"><span class="inner"><b>15</b><span>أرقام الهاتف</span></span></div>
+    <div class="clip step" id="step-16" data-start="214.97" data-duration="8.59" data-track-index="1"><span class="inner"><b>16</b><span>الويب هوك</span></span></div>
+    <div class="clip step" id="step-17" data-start="223.82" data-duration="10.69" data-track-index="0"><span class="inner"><b>17</b><span>المكالمات الصادرة</span></span></div>
+    <div class="clip step" id="step-18" data-start="234.75" data-duration="8.5" data-track-index="1"><span class="inner"><b>18</b><span>توليد الصوت</span></span></div>
+    <div class="clip step" id="step-19" data-start="243.5" data-duration="7.25" data-track-index="0"><span class="inner"><b>19</b><span>الفوترة</span></span></div>
+    <div class="clip step" id="step-20" data-start="251.97" data-duration="11.75" data-track-index="1"><span class="inner"><b>20</b><span>المحادثات</span></span></div>
+    <div class="clip sub agent" id="sub-0" data-start="106.6" data-duration="3.88" data-track-index="2"><span class="inner"><em>ليلى · موظفة الاستقبال الذكية</em>حيّاك الله في متجر الواحة، معاك ليلى. كيف أقدر أخدمك؟</span></div>
+    <div class="clip sub caller" id="sub-1" data-start="110.53" data-duration="3.68" data-track-index="3"><span class="inner"><em>المتصل</em>السلام عليكم، طلبت سماعات وما وصلت، وين طلبي؟</span></div>
+    <div class="clip sub agent" id="sub-2" data-start="114.26" data-duration="2.98" data-track-index="4"><span class="inner"><em>ليلى · موظفة الاستقبال الذكية</em>وعليكم السلام، ممكن تعطيني رقم الطلب؟</span></div>
+    <div class="clip sub caller" id="sub-3" data-start="117.29" data-duration="4.08" data-track-index="2"><span class="inner"><em>المتصل</em>رقم الطلب 4521.</span></div>
+    <div class="clip sub agent" id="sub-4" data-start="121.42" data-duration="6.05" data-track-index="3"><span class="inner"><em>ليلى · موظفة الاستقبال الذكية</em>طلبك رقم 4521 طلع مع المندوب اليوم، ويوصلك إن شاء الله قبل الساعة 9 بالليل.</span></div>
+    <div class="clip sub caller" id="sub-5" data-start="127.52" data-duration="3.55" data-track-index="4"><span class="inner"><em>المتصل</em>ما راح أكون في البيت الليلة، أقدر أخليه يوصل بكرة العصر؟</span></div>
+    <div class="clip sub agent" id="sub-6" data-start="131.12" data-duration="5.83" data-track-index="2"><span class="inner"><em>ليلى · موظفة الاستقبال الذكية</em>إي أكيد، نغير لك لبكرة العصر، بس ممكن تعطيني اسمك ورقم جوالك للتأكيد؟</span></div>
+    <div class="clip sub caller" id="sub-7" data-start="137" data-duration="8.31" data-track-index="3"><span class="inner"><em>المتصل</em>اسمي فهد الدوسري، وجوالي 0557654321.</span></div>
+    <div class="clip sub agent" id="sub-8" data-start="145.36" data-duration="6.63" data-track-index="4"><span class="inner"><em>ليلى · موظفة الاستقبال الذكية</em>تمام يا فهد، تم تغيير موعد التوصيل لبكرة العصر، والمندوب بيتصل عليك قبلها. أي خدمة ثانية؟</span></div>
+    <div class="clip sub caller" id="sub-9" data-start="152.04" data-duration="1.78" data-track-index="2"><span class="inner"><em>المتصل</em>مشكورة، مع السلامة.</span></div>
+    <div class="clip lyric" id="vo-cam1" data-start="0.35" data-duration="3.52" data-track-index="5"><span class="inner"><span class="w" id="vo-cam1-w0">نبني</span> <span class="w" id="vo-cam1-w1">اليوم</span> <span class="w" id="vo-cam1-w2">وكيل</span> <span class="w" id="vo-cam1-w3">ذكي</span> <span class="w" id="vo-cam1-w4">لخدمة</span> <span class="w" id="vo-cam1-w5">العملاء.</span></span></div>
+    <div class="clip lyric" id="vo-p2" data-start="3.77" data-duration="6.86" data-track-index="6"><span class="inner"><span class="w" id="vo-p2-w0">لأن</span> <span class="w" id="vo-p2-w1">أكثر</span> <span class="w" id="vo-p2-w2">سؤال</span> <span class="w" id="vo-p2-w3">يوصل</span> <span class="w" id="vo-p2-w4">أي</span> <span class="w" id="vo-p2-w5">متجر</span> <span class="w" id="vo-p2-w6">هو:</span> <span class="w" id="vo-p2-w7">وين</span> <span class="w" id="vo-p2-w8">طلبي؟</span> <span class="w" id="vo-p2-w9">والفريق</span> <span class="w" id="vo-p2-w10">ما</span> <span class="w" id="vo-p2-w11">يلحق</span> <span class="w" id="vo-p2-w12">يرد.</span></span></div>
+    <div class="clip lyric" id="vo-cam2" data-start="100.3" data-duration="2.91" data-track-index="5"><span class="inner"><span class="w" id="vo-cam2-w0">والحين،</span> <span class="w" id="vo-cam2-w1">خلونا</span> <span class="w" id="vo-cam2-w2">نتصل</span> <span class="w" id="vo-cam2-w3">عليه.</span></span></div>
+    <div class="clip lyric" id="vo-cam3" data-start="154.02" data-duration="3.47" data-track-index="6"><span class="inner"><span class="w" id="vo-cam3-w0">مكالمة</span> <span class="w" id="vo-cam3-w1">حقيقية،</span> <span class="w" id="vo-cam3-w2">بالسعودي.</span></span></div>
+    <div class="clip lyric" id="vo-cam4" data-start="265.12" data-duration="3.1" data-track-index="5"><span class="inner"><span class="w" id="vo-cam4-w0">ابنوا</span> <span class="w" id="vo-cam4-w1">وكيلكم</span> <span class="w" id="vo-cam4-w2">على</span> <span class="w" id="vo-cam4-w3">فُوهو</span> <span class="w" id="vo-cam4-w4">الليلة.</span></span></div>
+  </div>
+  <script>(() => { const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#step-1 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 10.89);
+    tl.fromTo("#step-2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 27.55);
+    tl.fromTo("#step-3 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 35.37);
+    tl.fromTo("#step-4 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 42.95);
+    tl.fromTo("#step-5 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 55.6);
+    tl.fromTo("#step-6 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 63.47);
+    tl.fromTo("#step-7 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 83.97);
+    tl.fromTo("#step-8 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 92.2);
+    tl.fromTo("#step-9 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 103.5);
+    tl.fromTo("#step-10 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 157.33);
+    tl.fromTo("#step-11 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 167.7);
+    tl.fromTo("#step-12 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 178.4);
+    tl.fromTo("#step-13 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 187.62);
+    tl.fromTo("#step-14 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 197.02);
+    tl.fromTo("#step-15 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 204.72);
+    tl.fromTo("#step-16 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 214.97);
+    tl.fromTo("#step-17 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 223.82);
+    tl.fromTo("#step-18 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 234.75);
+    tl.fromTo("#step-19 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 243.5);
+    tl.fromTo("#step-20 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 251.97);
+    tl.fromTo("#sub-0 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 106.6);
+    tl.fromTo("#sub-1 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 110.53);
+    tl.fromTo("#sub-2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 114.26);
+    tl.fromTo("#sub-3 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 117.29);
+    tl.fromTo("#sub-4 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 121.42);
+    tl.fromTo("#sub-5 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 127.52);
+    tl.fromTo("#sub-6 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 131.12);
+    tl.fromTo("#sub-7 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 137);
+    tl.fromTo("#sub-8 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 145.36);
+    tl.fromTo("#sub-9 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 152.04);
+    tl.fromTo("#vo-cam1 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 0.35);
+    tl.fromTo("#vo-p2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 3.77);
+    tl.fromTo("#vo-cam2 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 100.3);
+    tl.fromTo("#vo-cam3 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 154.02);
+    tl.fromTo("#vo-cam4 .inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 265.12);
+    tl.to("#vo-cam1-w0", { color: "#8FF0BE", duration: 0.08 }, 0.51);
+    tl.to("#vo-cam1-w1", { color: "#8FF0BE", duration: 0.08 }, 0.86);
+    tl.to("#vo-cam1-w2", { color: "#8FF0BE", duration: 0.08 }, 1.39);
+    tl.to("#vo-cam1-w3", { color: "#8FF0BE", duration: 0.08 }, 1.79);
+    tl.to("#vo-cam1-w4", { color: "#8FF0BE", duration: 0.08 }, 2.1);
+    tl.to("#vo-cam1-w5", { color: "#8FF0BE", duration: 0.08 }, 2.61);
+    tl.to("#vo-p2-w0", { color: "#8FF0BE", duration: 0.08 }, 3.9);
+    tl.to("#vo-p2-w1", { color: "#8FF0BE", duration: 0.08 }, 4.18);
+    tl.to("#vo-p2-w2", { color: "#8FF0BE", duration: 0.08 }, 4.59);
+    tl.to("#vo-p2-w3", { color: "#8FF0BE", duration: 0.08 }, 5);
+    tl.to("#vo-p2-w4", { color: "#8FF0BE", duration: 0.08 }, 5.51);
+    tl.to("#vo-p2-w5", { color: "#8FF0BE", duration: 0.08 }, 5.81);
+    tl.to("#vo-p2-w6", { color: "#8FF0BE", duration: 0.08 }, 6.39);
+    tl.to("#vo-p2-w7", { color: "#8FF0BE", duration: 0.08 }, 6.71);
+    tl.to("#vo-p2-w8", { color: "#8FF0BE", duration: 0.08 }, 7.22);
+    tl.to("#vo-p2-w9", { color: "#8FF0BE", duration: 0.08 }, 7.91);
+    tl.to("#vo-p2-w10", { color: "#8FF0BE", duration: 0.08 }, 8.75);
+    tl.to("#vo-p2-w11", { color: "#8FF0BE", duration: 0.08 }, 8.99);
+    tl.to("#vo-p2-w12", { color: "#8FF0BE", duration: 0.08 }, 9.47);
+    tl.to("#vo-cam2-w0", { color: "#8FF0BE", duration: 0.08 }, 100.42);
+    tl.to("#vo-cam2-w1", { color: "#8FF0BE", duration: 0.08 }, 101.1);
+    tl.to("#vo-cam2-w2", { color: "#8FF0BE", duration: 0.08 }, 101.76);
+    tl.to("#vo-cam2-w3", { color: "#8FF0BE", duration: 0.08 }, 102.29);
+    tl.to("#vo-cam3-w0", { color: "#8FF0BE", duration: 0.08 }, 154.15);
+    tl.to("#vo-cam3-w1", { color: "#8FF0BE", duration: 0.08 }, 154.78);
+    tl.to("#vo-cam3-w2", { color: "#8FF0BE", duration: 0.08 }, 155.46);
+    tl.to("#vo-cam4-w0", { color: "#8FF0BE", duration: 0.08 }, 265.27);
+    tl.to("#vo-cam4-w1", { color: "#8FF0BE", duration: 0.08 }, 265.65);
+    tl.to("#vo-cam4-w2", { color: "#8FF0BE", duration: 0.08 }, 266.5);
+    tl.to("#vo-cam4-w3", { color: "#8FF0BE", duration: 0.08 }, 266.85);
+    tl.to("#vo-cam4-w4", { color: "#8FF0BE", duration: 0.08 }, 267.2);
+    window.__timelines["captions"] = tl; tl.seek(0); })();</script>
+</template></body></html>

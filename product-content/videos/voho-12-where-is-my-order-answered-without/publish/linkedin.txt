@@ -1,0 +1,14 @@
+"Where is my order?" is the call every online store gets the most.
+
+So I built a customer service agent that answers it in Saudi Arabic, and recorded the whole tutorial in Saudi Arabic too, in the real Voho console.
+
+On the live call:
+1. The caller asks where his headphones are
+2. The agent asks for the order number, 4521, and says it's out with the courier, due before 9 tonight
+3. He won't be home, so it moves the delivery to tomorrow afternoon, after taking his name and mobile
+
+1 minute 12 seconds, $0.14, and Voho logged it as resolved with a one-paragraph summary. It never asks for a card number or a code, and it never promises a refund. That's the team's call.
+
+The honest part: in this demo it reads the order status from a list in its instructions. A real store wires the function to its order system, and that's the bit that takes a day, not two minutes.
+
+The full tutorial is in the comments 👇
